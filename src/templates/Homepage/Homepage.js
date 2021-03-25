@@ -1,8 +1,8 @@
-import * as React from "react"
+import * as React from "react";
 
-import Layout from "../../layouts"
-import SEO from "../../layouts/common/seo"
-import { Blog, Hero } from "./components";
+import Layout from "../../layouts";
+import SEO from "../../layouts/common/seo";
+import { Blog, Hero, Footer } from "./components";
 
 const Homepage = () => {
   return (
@@ -10,8 +10,9 @@ const Homepage = () => {
       <SEO title="Home" />
       <Hero />
       <Blog />
+      <Footer />
     </Layout>
   );
-}
+};
 
-export default Homepage
+export default Homepage;
