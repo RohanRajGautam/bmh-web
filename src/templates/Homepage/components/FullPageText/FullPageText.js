@@ -31,4 +31,5 @@ const Message = styled.h1`
   text-align: center;
   letter-spacing: 0.1px;
   color: #ffffff;
+  user-select: none;
 `;
