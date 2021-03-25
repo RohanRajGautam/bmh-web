@@ -18,6 +18,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Merriweather\:300,400,700`, `Mulish`],
+        display: "swap",
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -109,9 +116,9 @@ module.exports = {
         short_name: `BMH`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#6CA448`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icons/logo.svg`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,
