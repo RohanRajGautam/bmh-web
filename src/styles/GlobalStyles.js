@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -24,15 +24,34 @@ export const GlobalStyles = createGlobalStyle`
     left: 0;
     z-index: 1;
   }
-
+  
+  .slick-slide {
+    outline: none;
+  }
+  
   .slick-slide > div {
     outline: none;
   }
   .slick-slide > div:focus {
     outline: none;
   }
-
+  
   .slick-slide.slick-cloned > div {
     outline: none;
   }
-`;;
+  
+  .slick-slide > div {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .slick-center > div {
+    transform: scale(1);
+  }
+  
+  ul.slick-dots {
+    bottom: -120px;
+  }
+  ul.slick-dots li button::before {
+    font-size: 10px;
+  }
+`;
