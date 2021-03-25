@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import BlogCard from "./card";
 import blog from "../../../../images/blog.png";
 import blog1 from "../../../../images/blog1.png";
@@ -7,39 +7,8 @@ import blog2 from "../../../../images/blog2.png";
 import blog3 from "../../../../images/blog3.png";
 import blog4 from "../../../../images/blog4.png";
 import Slider from "react-slick";
-import Heading from "../../../../components/Heading";
 import { Link } from "gatsby";
-
-const settings = {
-  dots: false,
-  arrow: true,
-  fadeIn: false,
-  pauseOnHover: false,
-  slidesToShow: 3,
-  swipeToSlide: true,
-  centerPadding: "60px",
-  speed: 500,
-  slidesToScroll: 1,
-  variableWidth: true,
-  responsive: [
-    {
-      breakpoint: 1000,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
+import Heading from "../../../../components/Heading";
 
 const staticBlog = [
   {
@@ -78,7 +47,6 @@ const graniteGray = "#2C3336";
 
 const BlogWrapper = styled.div`
   margin: 72px 0 0 96px;
-  overflow: hidden;
 `;
 
 const SliderWrapper = styled.div`
@@ -105,6 +73,114 @@ const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
 `;
+
+const NavigationButton = styled.div`
+  position: absolute;
+  bottom: -140px;
+  button {
+    height: 65px;
+    width: 65px;
+    border: 1px solid #c5ccd3;
+    border-radius: 6px;
+    display: grid;
+    place-items: center;
+    background-color: #fff;
+    cursor: pointer;
+    &:hover {
+      background-color: #f4f4f4;
+    }
+  }
+  ${({ next }) =>
+    next &&
+    css`
+      left: 120px;
+    `}
+
+  ${({ prev }) =>
+    prev &&
+    css`
+      margin-left: 20px;
+    `}
+`;
+
+const settings = {
+  dots: true,
+  pauseOnHover: false,
+  slidesToShow: 3,
+  swipeToSlide: true,
+  infinite: true,
+  autoplay: true,
+  speed: 1000,
+  slidesToScroll: 1,
+  cssEase: "linear",
+  variableWidth: true,
+  nextArrow: <SampleNextArrow />,
+  prevArrow: <SamplePrevArrow />,
+  responsive: [
+    {
+      breakpoint: 1000,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
+
+function SampleNextArrow(props) {
+  const { onClick } = props;
+  return (
+    <NavigationButton next>
+      <button onClick={onClick}>
+        <svg
+          width="13"
+          height="21"
+          viewBox="0 0 13 21"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2 1.88721L10 10.8872L2 19.8872"
+            stroke="#5F6468"
+            stroke-width="3"
+          />
+        </svg>
+      </button>
+    </NavigationButton>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { onClick } = props;
+  return (
+    <NavigationButton prev>
+      <button onClick={onClick}>
+        <svg
+          width="13"
+          height="21"
+          viewBox="0 0 13 21"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11 1.88721L3 10.8872L11 19.8872"
+            stroke="#5F6468"
+            stroke-width="3"
+          />
+        </svg>
+      </button>
+    </NavigationButton>
+  );
+}
 
 const Blog = props => {
   return (
