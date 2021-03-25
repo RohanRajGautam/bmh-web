@@ -1,16 +1,19 @@
-import * as React from "react"
+import * as React from "react";
+import Blog from "../components/Blog";
 
-import Layout from "../layouts"
-import SEO from "../layouts/common/seo"
+import Layout from "../layouts";
+import SEO from "../layouts/common/seo";
 
 const IndexPage = () => {
-
   return (
     <Layout>
       <SEO title="All posts" />
-      <h1>yo</h1>
+      {/* Blog section */}
+      <section>
+        <Blog />
+      </section>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
