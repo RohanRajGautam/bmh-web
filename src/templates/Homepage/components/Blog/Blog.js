@@ -46,7 +46,7 @@ const staticBlog = [
 const graniteGray = "#2C3336";
 
 const BlogWrapper = styled.div`
-  margin: 72px 0 0 96px;
+  margin: 72px 0 140px 96px;
 `;
 
 const SliderWrapper = styled.div`
@@ -76,12 +76,12 @@ const StyledLink = styled(Link)`
 
 const NavigationButton = styled.div`
   position: absolute;
-  bottom: -140px;
+  bottom: -80px;
   button {
-    height: 65px;
-    width: 65px;
+    height: 40px;
+    width: 40px;
     border: 1px solid #c5ccd3;
-    border-radius: 6px;
+    border-radius: 3px;
     display: grid;
     place-items: center;
     background-color: #fff;
@@ -93,7 +93,7 @@ const NavigationButton = styled.div`
   ${({ next }) =>
     next &&
     css`
-      left: 120px;
+      left: 80px;
     `}
 
   ${({ prev }) =>
@@ -106,7 +106,6 @@ const NavigationButton = styled.div`
 const settings = {
   dots: true,
   pauseOnHover: false,
-  slidesToShow: 3,
   swipeToSlide: true,
   infinite: true,
   autoplay: true,
@@ -118,18 +117,20 @@ const settings = {
   prevArrow: <SamplePrevArrow />,
   responsive: [
     {
-      breakpoint: 1000,
+      breakpoint: 1440,
       settings: {
-        slidesToShow: 2,
         slidesToScroll: 1,
-        infinite: true,
-        dots: true,
       },
     },
     {
-      breakpoint: 600,
+      breakpoint: 1200,
       settings: {
-        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 1000,
+      settings: {
         slidesToScroll: 1,
       },
     },
@@ -151,7 +152,7 @@ function SampleNextArrow(props) {
           <path
             d="M2 1.88721L10 10.8872L2 19.8872"
             stroke="#5F6468"
-            stroke-width="3"
+            strokeWidth="3"
           />
         </svg>
       </button>
@@ -174,7 +175,7 @@ function SamplePrevArrow(props) {
           <path
             d="M11 1.88721L3 10.8872L11 19.8872"
             stroke="#5F6468"
-            stroke-width="3"
+            strokeWidth="3"
           />
         </svg>
       </button>
@@ -200,12 +201,12 @@ const Blog = props => {
             <path
               d="M53.4193 13.0669L62.3788 22.0266L53.4193 30.986"
               stroke="#2C3336"
-              stroke-width="3"
+              strokeWidth="3"
             />
             <path
               d="M62.3807 22.0264H0.977905"
               stroke="#2C3336"
-              stroke-width="3"
+              strokeWidth="3"
             />
           </svg>
         </StyledLink>
