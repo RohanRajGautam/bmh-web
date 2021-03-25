@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "beautiful-minds-health",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Beautiful Minds Health",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Webpoint",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
@@ -39,6 +39,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.2.1",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75",
