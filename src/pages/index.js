@@ -1,16 +1,6 @@
-import * as React from "react"
+import * as React from 'react';
+import Page from "../templates/Homepage"
 
-import Layout from "../layouts"
-import SEO from "../layouts/common/seo"
+const Index = () => (<Page title="Home" />)
 
-const IndexPage = () => {
-
-  return (
-    <Layout>
-      <SEO title="All posts" />
-      <h1>yo</h1>
-    </Layout>
-  )
-}
-
-export default IndexPage
+export default Index
