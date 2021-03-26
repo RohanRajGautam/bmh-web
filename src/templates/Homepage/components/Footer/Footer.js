@@ -1,5 +1,8 @@
+import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
+
+// images
 import Logo from "../../../../images/Frame.png";
 import BrandLogo from "../../../../images/brand-logo.png";
 import BrandLogo1 from "../../../../images/brand-logo1.png";
@@ -16,11 +19,13 @@ const FooterWrapper = styled.div`
   background-color: #2c3336;
 `;
 
-const FooterLogo = styled.div`
+const FooterLogo = styled(Link)`
   img {
     object-fit: cover;
     height: 55px;
     width: auto;
+    text-decoration: none;
+    cursor: pointer;
   }
 `;
 
@@ -138,10 +143,12 @@ const StaticBrandLogo = [
 ];
 
 const Footer = () => {
+  const date = new Date();
+
   return (
     <FooterWrapper>
-      <FooterLogo>
-        <img src={Logo} alt="" />
+      <FooterLogo to="/">
+        <img src={Logo} alt="bmh-logo" draggable="false" />
       </FooterLogo>
       <FooterDetails>
         {staticData.map((item, index) => (
@@ -158,12 +165,20 @@ const Footer = () => {
       <FooterBrandLogoWrapper>
         {StaticBrandLogo.map((item, index) => (
           <FooterBrandLogo key={index}>
-            <img src={item} alt="" />
+            <img src={item} alt="brand-logo" draggable="false"    />
           </FooterBrandLogo>
         ))}
       </FooterBrandLogoWrapper>
       <FooterCopyrightWrapper>
-        <FooterCopyright>©2021 WebPoint Solutions, LLC</FooterCopyright>
+        <FooterCopyright>
+          
+          
+          
+          &copy; {date.getFullYear()} WebPoint Solutions, LLC
+        
+        
+        
+        </FooterCopyright>
         <FooterCopyright>Terms & Conditions | Privacy Policies</FooterCopyright>
       </FooterCopyrightWrapper>
     </FooterWrapper>
