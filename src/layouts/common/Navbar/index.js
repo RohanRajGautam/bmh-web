@@ -48,7 +48,7 @@ const Logolink = styled(Link)`
     transform: scale(0.8);
   }
 `;
-const Menulink = styled(Link)`
+const Menulink = styled.div`
   text-decoration: none;
   cursor: pointer;
 `;

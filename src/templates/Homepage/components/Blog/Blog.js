@@ -46,7 +46,9 @@ const staticBlog = [
 const graniteGray = "#2C3336";
 
 const BlogWrapper = styled.div`
-  margin: 72px 0 140px 96px;
+  /* margin: 72px 0 140px 96px; */
+  padding: 5vw;
+  margin-bottom: 5em;
 `;
 
 const SliderWrapper = styled.div`
