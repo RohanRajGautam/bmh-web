@@ -6,6 +6,7 @@ export const Button = styled(Link)`
   color: ${({ primary }) => (primary ? "#fff" : "#66a250")};
   white-space: nowrap;
   width: 15em;
+  max-width: 100%;
   padding: 25px 140px;
   border: none;
   border-radius: ${({ round }) => (round ? "50px" : "none")};
@@ -27,6 +28,6 @@ export const Button = styled(Link)`
   }
 
   @media screen and (max-width: 860px) {
-    margin-bottom: 1em;
+    margin-bottom: 0.8rem;
   }
-`
+`;;

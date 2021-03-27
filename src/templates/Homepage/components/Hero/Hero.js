@@ -73,12 +73,13 @@ const HeroBg = styled.div`
 const ImageBg = styled.img`
   width: 100%;
   height: 100%;
+  max-width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   -o-object-fit: cover;
   object-fit: cover;
-`
+`;
 
 const HeroContent = styled.div`
   z-index: 3;
@@ -110,27 +111,27 @@ const HeroH1 = styled.h1`
   font-family: Merriweather;
   font-style: normal;
   font-weight: bold;
-  font-size: clamp(2rem, 6vw, 6rem);
+  font-size: clamp(4rem, 6vw, 6rem);
   letter-spacing: 0.3px;
   user-select: none;
   padding-bottom: 3rem;
-`
+`;
 
 const Divider = styled.div`
   width: 11rem;
   background: #fff;
   margin-bottom: 4rem;
-  border: 3px solid #ffffff;
-`
+  border: 2px solid #ffffff;
+`;
 
 const HeroP = styled.p`
   font-family: Mulish;
   font-weight: 400;
   line-height: 160%;
-  font-size: clamp(1rem, 3vw, 3rem);
+  font-size: clamp(1.8rem, 3vw, 3rem);
   padding-bottom: 3rem;
   font-weight: 400;
   letter-spacing: 0.3px;
   color: rgba(255, 255, 255, 0.7);
   user-select: none;
-`
+`;
