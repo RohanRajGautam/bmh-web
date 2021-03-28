@@ -100,7 +100,11 @@ const HeroContent = styled.div`
   z-index: 3;
   height: calc(100vh - 80px);
   max-height: 100%;
-  /* padding: 0rem calc((100vw - 1300px) / 2); */
+  padding: 0 5vw;
+
+  @media screen and (max-width: 860px) {
+    padding: 0;
+  }
 `;
 
 const HeroItems = styled.div`
@@ -120,7 +124,6 @@ const HeroItems = styled.div`
 
 const HeroTextContainer = styled.div`
   width: 100%;
-
   padding: 1.5rem;
 `;
 
