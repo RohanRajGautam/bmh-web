@@ -4,21 +4,21 @@ import styled from "styled-components";
 import { Hidden } from "@material-ui/core";
 
 import logo from "../../../images/icons/full-logo.svg";
-import logoSm from "../../../images/icons/logo.svg";
+// import logoSm from "../../../images/icons/logo.svg";
 import menu from "../../../images/icons/Union.svg";
 
 const Navbar = () => (
   <Nav>
-    <Hidden xsDown>
-      <Logolink to="/">
-        <img src={logo} alt="bmh-logo" draggable="false" />
-      </Logolink>
-    </Hidden>
-    <Hidden smUp>
-      <Logolink to="/">
+    {/* <Hidden xsDown> */}
+    <Logolink to="/">
+      <img src={logo} alt="bmh-logo" draggable="false" />
+    </Logolink>
+    {/* </Hidden> */}
+    {/* <Hidden smUp>
+      <Logolink to="/"> 
         <img src={logoSm} alt="bmh-logo" draggable="false" />
       </Logolink>
-    </Hidden>
+    </Hidden> */}
     <Menulink>
       <img src={menu} alt="menu" draggable="false" />
     </Menulink>
@@ -38,6 +38,14 @@ const Nav = styled.nav`
   z-index: 100;
   position: relative;
   transform: translateY(2rem);
+
+  @media screen and (max-width: 600px) {
+    transform: scale(0.6);
+    /* width: 170px;
+    height: 30px */
+    padding: 0;
+    transform: translate(-2rem, -0.7rem);
+  }
 `;
 
 const Logolink = styled(Link)`
@@ -45,7 +53,10 @@ const Logolink = styled(Link)`
   cursor: pointer;
 
   @media screen and (max-width: 600px) {
-    transform: scale(0.8);
+    transform: scale(0.6);
+    width: 170px;
+    height: 30px
+    transform: translate(-2rem, 1rem)
   }
 `;
 const Menulink = styled.div`
