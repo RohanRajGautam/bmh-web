@@ -17,6 +17,10 @@ const lightBlueGrey = "#C5CCD3";
 const FooterWrapper = styled.div`
   padding: 75px 96px;
   background-color: #2c3336;
+
+  @media (max-width: 576px) {
+    padding: 3rem;
+  }
 `;
 
 const FooterLogo = styled(Link)`
