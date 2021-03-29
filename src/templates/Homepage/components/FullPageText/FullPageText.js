@@ -14,7 +14,7 @@ import {
 } from "./FullPageText.styles";
 
 // images
-import logoSm from "../../../../images/icons/logo.svg";
+import logoSm from "@images/icons/logo.svg";
 
 const FullPageText = () => {
   return (
@@ -36,7 +36,7 @@ const FullPageText = () => {
         </MobileTextContainer>
       </Hidden>
       <Hidden smDown>
-        <Message data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        <Message data-aos="zoom-in" data-aos-anchor-placement="top-bottom">
           Leading
           <br />
           in Wholistic Mental Health

@@ -2,7 +2,7 @@ import React from "react";
 import { Hidden } from "@material-ui/core";
 
 // components
-import { Button } from "../../../../components/Button";
+import { Button } from "@components/Button";
 import {
   ButtonContainer,
   ButtonPrimary,
@@ -19,7 +19,7 @@ import {
 } from "./Hero.styles";
 
 // images
-import BackgroundImage from "../../../../images/background-img-hero.jpg";
+import BackgroundImage from "@images/background-img-hero.jpg";
 
 export default function Hero() {
   return (

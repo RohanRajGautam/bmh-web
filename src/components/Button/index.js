@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { Link } from "gatsby"
+import { Link } from "gatsby";
+import styled from "styled-components";
 
 export const Button = styled(Link)`
   background: ${({ primary }) => (primary ? "#66a250" : "#fff")};
@@ -31,6 +31,5 @@ export const Button = styled(Link)`
     padding: 1.5rem 5rem;
     font-size: 18px;
     width: 20em;
-
   }
-`;;
+`;

@@ -2,8 +2,8 @@ import * as React from "react";
 
 import { Logolink, Menulink, Nav } from "./Navbar.styles";
 
-import logo from "../../../images/icons/full-logo.svg";
-import menu from "../../../images/icons/Union.svg";
+import logo from "@images/icons/full-logo.svg";
+import menu from "@images/icons/Union.svg";
 
 const Navbar = () => (
   <Nav>
