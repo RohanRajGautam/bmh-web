@@ -16,6 +16,11 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     font-family: "Merriweather", serif;
   }
+
+  p{
+    line-height:1.7;
+  }
+
   .slick-next {
     right: 0;
     z-index: 1;
