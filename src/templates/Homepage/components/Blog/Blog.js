@@ -3,7 +3,7 @@ import Slider from "react-slick";
 
 import { BlogCard } from "./components";
 import { staticBlog } from "./Blog.datas";
-import Heading from "@components/Heading";
+import { Heading } from "@components/Heading";
 import {
   BlogWrapper,
   SliderWrapper,
@@ -96,7 +96,7 @@ const Blog = props => {
   return (
     <BlogWrapper>
       <HeadingWrapper>
-        <Heading>on the blog</Heading>
+        <Heading>On The Blog</Heading>
         <StyledLink to="/">
           <span>Check our blog</span>
           <svg

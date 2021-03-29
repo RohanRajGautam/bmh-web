@@ -39,10 +39,10 @@ export default function Hero() {
           </HeroTextContainer>
           <Hidden smDown>
             <ButtonContainer>
-              <ButtonPrimary primary="true" round="true" to="/">
+              <ButtonPrimary primary round to="/">
                 Medical
               </ButtonPrimary>
-              <Button round="true" to="/">
+              <Button round to="/">
                 Wellness
               </Button>
             </ButtonContainer>
