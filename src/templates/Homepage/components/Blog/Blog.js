@@ -1,9 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
-
 import { BlogCard } from "./components";
 import { staticBlog } from "./Blog.datas";
-import Heading from "@components/Heading";
+import { Heading } from "@components/Heading";
 import {
   BlogWrapper,
   SliderWrapper,
@@ -17,7 +16,7 @@ const settings = {
   pauseOnHover: false,
   swipeToSlide: true,
   infinite: true,
-  autoplay: true,
+  autoplay: false,
   speed: 1000,
   slidesToScroll: 1,
   cssEase: "linear",
@@ -96,7 +95,7 @@ const Blog = props => {
   return (
     <BlogWrapper>
       <HeadingWrapper>
-        <Heading>on the blog</Heading>
+        <Heading>On The Blog</Heading>
         <StyledLink to="/">
           <span>Check our blog</span>
           <svg
