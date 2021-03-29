@@ -1,10 +1,18 @@
 import * as React from "react";
-
 import Layout from "@layouts";
 import SEO from "@layouts/common/seo";
-import { Blog, Hero, Footer, FullPageText, StoryPage } from "./components";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import {
+  Blog,
+  Hero,
+  Footer,
+  FullPageText,
+  Donate,
+  Newsletter,
+  Event,
+  StoryPage,
+} from "./components";
 
 const Homepage = () => {
   React.useEffect(() => {
@@ -22,6 +30,9 @@ const Homepage = () => {
       <FullPageText />
       <StoryPage />
       <Blog />
+      <Event />
+      <Donate />
+      <Newsletter />
       <Footer />
     </Layout>
   );
