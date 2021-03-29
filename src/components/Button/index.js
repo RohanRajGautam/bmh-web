@@ -5,11 +5,11 @@ export const Button = styled(Link)`
   background: ${({ primary }) => (primary ? "#66a250" : "#fff")};
   color: ${({ primary }) => (primary ? "#fff" : "#66a250")};
   white-space: nowrap;
-  width: 15em;
+  /* width: 15em; */
   max-width: 95%;
-  padding: 25px 140px;
+  padding: ${({ md }) => (md ? "20px 100px" : "25px 140px")};
   border: none;
-  border-radius: ${({ round }) => (round ? "50px" : "none")};
+  border-radius: ${({ round }) => (round ? "50px" : "8px")};
   display: flex;
   text-align: center;
   justify-content: center;
