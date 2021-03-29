@@ -25,7 +25,7 @@ const StoryPage = () => {
           improving your mental health, our goal is to help you enhance every
           aspect of who you are.
         </TextWrapper>
-        <ButtonWrapper primary md>
+        <ButtonWrapper primary="true" md="true" to="/">
           Donate
         </ButtonWrapper>
       </Content>

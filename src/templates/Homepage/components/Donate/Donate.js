@@ -20,7 +20,9 @@ const Donate = () => {
             You can support mentally unwell people by donating, we are more than
             happy with what you share
           </DonateParagraph>
-          <Button primary>Donate</Button>
+          <Button primary="true" to="/">
+            Donate
+          </Button>
         </DonateColumn>
       </DonateStyle>
     </DonateWrapper>

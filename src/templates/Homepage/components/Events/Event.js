@@ -6,7 +6,7 @@ import {
   NavigationButton,
 } from "./Event.styles";
 import StaticData from "./Event.data";
-import Heading from "@components/Heading";
+import { Heading } from "@components/Heading";
 import Slider from "react-slick";
 
 const settings = {
@@ -14,7 +14,7 @@ const settings = {
   pauseOnHover: false,
   swipeToSlide: true,
   infinite: true,
-  autoplay: true,
+  autoplay: false,
   speed: 1000,
   slidesToScroll: 1,
   cssEase: "linear",

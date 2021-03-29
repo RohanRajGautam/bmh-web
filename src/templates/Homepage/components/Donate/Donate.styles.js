@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import donate from "../../../../images/donate/donate1.png";
+import donate from "@images/donate/donate1.png";
 
 export const DonateWrapper = styled.div`
   width: 100%;

@@ -16,7 +16,7 @@ const settings = {
   pauseOnHover: false,
   swipeToSlide: true,
   infinite: true,
-  autoplay: true,
+  autoplay: false,
   speed: 1000,
   slidesToScroll: 1,
   cssEase: "linear",
