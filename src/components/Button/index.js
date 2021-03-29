@@ -1,11 +1,12 @@
-import styled from "styled-components"
-import { Link } from "gatsby"
+import { Link } from "gatsby";
+import styled from "styled-components";
 
 export const Button = styled(Link)`
   background: ${({ primary }) => (primary ? "#66a250" : "#fff")};
   color: ${({ primary }) => (primary ? "#fff" : "#66a250")};
   white-space: nowrap;
   width: 15em;
+  max-width: 95%;
   padding: 25px 140px;
   border: none;
   border-radius: ${({ round }) => (round ? "50px" : "none")};
@@ -18,8 +19,8 @@ export const Button = styled(Link)`
   font-size: 24px;
   font-weight: bold;
   outline: none;
+  text-align: center;
   transition: 0.3s !important;
-  margin-right: 1em;
   cursor: pointer;
 
   &:hover {
@@ -27,6 +28,8 @@ export const Button = styled(Link)`
   }
 
   @media screen and (max-width: 860px) {
-    margin-bottom: 1em;
+    padding: 1.5rem 5rem;
+    font-size: 18px;
+    width: 20em;
   }
-`
+`;
