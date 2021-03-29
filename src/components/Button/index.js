@@ -9,7 +9,7 @@ export const Button = styled(Link)`
   max-width: 95%;
   padding: 25px 140px;
   border: none;
-  border-radius: ${({ round }) => (round ? "50px" : "none")};
+  border-radius: ${({ round }) => (round ? "50px" : "8px")};
   display: flex;
   text-align: center;
   justify-content: center;
