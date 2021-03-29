@@ -1,8 +1,7 @@
 import * as React from "react";
-
 import Layout from "@layouts";
 import SEO from "@layouts/common/seo";
-import { Blog, Hero, Footer, FullPageText } from "./components";
+import { Blog, Hero, Footer, FullPageText, Donate } from "./components";
 
 const Homepage = () => {
   return (
@@ -11,6 +10,7 @@ const Homepage = () => {
       <Hero />
       <FullPageText />
       <Blog />
+      <Donate />
       <Footer />
     </Layout>
   );

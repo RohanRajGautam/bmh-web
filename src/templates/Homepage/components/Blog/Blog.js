@@ -1,6 +1,5 @@
 import React from "react";
 import Slider from "react-slick";
-
 import { BlogCard } from "./components";
 import { staticBlog } from "./Blog.datas";
 import Heading from "@components/Heading";
