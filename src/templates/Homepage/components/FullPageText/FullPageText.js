@@ -36,7 +36,11 @@ const FullPageText = () => {
         </MobileTextContainer>
       </Hidden>
       <Hidden smDown>
-        <Message data-aos="zoom-in" data-aos-anchor-placement="top-bottom">
+        <Message
+          data-aos="fade-up"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="1500"
+        >
           Leading
           <br />
           in Wholistic Mental Health
