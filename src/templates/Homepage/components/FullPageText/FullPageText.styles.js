@@ -6,7 +6,7 @@ export const TextContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 70vh;
+  min-height: 100vh;
   transition: 2s ease;
   padding: 0 5vw;
 `;
