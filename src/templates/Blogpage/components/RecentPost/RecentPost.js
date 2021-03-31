@@ -46,7 +46,7 @@ const settings = {
 const RecentPost = props => {
   return (
     <RecentWrapper>
-      <Heading>Recent Articles</Heading>
+      <Heading clean>Recent Articles</Heading>
       <RecentBlockWrapper>
         <Slider {...settings}>
           {StaticData &&
