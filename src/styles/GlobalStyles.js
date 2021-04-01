@@ -59,4 +59,5 @@ export const GlobalStyles = createGlobalStyle`
   ul.slick-dots li button::before {
     font-size: 10px;
   }
+
 `;

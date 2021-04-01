@@ -6,7 +6,6 @@ const primary = "#6CA448";
 
 export const Card = styled.div`
   width: 350px;
-  margin: 0 20px;
 `;
 
 export const CardThumbnail = styled.div`

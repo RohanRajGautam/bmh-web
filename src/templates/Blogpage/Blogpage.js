@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "@layouts";
 import SEO from "@layouts/common/seo";
-import { Categories, RecentPost } from "./components";
+import { Categories, CategorySlider, RecentPost } from "./components";
 
 const BlogPage = props => {
   return (
@@ -9,6 +9,7 @@ const BlogPage = props => {
       <SEO title="Blog" />
       <Categories />
       <RecentPost />
+      <CategorySlider />
     </Layout>
   );
 };
