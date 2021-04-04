@@ -11,6 +11,9 @@ export const BlogWrapper = styled.div`
 
 export const SliderWrapper = styled.div`
   margin-top: 40px;
+  .slick-slide {
+    margin: 0 20px;
+  }
 `;
 
 export const HeadingWrapper = styled.div`
