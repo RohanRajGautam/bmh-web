@@ -12,6 +12,7 @@ import {
   Newsletter,
   Event,
   StoryPage,
+  HorizontalComponent,
 } from "./components";
 
 const Homepage = () => {
@@ -29,6 +30,7 @@ const Homepage = () => {
       <Hero />
       <FullPageText />
       <StoryPage />
+      <HorizontalComponent />
       <Blog />
       <Event />
       <Donate />
