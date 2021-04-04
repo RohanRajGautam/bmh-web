@@ -7,6 +7,9 @@ export const BlogWrapper = styled.div`
   /* margin: 72px 0 140px 96px; */
   padding: 5vw;
   margin-bottom: 5em;
+  .slick-slide {
+    margin: 0 20px;
+  }
 `;
 
 export const SliderWrapper = styled.div`
