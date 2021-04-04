@@ -6,3 +6,4 @@ export { default as Footer } from "./Footer";
 export { default as Event } from "./Events";
 export { default as Newsletter } from "./Newsletter";
 export { default as Donate } from "./Donate";
+export { default as HorizontalComponent } from "./HorizontalScroll";
