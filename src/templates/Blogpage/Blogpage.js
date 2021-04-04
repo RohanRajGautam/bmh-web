@@ -5,7 +5,7 @@ import { Categories, CategorySlider, RecentPost } from "./components";
 
 const BlogPage = props => {
   return (
-    <Layout>
+    <Layout dark>
       <SEO title="Blog" />
       <Categories />
       <RecentPost />

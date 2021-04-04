@@ -1,9 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Link } from "gatsby";
+
+const border = "#C5CCD3";
 
 export const Nav = styled.nav`
   background: transparent;
-  height: 80px;
   display: flex;
   justify-content: space-between;
   /* padding: 1rem calc((100vw - 1300px) / 2); */
@@ -11,7 +12,16 @@ export const Nav = styled.nav`
   align-items: center;
   z-index: 100;
   position: relative;
-  transform: translateY(2rem);
+  ${props =>
+    props.dark
+      ? css`
+          height: 120px;
+          border-bottom: 1px solid ${border};
+        `
+      : css`
+          transform: translateY(2rem);
+          height: 80px;
+        `}
 
   @media screen and (max-width: 600px) {
     transform: scale(0.6);
