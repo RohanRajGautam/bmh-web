@@ -22,7 +22,7 @@ const HorizontalScroll = props => {
   const horizontalScroll = useRef();
 
   const handleScroll = e => {
-    console.log(horizontalScroll.current.getBoundingClientRect());
+    // console.log(horizontalScroll.current.getBoundingClientRect());
   };
 
   useEffect(() => {
