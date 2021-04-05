@@ -1,11 +1,11 @@
 import React from "react";
-import { Button } from "@components/Button";
 import {
   DonateWrapper,
   DonateStyle,
   DonateHeading,
   DonateParagraph,
   DonateColumn,
+  DonateButton,
 } from "./Donate.styles";
 
 const Donate = () => {
@@ -20,9 +20,9 @@ const Donate = () => {
             You can support mentally unwell people by donating, we are more than
             happy with what you share
           </DonateParagraph>
-          <Button primary="true" to="/">
+          <DonateButton primary="true" to="/">
             Donate
-          </Button>
+          </DonateButton>
         </DonateColumn>
       </DonateStyle>
     </DonateWrapper>

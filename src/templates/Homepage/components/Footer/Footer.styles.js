@@ -15,10 +15,13 @@ export const FooterWrapper = styled.div`
 export const FooterLogo = styled(Link)`
   img {
     object-fit: cover;
-    height: 55px;
+    height: 40px;
     width: auto;
     text-decoration: none;
     cursor: pointer;
+    @media (min-width: 600px) {
+      height: 55px;
+    }
   }
 `;
 

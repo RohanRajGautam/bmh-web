@@ -4,19 +4,27 @@ import { Link } from "gatsby";
 const graniteGray = "#2C3336";
 
 export const BlogWrapper = styled.div`
-  /* margin: 72px 0 140px 96px; */
   padding: 5vw;
   margin-bottom: 5em;
+  .slick-dots {
+    display: none !important;
+  }
   .slick-slide {
-    margin: 0 20px;
+    margin: 0 10px;
+  }
+
+  @media (min-width: 600px) {
+    .slick-slide {
+      margin: 0 20px;
+    }
+    .slick-dots {
+      display: block !important;
+    }
   }
 `;
 
 export const SliderWrapper = styled.div`
   margin-top: 40px;
-  .slick-slide {
-    margin: 0 20px;
-  }
 `;
 
 export const HeadingWrapper = styled.div`

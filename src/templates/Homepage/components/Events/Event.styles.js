@@ -7,13 +7,26 @@ export const EventWrapper = styled.div`
   margin-top: 100px;
   padding: 5vw;
   margin-bottom: 5em;
+  .slick-slide {
+    margin: 0 5px;
+  }
+  .slick-dots {
+    display: none !important;
+  }
+  @media (min-width: 600px) {
+    .slick-slide {
+      margin: 0 20px;
+    }
+    .slick-dots {
+      display: block !important;
+    }
+  }
 `;
 
 export const EventCard = styled.div`
-  margin-right: 37px;
   border-radius: 12px;
-  width: 450px;
-  padding: 35px;
+  padding: 20px;
+  width: 250px;
   border: 1px solid ${medicalGrey};
   color: ${medicalGrey};
   transition: all 300ms;
@@ -30,6 +43,11 @@ export const EventCard = styled.div`
     time {
       color: #fff;
     }
+  }
+
+  @media (min-width: 600px) {
+    width: 450px;
+    padding: 35px;
   }
 `;
 
@@ -54,25 +72,34 @@ export const EventDate = styled.div`
 `;
 
 export const EventTitle = styled.h2`
-  font-size: 24px;
+  font-size: 14px;
   font-family: Merriweather;
   transition: color 300ms;
   line-height: 1.6;
   font-weight: 900;
   letter-spacing: 0.1px;
-  margin-top: 210px;
-  margin-bottom: 36px;
+  margin-top: 120px;
+  margin-bottom: 20px;
   color: ${primary};
+  @media (min-width: 600px) {
+    font-size: 24px;
+    margin-bottom: 36px;
+    margin-top: 210px;
+  }
 `;
 
 export const EventTime = styled.time`
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 600;
   transition: color 300ms;
   letter-spacing: 0.1px;
   font-family: Mulish;
   margin-bottom: 6px;
   display: block;
+  @media (min-width: 600px) {
+    margin-bottom: 4px;
+    font-size: 16px;
+  }
 `;
 
 export const NavigationButton = styled.div`

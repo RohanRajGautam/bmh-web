@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import donate from "@images/donate/donate1.png";
+import { Button } from "@components/Button";
 
 export const DonateWrapper = styled.div`
   width: 100%;
@@ -16,6 +17,7 @@ export const DonateWrapper = styled.div`
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  margin-top: 100px;
   @media (min-width: 768px) {
     padding: 0;
     padding-top: 36%;
@@ -35,17 +37,18 @@ export const DonateStyle = styled.div`
 
 export const DonateColumn = styled.div`
   font-size: 5px;
-  width: 80%;
+  width: 100%;
+  @media (min-width: 481px) {
+    width: 80%;
+  }
   @media (min-width: 768px) {
+    font-size: 4px;
     position: absolute;
     top: 50%;
     bottom: 0;
     right: 0;
     width: 40%;
     transform: translateY(-50%);
-  }
-  @media (min-width: 768px) {
-    font-size: 4px;
   }
   @media (min-width: 1025px) {
     font-size: 5px;
@@ -65,7 +68,11 @@ export const DonateHeading = styled.h2`
   margin: 0 auto 0.75em;
   line-height: 1.35;
   color: #fff;
-  width: 80%;
+  text-align: center;
+  @media (min-width: 481px) {
+    width: 80%;
+    text-align: left;
+  }
   @media (min-width: 768px) {
     margin: 0 0 0.75em 0;
   }
@@ -77,8 +84,17 @@ export const DonateParagraph = styled.div`
   line-height: 1.7;
   color: #fff;
   margin: 0 auto 3em;
-  width: 80%;
+  text-align: center;
+  @media (min-width: 481px) {
+    width: 80%;
+    text-align: left;
+  }
   @media (min-width: 768px) {
     margin: 0 0 3em 0;
   }
+`;
+
+export const DonateButton = styled(Button)`
+  display: block;
+  margin: 0 auto;
 `;

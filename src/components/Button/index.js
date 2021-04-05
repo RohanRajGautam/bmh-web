@@ -29,7 +29,8 @@ export const Button = styled(Link)`
 
   @media screen and (max-width: 860px) {
     padding: 1.5rem 5rem;
-    font-size: 18px;
+    font-size: 14px;
     width: 20em;
+    max-width: 80%;
   }
 `;
