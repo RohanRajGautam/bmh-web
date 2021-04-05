@@ -92,6 +92,7 @@ function SamplePrevArrow(props) {
 }
 
 const Blog = props => {
+  console.log(props.data);
   return (
     <BlogWrapper>
       <HeadingWrapper>
@@ -121,14 +122,15 @@ const Blog = props => {
       </HeadingWrapper>
       <SliderWrapper>
         <Slider {...settings}>
-          {staticBlog.map((item, index) => (
-            <BlogCard
-              title={item.title}
-              thumbnail={item.thumbnail}
-              desc={item.desc}
-              key={index}
-            />
-          ))}
+          {props &&
+            props.data.allPost.nodes.map((item, index) => (
+              <BlogCard
+                title={item.title}
+                thumbnail={item.featuredImage.node.sourceUrl}
+                desc={item.excerpt.replace(/<[^>]+>/g, "")}
+                key={index}
+              />
+            ))}
         </Slider>
       </SliderWrapper>
     </BlogWrapper>
