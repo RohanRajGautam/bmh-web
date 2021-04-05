@@ -10,20 +10,21 @@ import {
 } from "./Categories.style";
 
 const Categories = props => {
+  console.log(props);
   return (
     <CategoryWrapper>
-      <Heading clean>Mental Health & Awareness Articles</Heading>
-      <BlogBreadCrum>Home>Blogs & Articles</BlogBreadCrum>
+      <Heading clean>{props && props.data.name}</Heading>
+      <BlogBreadCrum>Home {">"} Blogs & Articles</BlogBreadCrum>
       <CategoryBlockWrapper>
         <CategoryBlock>
-          {StaticData &&
-            StaticData.map((item, index) => (
+          {props.data &&
+            props.data.posts.nodes.map((item, index) => (
               <CategoryCard
                 key={index}
                 title={item.title}
-                author={item.author}
-                date={item.date}
-                image={item.image}
+                author={item.author.node.name}
+                date={item.date.substring(0, 10)}
+                image={item.featuredImage.node.sourceUrl}
               />
             ))}
         </CategoryBlock>

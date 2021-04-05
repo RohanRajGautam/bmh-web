@@ -15,7 +15,7 @@ import {
   HorizontalComponent,
 } from "./components";
 
-const Homepage = () => {
+const Homepage = props => {
   React.useEffect(() => {
     Aos.init({
       duration: 500,
@@ -31,7 +31,7 @@ const Homepage = () => {
       <FullPageText />
       <StoryPage />
       <HorizontalComponent />
-      <Blog />
+      <Blog data={props.data} />
       <Event />
       <Donate />
       <Newsletter />

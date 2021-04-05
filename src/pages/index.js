@@ -1,8 +1,31 @@
 import * as React from "react";
 import Page from "../templates/Homepage";
+import { graphql } from "gatsby";
 
-const Index = () => {
-  return <Page title="Home" />;
+const Index = ({ data }) => {
+  console.log(data);
+  return <Page data={data} title="Home" />;
 };
+
+export const query = graphql`
+  query {
+    allPost: allWpPost {
+      nodes {
+        id
+        uri
+        slug
+        title
+        date
+        excerpt
+        authorId
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default Index;

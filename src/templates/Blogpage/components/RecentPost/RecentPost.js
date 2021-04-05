@@ -49,12 +49,12 @@ const RecentPost = props => {
       <Heading clean>Recent Articles</Heading>
       <RecentBlockWrapper>
         <Slider {...settings}>
-          {StaticData &&
-            StaticData.map((item, index) => (
+          {props.data &&
+            props.data.posts.nodes.map((item, index) => (
               <RecentCard
                 title={item.title}
-                image={item.image}
-                date={item.date}
+                image={item.featuredImage.node.sourceUrl}
+                date={item.date.substring(0, 10)}
                 key={index}
               />
             ))}

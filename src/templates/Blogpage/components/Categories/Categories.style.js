@@ -133,7 +133,7 @@ export const CategoryMetaWrapper = styled.p`
   margin-top: 10px;
 `;
 
-export const CategoryAuthor = styled.div`
+export const CategoryAuthor = styled.span`
   font-size: 11px;
   letter-spacing: 0.3px;
   font-family: Mulish;
@@ -143,7 +143,7 @@ export const CategoryAuthor = styled.div`
   }
 `;
 
-export const BlogBreadCrum = styled.div`
+export const BlogBreadCrum = styled.span`
   font-size: 14px;
   font-weight: 700;
   font-family: Mulish;
