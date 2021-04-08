@@ -97,7 +97,7 @@ const Blog = props => {
     <BlogWrapper>
       <HeadingWrapper>
         <Heading>On The Blog</Heading>
-        <StyledLink to="/">
+        <StyledLink to="/blog">
           <span>Check our blog</span>
           <svg
             width="78"

@@ -1,26 +1,38 @@
 import styled from "styled-components";
+import { Link } from "gatsby";
 
 const medicalGrey = "#5F6468";
 const graniteGrey = "#2C3336";
 const primary = "#6CA448";
 
 export const Card = styled.div`
-  width: 250px;
-  @media (min-width: 600px) {
-    width: 350px;
+  width: 350px;
+  &:hover {
+    .Cardstyles__CardThumbnail-dOkYCA {
+      transform: scale(1.05);
+      transition: transform 300ms;
+    }
   }
 `;
 
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
+
+export const CardThumbnailWrapper = styled.div`
+  overflow: hidden;
+  height: 340px;
+  border-radius: 12px 12px 0px 0px;
+`;
+
 export const CardThumbnail = styled.div`
-  height: 200px;
+  height: 100%;
   background-image: url(${props => props.thumbnail});
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 12px 12px 0px 0px;
-  @media (min-width: 600px) {
-    height: 340px;
-  }
+  overflow: hidden;
+  transition: transform 300ms;
 `;
 
 export const CardDesc = styled.div`

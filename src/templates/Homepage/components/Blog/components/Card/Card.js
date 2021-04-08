@@ -7,20 +7,26 @@ import {
   CardText,
   CardThumbnail,
   CardTitle,
+  StyledLink,
+  CardThumbnailWrapper,
 } from "./Card.styles";
 
 const BlogCard = props => {
   return (
-    <Card>
-      <CardThumbnail thumbnail={props.thumbnail} />
-      <CardDesc>
-        <CardTitle>{props.title}</CardTitle>
-        <CardText>{props.desc}</CardText>
-        <CardCta>
-          <Link to="/">Learn more</Link>
-        </CardCta>
-      </CardDesc>
-    </Card>
+    <StyledLink to="/blog-page">
+      <Card>
+        <CardThumbnailWrapper>
+          <CardThumbnail thumbnail={props.thumbnail} />
+        </CardThumbnailWrapper>
+        <CardDesc>
+          <CardTitle>{props.title}</CardTitle>
+          <CardText>{props.desc}</CardText>
+          <CardCta>
+            <Link to="/blog-page">Learn more</Link>
+          </CardCta>
+        </CardDesc>
+      </Card>
+    </StyledLink>
   );
 };
 
