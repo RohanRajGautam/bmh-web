@@ -19,7 +19,6 @@ const Homepage = props => {
   React.useEffect(() => {
     Aos.init({
       duration: 500,
-      disable: "mobile",
       // easing: "ease-in-sine",
     });
   }, []);

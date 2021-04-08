@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 const primaryColor = "#6CA448";
 
 export const Heading = styled.h2`
-  font-size: ${({ big }) => (big ? "4rem;" : "3rem;")};
+  font-size: ${({ big }) => (big ? "4rem;" : "2rem;")};
   user-select: none;
   font-weight: 700;
   color: #2c3336;
@@ -19,7 +19,13 @@ export const Heading = styled.h2`
         background-color: ${primaryColor};
         width: 85px;
         display: block;
-        margin-top: 3rem;
+        margin-top: 24px;
+        @media (min-width: 576px) {
+          margin-top: 3rem;
+        }
       }
     `}
+  @media (min-width:576px) {
+    font-size: 3rem;
+  }
 `;

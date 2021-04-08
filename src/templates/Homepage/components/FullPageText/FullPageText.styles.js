@@ -40,6 +40,7 @@ export const MobileTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   top: 10;
+  position: relative;
 `;
 
 export const Divider = styled.div`
