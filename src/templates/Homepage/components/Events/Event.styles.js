@@ -104,10 +104,10 @@ export const EventTime = styled.time`
 
 export const NavigationButton = styled.div`
   position: absolute;
-  bottom: -80px;
+  bottom: -50px;
   button {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     border: 1px solid #c5ccd3;
     border-radius: 3px;
     display: grid;
@@ -118,10 +118,20 @@ export const NavigationButton = styled.div`
       background-color: #f4f4f4;
     }
   }
+  @media (min-width: 768px) {
+    bottom: -80px;
+    button {
+      height: 40px;
+      width: 40px;
+    }
+  }
   ${({ next }) =>
     next &&
     css`
-      left: 80px;
+      left: 60px;
+      @media (min-width: 768px) {
+        left: 80px;
+      }
     `}
 
   ${({ prev }) =>

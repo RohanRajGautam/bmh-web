@@ -5,12 +5,12 @@ const graniteGray = "#2C3336";
 
 export const BlogWrapper = styled.div`
   padding: 5vw;
-  margin-bottom: 5em;
+  margin: 5em 0;
   .slick-dots {
     display: none !important;
   }
   .slick-slide {
-    margin: 0 10px;
+    margin: 0 5px;
   }
 
   @media (min-width: 600px) {
@@ -30,8 +30,12 @@ export const SliderWrapper = styled.div`
 export const HeadingWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-right: 96px;
+  @media (min-width: 768px) {
+    justify-content: space-between;
+  }
+  @media (min-width: 1024px) {
+    margin-right: 96px;
+  }
 `;
 
 export const StyledLink = styled(Link)`
@@ -46,14 +50,32 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   display: flex;
   align-items: center;
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+  }
+`;
+
+export const StyledLinkMobile = styled(StyledLink)`
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+  font-size: 14px;
+  svg {
+    height: 14px;
+    width: 26px;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const NavigationButton = styled.div`
   position: absolute;
-  bottom: -80px;
+  bottom: -50px;
   button {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     border: 1px solid #c5ccd3;
     border-radius: 3px;
     display: grid;
@@ -64,10 +86,21 @@ export const NavigationButton = styled.div`
       background-color: #f4f4f4;
     }
   }
+  @media (min-width: 768px) {
+    bottom: -80px;
+
+    button {
+      height: 40px;
+      width: 40px;
+    }
+  }
   ${({ next }) =>
     next &&
     css`
-      left: 80px;
+      left: 60px;
+      @media (min-width: 768px) {
+        left: 80px;
+      }
     `}
 
   ${({ prev }) =>

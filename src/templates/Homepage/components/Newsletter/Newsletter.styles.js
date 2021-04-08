@@ -6,9 +6,12 @@ const borderColor = "#bdbdbd";
 const graniteGrey = "#2C3336";
 
 export const NewsletterWrapper = styled.div`
-  padding: 65px 40px;
+  padding: 2rem;
   background-color: ${backgroundColor};
   font-size: 6px;
+  @media (min-width: 576px) {
+    padding: 65px 40px;
+  }
   @media (min-width: 1024px) {
     font-size: 8px;
     padding: 100px 85px;

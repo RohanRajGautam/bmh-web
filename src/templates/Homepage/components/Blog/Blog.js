@@ -9,6 +9,7 @@ import {
   HeadingWrapper,
   StyledLink,
   NavigationButton,
+  StyledLinkMobile,
 } from "./Blog.styles";
 
 const settings = {
@@ -17,7 +18,7 @@ const settings = {
   swipeToSlide: true,
   infinite: true,
   autoplay: false,
-  speed: 1000,
+  speed: 3000,
   slidesToScroll: 1,
   cssEase: "linear",
   variableWidth: true,
@@ -97,7 +98,7 @@ const Blog = props => {
     <BlogWrapper>
       <HeadingWrapper>
         <Heading>On The Blog</Heading>
-        <StyledLink to="/">
+        <StyledLink to="/blog">
           <span>Check our blog</span>
           <svg
             width="78"
@@ -133,6 +134,28 @@ const Blog = props => {
             ))}
         </Slider>
       </SliderWrapper>
+      <StyledLinkMobile to="/blog">
+        <span>Check our blog</span>
+        <svg
+          width="78"
+          height="44"
+          viewBox="0 0 78 44"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="56.1667" cy="21.9002" r="21.3333" stroke="#2C3336" />
+          <path
+            d="M53.4193 13.0669L62.3788 22.0266L53.4193 30.986"
+            stroke="#2C3336"
+            strokeWidth="3"
+          />
+          <path
+            d="M62.3807 22.0264H0.977905"
+            stroke="#2C3336"
+            strokeWidth="3"
+          />
+        </svg>
+      </StyledLinkMobile>
     </BlogWrapper>
   );
 };

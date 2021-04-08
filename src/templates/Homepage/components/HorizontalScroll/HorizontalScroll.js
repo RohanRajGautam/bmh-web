@@ -15,6 +15,10 @@ import {
   HorizontalComponentBlockWrapper,
   HorizontalComponentTitleWrapper,
   HorizontalComponentWrapper,
+  HorizontalComponentFourthOrder,
+  HorizontalComponentFifthOrder,
+  HorizontalComponentMobile,
+  HorizontalComponentDesktop,
 } from "./HorizontalScroll.styles";
 import { Services, HealingDesc, FutureDesc } from "./HorizontalScroll.data";
 
@@ -40,10 +44,10 @@ const HorizontalScroll = props => {
             <HorizontalComponentTitle>Beautiful Minds</HorizontalComponentTitle>
             <HorizontalComponentHeading>Medical</HorizontalComponentHeading>
           </div>
-          <div>
+          <HorizontalComponentDesktop>
             <HorizontalComponentTitle>Beautiful Minds</HorizontalComponentTitle>
             <HorizontalComponentHeading>Wellness</HorizontalComponentHeading>
-          </div>
+          </HorizontalComponentDesktop>
         </HorizontalComponentTitleWrapper>
         <HorizontalComponentBlockWrapper>
           <HorizontalComponentBlock>
@@ -55,7 +59,25 @@ const HorizontalScroll = props => {
             </SubtitleWrapper>
             <FirstText>{HealingDesc}</FirstText>
             <ServicesWrapper>
-              <ServicesHeading> Services</ServicesHeading>
+              <ServicesHeading>
+                Services
+                <span>
+                  {" "}
+                  <svg
+                    width="13"
+                    height="8"
+                    viewBox="0 0 13 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.872559 0.774292L6.35211 6.25345L11.8313 0.774292"
+                      stroke="#6CA448"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </span>
+              </ServicesHeading>
               <ServicesItemWrapper>
                 {Services &&
                   Services.map((item, index) => (
@@ -79,13 +101,35 @@ const HorizontalScroll = props => {
               />
             </svg>
           </HorizontalComponentBlock>
-          <HorizontalComponentBlock>
+          <HorizontalComponentMobile>
+            <HorizontalComponentTitle>Beautiful Minds</HorizontalComponentTitle>
+            <HorizontalComponentHeading>Wellness</HorizontalComponentHeading>
+          </HorizontalComponentMobile>
+          <HorizontalComponentFifthOrder>
             <SubtitleWrapper>
               <HorizontalHeading>Empowering your Future</HorizontalHeading>
             </SubtitleWrapper>
             <FirstText>{FutureDesc}</FirstText>
             <ServicesWrapper>
-              <ServicesHeading> Services</ServicesHeading>
+              <ServicesHeading>
+                Services
+                <span>
+                  {" "}
+                  <svg
+                    width="13"
+                    height="8"
+                    viewBox="0 0 13 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.872559 0.774292L6.35211 6.25345L11.8313 0.774292"
+                      stroke="#6CA448"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </span>
+              </ServicesHeading>
               <ServicesItemWrapper>
                 {Services &&
                   Services.map((item, index) => (
@@ -93,10 +137,10 @@ const HorizontalScroll = props => {
                   ))}
               </ServicesItemWrapper>
             </ServicesWrapper>
-          </HorizontalComponentBlock>
-          <HorizontalComponentBlock>
+          </HorizontalComponentFifthOrder>
+          <HorizontalComponentFourthOrder>
             <Image></Image>
-          </HorizontalComponentBlock>
+          </HorizontalComponentFourthOrder>
         </HorizontalComponentBlockWrapper>
       </HorizontalComponent>
     </HorizontalComponentWrapper>

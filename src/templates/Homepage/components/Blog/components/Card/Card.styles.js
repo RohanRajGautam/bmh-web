@@ -1,26 +1,60 @@
 import styled from "styled-components";
+import { Link } from "gatsby";
 
 const medicalGrey = "#5F6468";
 const graniteGrey = "#2C3336";
 const primary = "#6CA448";
+const blueGrey = "#C5CCD3";
 
 export const Card = styled.div`
   width: 250px;
+  &:hover {
+    .Cardstyles__CardThumbnail-dOkYCA {
+      transform: scale(1.05);
+      transition: transform 300ms;
+    }
+  }
+  .slick-slide {
+    margin: 0 5px;
+  }
+  .slick-dots {
+    display: none !important;
+  }
+  @media (min-width: 600px) {
+    .slick-slide {
+      margin: 0 20px;
+    }
+    .slick-dots {
+      display: block !important;
+    }
+  }
   @media (min-width: 600px) {
     width: 350px;
   }
 `;
 
-export const CardThumbnail = styled.div`
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
+
+export const CardThumbnailWrapper = styled.div`
+  overflow: hidden;
   height: 200px;
-  background-image: url(${props => props.thumbnail});
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
   border-radius: 12px 12px 0px 0px;
   @media (min-width: 600px) {
     height: 340px;
   }
+`;
+
+export const CardThumbnail = styled.div`
+  height: 100%;
+  background-color: ${blueGrey};
+  background-image: url(${props => props.thumbnail});
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: transform 300ms;
 `;
 
 export const CardDesc = styled.div`
