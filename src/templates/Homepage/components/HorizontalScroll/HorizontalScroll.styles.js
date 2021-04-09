@@ -1,10 +1,14 @@
 import { Heading } from "@components/Heading";
 import styled from "styled-components";
+import FeaturedImageOne from "@images/home/medical.png";
+import FeaturedImageTwo from "@images/home/wellness.png";
 
 const primary = "#6CA448";
 const graniteGrey = "#2C3336";
 const lightGreen = "#86CF57";
 const blueGrey = "#C5CCD3";
+const medicalGrey = "#5f6468";
+const gray3 = "#828282";
 
 export const HorizontalComponentWrapper = styled.div`
   @media (min-width: 1024px) {
@@ -13,15 +17,83 @@ export const HorizontalComponentWrapper = styled.div`
 `;
 
 export const HorizontalComponent = styled.div`
-  margin-top: 100px;
-  padding: 5vw;
   margin-bottom: 5em;
   font-size: 12px;
-  background-color: ${graniteGrey};
   width: fit-content;
+  display: flex;
   @media (min-width: 1024px) {
     min-height: 100vh;
   }
+`;
+
+export const HorizontalTitleDotWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  @media (min-width: 576px) {
+    margin-bottom: 60px;
+  }
+  @media (min-width: 1024px) {
+    margin-bottom: 25px;
+  }
+  @media (min-width: 1200px) {
+    margin-bottom: 40px;
+  }
+  @media (min-width: 1824px) {
+    margin-bottom: 70px;
+  }
+`;
+
+export const HorizontalTitleDotWrapperRight = styled(HorizontalTitleDotWrapper)`
+  left: -100px;
+  margin-right: -55px;
+  position: relative;
+  top: 25%;
+`;
+
+export const DisplayFlex = styled.div`
+  display: flex;
+  align-items: baseline;
+`;
+
+export const HorizontalComponentDotWrapper = styled.div`
+  position: relative;
+  svg {
+    position: absolute;
+    left: 115%;
+    top: 10%;
+  }
+`;
+
+export const HorizontalComponentDotWrapperHealing = styled.div`
+  position: relative;
+  left: -30px;
+  svg {
+    position: absolute;
+    top: -230%;
+    transform: translateX(-125%);
+  }
+`;
+
+export const HorizontalComponentDot = styled.div`
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(108, 164, 72, 0.2);
+  display: grid;
+  place-items: center;
+  margin-left: 24px;
+`;
+
+export const HorizontalComponentDotHealing = styled(HorizontalComponentDot)`
+  margin-left: -30px;
+`;
+
+export const HorizontalComponentDotInner = styled.div`
+  height: 16px;
+  width: 16px;
+  background-color: ${primary};
+  border-radius: 50%;
 `;
 
 export const HorizontalComponentBlockWrapper = styled.div`
@@ -29,7 +101,9 @@ export const HorizontalComponentBlockWrapper = styled.div`
   flex-direction: column;
   @media (min-width: 1024px) {
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
+    padding: 15vh 0;
+    margin-left: 168px;
   }
 `;
 
@@ -43,6 +117,17 @@ export const HorizontalComponentBlock = styled.div`
       display: block;
     }
   }
+`;
+
+export const HorizontalComponentCollageWrapper = styled(
+  HorizontalComponentBlock
+)`
+  margin-right: 0;
+  position: relative;
+`;
+
+export const HorizontalFullWidthBlock = styled.div`
+  width: 100vw;
 `;
 
 export const HorizontalComponentFourthOrder = styled(HorizontalComponentBlock)`
@@ -61,7 +146,7 @@ export const HorizontalComponentFifthOrder = styled(HorizontalComponentBlock)`
 
 export const HorizontalComponentMobile = styled.div`
   display: block;
-  margin-top: 96px;
+  margin-top: 72px;
   @media (min-width: 1024px) {
     display: none;
     margin-top: 0;
@@ -79,13 +164,13 @@ export const HorizontalComponentTitle = styled.h3`
   font-size: 14px;
   font-family: Mulish;
   letter-spacing: 0.1px;
-  color: #fff;
+  color: ${medicalGrey};
   margin-bottom: 8px;
   @media (min-width: 576px) {
     font-size: 24px;
     margin-bottom: 18px;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1824px) {
     font-size: 36px;
     margin-bottom: 24px;
   }
@@ -97,19 +182,65 @@ export const HorizontalComponentTitleWrapper = styled.div`
   justify-content: space-between;
 `;
 
+export const HorizontalComponentTitleImageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  padding: 5vh 0;
+  @media (min-width: 1440px) {
+    width: 70vw;
+  }
+`;
+
+export const HorizontalComponentTitleImageWrapperRight = styled(
+  HorizontalComponentTitleImageWrapper
+)`
+  padding: 5vh 0;
+  margin-left: 35vw;
+`;
+
+export const HorizontalComponentFeaturedImageWrapper = styled.div`
+  width: 100%;
+`;
+
+export const HorizontalComponentFeaturedImage = styled.div`
+  background-image: url(${FeaturedImageOne});
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-top: 80%;
+  position: relative;
+`;
+
+export const HorizontalComponentFeaturedImageRight = styled(
+  HorizontalComponentFeaturedImage
+)`
+  background-image: url(${FeaturedImageTwo});
+`;
+
 export const HorizontalComponentHeading = styled.h2`
-  color: ${lightGreen};
+  color: ${primary};
   font-family: Merriweather;
   letter-spacing: 0.1px;
-  margin-bottom: 40px;
   font-size: 24px;
   @media (min-width: 576px) {
     font-size: 40px;
-    margin-bottom: 60px;
   }
   @media (min-width: 1024px) {
+    font-size: 48px;
+  }
+  @media (min-width: 1824px) {
     font-size: 72px;
-    margin-bottom: 70px;
+  }
+`;
+
+export const HorizontalComponentHeadingWrapperRight = styled.div`
+  position: relative;
+  svg {
+    position: absolute;
+    left: 90%;
+    top: 90%;
   }
 `;
 
@@ -131,15 +262,22 @@ export const Image = styled.div`
 export const SubtitleWrapper = styled.div`
   margin-bottom: 48px;
   @media (min-width: 1024px) {
-    margin-bottom: 96px;
+    margin-bottom: 40px;
+  }
+  @media (min-width: 1824px) {
+    margin-bottom: 72px;
   }
 `;
 
 export const HorizontalHeading = styled(Heading)`
-  color: #fff;
+  color: ${graniteGrey};
   margin-top: 40px;
   @media (min-width: 1024px) {
     margin-top: 0;
+    font-size: 3rem;
+  }
+  @media (min-width: 1824px) {
+    font-size: 4.8rem;
   }
 `;
 
@@ -147,25 +285,58 @@ export const FirstText = styled.p`
   font-family: Mulish;
   font-size: 14px;
   letter-spacing: 0.1px;
-  color: ${blueGrey};
+  color: ${gray3};
   margin-bottom: 48px;
   @media (min-width: 768px) {
     font-size: 20px;
   }
 
   @media (min-width: 1024px) {
-    margin-bottom: 96px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    width: 60%;
+  }
+  @media (min-width: 1824px) {
+    margin-bottom: 72px;
     font-size: 24px;
-    width: 75%;
+    width: 50%;
   }
 `;
 
 export const ServicesWrapper = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: baseline;
-  flex-direction: column;
   @media (min-width: 1024px) {
-    flex-direction: row;
+    grid-template-columns: 10% 90%;
+  }
+`;
+
+export const ServicesWrapperRight = styled(ServicesWrapper)`
+  @media (min-width: 1024px) {
+    grid-template-columns: 20% 80%;
+  }
+`;
+
+export const WellnessSvgWrapper = styled.div`
+  svg {
+    @media (max-width: 1824px) {
+      width: 290px;
+      height: 40px;
+    }
+  }
+`;
+
+export const MedicalSvgWrapper = styled.div`
+  svg {
+    @media (max-width: 1824px) {
+      height: 75px;
+      width: 220px;
+    }
+    @media (max-width: 1440px) {
+      width: 160px;
+      height: 60px;
+    }
   }
 `;
 
@@ -190,6 +361,11 @@ export const ServicesHeading = styled.h2`
   @media (min-width: 1024px) {
     margin-right: 28px;
     margin-bottom: 0;
+    font-size: 30px;
+  }
+  @media (min-width: 1824px) {
+    margin-right: 28px;
+    margin-bottom: 0;
     font-size: 36px;
   }
 `;
@@ -199,7 +375,7 @@ export const ServicesItemWrapper = styled.div`
   grid-row-gap: 16px;
   grid-template-columns: 1fr;
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 36px;
     grid-column-gap: 60px;
   }
@@ -208,13 +384,13 @@ export const ServicesItemWrapper = styled.div`
 export const ServicesItems = styled.div`
   font-size: 14px;
   letter-spacing: 0.1px;
-  color: ${blueGrey};
+  color: ${medicalGrey};
   font-family: Mulish;
   @media (min-width: 768px) {
     font-size: 20px;
     white-space: nowrap;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1824px) {
     font-size: 24px;
   }
 `;

@@ -1,9 +1,7 @@
 export const Services = [
-  "Intensive Outpatient Program (IOP)",
+  "Psychiatry & Counseling",
+  "Signature Program (Intesive Outpatient)",
   "Transcranial Magnetic Stimulation (TMS)",
-  "Psychiatry",
-  "Dialectical Transcranial Magnetic Stimulation (TMS)",
-  "Dialectical Behavior Therapy (DBT)",
   "Life & Health Coaching",
 ];
 

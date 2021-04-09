@@ -1,5 +1,5 @@
 import { Link } from "gatsby";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Button = styled(Link)`
   background: ${({ primary }) => (primary ? "#66a250" : "#fff")};
@@ -33,4 +33,12 @@ export const Button = styled(Link)`
     width: 20em;
     max-width: 80%;
   }
+  ${props =>
+    props.hover &&
+    css`
+      &:hover {
+        background-color: #fff;
+        color: #66a250;
+      }
+    `}
 `;

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
+const graniteGrey = "#2C3336";
+
 export const TextContainer = styled.div`
-  background: #2c3336;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -9,6 +10,7 @@ export const TextContainer = styled.div`
   min-height: 100vh;
   transition: 2s ease;
   padding: 0 5vw;
+  width: 100vw;
 `;
 export const Message = styled.h1`
   font-family: Merriweather;
@@ -18,9 +20,12 @@ export const Message = styled.h1`
   line-height: 140.5%;
   text-align: center;
   letter-spacing: 0.1px;
-  color: #ffffff;
   user-select: none;
   transition: 2s ease;
+  color: ${graniteGrey};
+  @media (min-width: 1024px) {
+    font-size: 96px;
+  }
 `;
 
 export const MobileView = styled.h1`
