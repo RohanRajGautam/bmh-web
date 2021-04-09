@@ -41,9 +41,8 @@ const FullPageText = () => {
           data-aos-easing="ease-in-out"
           data-aos-duration="1500"
         >
-          Leading
-          <br />
-          in Wholistic Mental Health
+          You are a whole person,
+          <br /> not a mental illness.
         </Message>
       </Hidden>
     </TextContainer>

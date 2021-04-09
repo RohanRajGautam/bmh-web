@@ -27,9 +27,9 @@ const Homepage = props => {
     <Layout>
       <SEO title="Home" />
       <Hero />
-      <FullPageText />
-      <StoryPage />
+      {/* <FullPageText /> */}
       <HorizontalComponent />
+      <StoryPage />
       <Blog data={props.data} />
       <Event />
       <Donate />

@@ -13,14 +13,33 @@ import {
   ServicesItems,
   SubtitleWrapper,
   HorizontalComponentBlockWrapper,
-  HorizontalComponentTitleWrapper,
   HorizontalComponentWrapper,
   HorizontalComponentFourthOrder,
   HorizontalComponentFifthOrder,
   HorizontalComponentMobile,
-  HorizontalComponentDesktop,
+  HorizontalComponentTitleImageWrapper,
+  HorizontalFullWidthBlock,
+  HorizontalComponentFeaturedImageWrapper,
+  HorizontalComponentFeaturedImage,
+  HorizontalTitleDotWrapper,
+  HorizontalComponentDot,
+  HorizontalComponentDotInner,
+  DisplayFlex,
+  HorizontalComponentDotWrapper,
+  HorizontalComponentDotWrapperHealing,
+  HorizontalComponentDotHealing,
+  HorizontalComponentCollageWrapper,
+  HorizontalComponentTitleImageWrapperRight,
+  HorizontalComponentFeaturedImageRight,
+  HorizontalTitleDotWrapperRight,
+  HorizontalComponentHeadingWrapperRight,
+  ServicesWrapperRight,
+  WellnessSvgWrapper,
+  MedicalSvgWrapper,
 } from "./HorizontalScroll.styles";
 import { Services, HealingDesc, FutureDesc } from "./HorizontalScroll.data";
+import FullPageText from "../FullPageText";
+import { Collage } from "./components";
 
 const HorizontalScroll = props => {
   const horizontalScroll = useRef();
@@ -39,24 +58,68 @@ const HorizontalScroll = props => {
   return (
     <HorizontalComponentWrapper ref={horizontalScroll}>
       <HorizontalComponent>
-        <HorizontalComponentTitleWrapper>
-          <div>
-            <HorizontalComponentTitle>Beautiful Minds</HorizontalComponentTitle>
+        <HorizontalFullWidthBlock>
+          <FullPageText />
+        </HorizontalFullWidthBlock>
+
+        <HorizontalComponentTitleImageWrapper>
+          <HorizontalComponentTitle>Beautiful Minds</HorizontalComponentTitle>
+
+          <HorizontalTitleDotWrapper>
             <HorizontalComponentHeading>Medical</HorizontalComponentHeading>
-          </div>
-          <HorizontalComponentDesktop>
-            <HorizontalComponentTitle>Beautiful Minds</HorizontalComponentTitle>
-            <HorizontalComponentHeading>Wellness</HorizontalComponentHeading>
-          </HorizontalComponentDesktop>
-        </HorizontalComponentTitleWrapper>
+            <HorizontalComponentDotWrapper>
+              <HorizontalComponentDot>
+                <HorizontalComponentDotInner></HorizontalComponentDotInner>
+              </HorizontalComponentDot>
+              <MedicalSvgWrapper>
+                <svg
+                  width="296"
+                  height="117"
+                  viewBox="0 0 296 117"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 8.8329C50.8333 -2.50043 146.5 -11.5 203.5 49.8329C245.471 94.9941 282.167 118.499 295 115.333"
+                    stroke="#5F6468"
+                    stroke-dasharray="15 17"
+                  />
+                </svg>
+              </MedicalSvgWrapper>
+            </HorizontalComponentDotWrapper>
+          </HorizontalTitleDotWrapper>
+
+          <HorizontalComponentFeaturedImageWrapper>
+            <HorizontalComponentFeaturedImage></HorizontalComponentFeaturedImage>
+          </HorizontalComponentFeaturedImageWrapper>
+        </HorizontalComponentTitleImageWrapper>
+
         <HorizontalComponentBlockWrapper>
-          <HorizontalComponentBlock>
-            <Image></Image>
-          </HorizontalComponentBlock>
-          <HorizontalComponentBlock>
-            <SubtitleWrapper>
-              <HorizontalHeading>Healing begins here</HorizontalHeading>
-            </SubtitleWrapper>
+          <HorizontalComponentCollageWrapper>
+            <DisplayFlex>
+              <HorizontalComponentDotWrapperHealing>
+                <HorizontalComponentDotHealing>
+                  <HorizontalComponentDotInner></HorizontalComponentDotInner>
+                </HorizontalComponentDotHealing>
+                <svg
+                  width="94"
+                  height="85"
+                  viewBox="0 0 94 85"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.5 1C30.5 17 50 87 93.5 83.5"
+                    stroke="#5F6468"
+                    stroke-dasharray="15 17"
+                  />
+                </svg>
+              </HorizontalComponentDotWrapperHealing>
+              <SubtitleWrapper>
+                <HorizontalHeading>Healing begins here</HorizontalHeading>
+              </SubtitleWrapper>
+            </DisplayFlex>
+
             <FirstText>{HealingDesc}</FirstText>
             <ServicesWrapper>
               <ServicesHeading>
@@ -85,36 +148,80 @@ const HorizontalScroll = props => {
                   ))}
               </ServicesItemWrapper>
             </ServicesWrapper>
-          </HorizontalComponentBlock>
-          <HorizontalComponentBlock>
-            <svg
-              width="2836"
-              height="611"
-              viewBox="0 0 2836 611"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.204102 580.728C261.231 631.483 435.248 660.486 776.033 290.699C1116.82 -79.0888 1936.15 -71.8381 2247.93 181.938C2497.36 384.958 2743.4 406.71 2835.24 392.209"
-                stroke="white"
-                strokeDasharray="24 32"
-              />
-            </svg>
-          </HorizontalComponentBlock>
+          </HorizontalComponentCollageWrapper>
+        </HorizontalComponentBlockWrapper>
+
+        <HorizontalComponentCollageWrapper>
+          <Collage />
+        </HorizontalComponentCollageWrapper>
+
+        <HorizontalComponentTitleImageWrapperRight>
+          <HorizontalComponentTitle>Beautiful Minds</HorizontalComponentTitle>
+          <HorizontalTitleDotWrapper>
+            <HorizontalTitleDotWrapperRight>
+              <HorizontalComponentDot>
+                <HorizontalComponentDotInner></HorizontalComponentDotInner>
+              </HorizontalComponentDot>
+            </HorizontalTitleDotWrapperRight>
+            <HorizontalComponentHeadingWrapperRight>
+              <HorizontalComponentHeading>Wellness</HorizontalComponentHeading>
+              <WellnessSvgWrapper>
+                <svg
+                  width="451"
+                  height="74"
+                  viewBox="0 0 451 74"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 1C32 81.5 333.5 -14.4999 450 73.5"
+                    stroke="#5F6468"
+                    stroke-dasharray="15 17"
+                  />
+                </svg>
+              </WellnessSvgWrapper>
+            </HorizontalComponentHeadingWrapperRight>
+          </HorizontalTitleDotWrapper>
+
+          <HorizontalComponentFeaturedImageWrapper>
+            <HorizontalComponentFeaturedImageRight />
+          </HorizontalComponentFeaturedImageWrapper>
+        </HorizontalComponentTitleImageWrapperRight>
+
+        <HorizontalComponentBlockWrapper>
           <HorizontalComponentMobile>
             <HorizontalComponentTitle>Beautiful Minds</HorizontalComponentTitle>
             <HorizontalComponentHeading>Wellness</HorizontalComponentHeading>
           </HorizontalComponentMobile>
           <HorizontalComponentFifthOrder>
-            <SubtitleWrapper>
-              <HorizontalHeading>Empowering your Future</HorizontalHeading>
-            </SubtitleWrapper>
+            <DisplayFlex>
+              <HorizontalComponentDotWrapperHealing>
+                <HorizontalComponentDotHealing>
+                  <HorizontalComponentDotInner></HorizontalComponentDotInner>
+                </HorizontalComponentDotHealing>
+                <svg
+                  width="94"
+                  height="85"
+                  viewBox="0 0 94 85"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.5 1C30.5 17 50 87 93.5 83.5"
+                    stroke="#5F6468"
+                    stroke-dasharray="15 17"
+                  />
+                </svg>
+              </HorizontalComponentDotWrapperHealing>
+              <SubtitleWrapper>
+                <HorizontalHeading>Empowering your Future</HorizontalHeading>
+              </SubtitleWrapper>
+            </DisplayFlex>
             <FirstText>{FutureDesc}</FirstText>
-            <ServicesWrapper>
+            <ServicesWrapperRight>
               <ServicesHeading>
                 Services
                 <span>
-                  {" "}
                   <svg
                     width="13"
                     height="8"
@@ -136,11 +243,9 @@ const HorizontalScroll = props => {
                     <ServicesItems key={index}>{item}</ServicesItems>
                   ))}
               </ServicesItemWrapper>
-            </ServicesWrapper>
+            </ServicesWrapperRight>
           </HorizontalComponentFifthOrder>
-          <HorizontalComponentFourthOrder>
-            <Image></Image>
-          </HorizontalComponentFourthOrder>
+          <HorizontalComponentFourthOrder></HorizontalComponentFourthOrder>
         </HorizontalComponentBlockWrapper>
       </HorizontalComponent>
     </HorizontalComponentWrapper>

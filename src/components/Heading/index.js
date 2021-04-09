@@ -28,4 +28,10 @@ export const Heading = styled.h2`
   @media (min-width:576px) {
     font-size: 3rem;
   }
+  @media (min-width: 1024px) {
+    font-size: 4rem;
+  }
+  @media (min-width: 1200px) {
+    font-size: 4.8rem;
+  }
 `;

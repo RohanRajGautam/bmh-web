@@ -39,12 +39,22 @@ export default function Hero() {
           </HeroTextContainer>
           <Hidden smDown>
             <ButtonContainer>
-              <ButtonPrimary primary="true" round="true" to="/">
+              <ButtonPrimary
+                primary="true"
+                round="true"
+                to="https://www.beautifulmindsmedical.com/"
+                hover
+              >
                 Medical
               </ButtonPrimary>
-              <Button round="true" to="/">
+              <ButtonPrimary
+                round="true"
+                primary="true"
+                to="https://beautifulmindswellness.org/"
+                hover
+              >
                 Wellness
-              </Button>
+              </ButtonPrimary>
             </ButtonContainer>
           </Hidden>
           <Hidden mdUp>
