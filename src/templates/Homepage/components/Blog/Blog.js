@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import { BlogCard } from "./components";
-import { staticBlog } from "./Blog.datas";
+// import { staticBlog } from "./Blog.datas";
 import { Heading } from "@components/Heading";
 import {
   BlogWrapper,
@@ -123,7 +123,7 @@ const Blog = props => {
       </HeadingWrapper>
       <SliderWrapper>
         <Slider {...settings}>
-          {props &&
+          {props.data.length &&
             props.data.allPost.nodes.map((item, index) => (
               <BlogCard
                 title={item.title}

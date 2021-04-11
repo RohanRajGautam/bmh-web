@@ -9,7 +9,6 @@ import {
   Footer,
   FullPageText,
   Donate,
-  Newsletter,
   Event,
   StoryPage,
   HorizontalComponent,
@@ -33,7 +32,6 @@ const Homepage = props => {
       <Blog data={props.data} />
       <Event />
       <Donate />
-      <Newsletter />
       <Footer />
     </Layout>
   );

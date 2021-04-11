@@ -1,7 +1,7 @@
 import React from "react";
 import { Heading } from "../../../../components/Heading";
 import CategoryCard from "./Card";
-import StaticData from "./Categories.data";
+// import StaticData from "./Categories.data";
 import {
   CategoryWrapper,
   CategoryBlockWrapper,
