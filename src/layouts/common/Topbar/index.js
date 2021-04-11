@@ -1,6 +1,6 @@
 import React from "react";
 import { menuData } from "@data/MenuData";
-import { Wrapper, NavMenu, NavLink } from "./TopBar.styles";
+import { Wrapper, NavMenu, NavLink } from "./Topbar.styles";
 
 const Topbar = () => {
   return (
