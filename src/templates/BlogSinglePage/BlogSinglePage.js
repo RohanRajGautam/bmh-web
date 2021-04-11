@@ -22,7 +22,7 @@ import SEO from "@layouts/common/seo";
 import ArticleCard from "@components/ArticleCard";
 import { CardContent, BlogContentData } from "./BlogSinglePage.data";
 
-const BlogPage = props => {
+const BlogSinglePage = props => {
   return (
     <Layout>
       <SEO title={props.title} />
@@ -81,4 +81,4 @@ const BlogPage = props => {
   );
 };
 
-export default BlogPage;
+export default BlogSinglePage;

@@ -5,7 +5,7 @@ import {
   NavigationButton,
 } from "./CategorySlider.styles";
 import Slider from "react-slick";
-import { staticBlog } from "../../../Homepage/components/Blog/Blog.datas";
+// import { staticBlog } from "../../../Homepage/components/Blog/Blog.datas";
 import BlogCard from "../../../Homepage/components/Blog/components/Card";
 import { Heading } from "../../../../components/Heading";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { RecentBlockWrapper, RecentWrapper } from "./RecentPost.styles";
 import { Heading } from "../../../../components/Heading";
-import StaticData from "./RecentPost.data";
+// import StaticData from "./RecentPost.data";
 import RecentCard from "./RecentCard";
 import Slider from "react-slick";
 

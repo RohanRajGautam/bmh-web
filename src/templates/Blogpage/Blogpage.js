@@ -4,7 +4,6 @@ import SEO from "@layouts/common/seo";
 import { Categories, CategorySlider, RecentPost } from "./components";
 
 const BlogPage = props => {
-  console.log(props);
   return (
     <Layout dark>
       <SEO title="Blog" />
