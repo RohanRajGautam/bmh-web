@@ -21,9 +21,7 @@ const BlogCard = props => {
         <CardDesc>
           <CardTitle>{props.title}</CardTitle>
           <CardText>{props.desc}</CardText>
-          <CardCta>
-            <Link to="/blog-page">Learn more</Link>
-          </CardCta>
+          <CardCta>Learn more</CardCta>
         </CardDesc>
       </Card>
     </StyledLink>

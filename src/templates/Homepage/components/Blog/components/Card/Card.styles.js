@@ -9,7 +9,7 @@ const blueGrey = "#C5CCD3";
 export const Card = styled.div`
   width: 250px;
   &:hover {
-    .Cardstyles__CardThumbnail-dOkYCA {
+    .Cardstyles__CardThumbnail-gfcwtT {
       transform: scale(1.05);
       transition: transform 300ms;
     }
@@ -78,6 +78,7 @@ export const CardTitle = styled.h3`
   -webkit-box-orient: vertical;
   overflow: hidden;
   -webkit-line-clamp: 2;
+  min-height: 54px;
   @media (min-width: 600px) {
     margin-bottom: 24px;
     font-size: 18px;
@@ -104,8 +105,6 @@ export const CardCta = styled.div`
   font-size: 13px;
   line-height: 19px;
   font-family: Mulish;
-  a {
-    text-decoration: none;
-    color: ${primary};
-  }
+  text-decoration: none;
+  color: ${primary};
 `;
