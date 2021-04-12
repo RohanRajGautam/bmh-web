@@ -42,16 +42,15 @@ export default function Hero() {
               <ButtonPrimary
                 primary="true"
                 round="true"
+                target="_blank"
                 to="https://www.beautifulmindsmedical.com/"
-                hover
               >
                 Medical
               </ButtonPrimary>
               <ButtonPrimary
                 round="true"
-                primary="true"
                 to="https://beautifulmindswellness.org/"
-                hover
+                target="_blank"
               >
                 Wellness
               </ButtonPrimary>
