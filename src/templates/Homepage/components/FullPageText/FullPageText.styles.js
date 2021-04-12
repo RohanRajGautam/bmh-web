@@ -24,6 +24,9 @@ export const Message = styled.h1`
   transition: 2s ease;
   color: ${graniteGrey};
   @media (min-width: 1024px) {
+    font-size: 72px;
+  }
+  @media (min-width: 1440px) {
     font-size: 96px;
   }
 `;
