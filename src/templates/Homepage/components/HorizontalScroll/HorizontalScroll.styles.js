@@ -12,7 +12,7 @@ const gray3 = "#828282";
 
 export const HorizontalComponentWrapper = styled.div`
   @media (min-width: 1024px) {
-    overflow-x: auto;
+    overflow: hidden;
   }
 `;
 
@@ -102,8 +102,15 @@ export const HorizontalComponentBlockWrapper = styled.div`
   @media (min-width: 1024px) {
     flex-direction: row;
     align-items: flex-end;
-    padding: 15vh 0;
-    margin-left: 168px;
+    padding: 15vh 0 15vh 168px;
+  }
+`;
+
+export const HorizontalComponentBlockWrapperRight = styled(
+  HorizontalComponentBlockWrapper
+)`
+  @media (min-width: 1024px) {
+    padding: 15vh 25vw 15vh 168px;
   }
 `;
 
@@ -185,17 +192,22 @@ export const HorizontalComponentTitleWrapper = styled.div`
 export const HorizontalComponentTitleImageWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 90vw;
+  width: 125vw;
   padding: 5vh 0;
+  @media (min-width: 1200px) {
+    width: 100vw;
+  }
   @media (min-width: 1440px) {
-    width: 70vw;
+    width: 80vw;
+  }
+  @media (min-width: 1824px) {
+    width: 80vw;
   }
 `;
 
 export const HorizontalComponentTitleImageWrapperRight = styled(
   HorizontalComponentTitleImageWrapper
 )`
-  padding: 5vh 0;
   margin-left: 35vw;
 `;
 
@@ -299,22 +311,17 @@ export const FirstText = styled.p`
   @media (min-width: 1824px) {
     margin-bottom: 72px;
     font-size: 24px;
-    width: 50%;
+    width: 70%;
   }
 `;
 
 export const ServicesWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
   align-items: baseline;
-  @media (min-width: 1024px) {
-    grid-template-columns: 10% 90%;
-  }
 `;
 
 export const ServicesWrapperRight = styled(ServicesWrapper)`
   @media (min-width: 1024px) {
-    grid-template-columns: 20% 80%;
   }
 `;
 
@@ -361,6 +368,9 @@ export const ServicesHeading = styled.h2`
   @media (min-width: 1024px) {
     margin-right: 28px;
     margin-bottom: 0;
+    font-size: 24px;
+  }
+  @media (min-width: 1440px) {
     font-size: 30px;
   }
   @media (min-width: 1824px) {
@@ -376,6 +386,11 @@ export const ServicesItemWrapper = styled.div`
   grid-template-columns: 1fr;
   @media (min-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 24px;
+    grid-column-gap: 36px;
+    margin: 0 40px;
+  }
+  @media (min-width: 1440px) {
     grid-row-gap: 36px;
     grid-column-gap: 60px;
   }
@@ -387,8 +402,14 @@ export const ServicesItems = styled.div`
   color: ${medicalGrey};
   font-family: Mulish;
   @media (min-width: 768px) {
-    font-size: 20px;
+    font-size: 16px;
     white-space: nowrap;
+  }
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
+  @media (min-width: 1440px) {
+    font-size: 20px;
   }
   @media (min-width: 1824px) {
     font-size: 24px;

@@ -1,10 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import {
   HorizontalComponent,
-  HorizontalComponentBlock,
   HorizontalComponentTitle,
   HorizontalComponentHeading,
-  Image,
   HorizontalHeading,
   FirstText,
   ServicesWrapper,
@@ -14,9 +12,6 @@ import {
   SubtitleWrapper,
   HorizontalComponentBlockWrapper,
   HorizontalComponentWrapper,
-  HorizontalComponentFourthOrder,
-  HorizontalComponentFifthOrder,
-  HorizontalComponentMobile,
   HorizontalComponentTitleImageWrapper,
   HorizontalFullWidthBlock,
   HorizontalComponentFeaturedImageWrapper,
@@ -36,33 +31,70 @@ import {
   ServicesWrapperRight,
   WellnessSvgWrapper,
   MedicalSvgWrapper,
+  HorizontalComponentBlock,
+  HorizontalComponentBlockWrapperRight,
 } from "./HorizontalScroll.styles";
-import { Services, HealingDesc, FutureDesc } from "./HorizontalScroll.data";
+import {
+  Services,
+  HealingDesc,
+  FutureDesc,
+  ServicesSecond,
+} from "./HorizontalScroll.data";
 import FullPageText from "../FullPageText";
 import { Collage } from "./components";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const HorizontalScroll = props => {
-  const horizontalScroll = useRef();
-
-  const handleScroll = e => {
-    // console.log(horizontalScroll.current.getBoundingClientRect());
-  };
-
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
+    const sections = gsap.utils.toArray("#horizontal-scroll-item");
+    let maxWidth = 0;
+
+    const getMaxWidth = () => {
+      maxWidth = 0;
+      sections.forEach(section => {
+        maxWidth += section.offsetWidth;
+      });
     };
+    getMaxWidth();
+    ScrollTrigger.addEventListener("refreshInit", getMaxWidth);
+
+    gsap.to(sections, {
+      x: () => `-${maxWidth - window.innerWidth}`,
+      ease: "none",
+      scrollTrigger: {
+        trigger: "#horizontal-component",
+        pin: true,
+        scrub: true,
+        end: () => `+=${maxWidth + 350}`,
+        invalidateOnRefresh: true,
+      },
+    });
+
+    sections.forEach((sct, i) => {
+      ScrollTrigger.create({
+        trigger: sct,
+        start: () =>
+          "top top-=" +
+          (sct.offsetLeft - window.innerWidth / 2) *
+            (maxWidth / (maxWidth - window.innerWidth)),
+        end: () =>
+          "+=" + sct.offsetWidth * (maxWidth / (maxWidth - window.innerWidth)),
+        toggleClass: { targets: sct, className: "active" },
+      });
+    });
   }, []);
 
   return (
-    <HorizontalComponentWrapper ref={horizontalScroll}>
-      <HorizontalComponent>
-        <HorizontalFullWidthBlock>
+    <HorizontalComponentWrapper>
+      <HorizontalComponent id="horizontal-component">
+        <HorizontalFullWidthBlock id="horizontal-scroll-item">
           <FullPageText />
         </HorizontalFullWidthBlock>
 
-        <HorizontalComponentTitleImageWrapper>
+        <HorizontalComponentTitleImageWrapper id="horizontal-scroll-item">
           <HorizontalComponentTitle>Beautiful Minds</HorizontalComponentTitle>
 
           <HorizontalTitleDotWrapper>
@@ -94,7 +126,7 @@ const HorizontalScroll = props => {
           </HorizontalComponentFeaturedImageWrapper>
         </HorizontalComponentTitleImageWrapper>
 
-        <HorizontalComponentBlockWrapper>
+        <HorizontalComponentBlockWrapper id="horizontal-scroll-item">
           <HorizontalComponentCollageWrapper>
             <DisplayFlex>
               <HorizontalComponentDotWrapperHealing>
@@ -125,7 +157,6 @@ const HorizontalScroll = props => {
               <ServicesHeading>
                 Services
                 <span>
-                  {" "}
                   <svg
                     width="13"
                     height="8"
@@ -151,11 +182,11 @@ const HorizontalScroll = props => {
           </HorizontalComponentCollageWrapper>
         </HorizontalComponentBlockWrapper>
 
-        <HorizontalComponentCollageWrapper>
+        <HorizontalComponentCollageWrapper id="horizontal-scroll-item">
           <Collage />
         </HorizontalComponentCollageWrapper>
 
-        <HorizontalComponentTitleImageWrapperRight>
+        <HorizontalComponentTitleImageWrapperRight id="horizontal-scroll-item">
           <HorizontalComponentTitle>Beautiful Minds</HorizontalComponentTitle>
           <HorizontalTitleDotWrapper>
             <HorizontalTitleDotWrapperRight>
@@ -188,12 +219,8 @@ const HorizontalScroll = props => {
           </HorizontalComponentFeaturedImageWrapper>
         </HorizontalComponentTitleImageWrapperRight>
 
-        <HorizontalComponentBlockWrapper>
-          <HorizontalComponentMobile>
-            <HorizontalComponentTitle>Beautiful Minds</HorizontalComponentTitle>
-            <HorizontalComponentHeading>Wellness</HorizontalComponentHeading>
-          </HorizontalComponentMobile>
-          <HorizontalComponentFifthOrder>
+        <HorizontalComponentBlockWrapperRight id="horizontal-scroll-item">
+          <HorizontalComponentBlock>
             <DisplayFlex>
               <HorizontalComponentDotWrapperHealing>
                 <HorizontalComponentDotHealing>
@@ -214,9 +241,10 @@ const HorizontalScroll = props => {
                 </svg>
               </HorizontalComponentDotWrapperHealing>
               <SubtitleWrapper>
-                <HorizontalHeading>Empowering your Future</HorizontalHeading>
+                <HorizontalHeading>Healing begins here</HorizontalHeading>
               </SubtitleWrapper>
             </DisplayFlex>
+
             <FirstText>{FutureDesc}</FirstText>
             <ServicesWrapperRight>
               <ServicesHeading>
@@ -238,15 +266,14 @@ const HorizontalScroll = props => {
                 </span>
               </ServicesHeading>
               <ServicesItemWrapper>
-                {Services &&
-                  Services.map((item, index) => (
+                {ServicesSecond &&
+                  ServicesSecond.map((item, index) => (
                     <ServicesItems key={index}>{item}</ServicesItems>
                   ))}
               </ServicesItemWrapper>
             </ServicesWrapperRight>
-          </HorizontalComponentFifthOrder>
-          <HorizontalComponentFourthOrder></HorizontalComponentFourthOrder>
-        </HorizontalComponentBlockWrapper>
+          </HorizontalComponentBlock>
+        </HorizontalComponentBlockWrapperRight>
       </HorizontalComponent>
     </HorizontalComponentWrapper>
   );

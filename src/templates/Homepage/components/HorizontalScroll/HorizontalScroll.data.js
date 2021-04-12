@@ -10,3 +10,10 @@ export const HealingDesc =
 
 export const FutureDesc =
   "There is hope for mental healing beyond medication. At Beautiful Minds Wellness, our goal is to increase access to wholistic mental health services, wellness education, and community support groups.";
+
+export const ServicesSecond = [
+  "Events",
+  "Wellness Treatments",
+  "Education",
+  "Senior Peer Counseling",
+];
