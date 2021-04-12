@@ -50,7 +50,7 @@ gsap.registerPlugin(ScrollTrigger);
 const HorizontalScroll = props => {
   useEffect(() => {
     ScrollTrigger.matchMedia({
-      "min-width:1024px": function () {
+      "(min-width:1024px)": function () {
         const sections = gsap.utils.toArray("#horizontal-scroll-item");
         let maxWidth = 0;
 

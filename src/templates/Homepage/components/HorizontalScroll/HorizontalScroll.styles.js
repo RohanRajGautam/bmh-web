@@ -38,6 +38,7 @@ export const HorizontalTitleDotWrapper = styled.div`
   }
   @media (min-width: 1024px) {
     margin-bottom: 25px;
+    padding: 0;
   }
   @media (min-width: 1200px) {
     margin-bottom: 40px;
@@ -193,6 +194,7 @@ export const HorizontalComponentTitle = styled.h3`
   @media (min-width: 576px) {
     font-size: 24px;
     margin-bottom: 18px;
+    padding: 0;
   }
   @media (min-width: 1824px) {
     font-size: 36px;
@@ -358,6 +360,7 @@ export const ServicesWrapperRight = styled(ServicesWrapper)`
 export const WellnessSvgWrapper = styled.div`
   display: none;
   @media (min-width: 1024px) {
+    display: block;
     svg {
       @media (max-width: 1824px) {
         width: 290px;

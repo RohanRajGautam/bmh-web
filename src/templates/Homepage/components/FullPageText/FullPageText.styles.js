@@ -11,7 +11,7 @@ export const TextContainer = styled.div`
   transition: 2s ease;
   padding: 64px 5vw;
   width: 100vw;
-  padding: @media (min-width: 1024px) {
+  @media (min-width: 1024px) {
     min-height: 100vh;
   }
 `;
