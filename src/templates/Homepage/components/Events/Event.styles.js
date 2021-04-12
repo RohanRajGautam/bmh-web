@@ -6,7 +6,7 @@ const medicalGrey = "#5F6468";
 export const EventWrapper = styled.div`
   margin-top: 100px;
   padding: 5vw;
-  margin-bottom: 5em;
+  margin-bottom: 64px;
   .slick-slide {
     margin: 0 5px;
   }

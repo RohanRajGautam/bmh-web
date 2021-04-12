@@ -4,7 +4,7 @@ import { Button } from "@components/Button";
 
 export const DonateWrapper = styled.div`
   width: 100%;
-  padding: 40% 20px 20px;
+  padding: 40% 5vw 5vw;
   background-image: linear-gradient(
       274.39deg,
       #ffffff -11.28%,
@@ -96,6 +96,9 @@ export const DonateParagraph = styled.div`
 
 export const DonateButton = styled(Button)`
   display: block;
-  max-width: 70%;
   padding: 2rem 0;
+  max-width: 100%;
+  @media (min-width: 1024px) {
+    max-width: 70%;
+  }
 `;

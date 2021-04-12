@@ -34,7 +34,7 @@ export default function Hero() {
             <Divider />
             <HeroP>
               We treat and prevent mental illness
-              <br /> through medical care & wellness education
+              <span> through medical care & wellness education</span>
             </HeroP>
           </HeroTextContainer>
           <Hidden smDown>
