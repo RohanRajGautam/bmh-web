@@ -6,8 +6,7 @@ import Story from "@images/our-story.png";
 export const StoryContainer = styled.div`
   position: relative;
   font-size: 6px;
-  padding: 5vh 5vw;
-  margin: 5vh 0;
+  padding: 64px 5vw;
   @media (min-width: 768px) {
     font-size: 8px;
   }

@@ -49,41 +49,46 @@ gsap.registerPlugin(ScrollTrigger);
 
 const HorizontalScroll = props => {
   useEffect(() => {
-    const sections = gsap.utils.toArray("#horizontal-scroll-item");
-    let maxWidth = 0;
+    ScrollTrigger.matchMedia({
+      "(min-width:1024px)": function () {
+        const sections = gsap.utils.toArray("#horizontal-scroll-item");
+        let maxWidth = 0;
 
-    const getMaxWidth = () => {
-      maxWidth = 0;
-      sections.forEach(section => {
-        maxWidth += section.offsetWidth;
-      });
-    };
-    getMaxWidth();
-    ScrollTrigger.addEventListener("refreshInit", getMaxWidth);
+        const getMaxWidth = () => {
+          maxWidth = 0;
+          sections.forEach(section => {
+            maxWidth += section.offsetWidth;
+          });
+        };
+        getMaxWidth();
+        ScrollTrigger.addEventListener("refreshInit", getMaxWidth);
 
-    gsap.to(sections, {
-      x: () => `-${maxWidth - window.innerWidth}`,
-      ease: "none",
-      scrollTrigger: {
-        trigger: "#horizontal-component",
-        pin: true,
-        scrub: true,
-        end: () => `+=${maxWidth + 350}`,
-        invalidateOnRefresh: true,
+        gsap.to(sections, {
+          x: () => `-${maxWidth - window.innerWidth}`,
+          ease: "none",
+          scrollTrigger: {
+            trigger: "#horizontal-component",
+            pin: true,
+            scrub: true,
+            end: () => `+=${maxWidth + 350}`,
+            invalidateOnRefresh: true,
+          },
+        });
+
+        sections.forEach((sct, i) => {
+          ScrollTrigger.create({
+            trigger: sct,
+            start: () =>
+              "top top-=" +
+              (sct.offsetLeft - window.innerWidth / 2) *
+                (maxWidth / (maxWidth - window.innerWidth)),
+            end: () =>
+              "+=" +
+              sct.offsetWidth * (maxWidth / (maxWidth - window.innerWidth)),
+            toggleClass: { targets: sct, className: "active" },
+          });
+        });
       },
-    });
-
-    sections.forEach((sct, i) => {
-      ScrollTrigger.create({
-        trigger: sct,
-        start: () =>
-          "top top-=" +
-          (sct.offsetLeft - window.innerWidth / 2) *
-            (maxWidth / (maxWidth - window.innerWidth)),
-        end: () =>
-          "+=" + sct.offsetWidth * (maxWidth / (maxWidth - window.innerWidth)),
-        toggleClass: { targets: sct, className: "active" },
-      });
     });
   }, []);
 

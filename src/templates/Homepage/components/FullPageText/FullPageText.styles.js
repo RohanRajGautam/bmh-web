@@ -1,62 +1,37 @@
 import styled from "styled-components";
 
 const graniteGrey = "#2C3336";
+const primary = "#6CA448";
 
 export const TextContainer = styled.div`
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   transition: 2s ease;
-  padding: 0 5vw;
+  padding: 64px 5vw;
   width: 100vw;
+  @media (min-width: 1024px) {
+    min-height: 100vh;
+  }
 `;
 export const Message = styled.h1`
   font-family: Merriweather;
   font-style: normal;
   font-weight: bold;
-  font-size: 7rem;
+  font-size: 36px;
   line-height: 140.5%;
   text-align: center;
   letter-spacing: 0.1px;
   user-select: none;
   transition: 2s ease;
-  color: ${graniteGrey};
+  color: ${primary};
   @media (min-width: 1024px) {
     font-size: 72px;
   }
   @media (min-width: 1440px) {
     font-size: 96px;
   }
-`;
-
-export const MobileView = styled.h1`
-  font-family: Merriweather;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 4rem;
-  line-height: 140%;
-  text-align: left;
-  letter-spacing: 0.1px;
-  color: #ffffff;
-  user-select: none;
-  transition: 2s ease;
-`;
-
-export const MobileTextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  top: 10;
-  position: relative;
-`;
-
-export const Divider = styled.div`
-  width: 8rem;
-  height: 0px;
-  background: #6ca448;
-  margin-top: 7em;
-  border: 2px solid #6ca448;
 `;
 
 export const Quote = styled.span`

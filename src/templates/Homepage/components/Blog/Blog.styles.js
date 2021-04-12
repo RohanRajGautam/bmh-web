@@ -5,7 +5,7 @@ const graniteGray = "#2C3336";
 
 export const BlogWrapper = styled.div`
   padding: 5vw;
-  margin: 5em 0;
+  margin-bottom: 64px;
   .slick-dots {
     display: none !important;
   }

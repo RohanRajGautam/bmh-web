@@ -67,7 +67,7 @@ export const HeroItems = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  height: 75vh;
+  height: 60vh;
   width: 100%;
   max-height: 100%;
   padding: 3rem 0;
@@ -79,7 +79,7 @@ export const HeroItems = styled.div`
 
 export const HeroTextContainer = styled.div`
   width: 100%;
-  padding: 1.5rem;
+  padding: 1.5rem 5vw;
 `;
 
 export const ButtonContainer = styled.div`
@@ -101,15 +101,16 @@ export const MobileButtonPrimary = styled(Button)`
 `;
 
 export const HeroH1 = styled.h1`
-  /* font-size: clamp(2rem, 6vw, 4rem); */
-  /* margin-bottom: 1.5rem; */
   font-family: Merriweather;
   font-style: normal;
   font-weight: bold;
-  font-size: clamp(3rem, 6vw, 6rem);
   letter-spacing: 0.3px;
   user-select: none;
   padding-bottom: 3rem;
+  font-size: 24px;
+  @media (min-width: 1024px) {
+    font-size: clamp(3rem, 6vw, 6rem);
+  }
 `;
 
 export const Divider = styled.div`
@@ -128,10 +129,20 @@ export const HeroP = styled.p`
   font-family: Mulish;
   font-weight: 300;
   line-height: 160%;
-  font-size: clamp(1.8rem, 3vw, 3rem);
-  padding-bottom: 3rem;
+  font-size: 14px;
+  padding-bottom: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.3px;
   color: rgba(255, 255, 255, 0.7);
   user-select: none;
+  span {
+    font-family: inherit;
+  }
+  @media (min-width: 1024px) {
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    padding-bottom: 3rem;
+    span {
+      display: block;
+    }
+  }
 `;

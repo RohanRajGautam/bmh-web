@@ -17,24 +17,28 @@ export const HorizontalComponentWrapper = styled.div`
 `;
 
 export const HorizontalComponent = styled.div`
-  margin-bottom: 5em;
   font-size: 12px;
   width: fit-content;
   display: flex;
+  flex-direction: column;
   @media (min-width: 1024px) {
     min-height: 100vh;
+    flex-direction: row;
+    margin-bottom: 5em;
   }
 `;
 
 export const HorizontalTitleDotWrapper = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  padding: 0 5vw;
+  margin-bottom: 26px;
   @media (min-width: 576px) {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
   @media (min-width: 1024px) {
     margin-bottom: 25px;
+    padding: 0;
   }
   @media (min-width: 1200px) {
     margin-bottom: 40px;
@@ -45,10 +49,14 @@ export const HorizontalTitleDotWrapper = styled.div`
 `;
 
 export const HorizontalTitleDotWrapperRight = styled(HorizontalTitleDotWrapper)`
-  left: -100px;
-  margin-right: -55px;
-  position: relative;
-  top: 25%;
+  display: none;
+  @media (min-width: 1024px) {
+    display: block;
+    left: -100px;
+    margin-right: -55px;
+    position: relative;
+    top: 25%;
+  }
 `;
 
 export const DisplayFlex = styled.div`
@@ -58,6 +66,10 @@ export const DisplayFlex = styled.div`
 
 export const HorizontalComponentDotWrapper = styled.div`
   position: relative;
+  display: none;
+  @media (min-width: 1024px) {
+    display: block;
+  }
   svg {
     position: absolute;
     left: 115%;
@@ -68,6 +80,10 @@ export const HorizontalComponentDotWrapper = styled.div`
 export const HorizontalComponentDotWrapperHealing = styled.div`
   position: relative;
   left: -30px;
+  display: none;
+  @media (min-width: 1024px) {
+    display: block;
+  }
   svg {
     position: absolute;
     top: -230%;
@@ -99,6 +115,7 @@ export const HorizontalComponentDotInner = styled.div`
 export const HorizontalComponentBlockWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 0 5vw;
   @media (min-width: 1024px) {
     flex-direction: row;
     align-items: flex-end;
@@ -173,9 +190,11 @@ export const HorizontalComponentTitle = styled.h3`
   letter-spacing: 0.1px;
   color: ${medicalGrey};
   margin-bottom: 8px;
+  padding: 0 5vw;
   @media (min-width: 576px) {
     font-size: 24px;
     margin-bottom: 18px;
+    padding: 0;
   }
   @media (min-width: 1824px) {
     font-size: 36px;
@@ -192,10 +211,12 @@ export const HorizontalComponentTitleWrapper = styled.div`
 export const HorizontalComponentTitleImageWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 125vw;
-  padding: 5vh 0;
+  @media (min-width: 1024px) {
+    width: 125vw;
+  }
   @media (min-width: 1200px) {
     width: 100vw;
+    padding: 5vh 0;
   }
   @media (min-width: 1440px) {
     width: 80vw;
@@ -208,11 +229,16 @@ export const HorizontalComponentTitleImageWrapper = styled.div`
 export const HorizontalComponentTitleImageWrapperRight = styled(
   HorizontalComponentTitleImageWrapper
 )`
-  margin-left: 35vw;
+  @media (min-width: 1024px) {
+    margin-left: 35vw;
+  }
 `;
 
 export const HorizontalComponentFeaturedImageWrapper = styled.div`
-  width: 100%;
+  width: 100vw;
+  @media (min-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 export const HorizontalComponentFeaturedImage = styled.div`
@@ -299,8 +325,10 @@ export const FirstText = styled.p`
   letter-spacing: 0.1px;
   color: ${gray3};
   margin-bottom: 48px;
+  text-align: justify;
   @media (min-width: 768px) {
     font-size: 20px;
+    text-align: left;
   }
 
   @media (min-width: 1024px) {
@@ -318,6 +346,10 @@ export const FirstText = styled.p`
 export const ServicesWrapper = styled.div`
   display: flex;
   align-items: baseline;
+  flex-direction: column;
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
 `;
 
 export const ServicesWrapperRight = styled(ServicesWrapper)`
@@ -326,10 +358,14 @@ export const ServicesWrapperRight = styled(ServicesWrapper)`
 `;
 
 export const WellnessSvgWrapper = styled.div`
-  svg {
-    @media (max-width: 1824px) {
-      width: 290px;
-      height: 40px;
+  display: none;
+  @media (min-width: 1024px) {
+    display: block;
+    svg {
+      @media (max-width: 1824px) {
+        width: 290px;
+        height: 40px;
+      }
     }
   }
 `;
