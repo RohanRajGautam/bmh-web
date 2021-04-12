@@ -5,7 +5,6 @@ import {
   NavigationButton,
 } from "./CategorySlider.styles";
 import Slider from "react-slick";
-// import { staticBlog } from "../../../Homepage/components/Blog/Blog.datas";
 import BlogCard from "../../../Homepage/components/Blog/components/Card";
 import { Heading } from "../../../../components/Heading";
 
@@ -15,7 +14,6 @@ const settings = {
   swipeToSlide: true,
   infinite: true,
   autoplay: false,
-  speed: 1000,
   slidesToScroll: 1,
   cssEase: "linear",
   nextArrow: <SampleNextArrow />,

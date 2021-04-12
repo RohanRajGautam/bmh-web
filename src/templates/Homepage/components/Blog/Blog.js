@@ -18,7 +18,6 @@ const settings = {
   swipeToSlide: true,
   infinite: true,
   autoplay: false,
-  speed: 3000,
   slidesToScroll: 1,
   cssEase: "linear",
   variableWidth: true,
@@ -123,7 +122,7 @@ const Blog = props => {
       </HeadingWrapper>
       <SliderWrapper>
         <Slider {...settings}>
-          {props.data.length &&
+          {props.data.allPost.nodes.length &&
             props.data.allPost.nodes.map((item, index) => (
               <BlogCard
                 title={item.title}
