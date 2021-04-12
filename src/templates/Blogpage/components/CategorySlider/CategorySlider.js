@@ -95,11 +95,11 @@ const CategorySlider = props => {
       <Heading clean>Mental Wellness Articles</Heading>
       <CategorySliderWrapper>
         <Slider {...settings}>
-          {props.data &&
+          {props.data.length &&
             props.data.map((item, index) => (
               <BlogCard
                 title={item.title}
-                thumbnail={item.featuredImage.node.sourceUrl}
+                thumbnail={item.featuredImage.node?.sourceUrl}
                 desc={item.excerpt.replace(/<[^>]+>/g, "")}
                 key={index}
               />

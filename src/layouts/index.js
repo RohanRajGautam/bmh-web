@@ -2,7 +2,7 @@ import * as React from "react";
 import { GlobalStyles } from "@styles/GlobalStyles";
 import Navbar from "./common/Navbar";
 import Topbar from "./common/Topbar";
-// import { Link } from "gatsby"
+import Footer from "./common/Footer";
 
 const Layout = ({ children, ...props }) => {
   return (
@@ -11,6 +11,7 @@ const Layout = ({ children, ...props }) => {
       <Topbar />
       <Navbar dark={props.dark} />
       <main>{children}</main>
+      <Footer />
     </div>
   );
 };
