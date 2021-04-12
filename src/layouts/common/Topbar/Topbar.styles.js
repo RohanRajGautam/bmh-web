@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "gatsby";
 
 export const Wrapper = styled.nav`
   height: 3rem;
@@ -9,7 +10,7 @@ export const Wrapper = styled.nav`
   align-items: stretch;
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled(Link)`
   color: #fff;
   display: flex;
   align-items: center;
@@ -22,7 +23,7 @@ export const NavLink = styled.a`
   font-weight: 500;
   opacity: 0.7;
 
-  /* &.active, */
+  &.active,
   &:hover {
     border-top: 3px solid #fff;
     opacity: 1;
