@@ -96,5 +96,6 @@ export const DonateParagraph = styled.div`
 
 export const DonateButton = styled(Button)`
   display: block;
-  margin: 0 auto;
+  max-width: 70%;
+  padding: 2rem 0;
 `;

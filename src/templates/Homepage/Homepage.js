@@ -6,7 +6,6 @@ import "aos/dist/aos.css";
 import {
   Blog,
   Hero,
-  Footer,
   FullPageText,
   Donate,
   Event,
@@ -32,7 +31,6 @@ const Homepage = props => {
       <Blog data={props.data} />
       <Event />
       <Donate />
-      <Footer />
     </Layout>
   );
 };

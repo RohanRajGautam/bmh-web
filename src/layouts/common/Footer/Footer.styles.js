@@ -160,6 +160,7 @@ export const NewsletterButton = styled.div`
   font-size: 14px;
   line-height: 53px;
   font-family: Mulish;
+  cursor: pointer;
   font-weight: 500;
   letter-spacing: 0.1px;
   display: grid;
