@@ -28,14 +28,14 @@ const BlogSinglePage = ({ data }) => {
   return (
     <Layout>
       <SEO title="" />
-      <BlogPageHero image={post.featuredImage.node.sourceUrl}>
+      <BlogPageHero image={post?.featuredImage.node.sourceUrl}>
         <BlogPageHeroInner>
           <BlogPageTextWrapper>
             <BlogPageTitleWrapper>
-              <BlogPageTitle>{post.title}</BlogPageTitle>
+              <BlogPageTitle>{post?.title}</BlogPageTitle>
               <BlogPageMetaWrapper>
-                <BlogPageMeta>{post.author.node.name}</BlogPageMeta>
-                <BlogPageMeta>- {post.date.substring(0, 10)}</BlogPageMeta>
+                <BlogPageMeta>{post?.author.node.name}</BlogPageMeta>
+                <BlogPageMeta>- {post?.date.substring(0, 10)}</BlogPageMeta>
               </BlogPageMetaWrapper>
             </BlogPageTitleWrapper>
             <BlogPageShare>
