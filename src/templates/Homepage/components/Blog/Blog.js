@@ -18,7 +18,8 @@ const settings = {
   swipeToSlide: true,
   infinite: true,
   autoplay: false,
-  slidesToScroll: 1,
+  slidesToScroll: 3,
+  autplaySpeed: 9000,
   cssEase: "linear",
   variableWidth: true,
   nextArrow: <SampleNextArrow />,
@@ -27,13 +28,13 @@ const settings = {
     {
       breakpoint: 1440,
       settings: {
-        slidesToScroll: 1,
+        slidesToScroll: 3,
       },
     },
     {
       breakpoint: 1200,
       settings: {
-        slidesToScroll: 1,
+        slidesToScroll: 3,
       },
     },
     {
@@ -125,6 +126,7 @@ const Blog = props => {
           {props.data.allPost.nodes.length &&
             props.data.allPost.nodes.map((item, index) => (
               <BlogCard
+                url={item.uri}
                 title={item.title}
                 thumbnail={
                   item.featuredImage.node && item.featuredImage.node.sourceUrl

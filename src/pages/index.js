@@ -25,6 +25,25 @@ export const query = graphql`
         }
       }
     }
+    events: allWpClass {
+      nodes {
+        title
+        eventStartTime
+        eventDayOfWeek
+        eventMultiDays
+        eventMonth
+        eventYear
+        eventDuration
+        eventDay
+        rpClassType
+        id
+        eventLocations {
+          nodes {
+            name
+          }
+        }
+      }
+    }
   }
 `;
 

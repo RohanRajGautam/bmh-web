@@ -1,5 +1,11 @@
 export const menuData = [
-  { title: "Health", link: "/" },
-  { title: "Medical", link: "https://www.beautifulmindsmedical.com/" },
-  { title: "Wellness", link: "https://beautifulmindswellness.org/" },
+  // { title: "Health", link: "/" },
+  {
+    title: "Beautiful Minds Medical",
+    link: "https://www.beautifulmindsmedical.com/",
+  },
+  {
+    title: "Beautiful Minds Wellness",
+    link: "https://beautifulmindswellness.org/",
+  },
 ];

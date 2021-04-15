@@ -11,9 +11,7 @@ const medicalGrey = "#5f6468";
 const gray3 = "#828282";
 
 export const HorizontalComponentWrapper = styled.div`
-  @media (min-width: 1024px) {
-    overflow: hidden;
-  }
+  overflow: hidden;
 `;
 
 export const HorizontalComponent = styled.div`
@@ -152,6 +150,10 @@ export const HorizontalComponentCollageWrapper = styled(
 
 export const HorizontalFullWidthBlock = styled.div`
   width: 100vw;
+  padding-bottom: 64px;
+  @media (min-width: 1024px) {
+    padding: 0;
+  }
 `;
 
 export const HorizontalComponentFourthOrder = styled(HorizontalComponentBlock)`
@@ -194,6 +196,8 @@ export const HorizontalComponentTitle = styled.h3`
   @media (min-width: 576px) {
     font-size: 24px;
     margin-bottom: 18px;
+  }
+  @media (min-width: 1024px) {
     padding: 0;
   }
   @media (min-width: 1824px) {

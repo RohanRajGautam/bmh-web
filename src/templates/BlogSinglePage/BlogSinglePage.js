@@ -17,23 +17,26 @@ import {
   BlogWrapper,
   BlogSidebarTitle,
 } from "./BlogSinglePage.styles";
-import cover from "../../images/blog/cover.png";
 import SEO from "@layouts/common/seo";
 import ArticleCard from "@components/ArticleCard";
 import { CardContent, BlogContentData } from "./BlogSinglePage.data";
+import { graphql } from "gatsby";
 
-const BlogSinglePage = props => {
+const BlogSinglePage = ({ data }) => {
+  console.log(data);
+  const post = data.allWpPost.edges[0].node;
+  console.log(post.content);
   return (
     <Layout>
-      <SEO title={props.title} />
-      <BlogPageHero image={cover}>
+      <SEO title="" />
+      <BlogPageHero image={post.featuredImage.node.sourceUrl}>
         <BlogPageHeroInner>
           <BlogPageTextWrapper>
             <BlogPageTitleWrapper>
-              <BlogPageTitle>In Her Own Words: Crystal’s Story</BlogPageTitle>
+              <BlogPageTitle>{post.title}</BlogPageTitle>
               <BlogPageMetaWrapper>
-                <BlogPageMeta>By Jenny Johnson</BlogPageMeta>
-                <BlogPageMeta>- August 26, 2020</BlogPageMeta>
+                <BlogPageMeta>{post.author.node.name}</BlogPageMeta>
+                <BlogPageMeta>- {post.date.substring(0, 10)}</BlogPageMeta>
               </BlogPageMetaWrapper>
             </BlogPageTitleWrapper>
             <BlogPageShare>
@@ -57,8 +60,9 @@ const BlogSinglePage = props => {
       <BlogContentWrapper>
         <BlogContentWithSidebar>
           <BlogContent>
-            {BlogContentData &&
-              BlogContentData.map((item, index) => <p key={index}>{item}</p>)}
+            {/* {BlogContentData &&
+              BlogContentData.map((item, index) => <p key={index}>{item}</p>)} */}
+            <div dangerouslySetInnerHTML={{ __html: post.content }} />
           </BlogContent>
           <BlogSidebar>
             <BlogSidebarTitle>Recent Articles</BlogSidebarTitle>
@@ -82,3 +86,28 @@ const BlogSinglePage = props => {
 };
 
 export default BlogSinglePage;
+
+export const query = graphql`
+  query($id: String!) {
+    allWpPost(filter: { id: { eq: $id } }) {
+      edges {
+        node {
+          title
+          id
+          author {
+            node {
+              name
+            }
+          }
+          date
+          featuredImage {
+            node {
+              sourceUrl
+            }
+          }
+          content
+        }
+      }
+    }
+  }
+`;

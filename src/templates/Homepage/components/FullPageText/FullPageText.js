@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Message, TextContainer } from "./FullPageText.styles";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // images
-import logoSm from "@images/icons/logo.svg";
+gsap.registerPlugin(ScrollTrigger);
 
 const FullPageText = () => {
+  useEffect(() => {}, []);
   return (
     <TextContainer>
       <Message>

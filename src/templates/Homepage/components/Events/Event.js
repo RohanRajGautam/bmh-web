@@ -89,21 +89,25 @@ function SamplePrevArrow(props) {
   );
 }
 
-const Events = () => {
+const Events = props => {
+  console.log(props.data);
   return (
     <EventWrapper>
       <Heading>Here's What's Coming Up</Heading>
       <EventSliderWrapper>
         <Slider {...settings}>
-          {StaticData.length &&
-            StaticData.map((item, index) => (
+          {props.data.length &&
+            props.data.map((item, index) => (
               <Card
                 key={index}
                 title={item.title}
-                day={item.day}
-                date={item.date}
-                time={item.time}
-                venue={item.venue}
+                day={item.eventDay}
+                date={item.eventMonth + " " + item.eventYear}
+                time={item.eventStartTime}
+                venue={
+                  item.eventLocations.nodes.length &&
+                  item.eventLocations.nodes[0].name
+                }
               />
             ))}
         </Slider>

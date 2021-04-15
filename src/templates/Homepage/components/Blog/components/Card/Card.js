@@ -13,7 +13,7 @@ import {
 
 const BlogCard = props => {
   return (
-    <StyledLink to="/blog-page">
+    <StyledLink to={props.url}>
       <Card>
         <CardThumbnailWrapper>
           <CardThumbnail thumbnail={props.thumbnail} />
