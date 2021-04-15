@@ -15,8 +15,10 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 };
 
 const { slash } = require(`gatsby-core-utils`);
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
+
   // query content for WordPress posts
   const {
     data: {
@@ -28,20 +30,16 @@ exports.createPages = async ({ graphql, actions }) => {
         nodes {
           id
           uri
-          slug
           title
-          date
-          authorId
-          featuredImage {
-            node {
-              sourceUrl
-            }
-          }
         }
       }
     }
   `);
-  const postTemplate = path.resolve(`./src/templates/BlogSinglePage/index.js`);
+
+  const postTemplate = path.resolve(
+    `./src/templates/BlogSinglePage/BlogSinglePage.js`
+  );
+
   allPosts.forEach(post => {
     createPage({
       // will be the url for the page

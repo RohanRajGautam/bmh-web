@@ -53,7 +53,6 @@ const HorizontalScroll = props => {
       "(min-width:1024px)": function () {
         const sections = gsap.utils.toArray("#horizontal-scroll-item");
         let maxWidth = 0;
-
         const getMaxWidth = () => {
           maxWidth = 0;
           sections.forEach(section => {
@@ -62,7 +61,6 @@ const HorizontalScroll = props => {
         };
         getMaxWidth();
         ScrollTrigger.addEventListener("refreshInit", getMaxWidth);
-
         gsap.to(sections, {
           x: () => `-${maxWidth - window.innerWidth}`,
           ease: "none",
@@ -74,7 +72,6 @@ const HorizontalScroll = props => {
             invalidateOnRefresh: true,
           },
         });
-
         sections.forEach((sct, i) => {
           ScrollTrigger.create({
             trigger: sct,

@@ -81,6 +81,7 @@ export const EventTitle = styled.h2`
   margin-top: 120px;
   margin-bottom: 20px;
   color: ${primary};
+  min-height: 76px;
   @media (min-width: 600px) {
     font-size: 24px;
     margin-bottom: 36px;

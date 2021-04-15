@@ -14,6 +14,7 @@ import {
 } from "./components";
 
 const Homepage = props => {
+  console.log(props.data);
   React.useEffect(() => {
     Aos.init({
       duration: 500,
@@ -29,7 +30,7 @@ const Homepage = props => {
       <HorizontalComponent />
       <StoryPage />
       <Blog data={props.data} />
-      <Event />
+      <Event data={props.data.events.nodes} />
       <Donate />
     </Layout>
   );

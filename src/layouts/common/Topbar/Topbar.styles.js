@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 export const Wrapper = styled.nav`
-  height: 3rem;
+  height: 5rem;
   width: 100%;
   background: #6ca448;
   display: flex;
@@ -15,7 +15,7 @@ export const NavLink = styled(Link)`
   display: flex;
   align-items: center;
   text-decoration: none;
-  margin: 0 1rem;
+  margin: 0 3.6rem;
   height: 100%;
   cursor: pointer;
   font-size: medium;
@@ -34,4 +34,8 @@ export const NavLink = styled(Link)`
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: column;
+  @media (min-width: 576px) {
+    flex-direction: row;
+  }
 `;

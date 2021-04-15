@@ -56,7 +56,7 @@ export const DonateColumn = styled.div`
   @media (min-width: 1201px) {
     font-size: 6px;
   }
-  @media (min-width: 1441px) {
+  @media (min-width: 1824px) {
     font-size: 10px;
   }
 `;

@@ -37,35 +37,24 @@ export default function Hero() {
               <span> through medical care & wellness education</span>
             </HeroP>
           </HeroTextContainer>
-          <Hidden smDown>
-            <ButtonContainer>
-              <ButtonPrimary
-                primary="true"
-                round="true"
-                target="_blank"
-                to="https://www.beautifulmindsmedical.com/"
-              >
-                Medical
-              </ButtonPrimary>
-              <ButtonPrimary
-                round="true"
-                to="https://beautifulmindswellness.org/"
-                target="_blank"
-              >
-                Wellness
-              </ButtonPrimary>
-            </ButtonContainer>
-          </Hidden>
-          <Hidden mdUp>
-            <ButtonContainer>
-              <MobileButtonPrimary primary="true" round="true" to="/">
-                Beautiful Minds Medical
-              </MobileButtonPrimary>
-              <Button round="true" to="/">
-                Beautiful Minds Wellness
-              </Button>
-            </ButtonContainer>
-          </Hidden>
+          <ButtonContainer>
+            <ButtonPrimary
+              primary="true"
+              round="true"
+              target="_blank"
+              to="https://www.beautifulmindsmedical.com/"
+            >
+              Medical
+            </ButtonPrimary>
+            <ButtonPrimary
+              primary="true"
+              round="true"
+              to="https://beautifulmindswellness.org/"
+              target="_blank"
+            >
+              Wellness
+            </ButtonPrimary>
+          </ButtonContainer>
         </HeroItems>
       </HeroContent>
     </HeroContainer>

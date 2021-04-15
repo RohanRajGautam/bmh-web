@@ -19,29 +19,31 @@ export const Nav = styled.nav`
           border-bottom: 1px solid ${border};
         `
       : css`
-          transform: translateY(2rem);
           height: 80px;
         `}
-
-  @media screen and (max-width: 600px) {
-    transform: scale(0.6);
-    padding: 0;
-    transform: translate(-2rem, -0.7rem);
-  }
 `;
 
 export const Logolink = styled(Link)`
   text-decoration: none;
   cursor: pointer;
-
-  @media screen and (max-width: 600px) {
-    transform: scale(0.6);
-    width: 170px;
-    height: 30px
-    transform: translate(-2rem, 1rem)
+  img {
+    height: 40px;
+  }
+  @media (min-width: 576px) {
+    img {
+      height: auto;
+    }
   }
 `;
 export const Menulink = styled.div`
   text-decoration: none;
   cursor: pointer;
+  img {
+    height: 20px;
+  }
+  @media (min-width: 576px) {
+    img {
+      height: auto;
+    }
+  }
 `;

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { Button } from "@components/Button";
 
+const primaryColor = "#6CA448";
+
 export const HeroContainer = styled.div`
   background: #0c0c0c;
   display: flex;
@@ -80,20 +82,30 @@ export const HeroItems = styled.div`
 export const HeroTextContainer = styled.div`
   width: 100%;
   padding: 1.5rem 5vw;
+  @media (min-width: 1024px) {
+    padding: 0;
+  }
 `;
 
 export const ButtonContainer = styled.div`
-  @media screen and (max-width: 860px) {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 768px) {
+    flex-direction: row;
   }
 `;
 
 export const ButtonPrimary = styled(Button)`
   margin-right: 2rem;
+  margin-bottom: 2rem;
+  &:hover {
+    background-color: #fff;
+    color: ${primaryColor};
+  }
+  @media (min-width: );
 `;
 
 export const MobileButtonPrimary = styled(Button)`
@@ -117,7 +129,6 @@ export const Divider = styled.div`
   width: 11rem;
   height: 0px;
   background: #fff;
-  margin-bottom: 4rem;
   border: 2px solid #ffffff;
 
   @media screen and (max-width: 860px) {
@@ -129,8 +140,8 @@ export const HeroP = styled.p`
   font-family: Mulish;
   font-weight: 300;
   line-height: 160%;
-  font-size: 14px;
-  padding-bottom: 1.5rem;
+  font-size: 18px;
+  padding: 1.5rem 0;
   font-weight: 400;
   letter-spacing: 0.3px;
   color: rgba(255, 255, 255, 0.7);
@@ -138,9 +149,12 @@ export const HeroP = styled.p`
   span {
     font-family: inherit;
   }
+  @media (min-width: 576px) {
+    font-size: 24px;
+  }
   @media (min-width: 1024px) {
     font-size: clamp(1.8rem, 3vw, 3rem);
-    padding-bottom: 3rem;
+    padding: 64px 0;
     span {
       display: block;
     }

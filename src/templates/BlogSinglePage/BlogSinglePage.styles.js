@@ -5,7 +5,7 @@ const medicalGrey = "#5F6468";
 const graniteGrey = "#2C3336";
 
 export const BlogPageHero = styled.div`
-  height: 100vh;
+  height: calc(100vh - 50px);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -81,6 +81,7 @@ export const BlogPageMetaWrapper = styled.div`
 export const BlogPageMeta = styled.div`
   margin-right: 13px;
   letter-spacing: 0.3px;
+  font-family: inherit;
 `;
 
 export const BlogPageShare = styled.div`
@@ -112,12 +113,13 @@ export const BlogPageShare = styled.div`
 `;
 
 export const BlogContentWrapper = styled.div`
-  padding: 70px 45px 70px 93px;
+  @media (min-width: 1024px) {
+    padding: 70px 45px 70px 93px;
+  }
 `;
 
 export const BlogContentWithSidebar = styled.div`
   display: flex;
-  align-items: baseline;
   justify-content: space-between;
   flex-wrap: wrap;
 `;
@@ -133,15 +135,35 @@ export const BlogContent = styled.div`
   line-height: 2;
   text-align: justify;
   width: 100%;
+  .fusion-fullwidth {
+    @media (min-width: 1024px) {
+      padding-right: 120px !important;
+    }
+  }
+  .fusion-layout-column {
+    width: 100% !important;
+  }
+  .sharedaddy {
+    display: none;
+  }
+
+  img {
+    height: auto;
+    max-width: 100%;
+  }
 
   @media (min-width: 1024px) {
-    width: calc(100% - 420px);
+    width: calc(100% - 350px);
   }
-  @media (min-width: 1440px) {
-    width: calc(100% - 500px);
-  }
+
   p {
     margin-bottom: 25px;
+  }
+  .fusion-widget-area {
+    display: none;
+  }
+  iframe {
+    max-width: 100%;
   }
 `;
 
@@ -154,8 +176,10 @@ export const BlogWrapper = styled.div`
 `;
 
 export const BlogSidebar = styled.div`
+  padding: 30px;
   @media (min-width: 1024px) {
     width: 350px;
+    padding: 0;
   }
 `;
 
