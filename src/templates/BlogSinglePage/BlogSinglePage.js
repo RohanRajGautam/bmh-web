@@ -61,7 +61,7 @@ const BlogSinglePage = ({ data }) => {
           <BlogContent>
             {/* {BlogContentData &&
               BlogContentData.map((item, index) => <p key={index}>{item}</p>)} */}
-            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+            <div dangerouslySetInnerHTML={{ __html: post?.content }} />
           </BlogContent>
           <BlogSidebar>
             <BlogSidebarTitle>Recent Articles</BlogSidebarTitle>
