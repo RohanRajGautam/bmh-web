@@ -24,8 +24,7 @@ import { graphql } from "gatsby";
 
 const BlogSinglePage = ({ data }) => {
   console.log(data);
-  const post = data?.allWpPost.edges[0].node;
-  console.log("post in single blog", post.content);
+  const post = data?.allWpPost?.edges[0].node;
   return (
     <Layout>
       <SEO title="" />
