@@ -42,7 +42,6 @@ export const FooterDetails = styled.div`
   grid-template-columns: repeat(1fr);
   grid-gap: 2rem;
   margin-top: 5em;
-  justify-items: center;
   @media (min-width: 576px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -52,6 +51,7 @@ export const FooterDetails = styled.div`
   }
   @media (min-width: 1200px) {
     grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
   }
 `;
 
