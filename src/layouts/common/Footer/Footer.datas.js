@@ -9,17 +9,6 @@ import BrandLogo6 from "@images/brand-logo/brand-logo6.png";
 
 export const staticData = [
   {
-    title: "Beautiful Minds Wellness",
-    items: [
-      "Dialectical Behavior Therapy DBT",
-      "Intensive Outpatient Program IOP",
-      "Psychiatry",
-      "Transcranial Magnetic Stimulation TMS",
-      "Counseling",
-      "Life & Health Coaching",
-    ],
-  },
-  {
     title: "Beautiful Minds Medical",
     items: [
       "Senior Peer Counseling",
@@ -31,13 +20,26 @@ export const staticData = [
       "YouTube Channel",
     ],
   },
+
+  {
+    title: "Beautiful Minds Wellness",
+    items: [
+      "Psychiatry",
+      "Counseling",
+      "Intensive Outpatient Program",
+      "Transcranial Magnetic Stimulation (TMS)",
+      "1-on-1 Coaching",
+      "Group Coaching",
+      "Support Groups",
+    ],
+  },
   {
     title: "About",
-    items: ["Healing Philosophy", "Our Story", "Events", "Blogs"],
+    items: ["Healing Philosophy", "Our Story", "Events", "Blog"],
   },
   {
     title: "Get in Touch",
-    items: ["Donate", "Volunter", "Visit"],
+    items: ["Donate", "Volunter", "Visit us"],
   },
 ];
 
