@@ -70,7 +70,7 @@ export const HeroItems = styled.div`
   justify-content: center;
   align-items: flex-start;
   height: 60vh;
-  width: 100%;
+  width: 80%;
   max-height: 100%;
   padding: 3rem 0;
   color: #fff;
@@ -101,6 +101,7 @@ export const ButtonContainer = styled.div`
 export const ButtonPrimary = styled(Button)`
   margin-right: 2rem;
   margin-bottom: 2rem;
+  width: 40rem;
   &:hover {
     background-color: #fff;
     color: ${primaryColor};

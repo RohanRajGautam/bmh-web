@@ -7,7 +7,7 @@ export const Button = styled(Link)`
   white-space: nowrap;
   /* width: 15em; */
   max-width: 95%;
-  padding: ${({ md }) => (md ? "20px 100px" : "25px 140px")};
+  padding: ${({ md }) => (md ? "20px 100px" : "25px 120px")};
   border: none;
   border-radius: ${({ round }) => (round ? "50px" : "8px")};
   display: flex;
