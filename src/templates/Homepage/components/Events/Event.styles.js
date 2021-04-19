@@ -2,6 +2,8 @@ import styled, { css } from "styled-components";
 
 const primary = "#6CA448";
 const medicalGrey = "#5F6468";
+const graniteGrey = "#2C3336";
+const border = "#C5CCD3";
 
 export const EventWrapper = styled.div`
   margin-top: 100px;
@@ -21,6 +23,28 @@ export const EventWrapper = styled.div`
       display: block !important;
     }
   }
+  .MuiGrid-container {
+    position: relative;
+    z-index: 1;
+    .MuiInput-underline:before,
+    .MuiInput-underline:after {
+      display: none;
+    }
+    .MuiInput-underline:hover:before {
+      display: none;
+    }
+    .MuiInput-root {
+      input {
+        font-size: 20px;
+        font-family: Mulish;
+        color: ${graniteGrey};
+        cursor: pointer;
+      }
+    }
+    .MuiFormControl-root {
+      padding: 12px 20px;
+    }
+  }
 `;
 
 export const EventCard = styled.div`
@@ -29,9 +53,9 @@ export const EventCard = styled.div`
   width: 250px;
   border: 1px solid ${medicalGrey};
   color: ${medicalGrey};
-  transition: all 300ms;
+  transition: all 300ms, color 0ms;
   &:hover {
-    box-shadow: 16px 72px 74px rgba(19, 65, 124, 0.19);
+    box-shadow: 16px 40px 40px rgb(19 65 124 / 19%);
     transition: all 300ms;
     background-color: ${primary};
     cursor: pointer;
@@ -53,6 +77,9 @@ export const EventCard = styled.div`
 
 export const EventSliderWrapper = styled.div`
   margin-top: 40px;
+  .slick-slide {
+    margin: 0 20px 96px 20px;
+  }
 `;
 
 export const EventDay = styled.time`
@@ -120,7 +147,7 @@ export const NavigationButton = styled.div`
     }
   }
   @media (min-width: 768px) {
-    bottom: -80px;
+    bottom: -40px;
     button {
       height: 40px;
       width: 40px;
@@ -140,4 +167,25 @@ export const NavigationButton = styled.div`
     css`
       margin-left: 20px;
     `}
+`;
+
+export const EventDatePickerWrapper = styled.div`
+  border: 1px solid ${border};
+  margin-top: 72px;
+  max-width: 270px;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  svg {
+    margin-left: 20px;
+  }
+`;
+
+export const EventDatePickerArrow = styled.div`
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
 `;
