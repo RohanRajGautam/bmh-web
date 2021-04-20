@@ -21,9 +21,9 @@ import SEO from "@layouts/common/seo";
 import ArticleCard from "@components/ArticleCard";
 import { CardContent, BlogContentData } from "./BlogSinglePage.data";
 import { graphql } from "gatsby";
+import { RecentBlog } from "../Homepage/components/Blog/components/RecentBlog";
 
-const BlogSinglePage = ({ data }) => {
-  console.log(data);
+const BlogSinglePage = ({ data, ...props }) => {
   const post = data?.allWpPost?.edges[0].node;
   return (
     <Layout>
@@ -65,18 +65,7 @@ const BlogSinglePage = ({ data }) => {
           </BlogContent>
           <BlogSidebar>
             <BlogSidebarTitle>Recent Articles</BlogSidebarTitle>
-            <BlogWrapper>
-              {CardContent &&
-                CardContent.map((item, index) => (
-                  <BlogArticleWrapper key={index}>
-                    <ArticleCard
-                      title={item.title}
-                      date={item.date}
-                      image={item.image}
-                    />
-                  </BlogArticleWrapper>
-                ))}
-            </BlogWrapper>
+            <RecentBlog />
           </BlogSidebar>
         </BlogContentWithSidebar>
       </BlogContentWrapper>
