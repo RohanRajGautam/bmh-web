@@ -81,7 +81,7 @@ const Blog = props => {
         event.preventDefault();
       });
     };
-  }, []);
+  }, [sliderRef]);
 
   return (
     <BlogWrapper>

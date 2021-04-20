@@ -31,8 +31,6 @@ export default function MaterialUIPickers() {
         <Grid container justify="flex-start">
           <DatePicker
             variant="inline"
-            openTo="year"
-            views={["year", "month"]}
             value={selectedDate}
             onChange={handleDateChange}
             minDate={new Date()}

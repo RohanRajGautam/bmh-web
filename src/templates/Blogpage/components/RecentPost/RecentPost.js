@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { RecentBlockWrapper, RecentWrapper } from "./RecentPost.styles";
 import { Heading } from "../../../../components/Heading";
 // import StaticData from "./RecentPost.data";
@@ -16,39 +16,29 @@ const settings = {
   slidesToScroll: 1,
   arrows: false,
   cssEase: "linear",
-  responsive: [
-    {
-      breakpoint: 1440,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToScroll: 1,
-        variableWidth: true,
-        slidesToShow: 1,
-      },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToScroll: 1,
-        variableWidth: false,
-        slidesToShow: 1,
-      },
-    },
-  ],
 };
 
 const RecentPost = props => {
+  const recentSliderRef = useRef(null);
+  useEffect(() => {
+    let slickListDiv = document.getElementsByClassName("slick-list")[0];
+    slickListDiv.addEventListener("wheel", event => {
+      event.preventDefault();
+      event.wheelDeltaX < 0 && recentSliderRef.current.slickNext();
+      event.wheelDeltaX > 0 && recentSliderRef.current.slickPrev();
+    });
+    return () => {
+      slickListDiv.removeEventListener("wheel", event => {
+        event.preventDefault();
+      });
+    };
+  }, [recentSliderRef]);
+
   return (
     <RecentWrapper>
       <Heading clean>Recent Articles</Heading>
       <RecentBlockWrapper>
-        <Slider {...settings}>
+        <Slider {...settings} ref={recentSliderRef}>
           {props.data &&
             props.data.posts.nodes.map((item, index) => (
               <RecentCard

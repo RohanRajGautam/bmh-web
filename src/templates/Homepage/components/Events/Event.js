@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Card from "./Card";
 import {
   EventSliderWrapper,
   EventWrapper,
   NavigationButton,
 } from "./Event.styles";
-import StaticData from "./Event.data";
 import { Heading } from "@components/Heading";
 import Slider from "react-slick";
 import MaterialUIPickers from "./EventDatePicker";
@@ -68,12 +67,27 @@ function SamplePrevArrow(props) {
 }
 
 const Events = props => {
+  const eventRef = useRef(null);
+  useEffect(() => {
+    let slickListDiv = document.getElementsByClassName("slick-list")[1];
+    slickListDiv.addEventListener("wheel", event => {
+      event.preventDefault();
+      event.wheelDeltaX < 0 && eventRef.current.slickNext();
+      event.wheelDeltaX > 0 && eventRef.current.slickPrev();
+    });
+    return () => {
+      slickListDiv.removeEventListener("wheel", event => {
+        event.preventDefault();
+      });
+    };
+  }, [eventRef]);
+
   return (
     <EventWrapper>
       <Heading>Here's What's Coming Up</Heading>
       <MaterialUIPickers />
       <EventSliderWrapper>
-        <Slider {...settings}>
+        <Slider {...settings} ref={eventRef}>
           {props?.data.length &&
             props.data.map((item, index) => (
               <Card

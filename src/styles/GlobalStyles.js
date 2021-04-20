@@ -88,4 +88,8 @@ export const GlobalStyles = createGlobalStyle`
 .MuiTypography-root.MuiTypography-subtitle1{
   font-family:Mulish;
 }
+.MuiButtonBase-root.MuiPickersDay-day{
+  width:34px;
+  height:34px;
+}
 `;
