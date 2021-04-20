@@ -14,36 +14,12 @@ import {
 
 const settings = {
   dots: true,
-  pauseOnHover: false,
   infinite: true,
-  swipeToSlide: false,
   autoplay: false,
-  slidesToScroll: 3,
-  autplaySpeed: 9000,
   cssEase: "linear",
   variableWidth: true,
   nextArrow: <SampleNextArrow />,
   prevArrow: <SamplePrevArrow />,
-  responsive: [
-    {
-      breakpoint: 1440,
-      settings: {
-        slidesToScroll: 3,
-      },
-    },
-    {
-      breakpoint: 1200,
-      settings: {
-        slidesToScroll: 3,
-      },
-    },
-    {
-      breakpoint: 1000,
-      settings: {
-        slidesToScroll: 1,
-      },
-    },
-  ],
 };
 
 function SampleNextArrow(props) {

@@ -12,36 +12,13 @@ import MaterialUIPickers from "./EventDatePicker";
 
 const settings = {
   dots: true,
-  pauseOnHover: false,
-  swipeToSlide: false,
   infinite: true,
   autoplay: false,
-  speed: 1000,
   slidesToScroll: 1,
   cssEase: "linear",
   variableWidth: true,
   nextArrow: <SampleNextArrow />,
   prevArrow: <SamplePrevArrow />,
-  responsive: [
-    {
-      breakpoint: 1440,
-      settings: {
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 1200,
-      settings: {
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 1000,
-      settings: {
-        slidesToScroll: 1,
-      },
-    },
-  ],
 };
 
 function SampleNextArrow(props) {
@@ -91,14 +68,13 @@ function SamplePrevArrow(props) {
 }
 
 const Events = props => {
-  console.log(props.data);
   return (
     <EventWrapper>
       <Heading>Here's What's Coming Up</Heading>
       <MaterialUIPickers />
       <EventSliderWrapper>
         <Slider {...settings}>
-          {props.data.length &&
+          {props?.data.length &&
             props.data.map((item, index) => (
               <Card
                 key={index}

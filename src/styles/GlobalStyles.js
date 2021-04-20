@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
+const primary = "#6CA448";
+
 export const GlobalStyles = createGlobalStyle`
   * {
     font-family: 'Merriweather', 'Mulish';
@@ -73,5 +75,17 @@ export const GlobalStyles = createGlobalStyle`
     width:270px;
   }
 }
+}
+.MuiPickersToolbar-toolbar.MuiToolbar-regular {
+  background-color: ${primary};
+}
+.MuiTypography-root.MuiTypography-h5{
+  font-family:Mulish;
+}
+.MuiTypography-root.MuiTypography-h4{
+  font-family:Mulish;
+}
+.MuiTypography-root.MuiTypography-subtitle1{
+  font-family:Mulish;
 }
 `;
