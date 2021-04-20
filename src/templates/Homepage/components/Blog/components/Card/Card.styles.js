@@ -9,7 +9,7 @@ const blueGrey = "#C5CCD3";
 export const Card = styled.div`
   width: 250px;
   &:hover {
-    .Cardstyles__CardThumbnail-gfcwtT {
+    figure {
       transform: scale(1.05);
       transition: transform 300ms;
     }
@@ -46,7 +46,7 @@ export const CardThumbnailWrapper = styled.div`
   }
 `;
 
-export const CardThumbnail = styled.div`
+export const CardThumbnail = styled.figure`
   height: 100%;
   background-color: ${blueGrey};
   background-image: url(${props => props.thumbnail});

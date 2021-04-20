@@ -15,8 +15,8 @@ import {
 const settings = {
   dots: true,
   pauseOnHover: false,
-  swipeToSlide: true,
   infinite: true,
+  swipeToSlide: false,
   autoplay: false,
   slidesToScroll: 3,
   autplaySpeed: 9000,

@@ -63,5 +63,15 @@ export const GlobalStyles = createGlobalStyle`
     display: none
 }
 
-
+.MuiPopover-paper{
+  max-width:270px !important;
+  margin-left:-20px;
+  .MuiPickersBasePicker-pickerView{
+    max-width:270px;
+    min-width:270px;
+  .MuiPickersMonthSelection-container{
+    width:270px;
+  }
+}
+}
 `;

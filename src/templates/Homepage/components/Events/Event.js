@@ -8,11 +8,12 @@ import {
 import StaticData from "./Event.data";
 import { Heading } from "@components/Heading";
 import Slider from "react-slick";
+import MaterialUIPickers from "./EventDatePicker";
 
 const settings = {
   dots: true,
   pauseOnHover: false,
-  swipeToSlide: true,
+  swipeToSlide: false,
   infinite: true,
   autoplay: false,
   speed: 1000,
@@ -94,6 +95,7 @@ const Events = props => {
   return (
     <EventWrapper>
       <Heading>Here's What's Coming Up</Heading>
+      <MaterialUIPickers />
       <EventSliderWrapper>
         <Slider {...settings}>
           {props.data.length &&
