@@ -6,9 +6,7 @@ import { MuiPickersUtilsProvider, DatePicker } from "@material-ui/pickers";
 import { EventDatePickerWrapper, EventDatePickerArrow } from "./Event.styles";
 
 export default function MaterialUIPickers() {
-  const [selectedDate, setSelectedDate] = useState(
-    null > new Date("2014-08-18T21:11:54")
-  );
+  const [selectedDate, setSelectedDate] = useState(new Date());
 
   const handleDateChange = date => {
     setSelectedDate(date);
@@ -33,10 +31,9 @@ export default function MaterialUIPickers() {
         <Grid container justify="flex-start">
           <DatePicker
             variant="inline"
-            openTo="year"
-            views={["year", "month"]}
             value={selectedDate}
             onChange={handleDateChange}
+            minDate={new Date()}
           />
         </Grid>
       </MuiPickersUtilsProvider>

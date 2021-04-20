@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
   CategorySliderBlockWrapper,
   CategorySliderWrapper,
@@ -88,11 +88,26 @@ function SamplePrevArrow(props) {
 }
 
 const CategorySlider = props => {
+  const categorySliderRef = useRef(null);
+  useEffect(() => {
+    let slickListDiv = document.getElementsByClassName("slick-list")[1];
+    slickListDiv.addEventListener("wheel", event => {
+      event.preventDefault();
+      event.wheelDeltaX < 0 && categorySliderRef.current.slickNext();
+      event.wheelDeltaX > 0 && categorySliderRef.current.slickPrev();
+    });
+    return () => {
+      slickListDiv.removeEventListener("wheel", event => {
+        event.preventDefault();
+      });
+    };
+  }, [categorySliderRef]);
+
   return (
     <CategorySliderBlockWrapper>
       <Heading clean>Mental Wellness Articles</Heading>
       <CategorySliderWrapper>
-        <Slider {...settings}>
+        <Slider {...settings} ref={categorySliderRef}>
           {props.data.length &&
             props.data.map((item, index) => (
               <BlogCard

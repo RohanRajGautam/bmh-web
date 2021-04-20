@@ -1,47 +1,23 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Card from "./Card";
 import {
   EventSliderWrapper,
   EventWrapper,
   NavigationButton,
 } from "./Event.styles";
-import StaticData from "./Event.data";
 import { Heading } from "@components/Heading";
 import Slider from "react-slick";
 import MaterialUIPickers from "./EventDatePicker";
 
 const settings = {
   dots: true,
-  pauseOnHover: false,
-  swipeToSlide: false,
   infinite: true,
   autoplay: false,
-  speed: 1000,
   slidesToScroll: 1,
   cssEase: "linear",
   variableWidth: true,
   nextArrow: <SampleNextArrow />,
   prevArrow: <SamplePrevArrow />,
-  responsive: [
-    {
-      breakpoint: 1440,
-      settings: {
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 1200,
-      settings: {
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 1000,
-      settings: {
-        slidesToScroll: 1,
-      },
-    },
-  ],
 };
 
 function SampleNextArrow(props) {
@@ -91,14 +67,28 @@ function SamplePrevArrow(props) {
 }
 
 const Events = props => {
-  console.log(props.data);
+  const eventRef = useRef(null);
+  useEffect(() => {
+    let slickListDiv = document.getElementsByClassName("slick-list")[1];
+    slickListDiv.addEventListener("wheel", event => {
+      event.preventDefault();
+      event.wheelDeltaX < 0 && eventRef.current.slickNext();
+      event.wheelDeltaX > 0 && eventRef.current.slickPrev();
+    });
+    return () => {
+      slickListDiv.removeEventListener("wheel", event => {
+        event.preventDefault();
+      });
+    };
+  }, [eventRef]);
+
   return (
     <EventWrapper>
       <Heading>Here's What's Coming Up</Heading>
       <MaterialUIPickers />
       <EventSliderWrapper>
-        <Slider {...settings}>
-          {props.data.length &&
+        <Slider {...settings} ref={eventRef}>
+          {props?.data.length &&
             props.data.map((item, index) => (
               <Card
                 key={index}

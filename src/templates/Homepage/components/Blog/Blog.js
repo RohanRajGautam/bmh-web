@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Slider from "react-slick";
 import { BlogCard } from "./components";
-// import { staticBlog } from "./Blog.datas";
 import { Heading } from "@components/Heading";
 import {
   BlogWrapper,
@@ -14,36 +13,12 @@ import {
 
 const settings = {
   dots: true,
-  pauseOnHover: false,
   infinite: true,
-  swipeToSlide: false,
   autoplay: false,
-  slidesToScroll: 3,
-  autplaySpeed: 9000,
   cssEase: "linear",
   variableWidth: true,
   nextArrow: <SampleNextArrow />,
   prevArrow: <SamplePrevArrow />,
-  responsive: [
-    {
-      breakpoint: 1440,
-      settings: {
-        slidesToScroll: 3,
-      },
-    },
-    {
-      breakpoint: 1200,
-      settings: {
-        slidesToScroll: 3,
-      },
-    },
-    {
-      breakpoint: 1000,
-      settings: {
-        slidesToScroll: 1,
-      },
-    },
-  ],
 };
 
 function SampleNextArrow(props) {
@@ -93,7 +68,21 @@ function SamplePrevArrow(props) {
 }
 
 const Blog = props => {
-  console.log(props.data);
+  const sliderRef = useRef(null);
+  useEffect(() => {
+    let slickListDiv = document.getElementsByClassName("slick-list")[0];
+    slickListDiv.addEventListener("wheel", event => {
+      event.preventDefault();
+      event.wheelDeltaX < 0 && sliderRef.current.slickNext();
+      event.wheelDeltaX > 0 && sliderRef.current.slickPrev();
+    });
+    return () => {
+      slickListDiv.removeEventListener("wheel", event => {
+        event.preventDefault();
+      });
+    };
+  }, [sliderRef]);
+
   return (
     <BlogWrapper>
       <HeadingWrapper>
@@ -122,7 +111,7 @@ const Blog = props => {
         </StyledLink>
       </HeadingWrapper>
       <SliderWrapper>
-        <Slider {...settings}>
+        <Slider {...settings} ref={sliderRef}>
           {props.data.allPost.nodes.length &&
             props.data.allPost.nodes.map((item, index) => (
               <BlogCard
