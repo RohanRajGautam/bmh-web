@@ -9,7 +9,6 @@ export const BlogWrapper = styled.div`
 `;
 
 export const BlogArticleWrapper = styled.div`
-  margin-bottom: 70px;
   width: 100%;
   @media (min-width: 768px) {
     width: 30%;
@@ -18,5 +17,8 @@ export const BlogArticleWrapper = styled.div`
   @media (min-width: 1024px) {
     margin-right: 0;
     width: 350px;
+  }
+  &:not(:last-child) {
+    margin-bottom: 70px;
   }
 `;
