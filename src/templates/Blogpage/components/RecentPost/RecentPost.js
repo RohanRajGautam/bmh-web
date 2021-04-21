@@ -11,11 +11,8 @@ const settings = {
   swipeToSlide: true,
   infinite: true,
   autoplay: false,
-  slidesToShow: 3,
-  speed: 1000,
-  slidesToScroll: 1,
-  arrows: false,
   cssEase: "linear",
+  variableWidth: true,
 };
 
 const RecentPost = props => {
@@ -23,16 +20,15 @@ const RecentPost = props => {
   useEffect(() => {
     let slickListDiv = document.getElementsByClassName("slick-list")[0];
     slickListDiv.addEventListener("wheel", event => {
-      event.preventDefault();
       event.wheelDeltaX < 0 && recentSliderRef.current.slickNext();
       event.wheelDeltaX > 0 && recentSliderRef.current.slickPrev();
     });
     return () => {
-      slickListDiv.removeEventListener("wheel", event => {
-        event.preventDefault();
-      });
+      slickListDiv.removeEventListener("wheel", event => {});
     };
   }, [recentSliderRef]);
+
+  console.log(props.data.posts.nodes);
 
   return (
     <RecentWrapper>
@@ -42,6 +38,7 @@ const RecentPost = props => {
           {props.data &&
             props.data.posts.nodes.map((item, index) => (
               <RecentCard
+                url={item.uri}
                 title={item.title}
                 image={item.featuredImage.node.sourceUrl}
                 date={item.date.substring(0, 10)}

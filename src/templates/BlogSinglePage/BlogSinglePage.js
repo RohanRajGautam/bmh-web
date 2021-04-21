@@ -13,13 +13,9 @@ import {
   BlogContentWithSidebar,
   BlogContent,
   BlogSidebar,
-  BlogArticleWrapper,
-  BlogWrapper,
   BlogSidebarTitle,
 } from "./BlogSinglePage.styles";
 import SEO from "@layouts/common/seo";
-import ArticleCard from "@components/ArticleCard";
-import { CardContent, BlogContentData } from "./BlogSinglePage.data";
 import { graphql } from "gatsby";
 import { RecentBlog } from "../Homepage/components/Blog/components/RecentBlog";
 

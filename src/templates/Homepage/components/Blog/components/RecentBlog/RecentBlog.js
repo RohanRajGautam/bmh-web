@@ -16,6 +16,7 @@ const RecentBlog = ({ data }) => {
                 nodes {
                   title
                   id
+                  uri
                   date
                   author {
                     node {
@@ -44,6 +45,7 @@ const RecentBlog = ({ data }) => {
                   title={item.title}
                   date={item.date.substring(0, 10)}
                   image={item.featuredImage.node.sourceUrl}
+                  url={item.uri}
                 />
               </BlogArticleWrapper>
             ))}

@@ -20,6 +20,7 @@ const Categories = props => {
           {props.data &&
             props.data.posts.nodes.map((item, index) => (
               <CategoryCard
+                url={item.uri}
                 key={index}
                 title={item.title}
                 author={item.author.node.name}

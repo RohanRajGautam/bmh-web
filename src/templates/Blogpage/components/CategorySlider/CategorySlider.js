@@ -14,31 +14,10 @@ const settings = {
   swipeToSlide: true,
   infinite: true,
   autoplay: false,
-  slidesToScroll: 1,
   cssEase: "linear",
   nextArrow: <SampleNextArrow />,
   prevArrow: <SamplePrevArrow />,
   variableWidth: true,
-  responsive: [
-    {
-      breakpoint: 1440,
-      settings: {
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 1200,
-      settings: {
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 1000,
-      settings: {
-        slidesToScroll: 1,
-      },
-    },
-  ],
 };
 
 function SampleNextArrow(props) {
@@ -92,14 +71,11 @@ const CategorySlider = props => {
   useEffect(() => {
     let slickListDiv = document.getElementsByClassName("slick-list")[1];
     slickListDiv.addEventListener("wheel", event => {
-      event.preventDefault();
       event.wheelDeltaX < 0 && categorySliderRef.current.slickNext();
       event.wheelDeltaX > 0 && categorySliderRef.current.slickPrev();
     });
     return () => {
-      slickListDiv.removeEventListener("wheel", event => {
-        event.preventDefault();
-      });
+      slickListDiv.removeEventListener("wheel", event => {});
     };
   }, [categorySliderRef]);
 
@@ -115,6 +91,7 @@ const CategorySlider = props => {
                 thumbnail={item.featuredImage.node?.sourceUrl}
                 desc={item.excerpt.replace(/<[^>]+>/g, "")}
                 key={index}
+                url={item.uri}
               />
             ))}
         </Slider>

@@ -11,13 +11,14 @@ import MaterialUIPickers from "./EventDatePicker";
 
 const settings = {
   dots: true,
+  pauseOnHover: false,
+  swipeToSlide: true,
   infinite: true,
   autoplay: false,
-  slidesToScroll: 1,
   cssEase: "linear",
-  variableWidth: true,
   nextArrow: <SampleNextArrow />,
   prevArrow: <SamplePrevArrow />,
+  variableWidth: true,
 };
 
 function SampleNextArrow(props) {
@@ -71,14 +72,11 @@ const Events = props => {
   useEffect(() => {
     let slickListDiv = document.getElementsByClassName("slick-list")[1];
     slickListDiv.addEventListener("wheel", event => {
-      event.preventDefault();
       event.wheelDeltaX < 0 && eventRef.current.slickNext();
       event.wheelDeltaX > 0 && eventRef.current.slickPrev();
     });
     return () => {
-      slickListDiv.removeEventListener("wheel", event => {
-        event.preventDefault();
-      });
+      slickListDiv.removeEventListener("wheel", event => {});
     };
   }, [eventRef]);
 

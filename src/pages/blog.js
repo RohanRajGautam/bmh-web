@@ -32,6 +32,7 @@ export const query = graphql`
             nodes {
               title
               id
+              uri
               date
               author {
                 node {
@@ -55,6 +56,7 @@ export const query = graphql`
           posts {
             nodes {
               title
+              uri
               id
               date
               featuredImage {

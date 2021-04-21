@@ -13,7 +13,10 @@ export const CategorySliderBlockWrapper = styled.div`
 export const CategorySliderWrapper = styled.div`
   margin-top: 48px;
   .slick-slide {
-    margin: 0 20px;
+    margin: 0 5px;
+    @media (min-width: 600px) {
+      margin: 0 20px;
+    }
   }
   /* the parent */
 `;
