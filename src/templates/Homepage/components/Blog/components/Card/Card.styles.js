@@ -14,20 +14,6 @@ export const Card = styled.div`
       transition: transform 300ms;
     }
   }
-  .slick-slide {
-    margin: 0 5px;
-  }
-  .slick-dots {
-    display: none !important;
-  }
-  @media (min-width: 600px) {
-    .slick-slide {
-      margin: 0 20px;
-    }
-    .slick-dots {
-      display: block !important;
-    }
-  }
   @media (min-width: 600px) {
     width: 350px;
   }
@@ -36,6 +22,13 @@ export const Card = styled.div`
 export const StyledLink = styled(Link)`
   text-decoration: none;
   display: block;
+  margin: 0 5px;
+  @media (min-width: 600px) {
+    margin: 0 20px;
+  }
+  &:first-child {
+    margin-left: 0;
+  }
 `;
 
 export const CardThumbnailWrapper = styled.div`
