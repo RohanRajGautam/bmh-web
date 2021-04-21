@@ -10,5 +10,3 @@ import "typeface-merriweather";
 
 // Highlighting for code blocks
 import "prismjs/themes/prism.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";

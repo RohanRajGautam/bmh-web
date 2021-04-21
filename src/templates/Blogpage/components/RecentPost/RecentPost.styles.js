@@ -22,6 +22,15 @@ export const StyledLink = styled(Link)`
 
 export const RecentBlockWrapper = styled.div`
   margin-top: 48px;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const RecentCard = styled.article`
@@ -32,6 +41,13 @@ export const RecentCard = styled.article`
       transform: scale(1.05);
       transition: transform 300ms;
     }
+  }
+  margin: 0 5px;
+  &:first-child {
+    margin-left: 0;
+  }
+  @media (min-width: 600px) {
+    margin: 0 20px;
   }
 `;
 
