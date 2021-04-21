@@ -35,6 +35,7 @@ export const Card = styled.div`
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
+  display: block;
 `;
 
 export const CardThumbnailWrapper = styled.div`

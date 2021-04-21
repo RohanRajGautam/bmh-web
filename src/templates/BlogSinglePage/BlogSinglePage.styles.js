@@ -113,6 +113,7 @@ export const BlogPageShare = styled.div`
 `;
 
 export const BlogContentWrapper = styled.div`
+  padding-top: 64px;
   @media (min-width: 1024px) {
     padding: 70px 45px 70px 93px;
   }
@@ -163,6 +164,9 @@ export const BlogContent = styled.div`
     display: none;
   }
   iframe {
+    max-width: 100%;
+  }
+  figure {
     max-width: 100%;
   }
 `;

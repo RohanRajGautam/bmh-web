@@ -92,4 +92,10 @@ export const GlobalStyles = createGlobalStyle`
   width:34px;
   height:34px;
 }
+.MuiButtonBase-root.MuiPickersDay-daySelected{
+  background-color:${primary};
+  &:hover{
+  background-color:${primary};
+  }
+}
 `;

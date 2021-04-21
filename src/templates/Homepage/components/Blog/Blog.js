@@ -13,12 +13,14 @@ import {
 
 const settings = {
   dots: true,
+  pauseOnHover: false,
+  swipeToSlide: true,
   infinite: true,
   autoplay: false,
   cssEase: "linear",
-  variableWidth: true,
   nextArrow: <SampleNextArrow />,
   prevArrow: <SamplePrevArrow />,
+  variableWidth: true,
 };
 
 function SampleNextArrow(props) {
@@ -72,14 +74,11 @@ const Blog = props => {
   useEffect(() => {
     let slickListDiv = document.getElementsByClassName("slick-list")[0];
     slickListDiv.addEventListener("wheel", event => {
-      event.preventDefault();
       event.wheelDeltaX < 0 && sliderRef.current.slickNext();
       event.wheelDeltaX > 0 && sliderRef.current.slickPrev();
     });
     return () => {
-      slickListDiv.removeEventListener("wheel", event => {
-        event.preventDefault();
-      });
+      slickListDiv.removeEventListener("wheel", event => {});
     };
   }, [sliderRef]);
 

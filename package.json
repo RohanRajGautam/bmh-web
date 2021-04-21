@@ -53,6 +53,7 @@
   "devDependencies": {
     "env-cmd": "^10.1.0",
     "gatsby-plugin-material-ui": "^2.1.10",
+    "gatsby-plugin-remove-trailing-slashes": "^3.3.0",
     "prettier": "2.2.1"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
