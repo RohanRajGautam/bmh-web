@@ -21,7 +21,7 @@ const Blog = props => {
     <BlogWrapper>
       <HeadingWrapper>
         <Heading>On The Blog</Heading>
-        <StyledLink to="/blog">
+        <StyledLink to="/blog-cat">
           <span>Check our blog</span>
           <svg
             width="78"
@@ -91,7 +91,7 @@ const Blog = props => {
             </svg>
           </NavigationButton>
         </NavigationButtonWrapper>
-        <StyledLinkMobile to="/blog">
+        <StyledLinkMobile to="/blog-cat">
           <span>Check our blog</span>
           <svg
             width="78"

@@ -1,25 +1,19 @@
 import React from "react";
-import BlogSinglePage from "../templates/BlogSinglePage";
+import Page from "../templates/AllBlogs";
 import { graphql } from "gatsby";
 
-const BlogPage = ({ data }) => {
-  console.log(data);
-  return <BlogSinglePage title="Blog page" />;
+const Blogs = ({ data }) => {
+  return <Page data={data} />;
 };
-
-export default BlogPage;
 
 export const query = graphql`
   query {
-    allPost: allWpPost {
+    allWpPost(sort: { fields: date, order: DESC }) {
       nodes {
-        id
-        uri
-        slug
         title
         date
+        uri
         excerpt
-        authorId
         featuredImage {
           node {
             sourceUrl
@@ -29,3 +23,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default Blogs;

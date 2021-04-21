@@ -14,6 +14,7 @@ import {
   BlogContent,
   BlogSidebar,
   BlogSidebarTitle,
+  BlogViewMore,
 } from "./BlogSinglePage.styles";
 import SEO from "@layouts/common/seo";
 import { graphql } from "gatsby";
@@ -55,13 +56,12 @@ const BlogSinglePage = ({ data, ...props }) => {
       <BlogContentWrapper>
         <BlogContentWithSidebar>
           <BlogContent>
-            {/* {BlogContentData &&
-              BlogContentData.map((item, index) => <p key={index}>{item}</p>)} */}
             <div dangerouslySetInnerHTML={{ __html: post?.content }} />
           </BlogContent>
           <BlogSidebar>
             <BlogSidebarTitle>Recent Articles</BlogSidebarTitle>
             <RecentBlog />
+            <BlogViewMore to="/blogs">View More</BlogViewMore>
           </BlogSidebar>
         </BlogContentWithSidebar>
       </BlogContentWrapper>
