@@ -32,6 +32,7 @@ export const NavLink = styled(Link)`
 
   @media (max-width: 576px) {
     margin: 0 1rem;
+    font-size: small;
   }
 `;
 

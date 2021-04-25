@@ -74,6 +74,8 @@ export const DonateHeading = styled.h2`
   }
   @media (min-width: 768px) {
     margin: 0 0 0.75em 0;
+    width: 80%;
+    text-align: left;
   }
 `;
 
@@ -89,6 +91,8 @@ export const DonateParagraph = styled.div`
   }
   @media (min-width: 768px) {
     margin: 0 0 3em 0;
+    width: 80%;
+    text-align: left;
   }
 `;
 
@@ -100,6 +104,6 @@ export const DonateButton = styled(Button)`
     margin: 0 auto;
   }
   @media (min-width: 1024px) {
-    max-width: 70%;
+    max-width: 80%;
   }
 `;
