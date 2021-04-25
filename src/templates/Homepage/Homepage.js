@@ -1,8 +1,8 @@
 import * as React from "react";
 import Layout from "@layouts";
 import SEO from "@layouts/common/seo";
-import Aos from "aos";
-import "aos/dist/aos.css";
+// import Aos from "aos";
+// import "aos/dist/aos.css";
 import {
   Blog,
   Hero,
@@ -10,24 +10,23 @@ import {
   Donate,
   Event,
   StoryPage,
-  HorizontalComponent,
+  HorizontalScroll,
 } from "./components";
 
 const Homepage = props => {
-  console.log(props.data);
-  React.useEffect(() => {
-    Aos.init({
-      duration: 500,
-      // easing: "ease-in-sine",
-    });
-  }, []);
+  // console.log(props.data);
+  // React.useEffect(() => {
+  //   Aos.init({
+  //     duration: 500,
+  //     // easing: "ease-in-sine",
+  //   });
+  // }, []);
 
   return (
     <Layout>
       <SEO title="Home" />
       <Hero />
-      {/* <FullPageText /> */}
-      <HorizontalComponent />
+      <HorizontalScroll />
       <StoryPage />
       <Blog data={props.data} />
       <Event data={props.data.events.nodes} />

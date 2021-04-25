@@ -18,8 +18,7 @@ export const StoryContainer = styled.div`
   }
   @media (min-width: 1440px) {
     font-size: 16px;
-    padding: 0;
-    padding-left: 96px;
+    padding: 0 5vw;
     margin: 175px 0;
   }
 `;
