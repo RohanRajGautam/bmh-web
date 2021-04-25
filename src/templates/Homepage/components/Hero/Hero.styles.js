@@ -76,8 +76,9 @@ export const HeroItems = styled.div`
   line-height: 1.1;
   font-weight: bold;
   transform: translateY(25vh);
-  @media (min-width: 600px) {
-    width: 80%;
+
+  @media screen and (max-width: 576px) {
+    width: 100%;
   }
 `;
 
@@ -92,12 +93,13 @@ export const HeroTextContainer = styled.div`
 export const ButtonContainer = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 1.5rem 5vw;
-  @media (min-width: 768px) {
-    flex-direction: row;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0;
   }
   @media (min-width: 1024px) {
     padding: 0;
@@ -111,11 +113,16 @@ export const ButtonPrimary = styled(Button)`
     background-color: #fff;
     color: ${primaryColor};
   }
-  @media (min-width: 600px) {
-    margin-right: 2rem;
+  @media (max-width: 576px) {
+    margin: auto;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 90%;
+    padding: 2rem 5rem;
+    font-size: 20px;
   }
   @media (min-width: 1024px) {
-    width: 40rem;
+    margin-right: 1rem;
   }
 `;
 
@@ -134,6 +141,9 @@ export const HeroH1 = styled.h1`
   @media (min-width: 1024px) {
     font-size: clamp(3rem, 6vw, 6rem);
   }
+  @media (max-width: 576px) {
+    font-size: 3.5rem;
+  }
 `;
 
 export const Divider = styled.div`
@@ -141,10 +151,6 @@ export const Divider = styled.div`
   height: 0px;
   background: #fff;
   border: 2px solid #ffffff;
-
-  @media screen and (max-width: 860px) {
-    width: 5rem;
-  }
 `;
 
 export const HeroP = styled.p`
@@ -160,8 +166,9 @@ export const HeroP = styled.p`
   span {
     font-family: inherit;
   }
-  @media (min-width: 576px) {
-    font-size: 24px;
+  @media (max-width: 576px) {
+    font-size: 2rem;
+    padding: 3rem 0;
   }
   @media (min-width: 1024px) {
     font-size: clamp(1.8rem, 3vw, 3rem);

@@ -69,12 +69,13 @@ export const DonateHeading = styled.h2`
   line-height: 1.35;
   color: #fff;
   text-align: center;
-  @media (min-width: 481px) {
-    width: 80%;
-    text-align: left;
+  @media (max-width: 576px) {
+    font-size: 6em;
   }
   @media (min-width: 768px) {
     margin: 0 0 0.75em 0;
+    width: 80%;
+    text-align: left;
   }
 `;
 
@@ -85,12 +86,13 @@ export const DonateParagraph = styled.div`
   color: #fff;
   margin: 0 auto 3em;
   text-align: center;
-  @media (min-width: 481px) {
-    width: 80%;
-    text-align: left;
+  @media (max-width: 576px) {
+    font-size: 15px;
   }
   @media (min-width: 768px) {
     margin: 0 0 3em 0;
+    width: 80%;
+    text-align: left;
   }
 `;
 
@@ -98,7 +100,10 @@ export const DonateButton = styled(Button)`
   display: block;
   padding: 2rem 0;
   max-width: 100%;
+  @media (max-width: 576px) {
+    margin: 0 auto;
+  }
   @media (min-width: 1024px) {
-    max-width: 70%;
+    max-width: 80%;
   }
 `;

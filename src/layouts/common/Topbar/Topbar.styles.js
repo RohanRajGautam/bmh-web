@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 export const Wrapper = styled.nav`
-  height: 5rem;
+  height: 4rem;
   width: 100%;
   background: #6ca448;
   display: flex;
@@ -29,13 +29,15 @@ export const NavLink = styled(Link)`
     opacity: 1;
     /* transition: 0.3s; */
   }
+
+  @media (max-width: 576px) {
+    margin: 0 1rem;
+    font-size: small;
+  }
 `;
 
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
-  flex-direction: column;
-  @media (min-width: 576px) {
-    flex-direction: row;
-  }
+  flex-direction: row;
 `;

@@ -12,11 +12,13 @@ const gray3 = "#828282";
 
 export const HorizontalComponentWrapper = styled.div`
   overflow: hidden;
+  /* width: 400%; */
 `;
 
 export const HorizontalComponent = styled.div`
   font-size: 12px;
-  width: fit-content;
+  width: 600%;
+  /* width: fit-content; */
   display: flex;
   flex-direction: column;
   @media (min-width: 1024px) {
@@ -150,6 +152,70 @@ export const HorizontalComponentCollageWrapper = styled(
 
 export const HorizontalFullWidthBlock = styled.div`
   width: 100vw;
+  @media (min-width: 1024px) {
+    padding: 0;
+  }
+`;
+
+export const HorizontalFullWidthBlockSecond = styled.div`
+  background: #2c3336;
+  width: 100vw;
+
+  // add overlay to the background image
+
+  :before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(
+      90.56deg,
+      #2c3336 23.47%,
+      rgba(44, 51, 54, 0) 66.83%
+    );
+  }
+  @media (max-width: 576px) {
+    display: none;
+  }
+`;
+
+export const HorizontalComponentBlockThird = styled.div`
+  /* style */
+  width: 100vw;
+`;
+
+export const HorizontalComponentBlockForth = styled.div`
+  /* style */
+  @media (min-width: 1024px) {
+    width: 100vw;
+    position: relative;
+    left: 4%;
+  }
+`;
+
+export const HorizontalComponentImageLast = styled.div`
+  width: 100vw;
+`;
+
+export const ImageLast = styled.img`
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+  object-fit: cover;
+
+  @media (max-width: 576px) {
+    width: 185%;
+  }
+`;
+
+export const HorizontalFullWidthBlock2 = styled.div`
+  width: 100vw;
   padding-bottom: 64px;
   @media (min-width: 1024px) {
     padding: 0;
@@ -250,7 +316,8 @@ export const HorizontalComponentFeaturedImage = styled.div`
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 40vw;
+  height: 70vh;
   padding-top: 80%;
   position: relative;
 `;
