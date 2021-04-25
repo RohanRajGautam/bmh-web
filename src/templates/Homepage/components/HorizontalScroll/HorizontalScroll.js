@@ -67,8 +67,10 @@ const HorizontalScroll = props => {
           scrollTrigger: {
             trigger: "#horizontal-component",
             pin: true,
-            scrub: true,
-            end: () => `+=${maxWidth + 350}`,
+            scrub: 1,
+            // start: "top top",
+            snap: 1 / (sections.length - 1),
+            end: () => `+=${maxWidth + 450}`,
             invalidateOnRefresh: true,
           },
         });
@@ -87,6 +89,30 @@ const HorizontalScroll = props => {
         });
       },
     });
+    /*
+      horizontal scroll (advanced)
+    */
+    // let duration = 10,
+    //   sections = gsap.utils.toArray("#horizontal-scroll-item"),
+    //   sectionIncrement = duration / (sections.length - 1),
+    //   tl = gsap.timeline({
+    //     scrollTrigger: {
+    //       trigger: "#horizontal-component",
+    //       pin: true,
+    //       scrub: 1,
+    //       snap: 1 / (sections.length - 1),
+    //       start: "top top",
+    //       end: "+=5000",
+    //     },
+    //   });
+    // tl.to(sections, {
+    //   xPercent: -100 * (sections.length - 1),
+    //   duration: duration,
+    //   ease: "none",
+    // });
+    /*
+      end of advanced horizontal scrolling
+    */
   }, []);
 
   return (
@@ -243,7 +269,7 @@ const HorizontalScroll = props => {
                 </svg>
               </HorizontalComponentDotWrapperHealing>
               <SubtitleWrapper>
-                <HorizontalHeading>Healing begins here</HorizontalHeading>
+                <HorizontalHeading>Empowering your Future</HorizontalHeading>
               </SubtitleWrapper>
             </DisplayFlex>
 

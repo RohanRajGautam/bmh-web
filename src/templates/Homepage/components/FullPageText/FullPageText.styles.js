@@ -4,7 +4,8 @@ const graniteGrey = "#2C3336";
 const primary = "#6CA448";
 
 export const TextContainer = styled.div`
-  color: #fff;
+  /* background: #000; */
+  color: #eee;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,6 +27,9 @@ export const Message = styled.h1`
   user-select: none;
   transition: 2s ease;
   color: ${primary};
+  background-image: linear-gradient(45deg, #000 -200%, #eee -100%, #000 0%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   @media (min-width: 1024px) {
     font-size: 72px;
   }

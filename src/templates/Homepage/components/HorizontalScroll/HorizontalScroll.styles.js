@@ -12,11 +12,13 @@ const gray3 = "#828282";
 
 export const HorizontalComponentWrapper = styled.div`
   overflow: hidden;
+  /* width: 400%; */
 `;
 
 export const HorizontalComponent = styled.div`
   font-size: 12px;
-  width: fit-content;
+  width: 400%;
+  /* width: fit-content; */
   display: flex;
   flex-direction: column;
   @media (min-width: 1024px) {
@@ -250,7 +252,8 @@ export const HorizontalComponentFeaturedImage = styled.div`
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 40vw;
+  height: 70vh;
   padding-top: 80%;
   position: relative;
 `;
