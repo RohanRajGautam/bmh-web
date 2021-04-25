@@ -2,23 +2,31 @@ import styled, { css } from "styled-components";
 
 const primary = "#6CA448";
 const medicalGrey = "#5F6468";
+const graniteGrey = "#2C3336";
+const border = "#C5CCD3";
 
 export const EventWrapper = styled.div`
-  margin-top: 100px;
   padding: 5vw;
-  margin-bottom: 64px;
-  .slick-slide {
-    margin: 0 5px;
-  }
-  .slick-dots {
-    display: none !important;
-  }
-  @media (min-width: 600px) {
-    .slick-slide {
-      margin: 0 20px;
+  .MuiGrid-container {
+    position: relative;
+    z-index: 1;
+    .MuiInput-underline:before,
+    .MuiInput-underline:after {
+      display: none;
     }
-    .slick-dots {
-      display: block !important;
+    .MuiInput-underline:hover:before {
+      display: none;
+    }
+    .MuiInput-root {
+      input {
+        font-size: 20px;
+        font-family: Mulish;
+        color: ${graniteGrey};
+        cursor: pointer;
+      }
+    }
+    .MuiFormControl-root {
+      padding: 12px 20px;
     }
   }
 `;
@@ -26,12 +34,12 @@ export const EventWrapper = styled.div`
 export const EventCard = styled.div`
   border-radius: 12px;
   padding: 20px;
-  width: 250px;
+  min-width: 250px;
   border: 1px solid ${medicalGrey};
   color: ${medicalGrey};
-  transition: all 300ms;
+  transition: all 300ms, color 0ms;
+  margin: 0 5px;
   &:hover {
-    box-shadow: 16px 72px 74px rgba(19, 65, 124, 0.19);
     transition: all 300ms;
     background-color: ${primary};
     cursor: pointer;
@@ -44,15 +52,28 @@ export const EventCard = styled.div`
       color: #fff;
     }
   }
+  &:first-child {
+    margin-left: 0;
+  }
 
   @media (min-width: 600px) {
-    width: 450px;
+    min-width: 450px;
     padding: 35px;
+    margin: 0 20px;
   }
 `;
 
 export const EventSliderWrapper = styled.div`
   margin-top: 40px;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const EventDay = styled.time`
@@ -103,41 +124,55 @@ export const EventTime = styled.time`
   }
 `;
 
-export const NavigationButton = styled.div`
-  position: absolute;
-  bottom: -50px;
-  button {
-    height: 30px;
-    width: 30px;
-    border: 1px solid #c5ccd3;
-    border-radius: 3px;
-    display: grid;
-    place-items: center;
-    background-color: #fff;
-    cursor: pointer;
-    &:hover {
-      background-color: #f4f4f4;
-    }
+export const NavigationButtonWrapper = styled.div`
+  display: flex;
+  margin-top: 64px;
+`;
+
+export const NavigationButton = styled.button`
+  height: 30px;
+  width: 30px;
+  border: 1px solid #c5ccd3;
+  border-radius: 3px;
+  display: grid;
+  place-items: center;
+  background-color: #fff;
+  cursor: pointer;
+  &:hover {
+    background-color: #f4f4f4;
   }
   @media (min-width: 768px) {
-    bottom: -80px;
-    button {
-      height: 40px;
-      width: 40px;
+    height: 40px;
+    width: 40px;
+    svg {
+      height: 21px;
+      width: 13px;
     }
   }
-  ${({ next }) =>
-    next &&
+  ${props =>
+    props.right &&
     css`
-      left: 60px;
-      @media (min-width: 768px) {
-        left: 80px;
-      }
+      margin-left: 25px;
     `}
+`;
 
-  ${({ prev }) =>
-    prev &&
-    css`
-      margin-left: 20px;
-    `}
+export const EventDatePickerWrapper = styled.div`
+  border: 1px solid ${border};
+  margin-top: 72px;
+  max-width: 250px;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  svg {
+    margin-left: 20px;
+  }
+`;
+
+export const EventDatePickerArrow = styled.div`
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
 `;

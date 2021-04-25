@@ -6,19 +6,22 @@ import {
   RecentCardImage,
   RecentCardInner,
   RecentCardTitle,
+  StyledLink,
 } from "./RecentPost.styles";
 
 const MyRecentCard = props => {
   return (
-    <RecentCard>
-      <RecentCardInner>
-        <RecentCardImage image={props.image} />
-        <RecentCardDesc>
-          <RecentCardTitle>{props.title}</RecentCardTitle>
-          <RecentCardDate>{props.date}</RecentCardDate>
-        </RecentCardDesc>
-      </RecentCardInner>
-    </RecentCard>
+    <StyledLink to={props?.url}>
+      <RecentCard>
+        <RecentCardInner>
+          <RecentCardImage image={props.image} />
+          <RecentCardDesc>
+            <RecentCardTitle>{props.title}</RecentCardTitle>
+            <RecentCardDate>{props.date}</RecentCardDate>
+          </RecentCardDesc>
+        </RecentCardInner>
+      </RecentCard>
+    </StyledLink>
   );
 };
 

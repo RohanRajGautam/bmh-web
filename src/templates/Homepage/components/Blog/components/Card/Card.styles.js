@@ -9,23 +9,9 @@ const blueGrey = "#C5CCD3";
 export const Card = styled.div`
   width: 250px;
   &:hover {
-    .Cardstyles__CardThumbnail-gfcwtT {
+    figure {
       transform: scale(1.05);
       transition: transform 300ms;
-    }
-  }
-  .slick-slide {
-    margin: 0 5px;
-  }
-  .slick-dots {
-    display: none !important;
-  }
-  @media (min-width: 600px) {
-    .slick-slide {
-      margin: 0 20px;
-    }
-    .slick-dots {
-      display: block !important;
     }
   }
   @media (min-width: 600px) {
@@ -35,6 +21,14 @@ export const Card = styled.div`
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
+  display: block;
+  margin: 0 5px;
+  @media (min-width: 600px) {
+    margin: 0 20px;
+  }
+  &:first-child {
+    margin-left: 0;
+  }
 `;
 
 export const CardThumbnailWrapper = styled.div`
@@ -46,7 +40,7 @@ export const CardThumbnailWrapper = styled.div`
   }
 `;
 
-export const CardThumbnail = styled.div`
+export const CardThumbnail = styled.figure`
   height: 100%;
   background-color: ${blueGrey};
   background-image: url(${props => props.thumbnail});

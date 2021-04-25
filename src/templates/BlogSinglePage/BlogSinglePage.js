@@ -13,17 +13,14 @@ import {
   BlogContentWithSidebar,
   BlogContent,
   BlogSidebar,
-  BlogArticleWrapper,
-  BlogWrapper,
   BlogSidebarTitle,
+  BlogViewMore,
 } from "./BlogSinglePage.styles";
 import SEO from "@layouts/common/seo";
-import ArticleCard from "@components/ArticleCard";
-import { CardContent, BlogContentData } from "./BlogSinglePage.data";
 import { graphql } from "gatsby";
+import { RecentBlog } from "../Homepage/components/Blog/components/RecentBlog";
 
-const BlogSinglePage = ({ data }) => {
-  console.log(data);
+const BlogSinglePage = ({ data, ...props }) => {
   const post = data?.allWpPost?.edges[0].node;
   return (
     <Layout>
@@ -59,24 +56,12 @@ const BlogSinglePage = ({ data }) => {
       <BlogContentWrapper>
         <BlogContentWithSidebar>
           <BlogContent>
-            {/* {BlogContentData &&
-              BlogContentData.map((item, index) => <p key={index}>{item}</p>)} */}
             <div dangerouslySetInnerHTML={{ __html: post?.content }} />
           </BlogContent>
           <BlogSidebar>
             <BlogSidebarTitle>Recent Articles</BlogSidebarTitle>
-            <BlogWrapper>
-              {CardContent &&
-                CardContent.map((item, index) => (
-                  <BlogArticleWrapper key={index}>
-                    <ArticleCard
-                      title={item.title}
-                      date={item.date}
-                      image={item.image}
-                    />
-                  </BlogArticleWrapper>
-                ))}
-            </BlogWrapper>
+            <RecentBlog />
+            <BlogViewMore to="/blogs">View More</BlogViewMore>
           </BlogSidebar>
         </BlogContentWithSidebar>
       </BlogContentWrapper>

@@ -5,26 +5,19 @@ const graniteGray = "#2C3336";
 
 export const BlogWrapper = styled.div`
   padding: 5vw;
-  margin-bottom: 64px;
-  .slick-dots {
-    display: none !important;
-  }
-  .slick-slide {
-    margin: 0 5px;
-  }
-
-  @media (min-width: 600px) {
-    .slick-slide {
-      margin: 0 20px;
-    }
-    .slick-dots {
-      display: block !important;
-    }
-  }
 `;
 
 export const SliderWrapper = styled.div`
   margin-top: 40px;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const HeadingWrapper = styled.div`
@@ -59,7 +52,6 @@ export const StyledLink = styled(Link)`
 export const StyledLinkMobile = styled(StyledLink)`
   display: flex;
   justify-content: flex-end;
-  margin-top: 25px;
   font-size: 14px;
   svg {
     height: 14px;
@@ -70,42 +62,40 @@ export const StyledLinkMobile = styled(StyledLink)`
   }
 `;
 
-export const NavigationButton = styled.div`
-  position: absolute;
-  bottom: -50px;
-  button {
-    height: 30px;
-    width: 30px;
-    border: 1px solid #c5ccd3;
-    border-radius: 3px;
-    display: grid;
-    place-items: center;
-    background-color: #fff;
-    cursor: pointer;
-    &:hover {
-      background-color: #f4f4f4;
-    }
+export const NavigationButtonWrapper = styled.div`
+  display: flex;
+`;
+
+export const NavigationButton = styled.button`
+  height: 30px;
+  width: 30px;
+  border: 1px solid #c5ccd3;
+  border-radius: 3px;
+  display: grid;
+  place-items: center;
+  background-color: #fff;
+  cursor: pointer;
+  &:hover {
+    background-color: #f4f4f4;
   }
   @media (min-width: 768px) {
-    bottom: -80px;
-
-    button {
-      height: 40px;
-      width: 40px;
+    height: 40px;
+    width: 40px;
+    svg {
+      height: 21px;
+      width: 13px;
     }
   }
-  ${({ next }) =>
-    next &&
+  ${props =>
+    props.right &&
     css`
-      left: 60px;
-      @media (min-width: 768px) {
-        left: 80px;
-      }
+      margin-left: 25px;
     `}
+`;
 
-  ${({ prev }) =>
-    prev &&
-    css`
-      margin-left: 20px;
-    `}
+export const SpaceBetween = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 64px;
 `;

@@ -1,8 +1,10 @@
 import styled from "styled-components";
+import { Link } from "gatsby";
 
 const blue = "#427CC5";
 const medicalGrey = "#5F6468";
 const graniteGrey = "#2C3336";
+const primary = "#6CA448";
 
 export const BlogPageHero = styled.div`
   height: calc(100vh - 50px);
@@ -113,6 +115,7 @@ export const BlogPageShare = styled.div`
 `;
 
 export const BlogContentWrapper = styled.div`
+  padding-top: 64px;
   @media (min-width: 1024px) {
     padding: 70px 45px 70px 93px;
   }
@@ -165,6 +168,9 @@ export const BlogContent = styled.div`
   iframe {
     max-width: 100%;
   }
+  figure {
+    max-width: 100%;
+  }
 `;
 
 export const BlogWrapper = styled.div`
@@ -204,4 +210,14 @@ export const BlogArticleWrapper = styled.div`
     margin-right: 0;
     width: 350px;
   }
+`;
+
+export const BlogViewMore = styled(Link)`
+  text-align: center;
+  font-size: 18px;
+  color: ${primary};
+  font-family: Mulish;
+  margin: 25px 0;
+  display: block;
+  text-decoration: none;
 `;
