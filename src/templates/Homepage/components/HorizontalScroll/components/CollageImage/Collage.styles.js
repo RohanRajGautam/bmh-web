@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 export const CollageWrapper = styled.div`
   position: relative;
@@ -9,7 +9,7 @@ export const CollageWrapper = styled.div`
   }
 `;
 
-export const Collage = styled.div`
+export const Collage = styled.section`
   display: grid;
   grid-gap: 16px;
   grid-template-columns: 90vw;
@@ -35,6 +35,7 @@ export const CollageItems = styled.div`
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  opacity: 0;
   @media only screen and (min-width: 1024px) {
     height: 420px;
     width: 400px;
@@ -98,4 +99,21 @@ export const CollageItems = styled.div`
       bottom: 50%;
     }
   }
+  ${({ animate }) =>
+    animate &&
+    css`
+      animation: ${FadeInRight} 1s;
+      animation-fill-mode: forwards;
+    `}
+`;
+
+export const FadeInRight = keyframes`
+0%{
+  transform:translateX(250px);
+  opacity:0;
+}
+100%{
+  transform:translateX(0);
+  opacity:1;
+}
 `;

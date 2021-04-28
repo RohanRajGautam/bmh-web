@@ -4,7 +4,7 @@ import { Button } from "@components/Button";
 const primaryColor = "#6CA448";
 
 export const HeroContainer = styled.div`
-  background: #0c0c0c;
+  background: #eee;
   display: flex;
   justify-content: flex-start;
   align-items: center;

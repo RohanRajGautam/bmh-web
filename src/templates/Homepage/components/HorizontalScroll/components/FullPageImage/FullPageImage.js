@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import image from "@images/home/FullPageImage.png";
+import image from "@images/home/bmh-long.jpg";
 
 // styled components
 
@@ -25,10 +25,17 @@ const ImageBg = styled.div`
   overflow: hidden; */
 `;
 
+const TransitionToWhite = styled.div`
+  width: 40vw;
+  height: 100vh;
+  background: #f2f2f2;
+`;
+
 function FullPageImage() {
   return (
     <ImageBg>
       <Image src={image} type="image/png" />
+      {/* <TransitionToWhite /> */}
     </ImageBg>
   );
 }

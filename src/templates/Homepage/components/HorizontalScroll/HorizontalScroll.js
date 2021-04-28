@@ -29,9 +29,9 @@ import {
   HorizontalTitleDotWrapperRight,
   HorizontalComponentHeadingWrapperRight,
   ServicesWrapperRight,
+  HorizontalComponentWrapper,
   WellnessSvgWrapper,
   MedicalSvgWrapper,
-  HorizontalComponentWrapper,
   HorizontalComponentBlock,
   HorizontalComponentBlockWrapperRight,
   HorizontalComponentBlockThird,
@@ -61,90 +61,28 @@ import logoAlt from "@images/icons/Frame.svg";
 import vector from "@images/icons/vector-line.svg";
 import imageLast from "@images/home/horizontal-last.png";
 
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
 const HorizontalScroll = props => {
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    // ScrollTrigger.matchMedia({
-    //   "(min-width:1024px)": function () {
-    //     const sections = gsap.utils.toArray("#horizontal-scroll-item");
-    //     let maxWidth = 0;
-    //     const getMaxWidth = () => {
-    //       maxWidth = 0;
-    //       sections.forEach(section => {
-    //         maxWidth += section.offsetWidth;
-    //       });
-    //     };
-    //     getMaxWidth();
-    //     ScrollTrigger.addEventListener("refreshInit", getMaxWidth);
-    //     gsap.to(sections, {
-    //       x: () => `-${maxWidth - window.innerWidth}`,
-    //       ease: "none",
-    //       scrollTrigger: {
-    //         trigger: "#horizontal-component",
-    //         pin: true,
-    //         scrub: 1,
-    //         // start: "top top",
-    //         snap: 1 / (sections.length - 1),
-    //         end: () => `+=${maxWidth + 450}`,
-    //         invalidateOnRefresh: true,
-    //       },
-    //     });
-    //     sections.forEach((sct, i) => {
-    //       ScrollTrigger.create({
-    //         trigger: sct,
-    //         start: () =>
-    //           "top top-=" +
-    //           (sct.offsetLeft - window.innerWidth / 2) *
-    //             (maxWidth / (maxWidth - window.innerWidth)),
-    //         end: () =>
-    //           "+=" +
-    //           sct.offsetWidth * (maxWidth / (maxWidth - window.innerWidth)),
-    //         toggleClass: { targets: sct, className: "active" },
-    //       });
-    //     });
-    //   },
-    // });
-    /*
-      horizontal scroll (advanced)
-    */
-    // let duration = 2,
-    //   sections = gsap.utils.toArray("#horizontal-scroll-item"),
-    //   tl = gsap.timeline({
-    //     scrollTrigger: {
-    //       trigger: "#horizontal-component",
-    //       pin: true,
-    //       scrub: 1,
-    //       snap: 1 / (sections.length - 1),
-    //       // start: "top top",
-    //       end: () =>
-    //         "+=" + document.querySelector("#horizontal-component").offsetWidth,
-    //     },
-    //   });
-    // tl.to(sections, {
-    //   xPercent: -100 * (sections.length - 1),
-    //   duration: duration,
-    //   ease: "none",
-    // });
-    /*
-      end of advanced horizontal scrolling
-    */
-
     ScrollTrigger.matchMedia({
       "(min-width:1024px)": function () {
         let sections = gsap.utils.toArray("#horizontal-scroll-item");
 
-        gsap.to(sections, {
+        let timeline = gsap.timeline();
+
+        timeline.to(sections, {
           xPercent: -100 * (sections.length - 1),
           ease: "none",
           scrollTrigger: {
-            trigger: "#horizontal-component",
+            trigger: "#container",
             pin: true,
             scrub: 1,
             snap: 1 / (sections.length - 1),
-            // base vertical scrolling on how wide the container is so it feels more natural.
-            end: () =>
-              "+=" +
-              document.querySelector("#horizontal-component").offsetWidth,
+            // base vertical scrolling on how wide the is so it feels more natural.
+            end: () => "+=" + document.querySelector("#container").offsetWidth,
           },
         });
       },
@@ -153,7 +91,7 @@ const HorizontalScroll = props => {
 
   return (
     <HorizontalComponentWrapper>
-      <HorizontalComponent id="horizontal-component">
+      <HorizontalComponent id="container">
         <HorizontalFullWidthBlock id="horizontal-scroll-item">
           <FullPageText />
         </HorizontalFullWidthBlock>
@@ -164,7 +102,9 @@ const HorizontalScroll = props => {
           <ScrollableFirst />
         </HorizontalComponentBlockThird>
         <HorizontalComponentCollageWrapper id="horizontal-scroll-item">
-          <Collage />
+          <section>
+            <Collage />
+          </section>
         </HorizontalComponentCollageWrapper>
         <HorizontalComponentBlockForth id="horizontal-scroll-item">
           <ScrollableLast />

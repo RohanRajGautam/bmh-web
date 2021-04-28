@@ -49,7 +49,7 @@ const ScrollableFirst = () => {
               <path
                 d="M0.872559 0.774292L6.35211 6.25345L11.8313 0.774292"
                 stroke="#6CA448"
-                stroke-width="2"
+                strokeWidth="2"
               />
             </svg>
           </span>

@@ -303,3 +303,5 @@ export const BigMenuNavItem = styled.li`
     font-size: 18px;
   }
 `;
+
+export const Wrapper = styled.div``;

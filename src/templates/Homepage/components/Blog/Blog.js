@@ -20,8 +20,8 @@ const Blog = props => {
   return (
     <BlogWrapper>
       <HeadingWrapper>
-        <Heading>On The Blog</Heading>
-        <StyledLink to="/blog-cat">
+        <Heading data-aos="fade-up-right">On The Blog</Heading>
+        <StyledLink to="/blog-cat" data-aos="flip-right">
           <span>Check our blog</span>
           <svg
             width="78"
@@ -71,7 +71,7 @@ const Blog = props => {
               <path
                 d="M11 1.88721L3 10.8872L11 19.8872"
                 stroke="#5F6468"
-                stroke-width="3"
+                strokeWidth="3"
               />
             </svg>
           </NavigationButton>
@@ -86,7 +86,7 @@ const Blog = props => {
               <path
                 d="M2 1.88721L10 10.8872L2 19.8872"
                 stroke="#5F6468"
-                stroke-width="3"
+                strokeWidth="3"
               />
             </svg>
           </NavigationButton>

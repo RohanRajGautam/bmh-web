@@ -13,7 +13,7 @@ const StoryPage = () => {
   return (
     <StoryContainer>
       <ContentWrapper>
-        <Content data-aos="zoom-out-right">
+        <Content data-aos="fade-down-right" data-aos-delay="200">
           <HeadingWrapper big>
             Our Story
             <br /> meets yours
@@ -34,7 +34,7 @@ const StoryPage = () => {
             Donate
           </ButtonWrapper>
         </Content>
-        <Thumbnail />
+        <Thumbnail data-aos="fade-down-left" data-aos-delay="200" />
       </ContentWrapper>
     </StoryContainer>
   );

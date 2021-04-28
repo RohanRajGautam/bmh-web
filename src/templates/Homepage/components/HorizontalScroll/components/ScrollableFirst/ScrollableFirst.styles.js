@@ -192,7 +192,7 @@ export const VectorDotSecond = styled.div`
 
 export const VectorWrapper = styled.div`
   display: none;
-  @media (min-width: 1400px) {
+  @media (min-width: 1260px) {
     display: block;
     position: absolute;
   }

@@ -17,7 +17,7 @@ const Events = props => {
 
   return (
     <EventWrapper>
-      <Heading>Here's What's Coming Up</Heading>
+      <Heading data-aos="fade-up-right">Here's What's Coming Up</Heading>
       <MaterialUIPickers />
       <EventSliderWrapper ref={eventRef}>
         {props?.data.length &&
@@ -47,7 +47,7 @@ const Events = props => {
             <path
               d="M11 1.88721L3 10.8872L11 19.8872"
               stroke="#5F6468"
-              stroke-width="3"
+              strokeWidth="3"
             />
           </svg>
         </NavigationButton>
@@ -62,7 +62,7 @@ const Events = props => {
             <path
               d="M2 1.88721L10 10.8872L2 19.8872"
               stroke="#5F6468"
-              stroke-width="3"
+              strokeWidth="3"
             />
           </svg>
         </NavigationButton>
