@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import image from "@images/home/bmh-long.jpg";
+import image from "@images/home/FullPageImage.png";
 
 // styled components
 
