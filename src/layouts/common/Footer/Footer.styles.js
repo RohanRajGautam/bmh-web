@@ -85,14 +85,22 @@ export const FooterBrandLogoWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  flex-wrap: nowrap;
+  overflow-x: auto;
   margin: 60px 0;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -webkit-overflow-scrolling: touch;
 `;
 
 export const FooterBrandLogo = styled.div`
   padding: 15px;
+  flex: 0 0 auto;
   img {
     object-fit: cover;
+    user-select: none;
     height: 100%;
     width: auto;
   }
