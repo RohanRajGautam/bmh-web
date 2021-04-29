@@ -4,7 +4,7 @@ import { Button } from "@components/Button";
 const primaryColor = "#6CA448";
 
 export const HeroContainer = styled.div`
-  background: #eee;
+  background: #fff;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -24,12 +24,12 @@ export const HeroContainer = styled.div`
     right: 0;
     left: 0;
     z-index: 2;
-    background: linear-gradient(
+    /* background: linear-gradient(
         180deg,
         rgba(0, 0, 0, 0.2) 0%,
         rgba(0, 0, 0, 0.2) 100%
       ),
-      linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
+      linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%); */
   }
 `;
 export const HeroBg = styled.div`
