@@ -36,7 +36,7 @@ const Navbar = props => {
 
   let app = useRef(null);
   let logoAnim = useRef(null);
-  let tl = new TimelineLite({ delay: 0.8 });
+  let tl = new TimelineLite({ delay: 0.4 });
 
   useEffect(() => {
     const logoContent = logoAnim.children[0].firstElementChild;
@@ -46,10 +46,10 @@ const Navbar = props => {
     TweenMax.to(app, 0, { css: { visibility: "visible" } });
 
     tl.staggerFrom([logoContent, menuContent], 1, {
-      y: -40,
+      x: 20,
       opacity: 0,
       ease: Power3.easeIn,
-      delay: 0.8,
+      delay: 0.4,
     });
   }, [tl]);
 
@@ -78,7 +78,12 @@ const Navbar = props => {
                   Your love & support can change someone’s life
                 </BigMenuHeading>
               </BigMenuHeadingWrapper>
-              <BigMenuDonate>Donate</BigMenuDonate>
+              <BigMenuDonate
+                target="_blank"
+                href="https://beautifulmindswellness.org/donate/"
+              >
+                Donate
+              </BigMenuDonate>
             </BigMenuLeft>
             <BigMenuCenter>
               <BigMenuNavs>
@@ -90,7 +95,13 @@ const Navbar = props => {
                         {item.list.length &&
                           item.list.map((item, index) => (
                             <BigMenuNavItem key={index}>
-                              <Link to={item.to}>{item.title}</Link>
+                              <Link
+                                target="_blank"
+                                to={item.to}
+                                onClick={handleBigMenu}
+                              >
+                                {item.title}
+                              </Link>
                             </BigMenuNavItem>
                           ))}
                       </BigMenuNavItemWrapper>
