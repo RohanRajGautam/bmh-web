@@ -11,7 +11,7 @@ import {
 
 const StoryPage = () => {
   return (
-    <StoryContainer>
+    <StoryContainer id="our-story">
       <ContentWrapper>
         <Content data-aos="fade-down-right" data-aos-delay="200">
           <HeadingWrapper big>

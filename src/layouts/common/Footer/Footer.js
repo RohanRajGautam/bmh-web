@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "gatsby";
+
 import { StaticBrandLogo, staticData } from "./Footer.datas";
 import {
   FooterBrandLogo,
@@ -34,7 +36,11 @@ const Footer = () => {
               <FooterItemTitle>{item.title}</FooterItemTitle>
               <FooterItemList>
                 {item.items.map((obj, index) => (
-                  <FooterItem key={index}>{obj}</FooterItem>
+                  <FooterItem key={index}>
+                    <Link to={obj.to} target="_blank">
+                      {obj.title}
+                    </Link>
+                  </FooterItem>
                 ))}
               </FooterItemList>
             </div>

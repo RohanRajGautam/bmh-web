@@ -8,7 +8,7 @@ export const FooterWrapper = styled.div`
   padding: 2rem;
 
   @media (min-width: 576px) {
-    padding: 75px 96px;
+    padding: 75px 96px 15px;
   }
 `;
 
@@ -69,10 +69,16 @@ export const FooterItemList = styled.ul`
 export const FooterItem = styled.li`
   list-style-type: none;
   font-size: 14px;
-  color: ${lightBlueGrey};
   font-weight: 300;
-  font-family: Mulish;
-  line-height: 34px;
+
+  a {
+    color: ${lightBlueGrey};
+    line-height: 25px;
+    font-family: Mulish;
+    line-height: 34px;
+    user-select: none;
+    text-decoration: none;
+  }
 `;
 
 export const FooterBrandLogoWrapper = styled.div`
