@@ -1,11 +1,11 @@
 // images
-import BrandLogo from "@images/brand-logo/brand-logo.png";
-import BrandLogo1 from "@images/brand-logo/brand-logo1.png";
-import BrandLogo2 from "@images/brand-logo/brand-logo2.png";
-import BrandLogo3 from "@images/brand-logo/brand-logo3.png";
-import BrandLogo4 from "@images/brand-logo/brand-logo4.png";
-import BrandLogo5 from "@images/brand-logo/brand-logo5.png";
-import BrandLogo6 from "@images/brand-logo/brand-logo6.png";
+import BrandLogo from "@images/brand-logo/brand-logo.svg";
+import BrandLogo1 from "@images/brand-logo/brand-logo1.svg";
+import BrandLogo2 from "@images/brand-logo/brand-logo2.svg";
+import BrandLogo3 from "@images/brand-logo/brand-logo3.svg";
+import BrandLogo4 from "@images/brand-logo/brand-logo4.svg";
+import BrandLogo5 from "@images/brand-logo/brand-logo5.svg";
+import BrandLogo6 from "@images/brand-logo/brand-logo6.svg";
 
 export const staticData = [
   {
