@@ -13,16 +13,16 @@ const Donate = () => {
     <DonateWrapper>
       <DonateStyle>
         <DonateColumn>
-          <DonateHeading data-aos="fade-up-left">
-            Your love & support can change someone’s life
+          <DonateHeading data-aos="fade-right">
+            Let’s start with helping people to get better.
           </DonateHeading>
-          <DonateParagraph data-aos="fade-up-left">
+          {/* <DonateParagraph data-aos="fade-up-right">
             You can support mentally unwell people by donating, we are more than
             happy with what you share
-          </DonateParagraph>
+          </DonateParagraph> */}
           <DonateButton
             primary="true"
-            data-aos="fade-up-left"
+            data-aos="fade-right"
             to="https://beautifulmindswellness.org/donate/"
             target="_blank"
           >
