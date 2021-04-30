@@ -57,7 +57,7 @@ export const BigMenu = styled.div`
   width: 0px;
   overflow: hidden;
   background-color: #fff;
-  position: fixed;
+  position: absolute;
   right: calc(5vw + 10px);
   z-index: 100;
   margin-bottom: 2px;

@@ -159,7 +159,7 @@ export const HorizontalFullWidthBlock = styled.div`
 
 export const HorizontalFullWidthBlockSecond = styled.div`
   background: #2c3336;
-  width: 100vw;
+  width: 100.5vw;
 
   // add overlay to the background image
 
