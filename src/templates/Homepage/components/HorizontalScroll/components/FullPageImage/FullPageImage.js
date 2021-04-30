@@ -25,17 +25,10 @@ const ImageBg = styled.div`
   overflow: hidden; */
 `;
 
-const TransitionToWhite = styled.div`
-  width: 40vw;
-  height: 100vh;
-  background: #f2f2f2;
-`;
-
 function FullPageImage() {
   return (
     <ImageBg>
       <Image src={image} type="image/png" />
-      {/* <TransitionToWhite /> */}
     </ImageBg>
   );
 }

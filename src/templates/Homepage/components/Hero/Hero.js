@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { TimelineLite, TweenMax, Power3 } from "gsap";
 
 // components
-import { Button } from "@components/Button";
 import {
   ButtonContainer,
   ButtonPrimary,
@@ -15,7 +14,6 @@ import {
   HeroP,
   HeroTextContainer,
   ImageBg,
-  MobileButtonPrimary,
 } from "./Hero.styles";
 
 // images
@@ -25,11 +23,10 @@ export default function Hero() {
   let app = useRef(null);
   let images = useRef(null);
   let content = useRef(null);
-  let tl = new TimelineLite({ delay: 0.8 });
 
   useEffect(() => {
+    let tl = new TimelineLite({ delay: 0.8 });
     const bgImg = images.firstElementChild;
-    const all = app.current;
     const h1Text = content.children[0].children[0];
     const divider = content.children[0].children[1];
     const pText = content.children[0].children[2];
@@ -57,7 +54,7 @@ export default function Hero() {
       },
       1.4
     );
-  }, [tl]);
+  }, []);
 
   return (
     <HeroContainer ref={el => (app = el)}>

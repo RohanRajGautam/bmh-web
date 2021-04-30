@@ -9,7 +9,6 @@ import {
   ServicesHeading,
   ServicesItemWrapper,
   ServicesItems,
-  VectorLine,
 } from "./ScrollableLast.styles";
 import {
   FutureTitle,

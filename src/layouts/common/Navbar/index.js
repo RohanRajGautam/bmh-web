@@ -6,7 +6,6 @@ import {
   Menulink,
   Nav,
   BigMenu,
-  BigMenuWrapper,
   BigMenuInner,
   BigMenuLeft,
   BigMenuHeadingWrapper,
@@ -36,9 +35,9 @@ const Navbar = props => {
 
   let app = useRef(null);
   let logoAnim = useRef(null);
-  let tl = new TimelineLite({ delay: 0.4 });
 
   useEffect(() => {
+    let tl = new TimelineLite({ delay: 0.4 });
     const logoContent = logoAnim.children[0].firstElementChild;
     const menuContent = logoAnim.children[1].firstElementChild;
 

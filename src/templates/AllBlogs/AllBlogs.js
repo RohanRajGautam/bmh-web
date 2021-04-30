@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "@layouts";
-import SEO from "@layouts/common/seo";
+import Seo from "@layouts/common/seo";
 import {
   AllCardWrapper,
   AllBlogPageWrapper,
@@ -12,7 +12,7 @@ const AllBlogs = ({ data }) => {
   console.log(data);
   return (
     <Layout dark>
-      <SEO title="Blog" />
+      <Seo title="Blog" />
       <AllBlogPageWrapper>
         <AllBlogHeading clean>Beautiful Minds Blogs</AllBlogHeading>
         <AllCardWrapper>

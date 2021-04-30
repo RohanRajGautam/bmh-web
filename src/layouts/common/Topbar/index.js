@@ -2,13 +2,13 @@ import React, { useEffect, useRef } from "react";
 import { TimelineLite, TweenMax, Power3 } from "gsap";
 
 import { menuData } from "@data/MenuData";
-import { Container, Wrapper, NavMenu, NavLink } from "./Topbar.styles";
+import { Wrapper, NavMenu, NavLink } from "./Topbar.styles";
 
 const Topbar = () => {
   let bar = useRef(null);
-  let tl = new TimelineLite({ delay: 0.8 });
 
   useEffect(() => {
+    let tl = new TimelineLite({ delay: 0.8 });
     const top = bar.firstElementChild;
 
     //Remove initial flash
@@ -21,7 +21,7 @@ const Topbar = () => {
       { scale: 1.6, ease: Power3.easeOut },
       0.2
     );
-  }, [tl]);
+  }, []);
 
   return (
     <Wrapper ref={el => (bar = el)}>

@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const CategorySliderBlockWrapper = styled.div`
   margin: 40px 20px;

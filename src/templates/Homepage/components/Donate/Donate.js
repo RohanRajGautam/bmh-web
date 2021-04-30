@@ -3,7 +3,7 @@ import {
   DonateWrapper,
   DonateStyle,
   DonateHeading,
-  DonateParagraph,
+  // DonateParagraph,
   DonateColumn,
   DonateButton,
 } from "./Donate.styles";

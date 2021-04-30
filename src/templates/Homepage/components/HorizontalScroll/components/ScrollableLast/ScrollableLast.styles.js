@@ -3,8 +3,6 @@ import { Heading } from "@components/Heading";
 
 const primary = "#6CA448";
 const graniteGrey = "#2C3336";
-const lightGreen = "#86CF57";
-const blueGrey = "#C5CCD3";
 const medicalGrey = "#5f6468";
 const gray3 = "#828282";
 
