@@ -51,7 +51,7 @@ const Navbar = props => {
       ease: Power3.easeIn,
       delay: 0.4,
     });
-  }, [tl]);
+  }, []);
 
   return (
     <Wrapper ref={el => (app = el)}>
