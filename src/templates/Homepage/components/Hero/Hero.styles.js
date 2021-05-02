@@ -4,6 +4,7 @@ import { Button } from "@components/Button";
 const primaryColor = "#6CA448";
 
 export const HeroContainer = styled.div`
+  visibility: hidden;
   background: #fff;
   display: flex;
   justify-content: flex-start;
