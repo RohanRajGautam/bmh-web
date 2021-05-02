@@ -8,7 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: clip;
+    /* overflow-x: clip; */
   }
 
   html {
@@ -18,6 +18,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     box-sizing: border-box;
     font-family: "Merriweather", serif;
+    overflow-x: hidden;
   }
 
   p{
