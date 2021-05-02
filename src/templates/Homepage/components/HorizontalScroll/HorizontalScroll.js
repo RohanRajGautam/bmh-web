@@ -1,52 +1,17 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
+  HorizontalComponentWrapper,
   HorizontalComponent,
-  HorizontalComponentTitle,
-  HorizontalComponentHeading,
-  HorizontalHeading,
-  FirstText,
-  ServicesWrapper,
-  ServicesHeading,
-  ServicesItemWrapper,
-  ServicesItems,
-  SubtitleWrapper,
-  HorizontalComponentBlockWrapper,
-  HorizontalComponentTitleImageWrapper,
   HorizontalFullWidthBlock,
   HorizontalFullWidthBlockSecond,
-  HorizontalComponentFeaturedImageWrapper,
-  HorizontalComponentFeaturedImage,
-  HorizontalTitleDotWrapper,
-  HorizontalComponentDot,
-  HorizontalComponentDotInner,
-  DisplayFlex,
-  HorizontalComponentDotWrapper,
-  HorizontalComponentDotWrapperHealing,
-  HorizontalComponentDotHealing,
-  HorizontalComponentCollageWrapper,
-  HorizontalComponentTitleImageWrapperRight,
-  HorizontalComponentFeaturedImageRight,
-  HorizontalTitleDotWrapperRight,
-  HorizontalComponentHeadingWrapperRight,
-  ServicesWrapperRight,
-  HorizontalComponentWrapper,
-  WellnessSvgWrapper,
-  MedicalSvgWrapper,
-  HorizontalComponentBlock,
-  HorizontalComponentBlockWrapperRight,
   HorizontalComponentBlockThird,
+  HorizontalComponentCollageWrapper,
   HorizontalComponentBlockForth,
   HorizontalComponentImageLast,
   ImageLast,
 } from "./HorizontalScroll.styles";
-import {
-  Services,
-  HealingDesc,
-  FutureDesc,
-  ServicesSecond,
-  FutureTitle,
-  HealingTitle,
-} from "./HorizontalScroll.data";
 import {
   Collage,
   FullPageImage,
@@ -54,11 +19,7 @@ import {
   ScrollableFirst,
   ScrollableLast,
 } from "./components";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import logo from "@images/icons/Frame.svg";
-import logoAlt from "@images/icons/Frame.svg";
-import vector from "@images/icons/vector-line.svg";
+
 import imageLast from "@images/home/horizontal-last.png";
 
 if (typeof window !== "undefined") {

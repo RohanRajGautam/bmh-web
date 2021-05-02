@@ -9,14 +9,15 @@ export const HeroContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   height: 100vh;
+  width: 100vw;
   position: relative;
   margin-top: -80px;
   color: #fff;
-  padding-left: 5vw
+  padding-left: 5vw;
 
   // add overlay to the background image
 
-  :before {
+  /* :before {
     content: "";
     position: absolute;
     top: 0;
@@ -24,13 +25,7 @@ export const HeroContainer = styled.div`
     right: 0;
     left: 0;
     z-index: 2;
-    /* background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.2) 0%,
-        rgba(0, 0, 0, 0.2) 100%
-      ),
-      linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%); */
-  }
+  } */
 `;
 export const HeroBg = styled.div`
   position: absolute;
@@ -57,10 +52,12 @@ export const HeroContent = styled.div`
   z-index: 3;
   height: calc(100vh - 80px);
   max-height: 100%;
-  padding: 0 5vw;
+  /* padding: 0 5vw; */
 
   @media screen and (max-width: 860px) {
     padding: 0;
+    position: absolute;
+    left: 0;
   }
 `;
 
@@ -100,6 +97,8 @@ export const ButtonContainer = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     padding: 0;
+    margin-bottom: 5vw;
+}
   }
   @media (min-width: 1024px) {
     padding: 0;

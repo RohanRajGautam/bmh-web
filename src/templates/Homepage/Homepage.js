@@ -1,12 +1,11 @@
 import * as React from "react";
 import Layout from "@layouts";
-import SEO from "@layouts/common/seo";
+import Seo from "@layouts/common/seo";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import {
   Blog,
   Hero,
-  FullPageText,
   Donate,
   Event,
   StoryPage,
@@ -23,7 +22,7 @@ const Homepage = props => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <Seo title="Home" />
       <Hero />
       <HorizontalScroll />
       <StoryPage />

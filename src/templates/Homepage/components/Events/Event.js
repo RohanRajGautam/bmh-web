@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import Card from "./Card";
 import {
   EventSliderWrapper,
@@ -16,7 +16,7 @@ const Events = props => {
   };
 
   return (
-    <EventWrapper>
+    <EventWrapper id="events">
       <Heading data-aos="fade-up-right">Here's What's Coming Up</Heading>
       <MaterialUIPickers />
       <EventSliderWrapper ref={eventRef}>

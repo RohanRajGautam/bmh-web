@@ -8,7 +8,7 @@ export const FooterWrapper = styled.div`
   padding: 2rem;
 
   @media (min-width: 576px) {
-    padding: 75px 96px;
+    padding: 75px 96px 15px;
   }
 `;
 
@@ -69,24 +69,38 @@ export const FooterItemList = styled.ul`
 export const FooterItem = styled.li`
   list-style-type: none;
   font-size: 14px;
-  color: ${lightBlueGrey};
   font-weight: 300;
-  font-family: Mulish;
-  line-height: 34px;
+
+  a {
+    color: ${lightBlueGrey};
+    line-height: 25px;
+    font-family: Mulish;
+    line-height: 34px;
+    user-select: none;
+    text-decoration: none;
+  }
 `;
 
 export const FooterBrandLogoWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  flex-wrap: nowrap;
+  overflow-x: auto;
   margin: 60px 0;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -webkit-overflow-scrolling: touch;
 `;
 
 export const FooterBrandLogo = styled.div`
   padding: 15px;
+  flex: 0 0 auto;
   img {
     object-fit: cover;
+    user-select: none;
     height: 100%;
     width: auto;
   }

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-const graniteGrey = "#2C3336";
 const primary = "#6CA448";
 
 export const TextContainer = styled.div`

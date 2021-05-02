@@ -16,7 +16,7 @@ import {
   BlogSidebarTitle,
   BlogViewMore,
 } from "./BlogSinglePage.styles";
-import SEO from "@layouts/common/seo";
+import Seo from "@layouts/common/seo";
 import { graphql } from "gatsby";
 import { RecentBlog } from "../Homepage/components/Blog/components";
 
@@ -24,7 +24,7 @@ const BlogSinglePage = ({ data, ...props }) => {
   const post = data?.allWpPost?.edges[0].node;
   return (
     <Layout>
-      <SEO title="" />
+      <Seo title="" />
       <BlogPageHero image={post?.featuredImage.node.sourceUrl}>
         <BlogPageHeroInner>
           <BlogPageTextWrapper>
