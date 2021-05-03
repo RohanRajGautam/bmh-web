@@ -304,4 +304,6 @@ export const BigMenuNavItem = styled.li`
   }
 `;
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+  visibility: hidden;
+`;

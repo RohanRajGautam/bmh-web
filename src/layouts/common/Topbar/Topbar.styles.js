@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-export const Container = styled.div``;
-
 export const Wrapper = styled.nav`
+  visibility: hidden;
   height: 4rem;
   width: 100%;
   background: #6ca448;
