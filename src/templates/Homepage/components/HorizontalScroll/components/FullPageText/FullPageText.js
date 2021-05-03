@@ -21,15 +21,16 @@ const FullPageText = () => {
     const element = ref.current;
     gsap.to(element, {
       backgroundImage: "linear-gradient(45deg, #eee 200%, #2C3336 300%)",
-      duration: 2,
+      duration: 10,
       ease: "none",
 
       scrollTrigger: {
         trigger: element,
         start: "top 70%",
-        // end: "top 10%",
+        // end: "bottom bottom",
         // end: "bottom left",
-        scrub: true,
+        scrub: 1,
+        anticipatePin: true,
         // markers: true,
       },
     });
