@@ -28,7 +28,7 @@ export const FooterLogo = styled(Link)`
 export const FooterMain = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-gap: 2rem;
+  grid-gap: 4rem;
   align-items: center;
 
   @media only screen and (max-width: 992px) {
@@ -50,8 +50,8 @@ export const FooterDetails = styled.div`
     grid-gap: 4rem;
   }
   @media (min-width: 1200px) {
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
+    grid-template-columns: repeat(4, auto);
+    justify-items: flex-start;
   }
 `;
 

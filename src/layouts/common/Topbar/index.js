@@ -28,7 +28,7 @@ const Topbar = () => {
       <NavMenu>
         {menuData.map((item, index) => (
           <NavLink
-            to={item.link}
+            href={item.link}
             target="_blank"
             key={index}
             activeClassName="active"
