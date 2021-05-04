@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "gatsby";
 import {
   Wrapper,
   Logolink,
@@ -94,13 +93,13 @@ const Navbar = props => {
                         {item.list.length &&
                           item.list.map((item, index) => (
                             <BigMenuNavItem key={index}>
-                              <Link
+                              <a
                                 target="_blank"
-                                to={item.to}
+                                href={item.to}
                                 onClick={handleBigMenu}
                               >
                                 {item.title}
-                              </Link>
+                              </a>
                             </BigMenuNavItem>
                           ))}
                       </BigMenuNavItemWrapper>

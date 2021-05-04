@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "gatsby";
 
 export const Wrapper = styled.nav`
   visibility: hidden;
@@ -11,7 +10,7 @@ export const Wrapper = styled.nav`
   align-items: stretch;
 `;
 
-export const NavLink = styled(Link)`
+export const NavLink = styled.a`
   color: #fff;
   display: flex;
   align-items: center;

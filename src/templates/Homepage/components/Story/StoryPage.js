@@ -20,7 +20,7 @@ const StoryPage = () => {
           </HeadingWrapper>
           <TextWrapper>
             You are a whole person, not a mental illness. At Beautiful Minds
-            Medical, we design a custom treatment plans based on the individual
+            Medical, we design custom treatment plans based on the individual
             needs and backgrounds of each patient. Mental health is influenced
             by physical, psychological, social, and spiritual factors. In
             addition to improving your mental health, our goal is to help you

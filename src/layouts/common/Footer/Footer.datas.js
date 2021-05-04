@@ -63,7 +63,7 @@ export const staticData = [
         title: "Transcranial Magnetic Stimulation (TMS)",
         to: "https://www.beautifulmindsmedical.com/advanced-tms-therapy",
       },
-      { title: "Supplements", to: "/" },
+      { title: "Supplements", to: "https://www.beautifulmindsnutrition.com" },
       {
         title: "Life & Health Coaching",
         to:
@@ -74,7 +74,7 @@ export const staticData = [
   {
     title: "About",
     items: [
-      { title: "Healing Philosophy", to: "/" },
+      { title: "Healing Philosophy", to: "https://brojure.com/bmw/overview/" },
       { title: "Our Story", to: "/#our-story" },
       { title: "Events", to: "/#events" },
       { title: "Blog", to: "/blog-cat" },
@@ -85,7 +85,10 @@ export const staticData = [
     items: [
       { title: "Donate", to: "https://beautifulmindswellness.org/donate/" },
       { title: "Volunter", to: "/" },
-      { title: "Visit us", to: "/" },
+      {
+        title: "Visit us",
+        to: "https://www.beautifulmindsmedical.com/about/photo-gallery",
+      },
     ],
   },
 ];

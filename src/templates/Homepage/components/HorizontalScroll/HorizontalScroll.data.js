@@ -1,13 +1,30 @@
 export const HealingTitle = "Healing begins here";
 
 export const HealingDesc =
-  "You are a whole person, not a mental illness. At Beautiful Minds Medical, we design a custom treatment plans based on the individual needs and backgrounds of each patient. Mental health is influenced by physical, psychological, social, and spiritual factors. In addition to improving your mental health, our goal is to help you enhance every aspect of who you are.";
+  "You are a whole person, not a mental illness. At Beautiful Minds Medical, we design custom treatment plans based on the individual needs and backgrounds of each patient. Mental health is influenced by physical, psychological, social, and spiritual factors. In addition to improving your mental health, our goal is to help you enhance every aspect of who you are.";
 
 export const Services = [
-  "Psychiatry & Counseling",
-  "Signature Program (Intesive Outpatient)",
-  "Transcranial Magnetic Stimulation (TMS)",
-  "Life & Health Coaching",
+  {
+    title: "Psychiatry",
+    to: "https://www.beautifulmindsmedical.com/about/our-services/#psychiatry",
+  },
+  {
+    title: "Life & Health Coaching",
+    to: "https://www.beautifulmindsmedical.com/about/our-services/#coaching",
+  },
+  {
+    title: "Signature Program (Intensive Outpatient)",
+    to: "https://beautifulmindsoutpatient.com/",
+  },
+  {
+    title: "Counseling",
+    to: "https://www.beautifulmindsmedical.com/about/our-services/#counseling",
+  },
+  { title: "Supplements", to: "https://www.beautifulmindsnutrition.com/" },
+  {
+    title: "Transcranial Magnetic Stimulation (TMS)",
+    to: "https://www.beautifulmindsmedical.com/advanced-tms-therapy",
+  },
 ];
 
 export const FutureTitle = "Empowering your Future";

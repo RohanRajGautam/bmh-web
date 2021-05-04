@@ -114,9 +114,10 @@ export const ServicesItemWrapper = styled.div`
   grid-row-gap: 16px;
   grid-template-columns: 1fr;
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, auto);
     grid-row-gap: 24px;
-    grid-column-gap: 36px;
+    grid-column-gap: 5rem;
+    position: relative;
   }
   @media (min-width: 1440px) {
     grid-row-gap: 36px;
@@ -124,11 +125,12 @@ export const ServicesItemWrapper = styled.div`
   }
 `;
 
-export const ServicesItems = styled.div`
+export const ServicesItems = styled.a`
   font-size: 14px;
   letter-spacing: 0.1px;
   color: ${medicalGrey};
   font-family: Mulish;
+  text-decoration: none;
   @media (min-width: 768px) {
     font-size: 16px;
     white-space: nowrap;

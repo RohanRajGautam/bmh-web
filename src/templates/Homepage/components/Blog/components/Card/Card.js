@@ -19,7 +19,7 @@ const BlogCard = props => {
         </CardThumbnailWrapper>
         <CardDesc>
           <CardTitle>{props.title}</CardTitle>
-          <CardText>{props.desc}</CardText>
+          <CardText dangerouslySetInnerHTML={{ __html: props.desc }} />
           <CardCta>Learn more</CardCta>
         </CardDesc>
       </Card>

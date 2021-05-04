@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 
 import { StaticBrandLogo, staticData } from "./Footer.datas";
 import {
@@ -37,9 +37,9 @@ const Footer = () => {
               <FooterItemList>
                 {item.items.map((obj, index) => (
                   <FooterItem key={index}>
-                    <Link to={obj.to} target="_blank">
+                    <a href={obj.to} target="_blank">
                       {obj.title}
-                    </Link>
+                    </a>
                   </FooterItem>
                 ))}
               </FooterItemList>
