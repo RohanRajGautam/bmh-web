@@ -1,0 +1,21 @@
+.social-share {
+  ul {
+    display: flex;
+    align-items: center;
+    li {
+      padding-right: 1.2rem;
+      button,
+      a {
+        font-size: 18px;
+        color: #000;
+        display: block;
+        outline: none;
+        cursor: pointer;
+        img {
+          height: auto;
+          width: 2.4rem;
+        }
+      }
+    }
+  }
+}

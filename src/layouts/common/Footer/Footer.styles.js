@@ -5,11 +5,7 @@ const lightBlueGrey = "#C5CCD3";
 
 export const FooterWrapper = styled.div`
   background-color: #2c3336;
-  padding: 2rem;
-
-  @media (min-width: 576px) {
-    padding: 75px 96px 15px;
-  }
+  padding: 5vh 5vw;
 `;
 
 export const FooterLogo = styled(Link)`
@@ -111,12 +107,14 @@ export const FooterCopyrightWrapper = styled.div`
   align-items: center;
   flex-wrap: wrap;
 `;
-export const FooterCopyright = styled.div`
+export const FooterCopyright = styled(Link)`
   color: ${lightBlueGrey};
   font-size: 12px;
   font-weight: 400px;
   letter-spacing: 0.3px;
   margin-right: 27px;
+  cursor: pointer;
+  text-decoration: none;
 `;
 
 export const NewsletterWrapper = styled.div`

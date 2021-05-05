@@ -19,12 +19,13 @@ import {
 import Seo from "@layouts/common/seo";
 import { graphql } from "gatsby";
 import { RecentBlog } from "../Homepage/components/Blog/components";
+import SocialShare from "@components/SocialShare";
 
 const BlogSinglePage = ({ data, ...props }) => {
   const post = data?.allWpPost?.edges[0].node;
   return (
     <Layout>
-      <Seo title="" />
+      <Seo title={post?.title} />
       <BlogPageHero image={post?.featuredImage.node.sourceUrl}>
         <BlogPageHeroInner>
           <BlogPageTextWrapper>
@@ -35,7 +36,7 @@ const BlogSinglePage = ({ data, ...props }) => {
                 <BlogPageMeta>- {post?.date.substring(0, 10)}</BlogPageMeta>
               </BlogPageMetaWrapper>
             </BlogPageTitleWrapper>
-            <BlogPageShare>
+            {/* <BlogPageShare>
               <span>Share</span>
               <svg
                 width="17"
@@ -49,7 +50,8 @@ const BlogSinglePage = ({ data, ...props }) => {
                   fill="white"
                 />
               </svg>
-            </BlogPageShare>
+            </BlogPageShare> */}
+            <SocialShare slug={post?.slug} title={post?.title} />
           </BlogPageTextWrapper>
         </BlogPageHeroInner>
       </BlogPageHero>
@@ -78,6 +80,7 @@ export const query = graphql`
         node {
           title
           id
+          slug
           author {
             node {
               name

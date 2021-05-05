@@ -27,6 +27,8 @@ import menuDark from "@images/icons/Union.png";
 
 const Navbar = props => {
   const [bigMenu, setBigMenu] = useState(false);
+  const [navbar, setNavbar] = useState(false);
+
   const handleBigMenu = e => {
     e.preventDefault();
     setBigMenu(!bigMenu);
@@ -51,9 +53,23 @@ const Navbar = props => {
     });
   }, []);
 
+  const changeBackground = () => {
+    if (window.scrollY >= 40) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeBackground);
   return (
     <Wrapper ref={el => (app = el)}>
-      <Nav dark={props.dark} open={bigMenu} ref={el => (logoAnim = el)}>
+      <Nav
+        dark={props.dark}
+        open={bigMenu}
+        ref={el => (logoAnim = el)}
+        active={navbar}
+      >
         <Logolink to="/">
           <img
             src={props.dark ? logoDark : logo}

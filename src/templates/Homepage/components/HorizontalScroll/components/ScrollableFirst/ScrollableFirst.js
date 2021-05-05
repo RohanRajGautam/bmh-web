@@ -24,7 +24,7 @@ import vector from "@images/icons/vector-line.svg";
 
 const ScrollableFirst = () => {
   return (
-    <Container>
+    <Container data-aos="zoom-in">
       <LogoContainer src={logo} alt="bhm-logo" />
       <VectorWrapper>
         <VectorDot />

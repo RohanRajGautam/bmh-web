@@ -9,13 +9,18 @@ const lightBlueGrey = "#C5CCD3";
 
 export const Nav = styled.nav`
   background: transparent;
+  /* background: ${props => (props.active ? "#2c3336" : "transparent")} */
   display: flex;
   justify-content: space-between;
   /* padding: 1em calc((100vw - 1300px) / 2); */
   padding: 0 5vw;
   align-items: center;
   z-index: 100;
+  top: 0;
+  /* position: relative; */
+  width: 100%;
   position: relative;
+
   ${props =>
     props.dark
       ? css`
@@ -24,7 +29,19 @@ export const Nav = styled.nav`
         `
       : css`
           height: 80px;
-        `}
+        `};
+
+  @media (max-width: 576px) {
+    position: fixed;
+    ${({ active }) =>
+      active &&
+      `
+    transition: background 0.5s ease;
+    background: #2c3336;
+    
+    
+    `}
+  }
 `;
 
 export const Logolink = styled(Link)`

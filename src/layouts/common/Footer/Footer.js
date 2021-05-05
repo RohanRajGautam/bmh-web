@@ -155,9 +155,11 @@ const Footer = () => {
       </FooterBrandLogoWrapper>
       <FooterCopyrightWrapper>
         <FooterCopyright>
-          &copy; {date.getFullYear()} Webpoint Solutions, LLC
+          &copy; {date.getFullYear()} Beautiful Minds Health
         </FooterCopyright>
-        <FooterCopyright>Terms & Conditions | Privacy Policies</FooterCopyright>
+        <FooterCopyright to="/privacy-policy">
+          Terms & Conditions | Privacy Policies
+        </FooterCopyright>
       </FooterCopyrightWrapper>
     </FooterWrapper>
     <Snackbar open={open} autoHideDuration={60000} onClose={handleClose}>

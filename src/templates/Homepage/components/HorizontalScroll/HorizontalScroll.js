@@ -43,7 +43,7 @@ const HorizontalScroll = props => {
             scrub: 1,
             snap: 1 / (sections.length - 1),
             // base vertical scrolling on how wide the is so it feels more natural.
-            end: () => "+=" + document.querySelector("#container").offsetWidth,
+            end: () => "+=" + document.querySelector("#container")?.offsetWidth,
           },
         });
       },
@@ -71,7 +71,7 @@ const HorizontalScroll = props => {
           <ScrollableLast />
         </HorizontalComponentBlockForth>
         <HorizontalComponentImageLast id="horizontal-scroll-item">
-          <ImageLast src={imageLast} type="image/png" />
+          <ImageLast src={imageLast} type="image/png" data-aos="zoom-in-left" />
         </HorizontalComponentImageLast>
       </HorizontalComponent>
     </HorizontalComponentWrapper>

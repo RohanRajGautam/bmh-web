@@ -7,7 +7,7 @@ const graniteGrey = "#2C3336";
 const primary = "#6CA448";
 
 export const BlogPageHero = styled.div`
-  height: calc(100vh - 50px);
+  height: calc(100vh - 40px);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -43,6 +43,7 @@ export const BlogPageTextWrapper = styled.div`
   font-size: 8px;
   flex-direction: column;
   align-items: flex-start;
+  grid-gap: 2rem;
   @media (min-width: 768px) {
     font-size: 12px;
     flex-direction: row;

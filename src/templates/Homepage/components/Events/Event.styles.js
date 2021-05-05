@@ -29,6 +29,9 @@ export const EventWrapper = styled.div`
       padding: 12px 20px;
     }
   }
+  @media (max-width: 600px) {
+    margin-top: 5rem;
+  }
 `;
 
 export const EventCard = styled.div`
@@ -104,7 +107,7 @@ export const EventTitle = styled.h2`
   color: ${primary};
   min-height: 76px;
   @media (min-width: 600px) {
-    font-size: 24px;
+    font-size: 3rem;
     margin-bottom: 36px;
     margin-top: 210px;
   }

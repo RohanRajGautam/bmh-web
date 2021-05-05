@@ -16,8 +16,8 @@ const Events = props => {
   };
 
   return (
-    <EventWrapper id="events">
-      <Heading data-aos="fade-up-right">Here's What's Coming Up</Heading>
+    <EventWrapper id="events" data-aos="zoom-in">
+      <Heading>Here's What's Coming Up</Heading>
       <MaterialUIPickers />
       <EventSliderWrapper ref={eventRef}>
         {props?.data.length &&

@@ -15,10 +15,10 @@ const Topbar = () => {
     TweenMax.to(bar, 0, { css: { visibility: "visible" } });
 
     //Content Animation
-    tl.from(top, 1.2, { y: 1280, ease: Power3.easeOut }, "Start").from(
+    tl.from(top, 1.2, { y: -40, ease: Power3.easeIn }, "Start").from(
       top,
-      2,
-      { scale: 1.6, ease: Power3.easeOut },
+      1,
+      { scale: 1.6, ease: Power3.easeIn },
       0.2
     );
   }, []);

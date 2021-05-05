@@ -8,6 +8,10 @@ export const Wrapper = styled.nav`
   display: flex;
   justify-content: center;
   align-items: stretch;
+
+  @media (max-width: 576px) {
+    display: none;
+  }
 `;
 
 export const NavLink = styled.a`

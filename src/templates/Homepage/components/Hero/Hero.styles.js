@@ -16,6 +16,10 @@ export const HeroContainer = styled.div`
   color: #fff;
   padding-left: 5vw;
 
+  @media (max-width: 576px) {
+    height: 110vh;
+  }
+
   // add overlay to the background image
 
   /* :before {
