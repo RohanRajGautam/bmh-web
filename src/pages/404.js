@@ -16,6 +16,7 @@ const FourOhFour = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
 const BgImage = styled.div`
   position: absolute;
   top: 0;
