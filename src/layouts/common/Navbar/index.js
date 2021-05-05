@@ -61,7 +61,9 @@ const Navbar = props => {
     }
   };
 
-  window?.addEventListener("scroll", changeBackground);
+  const isBrowser = () => typeof window !== "undefined";
+  isBrowser() && window?.addEventListener("scroll", changeBackground);
+
   return (
     <Wrapper ref={el => (app = el)}>
       <Nav
