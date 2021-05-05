@@ -31,7 +31,7 @@ const Scroll = ({ showBelow }) => {
   const [show, setShow] = useState(showBelow ? false : true);
 
   const handleScroll = () => {
-    if (window.pageYOffset > showBelow) {
+    if (window?.pageYOffset > showBelow) {
       if (!show) setShow(true);
     } else {
       if (show) setShow(false);
@@ -44,10 +44,10 @@ const Scroll = ({ showBelow }) => {
 
   useEffect(() => {
     if (showBelow) {
-      window.addEventListener(`scroll`, handleScroll);
+      window?.addEventListener(`scroll`, handleScroll);
 
       return () => {
-        window.removeEventListener(`scroll`, handleScroll);
+        window?.removeEventListener(`scroll`, handleScroll);
       };
     }
   });

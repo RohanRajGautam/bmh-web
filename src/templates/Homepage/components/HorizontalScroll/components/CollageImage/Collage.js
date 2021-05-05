@@ -28,19 +28,19 @@ const Collages = () => {
 
     let arr = [...animate];
 
-    if (first < window.innerWidth) {
+    if (first < window?.innerWidth) {
       arr[0] = true;
     }
 
-    if (second < window.innerWidth) {
+    if (second < window?.innerWidth) {
       arr[1] = true;
     }
 
-    if (third < window.innerWidth) {
+    if (third < window?.innerWidth) {
       arr[2] = true;
     }
 
-    if (fourth < window.innerWidth) {
+    if (fourth < window?.innerWidth) {
       arr[3] = true;
     }
 

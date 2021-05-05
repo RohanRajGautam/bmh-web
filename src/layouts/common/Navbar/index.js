@@ -54,14 +54,14 @@ const Navbar = props => {
   }, []);
 
   const changeBackground = () => {
-    if (window.scrollY >= 40) {
+    if (window?.scrollY >= 40) {
       setNavbar(true);
     } else {
       setNavbar(false);
     }
   };
 
-  window.addEventListener("scroll", changeBackground);
+  window?.addEventListener("scroll", changeBackground);
   return (
     <Wrapper ref={el => (app = el)}>
       <Nav
