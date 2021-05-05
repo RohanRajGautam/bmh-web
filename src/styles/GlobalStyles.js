@@ -58,4 +58,21 @@ export const GlobalStyles = createGlobalStyle`
   background-color:${primary};
   }
 }
+
+.MuiSnackbar-root {
+  .MuiAlert-icon{
+    font-size:36px;
+  }
+  .MuiAlert-message{
+    font-size:20px;
+    padding:0 20px;
+  }
+  .MuiSvgIcon-fontSizeSmall{
+  font-size:24px;
+  }
+  .MuiAlert-root{
+    padding:12px 36px;
+    align-items:center;
+}
+}
 `;

@@ -1,5 +1,5 @@
 import { Link } from "gatsby";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const lightBlueGrey = "#C5CCD3";
 
@@ -187,4 +187,7 @@ export const NewsletterButton = styled.div`
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
   }
+  ${({disabled})=>disabled && css`
+  opacity:0.6;
+  `}
 `;
