@@ -29,7 +29,7 @@ const SocialShare = ({ slug, title }) => {
         <li>
           <a
             onClick={() => {
-              window.open(
+              window?.open(
                 "https://www.facebook.com/sharer/sharer.php?u=" + url + slug,
                 "facebook-share-dialog",
                 "width=626,height=436"
