@@ -5,6 +5,7 @@ import { TimelineLite, TweenMax, Power3 } from "gsap";
 import {
   ButtonContainer,
   ButtonPrimary,
+  ButtonSecondary,
   Divider,
   HeroBg,
   HeroContainer,
@@ -14,10 +15,12 @@ import {
   HeroP,
   HeroTextContainer,
   ImageBg,
+  ButtonWrapper,
+  ButtonText,
 } from "./Hero.styles";
 
 // images
-import BackgroundImage from "@images/background-img-hero.jpg";
+import BackgroundImage from "@images/background-img-hero.png";
 
 export default function Hero() {
   let app = useRef(null);
@@ -67,28 +70,32 @@ export default function Hero() {
             <HeroH1>Get Your Life Back</HeroH1>
             <Divider />
             <HeroP>
-              We treat and prevent mental illness
-              <span> through medical care & wellness education</span>
+              We treat and prevent mental illness through
+              <span> wholistic medical care & wellness education</span>
             </HeroP>
           </HeroTextContainer>
-          <ButtonContainer>
-            <ButtonPrimary
-              primary="true"
-              round="true"
-              target="_blank"
-              to="https://www.beautifulmindsmedical.com/"
-            >
-              Medical
-            </ButtonPrimary>
-            <ButtonPrimary
-              primary="true"
-              round="true"
-              to="https://beautifulmindswellness.org/"
-              target="_blank"
-            >
-              Wellness
-            </ButtonPrimary>
-          </ButtonContainer>
+
+          <ButtonWrapper>
+            <ButtonText>What services do you need?</ButtonText>
+            <ButtonContainer>
+              <ButtonPrimary
+                primary="true"
+                round="true"
+                target="_blank"
+                to="https://www.beautifulmindsmedical.com/"
+              >
+                Medical
+              </ButtonPrimary>
+              <ButtonSecondary
+                primary="true"
+                round="true"
+                to="https://beautifulmindswellness.org/"
+                target="_blank"
+              >
+                Wellness
+              </ButtonSecondary>
+            </ButtonContainer>
+          </ButtonWrapper>
         </HeroItems>
       </HeroContent>
     </HeroContainer>

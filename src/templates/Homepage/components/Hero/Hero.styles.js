@@ -92,13 +92,32 @@ export const HeroTextContainer = styled.div`
   }
 `;
 
+export const ButtonWrapper = styled.div`
+  background: #6ca448;
+  width: 100%;
+  border-radius: 55px;
+
+  @media (max-width: 768px) {
+    background: none;
+  }
+`;
+export const ButtonText = styled.p`
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  padding: 1rem 0 0.6rem 0;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
 export const ButtonContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem 5vw;
+  /* padding: 1.5rem 5vw; */
   @media (max-width: 768px) {
     flex-direction: column;
     padding: 0;
@@ -111,27 +130,42 @@ export const ButtonContainer = styled.div`
 `;
 
 export const ButtonPrimary = styled(Button)`
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   width: 100%;
+  height: 60px;
+  text-transform: uppercase;
+  border-radius: 0 0 0 50px;
+  margin: 0 0 5px 5px;
+  background: #2c3336;
+  padding: 15px 0 0 0;
   &:hover {
     background-color: #fff;
     color: ${primaryColor};
+    transform: none;
   }
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     margin: auto;
     margin-bottom: 1.5rem;
     width: 100%;
+    border-radius: 50px;
     max-width: 90%;
     padding: 2rem 5rem;
     font-size: 20px;
-  }
-  @media (min-width: 1024px) {
-    margin-right: 1rem;
+    background: #66a250;
   }
 `;
 
 export const MobileButtonPrimary = styled(Button)`
   margin-bottom: 1rem;
+`;
+
+export const ButtonSecondary = styled(ButtonPrimary)`
+  border-radius: 0 0 50px 0;
+  margin: 0 5px 5px 1px;
+
+  @media (max-width: 768px) {
+    border-radius: 50px;
+  }
 `;
 
 export const HeroH1 = styled.h1`
@@ -142,6 +176,7 @@ export const HeroH1 = styled.h1`
   user-select: none;
   padding-bottom: 3rem;
   font-size: 24px;
+  font-style: italic;
   @media (min-width: 1024px) {
     font-size: clamp(3rem, 6vw, 6rem);
   }
