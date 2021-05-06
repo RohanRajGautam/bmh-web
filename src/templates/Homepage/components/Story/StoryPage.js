@@ -16,7 +16,7 @@ const StoryPage = () => {
         <Content>
           <HeadingWrapper big>
             Our Story
-            <br /> meets yours
+            <br /> Meets Yours
           </HeadingWrapper>
           <TextWrapper>
             You are a whole person, not a mental illness. At Beautiful Minds

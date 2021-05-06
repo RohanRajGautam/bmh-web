@@ -19,13 +19,14 @@ export const NavLink = styled.a`
   display: flex;
   align-items: center;
   text-decoration: none;
-  margin: 0 3.6rem;
+  margin: 0 2rem;
   height: 100%;
   cursor: pointer;
   font-size: medium;
   font-family: Mulish;
   font-weight: 500;
   opacity: 0.7;
+  text-transform: uppercase;
 
   &.active,
   &:hover {
