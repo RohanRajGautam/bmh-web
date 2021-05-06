@@ -71,7 +71,7 @@ const HorizontalScroll = props => {
           <ScrollableLast />
         </HorizontalComponentBlockForth>
         <HorizontalComponentImageLast id="horizontal-scroll-item">
-          <ImageLast src={imageLast} type="image/png" data-aos="zoom-in-left" />
+          <ImageLast src={imageLast} type="image/png" data-aos="fade-up" />
         </HorizontalComponentImageLast>
       </HorizontalComponent>
     </HorizontalComponentWrapper>

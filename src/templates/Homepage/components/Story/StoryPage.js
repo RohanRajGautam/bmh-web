@@ -11,9 +11,9 @@ import {
 
 const StoryPage = () => {
   return (
-    <StoryContainer id="our-story">
+    <StoryContainer id="our-story" data-aos="fade-up">
       <ContentWrapper>
-        <Content data-aos="fade-down-right" data-aos-delay="200">
+        <Content>
           <HeadingWrapper big>
             Our Story
             <br /> meets yours
@@ -34,7 +34,7 @@ const StoryPage = () => {
             Donate
           </ButtonWrapper>
         </Content>
-        <Thumbnail data-aos="fade-down-left" data-aos-delay="200" />
+        <Thumbnail />
       </ContentWrapper>
     </StoryContainer>
   );

@@ -34,6 +34,7 @@ export default function MaterialUIPickers() {
             value={selectedDate}
             onChange={handleDateChange}
             minDate={new Date()}
+            views={["year", "month"]}
           />
         </Grid>
       </MuiPickersUtilsProvider>

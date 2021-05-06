@@ -8,6 +8,7 @@ import {
 } from "./Event.styles";
 import { Heading } from "@components/Heading";
 import MaterialUIPickers from "./EventDatePicker";
+// import EventDialog from "./EventDialog";
 
 const Events = props => {
   const eventRef = useRef(null);
@@ -16,7 +17,7 @@ const Events = props => {
   };
 
   return (
-    <EventWrapper id="events" data-aos="zoom-in">
+    <EventWrapper id="events" data-aos="fade-up">
       <Heading>Here's What's Coming Up</Heading>
       <MaterialUIPickers />
       <EventSliderWrapper ref={eventRef}>

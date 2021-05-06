@@ -55,7 +55,7 @@ const Collages = () => {
   }, []);
 
   return (
-    <CollageWrapper>
+    <CollageWrapper data-aos="fade-up">
       <Collage>
         <CollageItems animate={animate[0]} ref={imageOne} url={Image1} />
         <CollageItems animate={animate[1]} ref={imageTwo} url={Image2} />

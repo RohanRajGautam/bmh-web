@@ -23,6 +23,10 @@ export const BlogPageHero = styled.div`
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+
+  @media (max-width: 576px) {
+    height: 111vh;
+  }
 `;
 
 export const BlogPageHeroInner = styled.div`
@@ -148,6 +152,10 @@ export const BlogContent = styled.div`
     width: 100% !important;
   }
   .sharedaddy {
+    display: none;
+  }
+
+  span.fusion-imageframe {
     display: none;
   }
 

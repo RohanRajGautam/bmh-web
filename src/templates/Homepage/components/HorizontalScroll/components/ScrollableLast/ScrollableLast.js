@@ -20,7 +20,7 @@ import logo from "@images/icons/logoAlt.svg";
 
 const ScrollableLast = () => {
   return (
-    <Container data-aos="zoom-out">
+    <Container data-aos="fade-up">
       <LogoContainer src={logo} alt="bhm-logo" />
       <SubtitleWrapper>
         <HorizontalHeading>{FutureTitle}</HorizontalHeading>

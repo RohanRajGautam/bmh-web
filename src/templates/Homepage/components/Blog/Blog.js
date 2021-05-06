@@ -18,7 +18,7 @@ const Blog = props => {
     sliderRef.current.scrollLeft += scrollOffset;
   };
   return (
-    <BlogWrapper data-aos="zoom-in">
+    <BlogWrapper data-aos="fade-up">
       <HeadingWrapper>
         <Heading>On The Blog</Heading>
         <StyledLink to="/blog-cat">
