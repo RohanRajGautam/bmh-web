@@ -9,6 +9,7 @@ import {
   ServicesHeading,
   ServicesItemWrapper,
   ServicesItems,
+  Anchor,
 } from "./ScrollableLast.styles";
 import {
   FutureTitle,
@@ -26,27 +27,14 @@ const ScrollableLast = () => {
       </SubtitleWrapper>
       <FirstText>{FutureDesc}</FirstText>
       <ServicesWrapper>
-        <ServicesHeading>
-          Services
-          <span>
-            <svg
-              width="13"
-              height="8"
-              viewBox="0 0 13 8"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.872559 0.774292L6.35211 6.25345L11.8313 0.774292"
-                stroke="#6CA448"
-                strokeWidth="2"
-              />
-            </svg>
-          </span>
-        </ServicesHeading>
+        <ServicesHeading>Services</ServicesHeading>
         <ServicesItemWrapper>
           {ServicesSecond?.map((item, index) => (
-            <ServicesItems key={index}>{item}</ServicesItems>
+            <ServicesItems key={index}>
+              <Anchor href={item.to} target="_blank">
+                {item.title}
+              </Anchor>
+            </ServicesItems>
           ))}
         </ServicesItemWrapper>
       </ServicesWrapper>

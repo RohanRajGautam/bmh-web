@@ -33,8 +33,20 @@ export const FutureDesc =
   "There is hope for mental healing beyond medication. At Beautiful Minds Wellness, our goal is to increase access to wholistic mental health services, wellness education, and community support groups.";
 
 export const ServicesSecond = [
-  "Events",
-  "Wellness Treatments",
-  "Education",
-  "Senior Peer Counseling",
+  {
+    title: "Events",
+    to: "/#events",
+  },
+  {
+    title: "Wellness Treatments",
+    to: "https://beautifulmindswellness.org/",
+  },
+  {
+    title: "Education",
+    to: "https://beautifulmindswellness.org/free-downloads/",
+  },
+  {
+    title: "Senior Peer Counseling",
+    to: "https://beautifulmindswellness.org/seniorpeercounseling/",
+  },
 ];

@@ -66,7 +66,7 @@ const FullPageText = () => {
         </Message>
         <LogoContainer>
           <LogoImg src={logo} alt="bmh-logo" draggable="false" />
-          <FadedText>Our healing Moto</FadedText>
+          {/* <FadedText>Our healing Moto</FadedText> */}
         </LogoContainer>
       </TextContainer>
     </>

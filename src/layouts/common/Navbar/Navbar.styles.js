@@ -21,6 +21,10 @@ export const Nav = styled.nav`
   width: 100%;
   position: relative;
 
+  @media (min-width: 576px) {
+    padding-top: 3rem;
+  }
+
   ${props =>
     props.dark
       ? css`

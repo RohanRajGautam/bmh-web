@@ -125,12 +125,11 @@ export const ServicesItemWrapper = styled.div`
   }
 `;
 
-export const ServicesItems = styled.a`
+export const ServicesItems = styled.div`
   font-size: 14px;
   letter-spacing: 0.1px;
-  color: ${medicalGrey};
   font-family: Mulish;
-  text-decoration: none;
+
   @media (min-width: 768px) {
     font-size: 16px;
     white-space: nowrap;
@@ -143,6 +142,16 @@ export const ServicesItems = styled.a`
   }
   @media (min-width: 1824px) {
     font-size: 24px;
+  }
+`;
+
+export const Anchor = styled.a`
+  text-decoration: none;
+  cursor: pointer;
+  color: ${medicalGrey};
+  &:hover {
+    border-bottom: 2px solid #6ca448;
+    padding-bottom: 5px;
   }
 `;
 

@@ -185,7 +185,9 @@ export const NewsletterButton = styled.div`
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
   }
-  ${({disabled})=>disabled && css`
-  opacity:0.6;
-  `}
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      opacity: 0.6;
+    `}
 `;

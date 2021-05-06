@@ -56,7 +56,7 @@ export const BlogPageTextWrapper = styled.div`
 
 export const BlogPageTitleWrapper = styled.div`
   @media (min-width: 768px) {
-    margin-right: 110px;
+    margin-right: auto;
   }
 `;
 
@@ -116,9 +116,9 @@ export const BlogPageShare = styled.div`
 `;
 
 export const BlogContentWrapper = styled.div`
-  padding-top: 64px;
+  /* padding-top: 64px; */
   @media (min-width: 1024px) {
-    padding: 70px 45px 70px 93px;
+    padding: 5vh 5vw;
   }
 `;
 
@@ -151,9 +151,14 @@ export const BlogContent = styled.div`
     display: none;
   }
 
+  h1 {
+    display: none;
+  }
+
   img {
-    height: auto;
-    max-width: 100%;
+    /* height: auto;
+    max-width: 100%; */
+    display: none;
   }
 
   @media (min-width: 1024px) {
