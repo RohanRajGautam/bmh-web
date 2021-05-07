@@ -29,7 +29,8 @@ const StoryPage = () => {
           <ButtonWrapper
             primary="true"
             md="true"
-            to="https://quickclick.com/cart/cart.php?action=show_information&internal_key=b891033e3f[…]nal_timestamp=1617969086&tid=c2d5699d8721a1f3f7bf3b7a6a46ba5c"
+            to="https://beautifulmindswellness.org/donate/"
+            target="_blank"
           >
             Donate
           </ButtonWrapper>

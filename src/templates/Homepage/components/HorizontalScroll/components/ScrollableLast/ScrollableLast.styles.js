@@ -204,28 +204,36 @@ export const ImageLast = styled.img`
 
 export const ImageContent = styled.div`
   z-index: 3;
+
+  position: absolute;
+  bottom: 5%;
+  margin-left: 2rem;
+  /* @media (max-width: 576px) {
+
+  } */
 `;
 
 export const ButtonWrapper = styled(Button)`
-  position: absolute;
+  /* position: absolute;
   right: 3%;
-  top: 80%;
+  top: 80%; */
   padding: 10px 30px;
   border-radius: 50px;
   text-transform: uppercase;
 
   @media (max-width: 576px) {
-    right: 85%;
-    top: 88%;
-    width: 13%;
+    /* right: 85%;
+    top: 88%; */
+    width: 90vw;
     padding: 15px 40px;
+    margin-top: 2rem;
   }
 `;
 
 export const TextWrapper = styled.p`
-  position: absolute;
+  /* position: absolute;
   bottom: 24%;
-  right: 3%;
+  right: 3%; */
   color: #fff;
   font-size: 4rem;
   text-transform: capitalize;
@@ -234,8 +242,9 @@ export const TextWrapper = styled.p`
   letter-spacing: 1px;
 
   @media (max-width: 576px) {
-    bottom: 15%;
-    right: 85%;
+    /* bottom: 15%;
+    right: 85%; */
     font-size: 3rem;
   }
 `;
+

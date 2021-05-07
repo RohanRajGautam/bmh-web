@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Heading } from "@components/Heading";
 import { Button } from "@components/Button";
-import Story from "@images/our-story.png";
+import Story from "@images/our-story.jpg";
 
 export const StoryContainer = styled.div`
   position: relative;

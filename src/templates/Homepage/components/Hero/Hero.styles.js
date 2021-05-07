@@ -50,6 +50,7 @@ export const ImageBg = styled.img`
   background-size: cover;
   -o-object-fit: cover;
   object-fit: cover;
+  filter: brightness(50%);
 `;
 
 export const HeroContent = styled.div`

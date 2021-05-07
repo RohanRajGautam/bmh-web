@@ -3,7 +3,7 @@ export const NavbarItem = [
     title: "What We Do",
     list: [
       { title: "Medical", to: "https://www.beautifulmindsmedical.com/" },
-      { title: "Outpatient", to: "https://beautifulmindsoutpatient.com/" },
+      // { title: "Outpatient", to: "https://beautifulmindsoutpatient.com/" },
       { title: "Wellness", to: "https://beautifulmindswellness.org/" },
     ],
   },
