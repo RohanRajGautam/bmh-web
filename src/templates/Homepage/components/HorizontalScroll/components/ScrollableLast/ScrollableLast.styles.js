@@ -183,8 +183,9 @@ export const ImagePlaceholder = styled.div`
   background: #eee;
 
   @media (max-width: 576px) {
-    margin-top: 5rem;
-    position: absolute;
+    /* margin-top: 5rem;
+    position: absolute; */
+    display: none;
   }
 `;
 
@@ -200,6 +201,7 @@ export const ImageLast = styled.img`
   @media (max-width: 576px) {
     width: 100vw;
     height: 100vh;
+    display: none;
   }
 `;
 
@@ -209,9 +211,9 @@ export const ImageContent = styled.div`
   position: absolute;
   bottom: 5%;
   margin-left: 2rem;
-  /* @media (max-width: 576px) {
-
-  } */
+  @media (max-width: 576px) {
+    display: none;
+  }
 `;
 
 export const ButtonWrapper = styled(Button)`
@@ -228,6 +230,7 @@ export const ButtonWrapper = styled(Button)`
     width: 90vw;
     padding: 15px 40px;
     margin-top: 2rem;
+    display: none;
   }
 `;
 
@@ -246,5 +249,6 @@ export const TextWrapper = styled.p`
     /* bottom: 15%;
     right: 85%; */
     font-size: 3rem;
+    display: none;
   }
 `;
