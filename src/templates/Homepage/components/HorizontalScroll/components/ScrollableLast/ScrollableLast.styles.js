@@ -184,6 +184,7 @@ export const ImagePlaceholder = styled.div`
 
   @media (max-width: 576px) {
     margin-top: 5rem;
+    position: absolute;
   }
 `;
 
@@ -247,4 +248,3 @@ export const TextWrapper = styled.p`
     font-size: 3rem;
   }
 `;
-

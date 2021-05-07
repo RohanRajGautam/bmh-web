@@ -162,7 +162,7 @@ export const VectorDot = styled.div`
     background-color: #6ca448;
     border-radius: 50%;
     position: absolute;
-    left: 15%;
+    left: 13%;
     z-index: 2;
     /* top: 4%; */
   }
@@ -175,7 +175,7 @@ export const VectorDot = styled.div`
 export const VectorLine = styled.img`
   @media (min-width: 1024px) {
     position: relative;
-    left: 15%;
+    left: 14%;
   }
   @media (min-width: 1920px) {
     left: 40%;
@@ -190,8 +190,8 @@ export const VectorDotSecond = styled.div`
     background-color: #6ca448;
     border-radius: 50%;
     position: absolute;
-    left: 115%;
-    bottom: 98%;
+    left: 111%;
+    bottom: 96%;
   }
   @media (min-width: 1920px) {
     bottom: 98%;
