@@ -7,7 +7,7 @@ export const TextContainer = styled.div`
   color: #eee;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   transition: 2s ease;
   /* padding: 64px 5vw; */
@@ -57,6 +57,6 @@ export const FadedText = styled.span`
 
 export const LogoImg = styled.img`
   opacity: 0.5;
-  width: 90px;
-  margin: 2em auto;
+  width: 70px;
+  margin-top: 7rem;
 `;

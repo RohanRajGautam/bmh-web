@@ -29,7 +29,6 @@ export const Nav = styled.nav`
     props.dark
       ? css`
           height: 120px;
-          border-bottom: 1px solid ${border};
         `
       : css`
           height: 80px;
@@ -44,6 +43,14 @@ export const Nav = styled.nav`
     background: #2c3336;
     
     
+    `}
+
+    ${({ dark }) =>
+      dark &&
+      `
+      background: #fff;
+      border-bottom: 1px solid #C5CCD3;
+      height: 90px
     `}
   }
 `;
@@ -60,6 +67,19 @@ export const Logolink = styled(Link)`
     }
   }
 `;
+
+export const DonateButton = styled(Button)`
+  text-transform: uppercase;
+  border-radius: 50px;
+  padding: 1rem 3rem;
+  margin-left: auto;
+  margin-right: 5rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
 export const Menulink = styled.div`
   text-decoration: none;
   cursor: pointer;

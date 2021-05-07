@@ -19,7 +19,6 @@ export const HeroContainer = styled.div`
   @media (max-width: 576px) {
     height: 110vh;
   }
-
   // add overlay to the background image
 
   /* :before {
@@ -71,7 +70,7 @@ export const HeroItems = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  height: 60vh;
+  /* height: 60vh; */
   max-height: 100%;
   padding: 3rem 0;
   color: #fff;
@@ -81,6 +80,7 @@ export const HeroItems = styled.div`
 
   @media screen and (max-width: 576px) {
     width: 100%;
+    height: 70%;
   }
 `;
 
@@ -108,7 +108,9 @@ export const ButtonText = styled.p`
   padding: 1rem 0 0.6rem 0;
 
   @media (max-width: 768px) {
-    display: none;
+    /* display: none; */
+    font-size: 2rem;
+    padding: 1rem 0 2rem 0;
   }
 `;
 export const ButtonContainer = styled.div`
@@ -165,6 +167,7 @@ export const ButtonSecondary = styled(ButtonPrimary)`
 
   @media (max-width: 768px) {
     border-radius: 50px;
+    margin: 0 auto;
   }
 `;
 
@@ -188,8 +191,8 @@ export const HeroH1 = styled.h1`
 export const Divider = styled.div`
   width: 11rem;
   height: 0px;
-  background: #fff;
-  border: 2px solid #ffffff;
+  background: #6ca448;
+  border: 2px solid #6ca448;
 `;
 
 export const HeroP = styled.p`
@@ -210,7 +213,7 @@ export const HeroP = styled.p`
     padding: 3rem 0;
   }
   @media (min-width: 1024px) {
-    font-size: clamp(1.8rem, 3vw, 3rem);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
     padding: 64px 0;
     span {
       display: block;

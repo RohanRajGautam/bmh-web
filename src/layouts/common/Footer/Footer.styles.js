@@ -26,6 +26,7 @@ export const FooterMain = styled.div`
   grid-template-columns: 2fr 1fr;
   grid-gap: 4rem;
   align-items: center;
+  margin-top: 5rem;
 
   @media only screen and (max-width: 992px) {
     grid-template-columns: 1fr;
@@ -37,7 +38,6 @@ export const FooterDetails = styled.div`
   display: grid;
   grid-template-columns: repeat(1fr);
   grid-gap: 2rem;
-  margin-top: 5em;
   @media (min-width: 576px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -119,6 +119,7 @@ export const FooterCopyright = styled(Link)`
 
 export const NewsletterWrapper = styled.div`
   font-size: 6px;
+  align-self: baseline;
   @media (min-width: 1024px) {
     font-size: 8px;
   }
@@ -132,7 +133,7 @@ export const NewsletterWrapper = styled.div`
 
 export const NewsletterTitle = styled.h2`
   font-size: clamp(2rem, 2.5vw, 3rem);
-  line-height: 1.7;
+  /* line-height: 1.7; */
   letter-spacing: 0.1px;
   color: ${lightBlueGrey};
   font-weight: 700;

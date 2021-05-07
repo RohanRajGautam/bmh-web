@@ -11,6 +11,12 @@ const Wrapper = styled.div`
 `;
 const Title = styled.h2`
   font-size: 3.6rem;
+
+  @media (max-width: 576px) {
+    margin-top: 8rem;
+    color: #6ca448;
+    text-align: center;
+  }
 `;
 const Description = styled.p`
   padding: 2rem 0;

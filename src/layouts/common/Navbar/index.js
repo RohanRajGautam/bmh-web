@@ -17,6 +17,7 @@ import {
   BigMenuNavItem,
   BigMenuRight,
   BigMenuClose,
+  DonateButton,
 } from "./Navbar.styles";
 import { TimelineLite, TweenMax, Power3 } from "gsap";
 import { NavbarItem } from "./Navbar.datas";
@@ -40,12 +41,13 @@ const Navbar = props => {
   useEffect(() => {
     let tl = new TimelineLite({ delay: 0.4 });
     const logoContent = logoAnim.children[0].firstElementChild;
-    const menuContent = logoAnim.children[1].firstElementChild;
+    const donateContent = logoAnim.children[1];
+    const menuContent = logoAnim.children[2].firstElementChild;
 
     //Remove initial flash
     TweenMax.to(app, 0, { css: { visibility: "visible" } });
 
-    tl.staggerFrom([logoContent, menuContent], 1, {
+    tl.staggerFrom([logoContent, donateContent, menuContent], 1, {
       x: 20,
       opacity: 0,
       ease: Power3.easeIn,
@@ -79,6 +81,13 @@ const Navbar = props => {
             draggable="false"
           />
         </Logolink>
+        <DonateButton
+          primary
+          to="https://beautifulmindswellness.org/donate/"
+          target="_blank"
+        >
+          Donate
+        </DonateButton>
         <Menulink onClick={handleBigMenu}>
           <img
             src={props.dark ? menuDark : menu}

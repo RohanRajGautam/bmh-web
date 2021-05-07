@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Heading } from "@components/Heading";
 import { Link } from "gatsby";
 
 const medicalGrey = "#5F6468";
@@ -10,6 +11,15 @@ export const CategoryWrapper = styled.div`
   }
   @media (min-width: 1024px) {
     margin: 120px 90px;
+  }
+`;
+
+export const BlogHeading = styled(Heading)`
+  @media (max-width: 576px) {
+    margin-top: 13rem;
+    margin-bottom: 2rem;
+    color: #6ca448;
+    font-size: 4rem;
   }
 `;
 

@@ -21,4 +21,10 @@ export const AllBlogPageWrapper = styled.div`
 export const AllBlogHeading = styled(Heading)`
   padding-bottom: 40px;
   text-align: center;
+  color: #6ca448;
+  font-size: 3rem;
+
+  @media (max-width: 576px) {
+    padding: 4rem 0 2rem 0;
+  }
 `;

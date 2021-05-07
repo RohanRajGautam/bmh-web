@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { TimelineLite, TweenMax, Power3 } from "gsap";
+import { Hidden } from "@material-ui/core";
 
 // components
 import {
@@ -20,7 +21,8 @@ import {
 } from "./Hero.styles";
 
 // images
-import BackgroundImage from "@images/background-img-hero.png";
+import HeroDesktop from "@images/hero-desktop.png";
+import HeroMobile from "@images/hero-mobile.png";
 
 export default function Hero() {
   let app = useRef(null);
@@ -62,7 +64,12 @@ export default function Hero() {
   return (
     <HeroContainer ref={el => (app = el)}>
       <HeroBg ref={el => (images = el)}>
-        <ImageBg src={BackgroundImage} type="image/jpg" />
+        <Hidden smDown>
+          <ImageBg src={HeroDesktop} type="image/png" />
+        </Hidden>
+        <Hidden mdUp>
+          <ImageBg src={HeroMobile} type="image/png" />
+        </Hidden>
       </HeroBg>
       <HeroContent>
         <HeroItems ref={el => (content = el)}>

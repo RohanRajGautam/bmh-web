@@ -24,8 +24,8 @@ export const NavLink = styled.a`
   cursor: pointer;
   font-size: medium;
   font-family: Mulish;
-  font-weight: 500;
-  opacity: 0.7;
+  font-weight: 600;
+  /* opacity: 0.7; */
   text-transform: uppercase;
 
   &.active,

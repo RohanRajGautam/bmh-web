@@ -1,19 +1,18 @@
 import React from "react";
-import { Heading } from "../../../../components/Heading";
 import CategoryCard from "./Card";
-// import StaticData from "./Categories.data";
 import {
   CategoryWrapper,
   CategoryBlockWrapper,
   CategoryBlock,
   BlogBreadCrum,
+  BlogHeading,
 } from "./Categories.style";
 
 const Categories = props => {
   console.log(props);
   return (
     <CategoryWrapper>
-      <Heading clean>{props && props.data.name}</Heading>
+      <BlogHeading clean>{props && props.data.name}</BlogHeading>
       <BlogBreadCrum>Home {">"} Blogs & Articles</BlogBreadCrum>
       <CategoryBlockWrapper>
         <CategoryBlock>

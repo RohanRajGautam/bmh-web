@@ -128,10 +128,7 @@ const Footer = () => {
             ))}
           </FooterDetails>
           <NewsletterWrapper>
-            <NewsletterTitle>
-              Hear from our mental health experts on how you or someone you know
-              can beat depression and anxiety
-            </NewsletterTitle>
+            <NewsletterTitle>Sign Up For Our Newsletter</NewsletterTitle>
             <NewsletterInput>
               <input
                 type="text"
