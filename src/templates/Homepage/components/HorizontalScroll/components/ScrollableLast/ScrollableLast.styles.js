@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Heading } from "@components/Heading";
+import { Button } from "@components/Button";
 
 const primary = "#6CA448";
 const graniteGrey = "#2C3336";
@@ -7,6 +8,7 @@ const medicalGrey = "#5f6468";
 const gray3 = "#828282";
 
 export const Container = styled.div`
+  width: 65vw;
   display: flex;
   flex-direction: column;
   margin: 5vh 5vw;
@@ -17,7 +19,7 @@ export const Container = styled.div`
 export const LogoContainer = styled.img`
   width: 350px;
   @media (min-width: 1824px) {
-    width: min-content;
+    width: min-ImageContent;
   }
 `;
 
@@ -162,5 +164,78 @@ export const Anchor = styled.a`
   &:hover {
     border-bottom: 2px solid #6ca448;
     padding-bottom: 5px;
+  }
+`;
+
+export const Wrapper = styled.div`
+  width: 100vw;
+  display: flex;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
+`;
+
+// image wrapperStyle
+export const ImagePlaceholder = styled.div`
+  width: 35vw;
+  height: 100vh;
+  background: #eee;
+
+  @media (max-width: 576px) {
+    margin-top: 5rem;
+  }
+`;
+
+export const ImageLast = styled.img`
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+  object-fit: cover;
+  filter: brightness(35%);
+  backdrop-filter: blur(10px);
+
+  @media (max-width: 576px) {
+    width: 100vw;
+    height: 100vh;
+  }
+`;
+
+export const ImageContent = styled.div`
+  z-index: 3;
+`;
+
+export const ButtonWrapper = styled(Button)`
+  position: absolute;
+  right: 3%;
+  top: 80%;
+  padding: 10px 30px;
+  border-radius: 50px;
+  text-transform: uppercase;
+
+  @media (max-width: 576px) {
+    right: 85%;
+    top: 88%;
+    width: 13%;
+    padding: 15px 40px;
+  }
+`;
+
+export const TextWrapper = styled.p`
+  position: absolute;
+  bottom: 24%;
+  right: 3%;
+  color: #fff;
+  font-size: 4rem;
+  text-transform: capitalize;
+  font-style: oblique;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  @media (max-width: 576px) {
+    bottom: 15%;
+    right: 85%;
+    font-size: 3rem;
   }
 `;

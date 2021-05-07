@@ -162,11 +162,12 @@ export const VectorDot = styled.div`
     background-color: #6ca448;
     border-radius: 50%;
     position: absolute;
-    left: 24%;
+    left: 15%;
+    z-index: 2;
     /* top: 4%; */
   }
   @media (min-width: 1920px) {
-    left: 59%;
+    left: 40%;
 }
   }
 `;
@@ -174,11 +175,10 @@ export const VectorDot = styled.div`
 export const VectorLine = styled.img`
   @media (min-width: 1024px) {
     position: relative;
-    /* top: 13%; */
-    left: 25%;
+    left: 15%;
   }
   @media (min-width: 1920px) {
-    left: 60%;
+    left: 40%;
     top: 7%;
   }
 `;
@@ -190,12 +190,12 @@ export const VectorDotSecond = styled.div`
     background-color: #6ca448;
     border-radius: 50%;
     position: absolute;
-    left: 125%;
+    left: 115%;
     bottom: 98%;
   }
   @media (min-width: 1920px) {
     bottom: 98%;
-    left: 160%;
+    left: 140%;
   }
 `;
 

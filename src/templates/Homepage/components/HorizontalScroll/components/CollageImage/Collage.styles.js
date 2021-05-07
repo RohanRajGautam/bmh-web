@@ -37,33 +37,33 @@ export const CollageItems = styled.div`
   background-repeat: no-repeat;
   opacity: 0;
   @media only screen and (min-width: 1024px) {
-    height: 420px;
-    width: 400px;
+    height: 350px;
+    width: 300px;
     &:nth-child(1) {
       grid-column: 1/4;
       grid-row: 1;
       position: relative;
-      top: 20%;
-      left: -88%;
+      /* top: 20%; */
+      left: -90%;
     }
     &:nth-child(2) {
       grid-column: 1/9;
       grid-row: 2/3;
       position: relative;
-      left: 4%;
+      left: 7%;
       bottom: 50%;
     }
     &:nth-child(3) {
       grid-column: 3/9;
       grid-row: 1/3;
       position: relative;
-      left: 24%;
+      left: 20%;
     }
     &:nth-child(4) {
       grid-column: 6/9;
       grid-row: 2/3;
       position: relative;
-      left: 50%;
+      left: 20%;
       bottom: 50%;
     }
   }
@@ -74,28 +74,28 @@ export const CollageItems = styled.div`
       grid-column: 1/4;
       grid-row: 1;
       position: relative;
-      top: 20%;
-      left: -88%;
+      /* top: 20%; */
+      left: -75%;
     }
     &:nth-child(2) {
       grid-column: 1/9;
       grid-row: 2/3;
       position: relative;
-      left: 4%;
-      bottom: 30%;
+      left: 5%;
+      /* bottom: 30%; */
     }
     &:nth-child(3) {
       grid-column: 3/9;
       grid-row: 1/3;
       position: relative;
-      left: 25%;
-      top: 10%;
+      left: 20%;
+      /* top: 10%; */
     }
     &:nth-child(4) {
       grid-column: 6/9;
       grid-row: 2/3;
       position: relative;
-      left: 50%;
+      left: 30%;
       bottom: 50%;
     }
   }

@@ -78,8 +78,8 @@ export const HorizontalComponentBlockForth = styled.div`
   /* style */
   @media (min-width: 1024px) {
     width: 100vw;
-    position: relative;
-    left: 4%;
+    /* position: relative;
+    left: 4%; */
   }
 `;
 

@@ -31,7 +31,7 @@ export default function Hero() {
 
   useEffect(() => {
     let tl = new TimelineLite({ delay: 0.8 });
-    const bgImg = images.firstElementChild;
+    const bgImg = images.current;
     const h1Text = content.children[0].children[0];
     const divider = content.children[0].children[1];
     const pText = content.children[0].children[2];

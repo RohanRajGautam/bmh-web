@@ -20,8 +20,6 @@ import {
   ScrollableLast,
 } from "./components";
 
-import imageLast from "@images/home/horizontal-last.png";
-
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
@@ -34,18 +32,22 @@ const HorizontalScroll = props => {
 
         let timeline = gsap.timeline();
 
-        timeline.to(sections, {
-          xPercent: -100 * (sections.length - 1),
-          ease: "none",
-          scrollTrigger: {
-            trigger: "#container",
-            pin: true,
-            scrub: 1,
-            snap: 1 / (sections.length - 1),
-            // base vertical scrolling on how wide the is so it feels more natural.
-            end: () => "+=" + document.querySelector("#container")?.offsetWidth,
-          },
-        });
+        timeline
+          .to(sections, {
+            xPercent: -100 * (sections.length - 1),
+            ease: "none",
+            scrollTrigger: {
+              trigger: "#container",
+              pin: true,
+              scrub: 1,
+              snap: 1 / (sections.length - 1),
+              // base vertical scrolling on how wide the is so it feels more natural.
+              end: () =>
+                "+=" + document.querySelector("#container")?.offsetWidth,
+              // end: "+=10000",
+            },
+          })
+          .to({}, { duration: 10 });
       },
     });
   }, []);
@@ -70,9 +72,6 @@ const HorizontalScroll = props => {
         <HorizontalComponentBlockForth id="horizontal-scroll-item">
           <ScrollableLast />
         </HorizontalComponentBlockForth>
-        <HorizontalComponentImageLast id="horizontal-scroll-item">
-          <ImageLast src={imageLast} type="image/png" data-aos="fade-up" />
-        </HorizontalComponentImageLast>
       </HorizontalComponent>
     </HorizontalComponentWrapper>
   );
