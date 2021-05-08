@@ -25,6 +25,30 @@ export const EventWrapper = styled.div`
         cursor: pointer;
       }
     }
+    .MuiPopover-root {
+      .MuiPaper-root {
+        .MuiPickersBasePicker-container {
+          .MuiPickersBasePicker-pickerView {
+            .MuiPickersYearSelection-container {
+              .MuiPickersYear-yearSelected {
+                font-size: 3rem;
+              }
+              .MuiPickersYear-root {
+                font-size: 2rem;
+              }
+            }
+            .MuiPickersMonthSelection-container {
+              .MuiPickersMonth-root {
+                font-size: 2rem;
+              }
+              .MuiPickersMonth-monthSelected {
+                font-size: 2.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
     .MuiFormControl-root {
       padding: 12px 20px;
     }
@@ -178,4 +202,9 @@ export const EventDatePickerArrow = styled.div`
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
+`;
+
+export const NotFoundContainer = styled(EventCard)``;
+export const NotFoundText = styled.p`
+  font-size: 3rem;
 `;

@@ -1,10 +1,13 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
+import { isEmpty } from "lodash";
 import Card from "./Card";
 import {
   EventSliderWrapper,
   EventWrapper,
   NavigationButton,
   NavigationButtonWrapper,
+  NotFoundContainer,
+  NotFoundText,
 } from "./Event.styles";
 import { Heading } from "@components/Heading";
 import MaterialUIPickers from "./EventDatePicker";
@@ -16,13 +19,36 @@ const Events = props => {
     eventRef.current.scrollLeft += scrollOffset;
   };
 
+  const [selectedDate, setSelectedDate] = useState(new Date("2021-05-01"));
+  const [events, setEvents] = useState([]);
+
+  const handleDateChange = date => {
+    setSelectedDate(date);
+    console.log(date);
+  };
+
+  useEffect(() => {
+    const data = props?.data.filter(function (item) {
+      // return item.eventYear >= `${year}`;
+      return item.eventYear == `${year}` && item.eventMonth == `${month}`;
+    });
+    setEvents(data);
+  }, [selectedDate]);
+
+  console.log(">>>>", { props });
+  let year = selectedDate.getFullYear();
+  let month = selectedDate.toLocaleString("default", { month: "long" });
+
   return (
     <EventWrapper id="events" data-aos="fade-up">
       <Heading>Here's What's Coming Up</Heading>
-      <MaterialUIPickers />
+      <MaterialUIPickers
+        handleDateChange={handleDateChange}
+        selectedDate={selectedDate}
+      />
       <EventSliderWrapper ref={eventRef}>
-        {props?.data.length &&
-          props.data.map((item, index) => (
+        {!isEmpty(events) ? (
+          events.map((item, index) => (
             <Card
               key={index}
               title={item.title}
@@ -34,7 +60,14 @@ const Events = props => {
                 item.eventLocations.nodes[0].name
               }
             />
-          ))}
+          ))
+        ) : (
+          <NotFoundContainer>
+            <NotFoundText>
+              No events were found. Please try a different date.
+            </NotFoundText>
+          </NotFoundContainer>
+        )}
       </EventSliderWrapper>
       <NavigationButtonWrapper>
         <NavigationButton onClick={() => scroll(-370)}>

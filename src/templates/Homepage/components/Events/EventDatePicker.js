@@ -5,13 +5,15 @@ import DateFnsUtils from "@date-io/date-fns";
 import { MuiPickersUtilsProvider, DatePicker } from "@material-ui/pickers";
 import { EventDatePickerWrapper, EventDatePickerArrow } from "./Event.styles";
 
-export default function MaterialUIPickers() {
-  const [selectedDate, setSelectedDate] = useState(new Date());
+export default function MaterialUIPickers({ selectedDate, handleDateChange }) {
+  // const [selectedDate, setSelectedDate] = useState(new Date());
 
-  const handleDateChange = date => {
-    setSelectedDate(date);
-    console.log(date);
-  };
+  // const handleDateChange = date => {
+  //   setSelectedDate(date);
+  //   console.log(date);
+  // };
+
+  // console.log(selectedDate);
 
   return (
     <EventDatePickerWrapper>
@@ -33,7 +35,8 @@ export default function MaterialUIPickers() {
             variant="inline"
             value={selectedDate}
             onChange={handleDateChange}
-            minDate={new Date()}
+            minDate={new Date("2020-01-01")}
+            // views={["year"]}
             views={["year", "month"]}
           />
         </Grid>
