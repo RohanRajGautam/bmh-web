@@ -24,20 +24,17 @@ const Events = props => {
 
   const handleDateChange = date => {
     setSelectedDate(date);
-    console.log(date);
   };
 
   useEffect(() => {
+    let year = selectedDate.getFullYear();
+    let month = selectedDate.toLocaleString("default", { month: "long" });
+
     const data = props?.data.filter(function (item) {
-      // return item.eventYear >= `${year}`;
       return item.eventYear == `${year}` && item.eventMonth == `${month}`;
     });
     setEvents(data);
   }, [selectedDate]);
-
-  console.log(">>>>", { props });
-  let year = selectedDate.getFullYear();
-  let month = selectedDate.toLocaleString("default", { month: "long" });
 
   return (
     <EventWrapper id="events" data-aos="fade-up">
