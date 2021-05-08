@@ -185,7 +185,7 @@ export const ImagePlaceholder = styled.div`
   @media (max-width: 576px) {
     /* margin-top: 5rem;
     position: absolute; */
-    display: none;
+    /* display: none; */
   }
 `;
 
@@ -197,11 +197,12 @@ export const ImageLast = styled.img`
   object-fit: cover;
   filter: brightness(35%);
   backdrop-filter: blur(10px);
+  height: 100vh;
+  width: 35vw;
 
   @media (max-width: 576px) {
     width: 100vw;
     height: 100vh;
-    display: none;
   }
 `;
 
@@ -212,32 +213,24 @@ export const ImageContent = styled.div`
   bottom: 5%;
   margin-left: 2rem;
   @media (max-width: 576px) {
-    display: none;
+    position: relative;
+    bottom: 30%;
   }
 `;
 
 export const ButtonWrapper = styled(Button)`
-  /* position: absolute;
-  right: 3%;
-  top: 80%; */
   padding: 10px 30px;
   border-radius: 50px;
   text-transform: uppercase;
+  display: flex;
+  margin-top: 2rem;
 
   @media (max-width: 576px) {
-    /* right: 85%;
-    top: 88%; */
-    width: 90vw;
-    padding: 15px 40px;
-    margin-top: 2rem;
-    display: none;
+    padding: 20px 160px;
   }
 `;
 
 export const TextWrapper = styled.p`
-  /* position: absolute;
-  bottom: 24%;
-  right: 3%; */
   color: #fff;
   font-size: 4rem;
   text-transform: capitalize;
@@ -246,9 +239,7 @@ export const TextWrapper = styled.p`
   letter-spacing: 1px;
 
   @media (max-width: 576px) {
-    /* bottom: 15%;
-    right: 85%; */
     font-size: 3rem;
-    display: none;
+    width: 100vw;
   }
 `;
