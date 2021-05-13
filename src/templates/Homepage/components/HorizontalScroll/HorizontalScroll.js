@@ -50,6 +50,10 @@ const HorizontalScroll = props => {
           .to({}, { duration: 10 });
       },
     });
+
+    return () => {
+      ScrollTrigger.getAll().forEach(t => t.kill());
+    };
   }, []);
 
   return (
