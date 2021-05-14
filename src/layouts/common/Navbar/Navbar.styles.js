@@ -22,7 +22,7 @@ export const Nav = styled.nav`
   position: relative;
 
   @media (min-width: 576px) {
-    padding-top: 3rem;
+    /* padding-top: 3rem; */
   }
 
   ${props =>
@@ -50,7 +50,7 @@ export const Nav = styled.nav`
       `
       background: #fff;
       border-bottom: 1px solid #C5CCD3;
-      height: 90px
+      height: 70px
     `}
   }
 `;
@@ -71,9 +71,10 @@ export const Logolink = styled(Link)`
 export const DonateButton = styled(Button)`
   text-transform: uppercase;
   border-radius: 50px;
-  padding: 1rem 3rem;
+  padding: 0.5rem 1.5rem;
   margin-left: auto;
-  margin-right: 5rem;
+  font-size: 1.5rem;
+  margin-right: 4rem;
 
   @media (max-width: 768px) {
     display: none;

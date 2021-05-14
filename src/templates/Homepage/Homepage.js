@@ -21,7 +21,7 @@ const Homepage = props => {
   }, []);
 
   return (
-    <Layout>
+    <Layout dark>
       <Seo title="Home" />
       <Hero />
       <HorizontalScroll />

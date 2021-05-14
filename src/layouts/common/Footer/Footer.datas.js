@@ -84,7 +84,7 @@ export const staticData = [
     title: "Get in Touch",
     items: [
       { title: "Donate", to: "https://beautifulmindswellness.org/donate/" },
-      { title: "Volunter", to: "/" },
+      // { title: "Volunter", to: "/" },
       {
         title: "Visit us",
         to: "https://www.beautifulmindsmedical.com/about/photo-gallery",

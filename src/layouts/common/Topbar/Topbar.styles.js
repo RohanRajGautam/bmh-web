@@ -45,4 +45,5 @@ export const NavMenu = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
+  margin-left: 1.6rem;
 `;

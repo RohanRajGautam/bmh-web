@@ -4,6 +4,7 @@ import Navbar from "./common/Navbar";
 import Topbar from "./common/Topbar";
 import Footer from "./common/Footer";
 import Scroll from "@components/ScrollTop";
+import "../assets/fonts/fonts.css";
 
 const Layout = ({ children, ...props }) => {
   return (

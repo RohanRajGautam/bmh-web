@@ -7,17 +7,18 @@ export const HeroContainer = styled.div`
   visibility: hidden;
   background: #fff;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
   height: 100vh;
   width: 100vw;
-  position: relative;
-  margin-top: -80px;
-  color: #fff;
-  padding-left: 5vw;
+  margin-top: -12rem;
 
   @media (max-width: 576px) {
+    position: relative;
+    color: #fff;
+    padding-left: 5vw;
+    justify-content: flex-start;
+    align-items: center;
     height: 110vh;
+    margin-top: -80px;
   }
   // add overlay to the background image
 
@@ -32,14 +33,18 @@ export const HeroContainer = styled.div`
   } */
 `;
 export const HeroBg = styled.div`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  width: 50vw;
+
+  @media (max-width: 576px) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
 `;
 
 export const ImageBg = styled.img`
@@ -57,57 +62,62 @@ export const ImageBg = styled.img`
 `;
 
 export const HeroContent = styled.div`
+  width: 50vw;
   z-index: 3;
-  height: calc(100vh - 80px);
-  max-height: 100%;
+  /* max-height: 100%; */
   /* padding: 0 5vw; */
 
   @media screen and (max-width: 860px) {
+    height: calc(100vh - 80px);
     padding: 0;
     position: absolute;
     left: 0;
+    width: auto;
   }
 `;
 
 export const HeroItems = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   /* height: 60vh; */
-  max-height: 100%;
-  padding: 3rem 0;
+  /* max-height: 100%; */
+  padding: 0 5vw;
   color: #fff;
   line-height: 1.1;
   font-weight: bold;
+  margin-right: 5vw;
   transform: translateY(25vh);
 
   @media screen and (max-width: 576px) {
+    justify-content: center;
+    align-items: flex-start;
     width: 100%;
     height: 70%;
+    padding: 3rem 0;
   }
 `;
 
 export const HeroTextContainer = styled.div`
   width: 100%;
   padding: 1.5rem 5vw;
-  @media (min-width: 1024px) {
+  @media (min-width: 860px) {
     padding: 0;
   }
 `;
 
 export const ButtonWrapper = styled.div`
   background: #6ca448;
-  width: 100%;
+  width: 80%;
   border-radius: 55px;
 
   @media (max-width: 768px) {
     background: none;
+    width: 100%;
   }
 `;
 export const ButtonText = styled.p`
   color: #fff;
-  font-size: 3rem;
+  font-size: clamp(1rem, 1.6vw, 3rem);
   text-align: center;
   padding: 1rem 0 0.6rem 0;
 
@@ -130,7 +140,7 @@ export const ButtonContainer = styled.div`
     margin-bottom: 5vw;
 }
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 860px) {
     padding: 0;
   }
 `;
@@ -138,12 +148,14 @@ export const ButtonContainer = styled.div`
 export const ButtonPrimary = styled(Button)`
   /* margin-bottom: 2rem; */
   width: 100%;
-  height: 60px;
+  height: 45px;
   text-transform: uppercase;
   border-radius: 0 0 0 50px;
   margin: 0 0 5px 5px;
-  background: #2c3336;
-  padding: 15px 0 0 0;
+  background: #fff;
+  color: #2c3336;
+  padding: 13px 0 0 0;
+  font-size: 1.7rem;
   &:hover {
     background-color: #fff;
     color: ${primaryColor};
@@ -156,8 +168,10 @@ export const ButtonPrimary = styled(Button)`
     border-radius: 50px;
     max-width: 90%;
     padding: 2rem 5rem;
-    font-size: 20px;
+    font-size: 1.8rem;
     background: #66a250;
+    height: 60px;
+    color: #fff;
   }
 `;
 
@@ -181,33 +195,48 @@ export const HeroH1 = styled.h1`
   font-weight: bold;
   letter-spacing: 0.3px;
   user-select: none;
+  color: #2c3336;
   padding-bottom: 3rem;
   font-size: 24px;
   font-style: italic;
-  @media (min-width: 1024px) {
-    font-size: clamp(3rem, 6vw, 6rem);
+
+  span {
+    font-family: "Smiley";
+    font-style: normal;
+    font-variant: all-small-caps;
+    letter-spacing: 2px;
+  }
+
+  @media (min-width: 860px) {
+    font-size: clamp(3rem, 4vw, 7rem);
   }
   @media (max-width: 576px) {
-    font-size: 3.5rem;
+    font-size: clamp(3.5rem, 10vw, 4rem);
+    color: #fff;
   }
 `;
 
 export const Divider = styled.div`
-  width: 11rem;
-  height: 0px;
+  width: 7rem;
+  height: 5px;
+  position: relative;
   background: #6ca448;
-  border: 2px solid #6ca448;
+  bottom: 30px;
+  @media (max-width: 576px) {
+    width: 6rem;
+    bottom: 20px;
+  }
 `;
 
 export const HeroP = styled.p`
   font-family: Mulish;
   font-weight: 300;
+  color: #2c3336;
   line-height: 160%;
   font-size: 18px;
   padding: 1.5rem 0;
   font-weight: 400;
   letter-spacing: 0.3px;
-  color: rgba(255, 255, 255, 0.7);
   user-select: none;
   span {
     font-family: inherit;
@@ -215,10 +244,11 @@ export const HeroP = styled.p`
   @media (max-width: 576px) {
     font-size: 2rem;
     padding: 3rem 0;
+    color: rgba(255, 255, 255, 0.7);
   }
-  @media (min-width: 1024px) {
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
-    padding: 64px 0;
+  @media (min-width: 860px) {
+    font-size: clamp(2rem, 1.6vw, 2.5rem);
+    padding: 1rem 0 6rem 0;
     span {
       display: block;
     }

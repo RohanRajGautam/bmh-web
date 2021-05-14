@@ -26,7 +26,7 @@ export const NavbarItem = [
     title: "Get in Touch",
     list: [
       { title: "Donate", to: "https://beautifulmindswellness.org/donate/" },
-      { title: "Volunter", to: "/" },
+      // { title: "Volunter", to: "/" },
       { title: "Visit", to: "/" },
     ],
   },

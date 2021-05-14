@@ -31,7 +31,7 @@ const Events = props => {
     let month = selectedDate.toLocaleString("default", { month: "long" });
 
     const data = props?.data.filter(function (item) {
-      return item.eventYear == `${year}` && item.eventMonth == `${month}`;
+      return item.eventYear >= `${year}` || item.eventMonth == `${month}`;
     });
     setEvents(data);
   }, [selectedDate]);

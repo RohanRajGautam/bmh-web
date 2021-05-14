@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { TimelineLite, TweenMax, Power3 } from "gsap";
+import Divider from "@material-ui/core/Divider";
 
 import { menuData } from "@data/MenuData";
 import { Wrapper, NavMenu, NavLink } from "./Topbar.styles";
@@ -26,16 +27,25 @@ const Topbar = () => {
   return (
     <Wrapper ref={el => (bar = el)}>
       <NavMenu>
-        {menuData.map((item, index) => (
-          <NavLink
-            href={item.link}
-            target="_blank"
-            key={index}
-            activeClassName="active"
-          >
-            {item.title}
-          </NavLink>
-        ))}
+        <NavLink
+          href="https://www.beautifulmindsmedical.com/"
+          target="_blank"
+          activeClassName="active"
+        >
+          Medical
+        </NavLink>
+        <Divider
+          orientation="vertical"
+          flexItem
+          style={{ background: "#eee" }}
+        />
+        <NavLink
+          href="https://beautifulmindswellness.org/"
+          target="_blank"
+          activeClassName="active"
+        >
+          Wellness
+        </NavLink>
       </NavMenu>
     </Wrapper>
   );

@@ -1,0 +1,4 @@
+@font-face {
+  font-family: "Smiley";
+  src: local("Smiley"), url("./Smiley.ttf") format("truetype");
+}

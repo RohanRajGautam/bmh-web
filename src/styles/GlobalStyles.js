@@ -4,7 +4,7 @@ const primary = "#6CA448";
 
 export const GlobalStyles = createGlobalStyle`
   * {
-    font-family: 'Merriweather', 'Mulish';
+    font-family: 'Merriweather', 'Mulish', 'Smiley';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -25,6 +25,7 @@ export const GlobalStyles = createGlobalStyle`
   p{
     line-height:1.7;
   }
+
 
 .MuiPopover-paper{
   max-width:250px !important;

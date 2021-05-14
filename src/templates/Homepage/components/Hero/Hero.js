@@ -21,7 +21,7 @@ import {
 } from "./Hero.styles";
 
 // images
-import HeroDesktop from "@images/hero-desktop.png";
+import HeroDesktop from "@images/hero-desktop.jpg";
 import HeroMobile from "@images/hero-mobile.png";
 
 export default function Hero() {
@@ -63,18 +63,12 @@ export default function Hero() {
 
   return (
     <HeroContainer ref={el => (app = el)}>
-      <HeroBg ref={el => (images = el)}>
-        <Hidden smDown>
-          <ImageBg src={HeroDesktop} type="image/png" />
-        </Hidden>
-        <Hidden mdUp>
-          <ImageBg src={HeroMobile} type="image/png" />
-        </Hidden>
-      </HeroBg>
       <HeroContent>
         <HeroItems ref={el => (content = el)}>
           <HeroTextContainer>
-            <HeroH1>Get Your Life Back</HeroH1>
+            <HeroH1>
+              Mental Health for <span>all</span> of You
+            </HeroH1>
             <Divider />
             <HeroP>
               We treat and prevent mental illness through
@@ -105,6 +99,14 @@ export default function Hero() {
           </ButtonWrapper>
         </HeroItems>
       </HeroContent>
+      <HeroBg ref={el => (images = el)}>
+        <Hidden smDown>
+          <ImageBg src={HeroDesktop} type="image/png" />
+        </Hidden>
+        <Hidden mdUp>
+          <ImageBg src={HeroMobile} type="image/png" />
+        </Hidden>
+      </HeroBg>
     </HeroContainer>
   );
 }
