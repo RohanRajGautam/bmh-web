@@ -1,0 +1,101 @@
+import styled, { css } from "styled-components";
+import { Link } from "gatsby";
+
+const graniteGray = "#2C3336";
+
+export const BlogWrapper = styled.div`
+  padding: 5vw;
+`;
+
+export const SliderWrapper = styled.div`
+  margin-top: 40px;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+`;
+
+export const HeadingWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  @media (min-width: 768px) {
+    justify-content: space-between;
+  }
+  @media (min-width: 1024px) {
+    margin-right: 96px;
+  }
+`;
+
+export const StyledLink = styled(Link)`
+  span {
+    margin-right: 15px;
+  }
+  font-size: 24px;
+  font-weight: 600;
+  font-family: Mulish;
+  letter-spacing: 0.1px;
+  color: ${graniteGray};
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+  }
+`;
+
+export const StyledLinkMobile = styled(StyledLink)`
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  svg {
+    height: 14px;
+    width: 26px;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export const NavigationButtonWrapper = styled.div`
+  display: flex;
+`;
+
+export const NavigationButton = styled.button`
+  height: 30px;
+  width: 30px;
+  border: 1px solid #c5ccd3;
+  border-radius: 3px;
+  display: grid;
+  place-items: center;
+  background-color: #fff;
+  cursor: pointer;
+  &:hover {
+    background-color: #f4f4f4;
+  }
+  @media (min-width: 768px) {
+    height: 40px;
+    width: 40px;
+    svg {
+      height: 21px;
+      width: 13px;
+    }
+  }
+  ${props =>
+    props.right &&
+    css`
+      margin-left: 25px;
+    `}
+`;
+
+export const SpaceBetween = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 64px;
+`;

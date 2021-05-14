@@ -1,0 +1,237 @@
+import styled from "styled-components";
+import { Link } from "gatsby";
+
+const blue = "#427CC5";
+const medicalGrey = "#5F6468";
+const graniteGrey = "#2C3336";
+const primary = "#6CA448";
+
+export const BlogPageHero = styled.div`
+  height: calc(100vh - 40px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: -80px;
+  background-image: linear-gradient(
+      11.06deg,
+      #2c3336 -15.64%,
+      rgba(44, 51, 54, 0) 75.3%
+    ),
+    linear-gradient(173.86deg, #2c3336 -10.11%, rgba(44, 51, 54, 0) 73.68%),
+    url(${props => props.image});
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  @media (max-width: 576px) {
+    height: 111vh;
+  }
+`;
+
+export const BlogPageHeroInner = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px 25px;
+  position: relative;
+  @media (min-width: 768px) {
+    padding: 52px 93px;
+  }
+`;
+
+export const BlogPageTextWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  grid-gap: 2rem;
+  @media (min-width: 768px) {
+    font-size: 12px;
+    flex-direction: row;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    font-size: 16px;
+  }
+`;
+
+export const BlogPageTitleWrapper = styled.div`
+  @media (min-width: 768px) {
+    margin-right: auto;
+  }
+`;
+
+export const BlogPageTitle = styled.h1`
+  font-size: 3em;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  line-height: 1.25;
+  color: #fff;
+  font-family: Merriweather;
+  margin-bottom: 12px;
+`;
+
+export const BlogPageMetaWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #fff;
+  font-family: Mulish;
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
+`;
+
+export const BlogPageMeta = styled.div`
+  margin-right: 13px;
+  letter-spacing: 0.3px;
+  font-family: inherit;
+`;
+
+export const BlogPageShare = styled.div`
+  padding: 2px 12px;
+  border-radius: 6px;
+  background-color: ${blue};
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  span {
+    font-size: 16px;
+    line-height: 35px;
+    letter-spacing: 0.3px;
+    color: #fff;
+    font-family: Mulish;
+    font-weight: 600;
+    margin-right: 17px;
+  }
+  @media (min-width: 768px) {
+    padding: 6px 20px;
+    span {
+      font-size: 18px;
+    }
+    svg {
+      height: 15px;
+    }
+  }
+`;
+
+export const BlogContentWrapper = styled.div`
+  /* padding-top: 64px; */
+  @media (min-width: 1024px) {
+    padding: 5vh 5vw;
+  }
+`;
+
+export const BlogContentWithSidebar = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`;
+
+export const BlogContent = styled.div`
+  font-size: 16px;
+  -webkit-letter-spacing: 0.3px;
+  -moz-letter-spacing: 0.3px;
+  -ms-letter-spacing: 0.3px;
+  letter-spacing: 0.3px;
+  font-family: Mulish;
+  color: ${medicalGrey};
+  line-height: 2;
+  text-align: justify;
+  width: 100%;
+  .fusion-fullwidth {
+    @media (min-width: 1024px) {
+      padding-right: 120px !important;
+    }
+  }
+  .fusion-layout-column {
+    width: 100% !important;
+  }
+  .sharedaddy {
+    display: none;
+  }
+
+  span.fusion-imageframe {
+    display: none;
+  }
+
+  h1 {
+    display: none;
+  }
+
+  img {
+    /* height: auto;
+    max-width: 100%; */
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    width: calc(100% - 350px);
+  }
+
+  p {
+    margin-bottom: 25px;
+  }
+  .fusion-widget-area {
+    display: none;
+  }
+  iframe {
+    max-width: 100%;
+  }
+  figure {
+    max-width: 100%;
+  }
+`;
+
+export const BlogWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  @media (min-width: 1024px) {
+    flex-direction: column;
+  }
+`;
+
+export const BlogSidebar = styled.div`
+  padding: 30px;
+  @media (min-width: 1024px) {
+    width: 350px;
+    padding: 0;
+  }
+`;
+
+export const BlogSidebarTitle = styled.div`
+  font-family: Mulish;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 2;
+  letter-spacing: 0.3px;
+  color: ${graniteGrey};
+  margin-bottom: 49px;
+`;
+
+export const BlogArticleWrapper = styled.div`
+  margin-bottom: 70px;
+  width: 100%;
+  @media (min-width: 768px) {
+    width: 30%;
+    margin-right: 20px;
+  }
+  @media (min-width: 1024px) {
+    margin-right: 0;
+    width: 350px;
+  }
+`;
+
+export const BlogViewMore = styled(Link)`
+  text-align: center;
+  font-size: 18px;
+  color: ${primary};
+  font-family: Mulish;
+  margin: 25px 0;
+  display: block;
+  text-decoration: none;
+`;
