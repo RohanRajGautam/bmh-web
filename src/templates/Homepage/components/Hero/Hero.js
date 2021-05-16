@@ -31,7 +31,7 @@ export default function Hero() {
 
   useEffect(() => {
     let tl = new TimelineLite({ delay: 0.8 });
-    const bgImg = images.current;
+    const bgImg = images.children[0];
     const h1Text = content.children[0].children[0];
     const divider = content.children[0].children[1];
     const pText = content.children[0].children[2];
@@ -41,23 +41,18 @@ export default function Hero() {
     TweenMax.to(app, 0, { css: { visibility: "visible" } });
 
     //Images Animation
-    tl.from(bgImg, 1.2, { y: 1280, ease: Power3.easeOut }, "Start").from(
-      bgImg,
-      2,
-      { scale: 1.6, ease: Power3.easeOut },
-      0.2
-    );
+    tl.from(bgImg, 1, { x: 50, opacity: 0, ease: Power3.easeIn }, 1.5);
 
     //Content Animation
     tl.from(
       [h1Text, divider, pText, contentButton],
       1,
       {
-        y: 20,
+        x: -50,
         opacity: 0,
-        ease: Power3.easeInOut,
+        ease: Power3.easeIn,
       },
-      1.4
+      1.5
     );
   }, []);
 
@@ -100,12 +95,12 @@ export default function Hero() {
         </HeroItems>
       </HeroContent>
       <HeroBg ref={el => (images = el)}>
-        <Hidden smDown>
-          <ImageBg src={HeroDesktop} type="image/png" />
-        </Hidden>
+        {/* <Hidden smDown> */}
+        <ImageBg src={HeroDesktop} type="image/png" />
+        {/* </Hidden>
         <Hidden mdUp>
           <ImageBg src={HeroMobile} type="image/png" />
-        </Hidden>
+        </Hidden> */}
       </HeroBg>
     </HeroContainer>
   );

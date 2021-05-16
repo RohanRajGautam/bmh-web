@@ -101,4 +101,6 @@ export const StaticBrandLogo = [
   BrandLogo4,
   BrandLogo5,
   BrandLogo6,
+  BrandLogo2,
+  BrandLogo3,
 ];
