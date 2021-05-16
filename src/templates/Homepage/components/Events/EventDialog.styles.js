@@ -34,148 +34,195 @@ export const EventWrapper = styled.div`
   }
 `;
 
-export const EventCard = styled.div`
-  border-radius: 12px;
-  padding: 20px;
-  min-width: 250px;
-  /* border: 1px solid ${medicalGrey}; */
-  /* color: ${medicalGrey}; */
-  /* transition: all 300ms, color 0ms; */
-  margin: 0 5px;
-  /* &:hover { */
-  transition: all 300ms;
-  background-color: ${primary};
-  cursor: pointer;
-  color: #fff;
-  border-color: ${primary};
-  h2 {
-    color: #fff;
-  }
-  time {
-    color: #fff;
-  }
-  /* } */
-  &:first-child {
-    margin-left: 0;
-  }
-
-  @media (min-width: 600px) {
-    min-width: 450px;
-    padding: 35px;
-    margin: 0 20px;
-  }
-`;
-
-export const EventSliderWrapper = styled.div`
-  margin-top: 40px;
+export const Wrapper = styled.div`
+  width: 100%;
+  height: 50vh;
   display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none;
-  scroll-behavior: smooth;
-  ::-webkit-scrollbar {
-    display: none;
-  }
 `;
 
-export const EventDay = styled.time`
-  font-size: 36px;
-  letter-spacing: 0.1px;
-  font-weight: 700;
-  transition: color 300ms;
-  font-family: Merriweather;
-  line-height: 55px;
-  color: ${primary};
+export const DialogTitle = styled.div`
+  height: 100%;
+  width: 55%;
+  background: linear-gradient(285.38deg, #f7d525 -12.17%, #86cf57 81.52%);
 `;
 
-export const EventDate = styled.div`
-  font-size: 18px;
-  transition: color 300ms;
-  letter-spacing: 0.1px;
+export const DialogContent = styled.div`
+  height: 100%;
+  width: 45%;
+  border-radius: 12px;
+  margin: 4rem 0 0 3rem;
 `;
 
 export const EventTitle = styled.h2`
-  font-size: 14px;
+  font-size: 3rem;
   font-family: Merriweather;
   transition: color 300ms;
   line-height: 1.6;
   font-weight: 900;
   letter-spacing: 0.1px;
-  margin-top: 120px;
-  margin-bottom: 20px;
-  color: ${primary};
-  min-height: 76px;
+  color: #fff;
+  margin: 5rem 3rem 1rem 3rem;
   @media (min-width: 600px) {
-    font-size: 3rem;
-    margin-bottom: 36px;
-    margin-top: 210px;
+    font-size: 4rem;
   }
 `;
 
-export const EventTime = styled.time`
-  font-size: 12px;
-  font-weight: 600;
-  transition: color 300ms;
-  letter-spacing: 0.1px;
+export const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+`;
+export const Title = styled.p`
   font-family: Mulish;
-  margin-bottom: 6px;
-  display: block;
-  @media (min-width: 600px) {
-    margin-bottom: 4px;
-    font-size: 16px;
-  }
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.8rem;
+  line-height: 147.69%;
+  letter-spacing: 0.1px;
+  color: #5f6468;
+`;
+export const Value = styled.p`
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 147.69%;
+  letter-spacing: 0.1px;
+  color: ${primary};
 `;
 
-export const NavigationButtonWrapper = styled.div`
-  display: flex;
-  margin-top: 64px;
-`;
-
-export const NavigationButton = styled.button`
-  height: 30px;
-  width: 30px;
-  border: 1px solid #c5ccd3;
-  border-radius: 3px;
-  display: grid;
-  place-items: center;
-  background-color: #fff;
-  cursor: pointer;
-  &:hover {
-    background-color: #f4f4f4;
-  }
-  @media (min-width: 768px) {
-    height: 40px;
-    width: 40px;
-    svg {
-      height: 21px;
-      width: 13px;
-    }
-  }
-  ${props =>
-    props.right &&
-    css`
-      margin-left: 25px;
-    `}
-`;
-
-export const EventDatePickerWrapper = styled.div`
-  border: 1px solid ${border};
-  margin-top: 72px;
-  max-width: 250px;
-  border-radius: 8px;
+export const Divider = styled.div`
+  width: 5rem;
+  height: 5px;
   position: relative;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  svg {
-    margin-left: 20px;
-  }
+  background: #fff;
+  left: 3rem;
 `;
 
-export const EventDatePickerArrow = styled.div`
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-`;
+// export const EventCard = styled.div`
+//   border-radius: 12px;
+//   padding: 20px;
+//   min-width: 250px;
+//   /* border: 1px solid ${medicalGrey}; */
+//   /* color: ${medicalGrey}; */
+//   /* transition: all 300ms, color 0ms; */
+//   margin: 0 5px;
+//   /* &:hover { */
+//   transition: all 300ms;
+//   background-color: ${primary};
+//   cursor: pointer;
+//   color: #fff;
+//   border-color: ${primary};
+//   h2 {
+//     color: #fff;
+//   }
+//   time {
+//     color: #fff;
+//   }
+//   /* } */
+//   &:first-child {
+//     margin-left: 0;
+//   }
+
+//   @media (min-width: 600px) {
+//     min-width: 450px;
+//     padding: 35px;
+//     margin: 0 20px;
+//   }
+// `;
+
+// export const EventSliderWrapper = styled.div`
+//   margin-top: 40px;
+//   display: flex;
+//   overflow-x: scroll;
+//   overflow-y: hidden;
+//   -ms-overflow-style: none; /* IE and Edge */
+//   scrollbar-width: none;
+//   scroll-behavior: smooth;
+//   ::-webkit-scrollbar {
+//     display: none;
+//   }
+// `;
+
+// export const EventDay = styled.time`
+//   font-size: 36px;
+//   letter-spacing: 0.1px;
+//   font-weight: 700;
+//   transition: color 300ms;
+//   font-family: Merriweather;
+//   line-height: 55px;
+//   color: ${primary};
+// `;
+
+// export const EventDate = styled.div`
+//   font-size: 18px;
+//   transition: color 300ms;
+//   letter-spacing: 0.1px;
+// `;
+
+// export const EventTime = styled.time`
+//   font-size: 12px;
+//   font-weight: 600;
+//   transition: color 300ms;
+//   letter-spacing: 0.1px;
+//   font-family: Mulish;
+//   margin-bottom: 6px;
+//   display: block;
+//   @media (min-width: 600px) {
+//     margin-bottom: 4px;
+//     font-size: 16px;
+//   }
+// `;
+
+// export const NavigationButtonWrapper = styled.div`
+//   display: flex;
+//   margin-top: 64px;
+// `;
+
+// export const NavigationButton = styled.button`
+//   height: 30px;
+//   width: 30px;
+//   border: 1px solid #c5ccd3;
+//   border-radius: 3px;
+//   display: grid;
+//   place-items: center;
+//   background-color: #fff;
+//   cursor: pointer;
+//   &:hover {
+//     background-color: #f4f4f4;
+//   }
+//   @media (min-width: 768px) {
+//     height: 40px;
+//     width: 40px;
+//     svg {
+//       height: 21px;
+//       width: 13px;
+//     }
+//   }
+//   ${props =>
+//     props.right &&
+//     css`
+//       margin-left: 25px;
+//     `}
+// `;
+
+// export const EventDatePickerWrapper = styled.div`
+//   border: 1px solid ${border};
+//   margin-top: 72px;
+//   max-width: 250px;
+//   border-radius: 8px;
+//   position: relative;
+//   cursor: pointer;
+//   display: flex;
+//   align-items: center;
+//   svg {
+//     margin-left: 20px;
+//   }
+// `;
+
+// export const EventDatePickerArrow = styled.div`
+//   position: absolute;
+//   right: 16px;
+//   top: 50%;
+//   transform: translateY(-50%);
+// `;
