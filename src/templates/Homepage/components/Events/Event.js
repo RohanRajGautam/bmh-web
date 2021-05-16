@@ -28,7 +28,11 @@ const Events = props => {
 
   useEffect(() => {
     let year = selectedDate.getFullYear();
-    let month = selectedDate.getMonth();
+    let month = ("0" + (selectedDate.getMonth() + 1)).slice(-2);
+
+    console.log("date:", selectedDate);
+    console.log("date:", year);
+    console.log("month:", month);
 
     // Full month in word
     // let month = selectedDate.toLocaleString("default", { month: "long" });
@@ -38,6 +42,8 @@ const Events = props => {
     });
     setEvents(data);
   }, [selectedDate]);
+
+  console.log(events);
 
   return (
     <EventWrapper id="events" data-aos="fade-up">
@@ -59,6 +65,8 @@ const Events = props => {
                 item.eventLocations.nodes.length &&
                 item.eventLocations.nodes[0].name
               }
+              instructor={item.eventInstructors?.nodes[0]?.name}
+              cost={item.eventCost}
             />
           ))
         ) : (
