@@ -28,10 +28,13 @@ const Events = props => {
 
   useEffect(() => {
     let year = selectedDate.getFullYear();
-    let month = selectedDate.toLocaleString("default", { month: "long" });
+    let month = selectedDate.getMonth();
+
+    // Full month in word
+    // let month = selectedDate.toLocaleString("default", { month: "long" });
 
     const data = props?.data.filter(function (item) {
-      return item.eventYear >= `${year}` || item.eventMonth == `${month}`;
+      return item.eventYear >= `${year}` || item.eventMonth >= `${month}`;
     });
     setEvents(data);
   }, [selectedDate]);

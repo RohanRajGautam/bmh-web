@@ -98,7 +98,8 @@ export const FooterBrandLogo = styled.div`
     object-fit: cover;
     user-select: none;
     height: 100%;
-    width: auto;
+    width: 100%;
+    margin: 0 1rem;
   }
 `;
 

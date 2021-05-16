@@ -25,7 +25,7 @@ export const query = graphql`
         }
       }
     }
-    events: allWpClass(sort: { fields: eventDay, order: ASC }) {
+    events: allWpClass(sort: { fields: [eventMonth, eventDay] }) {
       nodes {
         title
         eventStartTime

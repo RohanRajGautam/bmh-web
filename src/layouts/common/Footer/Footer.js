@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
 import { makeStyles } from "@material-ui/core/styles";
+import Marquee from "react-fast-marquee";
 // import { Link } from "gatsby";
 
 import { StaticBrandLogo, staticData } from "./Footer.datas";
@@ -142,13 +143,15 @@ const Footer = () => {
             </NewsletterInput>
           </NewsletterWrapper>
         </FooterMain>
-        <FooterBrandLogoWrapper>
-          {StaticBrandLogo.map((item, index) => (
-            <FooterBrandLogo key={index}>
-              <img src={item} alt="brand-logo" draggable="false" />
-            </FooterBrandLogo>
-          ))}
-        </FooterBrandLogoWrapper>
+        <Marquee pauseOnHover={true} gradient={false}>
+          <FooterBrandLogoWrapper>
+            {StaticBrandLogo.map((item, index) => (
+              <FooterBrandLogo key={index}>
+                <img src={item} alt="brand-logo" draggable="false" />
+              </FooterBrandLogo>
+            ))}
+          </FooterBrandLogoWrapper>
+        </Marquee>
         <FooterCopyrightWrapper>
           <FooterCopyright>
             &copy; {date.getFullYear()} Beautiful Minds Health
