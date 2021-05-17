@@ -17,7 +17,7 @@ export const HeroContainer = styled.div`
     padding-left: 5vw;
     justify-content: flex-start;
     align-items: center;
-    height: 110vh;
+    height: 120vh;
     /* margin-top: -80px; */
   }
   // add overlay to the background image

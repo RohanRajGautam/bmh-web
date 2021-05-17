@@ -5,10 +5,10 @@ import { Container, Medical, Wellness } from "./DualPage.styles";
 const DualPage = () => {
   return (
     <Container>
-      <Medical>
+      <Medical data-aos="fade-right">
         <MedicalPage />
       </Medical>
-      <Wellness>
+      <Wellness data-aos="fade-left">
         <WellnessPage />
       </Wellness>
     </Container>

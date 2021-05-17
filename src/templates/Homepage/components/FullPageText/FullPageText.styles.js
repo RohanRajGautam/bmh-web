@@ -3,8 +3,9 @@ import styled from "styled-components";
 const primary = "#6CA448";
 
 export const TextContainer = styled.div`
-  background: #2c3336;
-  color: #eee;
+  background: #fff;
+  /* color: #fff;s */
+  /* color: #2c3336; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,7 +15,7 @@ export const TextContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
   @media only screen and (min-width: 1024px) {
-    width: 100.1vw;
+    width: 100vw;
   }
 `;
 export const Message = styled.h1`

@@ -20,14 +20,15 @@ const FullPageText = () => {
   useEffect(() => {
     const element = ref.current;
     gsap.to(element, {
-      backgroundImage: "linear-gradient(45deg, #eee 200%, #2C3336 300%)",
-      duration: 10,
+      backgroundImage:
+        "linear-gradient(45deg, #fff 0%, #2c3336 100%, #fff 200%, #2c3336 300%)",
+      duration: 2,
       ease: "none",
 
       scrollTrigger: {
         trigger: element,
-        start: "top 70%",
-        // end: "bottom bottom",
+        start: "top 100%",
+        end: "bottom 0%",
         // end: "bottom left",
         scrub: 1,
         anticipatePin: true,
