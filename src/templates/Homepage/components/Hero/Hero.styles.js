@@ -11,14 +11,14 @@ export const HeroContainer = styled.div`
   width: 100vw;
   margin-top: -12rem;
 
-  @media (max-width: 576px) {
+  @media (max-width: 860px) {
     position: relative;
     color: #fff;
     padding-left: 5vw;
     justify-content: flex-start;
     align-items: center;
     height: 110vh;
-    margin-top: -80px;
+    /* margin-top: -80px; */
   }
   // add overlay to the background image
 
@@ -35,7 +35,7 @@ export const HeroContainer = styled.div`
 export const HeroBg = styled.div`
   width: 50vw;
 
-  @media (max-width: 576px) {
+  @media (max-width: 860px) {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -56,7 +56,7 @@ export const ImageBg = styled.img`
   -o-object-fit: cover;
   object-fit: cover;
 
-  @media (max-width: 576px) {
+  @media (max-width: 860px) {
     filter: brightness(50%);
   }
 `;
@@ -88,7 +88,7 @@ export const HeroItems = styled.div`
   margin-right: 5vw;
   transform: translateY(25vh);
 
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 860px) {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
@@ -110,7 +110,7 @@ export const ButtonWrapper = styled.div`
   width: 80%;
   border-radius: 55px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 860px) {
     background: none;
     width: 100%;
   }
@@ -121,7 +121,7 @@ export const ButtonText = styled.p`
   text-align: center;
   padding: 1rem 0 0.6rem 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 860px) {
     /* display: none; */
     font-size: 2rem;
     padding: 1rem 0 2rem 0;
@@ -134,7 +134,7 @@ export const ButtonContainer = styled.div`
   justify-content: center;
   align-items: center;
   /* padding: 1.5rem 5vw; */
-  @media (max-width: 768px) {
+  @media (max-width: 860px) {
     flex-direction: column;
     padding: 0;
     margin-bottom: 5vw;
@@ -161,7 +161,7 @@ export const ButtonPrimary = styled(Button)`
     color: ${primaryColor};
     transform: none;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 860px) {
     margin: auto;
     margin-bottom: 1.5rem;
     width: 100%;
@@ -183,7 +183,7 @@ export const ButtonSecondary = styled(ButtonPrimary)`
   border-radius: 0 0 50px 0;
   margin: 0 5px 5px 1px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 860px) {
     border-radius: 50px;
     margin: 0 auto;
   }
@@ -210,7 +210,7 @@ export const HeroH1 = styled.h1`
   @media (min-width: 860px) {
     font-size: clamp(3rem, 4vw, 7rem);
   }
-  @media (max-width: 576px) {
+  @media (max-width: 860px) {
     font-size: clamp(3.5rem, 10vw, 4rem);
     color: #fff;
   }
@@ -222,7 +222,7 @@ export const Divider = styled.div`
   position: relative;
   background: #6ca448;
   bottom: 30px;
-  @media (max-width: 576px) {
+  @media (max-width: 860px) {
     width: 6rem;
     bottom: 20px;
   }
@@ -241,7 +241,7 @@ export const HeroP = styled.p`
   span {
     font-family: inherit;
   }
-  @media (max-width: 576px) {
+  @media (max-width: 860px) {
     font-size: 2rem;
     padding: 3rem 0;
     color: rgba(255, 255, 255, 0.7);

@@ -9,9 +9,10 @@ import {
   Donate,
   Event,
   StoryPage,
-  HorizontalScroll,
+  FullPageText,
+  DualPage,
+  // HorizontalScroll,
 } from "./components";
-
 const Homepage = props => {
   React.useEffect(() => {
     Aos.init({
@@ -24,7 +25,8 @@ const Homepage = props => {
     <Layout dark>
       <Seo title="Home" />
       <Hero />
-      <HorizontalScroll />
+      <FullPageText />
+      <DualPage />
       <StoryPage />
       <Blog data={props.data} />
       <Event data={props.data.events.nodes} />
