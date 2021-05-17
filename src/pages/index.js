@@ -10,42 +10,46 @@ const Index = ({ data }) => {
 export const query = graphql`
   query {
     allPost: allWpPost {
-      nodes {
-        id
-        uri
-        slug
-        title
-        date
-        excerpt
-        authorId
-        featuredImage {
-          node {
-            sourceUrl
+      edges {
+        node {
+          id
+          uri
+          slug
+          title
+          date
+          excerpt
+          authorId
+          featuredImage {
+            node {
+              sourceUrl
+            }
           }
         }
       }
     }
     events: allWpClass(sort: { fields: [eventYear, eventMonth, eventDay] }) {
-      nodes {
-        title
-        eventStartTime
-        eventDayOfWeek
-        eventMultiDays
-        eventMonth
-        eventYear
-        eventDuration
-        eventDay
-        rpClassType
-        id
-        eventCost
-        eventInstructors {
-          nodes {
-            name
+      edges {
+        node {
+          title
+          eventStartTime
+          eventDayOfWeek
+          eventMultiDays
+          eventMonth
+          eventYear
+          eventDuration
+          eventDay
+          rpClassType
+          id
+          eventCost
+          eventInstructors {
+            nodes {
+              name
+            }
           }
-        }
-        eventLocations {
-          nodes {
-            name
+          eventLocations {
+            nodes {
+              name
+            }
           }
         }
       }
