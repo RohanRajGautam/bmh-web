@@ -79,7 +79,7 @@ export const TextWrapper = styled.div`
 
 export const ButtonWrapper = styled(Button)`
   bottom: 0;
-  max-width: 100%;
+  min-width: 100%;
   font-size: 18px;
   width: 100%;
   @media (min-width: 768px) {

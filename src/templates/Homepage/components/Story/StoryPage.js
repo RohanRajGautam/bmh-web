@@ -19,20 +19,14 @@ const StoryPage = () => {
             <br /> Meets Yours
           </HeadingWrapper>
           <TextWrapper>
-            You are a whole person, not a mental illness. At Beautiful Minds
-            Medical, we design custom treatment plans based on the individual
-            needs and backgrounds of each patient. Mental health is influenced
-            by physical, psychological, social, and spiritual factors. In
-            addition to improving your mental health, our goal is to help you
-            enhance every aspect of who you are.
+            When I went to medical school I had the dream of becoming a surgeon.
+            Little did I know where my journey would lead me. During my fourth
+            year of medical school I went through a transformative process where
+            I grew tremendously emotionally, spiritually and relationally. As a
+            result I found a peace...
           </TextWrapper>
-          <ButtonWrapper
-            primary="true"
-            md="true"
-            to="https://beautifulmindswellness.org/donate/"
-            target="_blank"
-          >
-            Donate
+          <ButtonWrapper primary="true" md="true" to="/our-story">
+            Read More
           </ButtonWrapper>
         </Content>
         <Thumbnail />

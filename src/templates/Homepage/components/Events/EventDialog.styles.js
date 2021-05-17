@@ -65,9 +65,10 @@ export const EventTitle = styled.h2`
   font-weight: 900;
   letter-spacing: 0.1px;
   color: #fff;
-  margin: 4rem 2rem 1rem;
+  margin: 4rem 3rem 1rem;
   @media (max-width: 600px) {
     font-size: 2.3rem;
+    margin: 4rem 2rem 1rem;
   }
 `;
 
@@ -102,7 +103,11 @@ export const Divider = styled.div`
   height: 5px;
   position: relative;
   background: #fff;
-  left: 2rem;
+  left: 3rem;
+
+  @media (max-width: 576px) {
+    left: 2rem;
+  }
 `;
 
 // export const EventCard = styled.div`
