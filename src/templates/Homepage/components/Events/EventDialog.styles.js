@@ -36,42 +36,48 @@ export const EventWrapper = styled.div`
 
 export const Wrapper = styled.div`
   width: 100%;
-  height: 50vh;
+  min-height: 50vh;
   display: flex;
 `;
 
 export const DialogTitle = styled.div`
-  height: 100%;
-  width: 55%;
+  /* height: 100%; */
+  width: 50%;
   background: linear-gradient(285.38deg, #f7d525 -12.17%, #86cf57 81.52%);
 `;
 
 export const DialogContent = styled.div`
-  height: 100%;
-  width: 45%;
+  /* height: 100%; */
+  width: 50%;
   border-radius: 12px;
   margin: 4rem 0 0 3rem;
+
+  @media (max-width: 576px) {
+    margin: 4rem 2rem;
+  }
 `;
 
 export const EventTitle = styled.h2`
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: Merriweather;
   transition: color 300ms;
   line-height: 1.6;
   font-weight: 900;
   letter-spacing: 0.1px;
   color: #fff;
-  margin: 5rem 3rem 1rem 3rem;
-  @media (min-width: 600px) {
-    font-size: 4rem;
+  margin: 4rem 2rem 1rem;
+  @media (max-width: 600px) {
+    font-size: 2.3rem;
   }
 `;
 
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 2rem 0;
+  padding-bottom: 3rem;
+  padding-top: 1rem;
 `;
+
 export const Title = styled.p`
   font-family: Mulish;
   font-style: normal;
@@ -96,7 +102,7 @@ export const Divider = styled.div`
   height: 5px;
   position: relative;
   background: #fff;
-  left: 3rem;
+  left: 2rem;
 `;
 
 // export const EventCard = styled.div`
