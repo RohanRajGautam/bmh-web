@@ -18,9 +18,14 @@ const CoverImage = styled.img`
 `;
 
 const DescImage = styled.img`
-  width: 100%;
+  width: 50%;
   height: auto;
-  margin: 5rem 0;
+  margin: 3rem 0 3rem 5rem;
+  float: right;
+
+  @media (max-width: 860px) {
+    width: 100%;
+  }
 `;
 
 const Wrapper = styled.div`

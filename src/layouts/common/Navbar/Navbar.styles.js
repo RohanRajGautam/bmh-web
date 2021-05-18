@@ -76,7 +76,7 @@ export const DonateButton = styled(Button)`
   font-size: 1.5rem;
   margin-right: 4rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 860px) {
     display: none;
   }
 `;

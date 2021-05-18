@@ -51,13 +51,13 @@ export const LogoContainer = styled.div`
 `;
 
 export const FadedText = styled.span`
-  opacity: 0.6;
+  opacity: 0.8;
   font-size: 3rem;
   font-family: "Merriweather";
 `;
 
 export const LogoImg = styled.img`
-  opacity: 0.5;
+  opacity: 0.9;
   width: 70px;
   margin-top: 7rem;
 `;
