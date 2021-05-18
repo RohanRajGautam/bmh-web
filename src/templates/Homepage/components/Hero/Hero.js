@@ -30,7 +30,7 @@ export default function Hero() {
   let content = useRef(null);
 
   useEffect(() => {
-    let tl = new TimelineLite({ delay: 0.8 });
+    let tl = new TimelineLite({ delay: 0.6 });
     const bgImg = images.children[0];
     const h1Text = content.children[0].children[0];
     const divider = content.children[0].children[1];
@@ -41,18 +41,18 @@ export default function Hero() {
     TweenMax.to(app, 0, { css: { visibility: "visible" } });
 
     //Images Animation
-    tl.from(bgImg, 1, { x: 50, opacity: 0, ease: Power3.easeIn }, 1.5);
+    tl.from(bgImg, 0.4, { x: 50, opacity: 0, ease: Power3.easeIn }, 0.6);
 
     //Content Animation
     tl.from(
       [h1Text, divider, pText, contentButton],
-      1,
+      0.4,
       {
         x: -50,
         opacity: 0,
         ease: Power3.easeIn,
       },
-      1.5
+      0.6
     );
   }, []);
 

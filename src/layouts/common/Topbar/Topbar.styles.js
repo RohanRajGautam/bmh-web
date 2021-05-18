@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.nav`
-  visibility: hidden;
+  /* visibility: hidden; */
   height: 4rem;
   width: 100%;
   background: #6ca448;

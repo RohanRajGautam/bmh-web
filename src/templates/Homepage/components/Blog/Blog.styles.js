@@ -48,6 +48,23 @@ export const StyledLink = styled(Link)`
   @media (min-width: 768px) {
     display: flex;
   }
+
+  &:hover {
+    span {
+      color: #6ca448;
+    }
+    svg {
+      path {
+        transform: translateX(1.5rem);
+        transition: all 0.4s;
+        stroke: #6ca448;
+      }
+      circle {
+        stroke: #6ca448;
+        stroke-width: 2;
+      }
+    }
+  }
 `;
 
 export const StyledLinkMobile = styled(StyledLink)`

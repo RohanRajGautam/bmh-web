@@ -24,7 +24,7 @@ import { NavbarItem } from "./Navbar.datas";
 import logo from "@images/icons/full-logo.svg";
 import logoDark from "@images/icons/full-logo.png";
 import menu from "@images/icons/Union.svg";
-import menuDark from "@images/icons/Union.png";
+import menuDark from "@images/icons/Union-Alt.svg";
 
 const Navbar = props => {
   const [bigMenu, setBigMenu] = useState(false);
@@ -47,7 +47,7 @@ const Navbar = props => {
     //Remove initial flash
     TweenMax.to(app, 0, { css: { visibility: "visible" } });
 
-    tl.staggerFrom([logoContent, donateContent, menuContent], 1, {
+    tl.staggerFrom([logoContent, donateContent, menuContent], 0.4, {
       x: 20,
       opacity: 0,
       ease: Power3.easeIn,

@@ -95,7 +95,7 @@ export const ServicesHeading = styled.h2`
     font-size: 2.4rem;
   }
   @media (min-width: 1024px) {
-    margin-right: 28px;
+    /* margin-right: 28px; */
     font-size: 2.4rem;
   }
   @media (min-width: 1440px) {
@@ -114,12 +114,12 @@ export const ServicesItemWrapper = styled.div`
   grid-template-columns: 1fr;
   @media (min-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 24px;
-    grid-column-gap: 5rem;
+    grid-row-gap: 2.4rem;
+    /* grid-column-gap: 5rem; */
   }
   @media (min-width: 1440px) {
-    grid-row-gap: 3.6rem;
-    grid-column-gap: 6rem;
+    grid-row-gap: 2.5rem;
+    /* grid-column-gap: 6rem; */
   }
 `;
 
@@ -178,6 +178,22 @@ export const ExploreWrapper = styled.a`
 
   @media (max-width: 576px) {
     bottom: 0%;
+  }
+
+  &:hover {
+    span {
+      svg {
+        path {
+          transform: translateX(1.5rem);
+          transition: all 0.4s;
+          stroke: #6ca448;
+        }
+        circle {
+          stroke: #6ca448;
+          stroke-width: 2;
+        }
+      }
+    }
   }
 `;
 export const ExploreText = styled.p`

@@ -100,14 +100,14 @@ export const ServicesHeading = styled.h2`
     font-size: 2.4rem;
   }
   @media (min-width: 1024px) {
-    margin-right: 28px;
+    /* margin-right: 28px; */
     font-size: 2.4rem;
   }
   @media (min-width: 1440px) {
     font-size: 3rem;
   }
   @media (min-width: 1824px) {
-    margin-right: 2.8rem;
+    /* margin-right: 2.8rem; */
     margin-bottom: 4rem;
     font-size: 3.6rem;
   }
@@ -119,12 +119,12 @@ export const ServicesItemWrapper = styled.div`
   grid-template-columns: 1fr;
   @media (min-width: 1024px) {
     grid-template-columns: repeat(2, auto);
-    grid-row-gap: 24px;
+    grid-row-gap: 2.4rem;
     grid-column-gap: 5rem;
     position: relative;
   }
   @media (min-width: 1440px) {
-    grid-row-gap: 3.6rem;
+    grid-row-gap: 2.5rem;
     grid-column-gap: 6rem;
   }
 `;
