@@ -9,21 +9,21 @@ export const MedicalServices = [
     to: "https://www.beautifulmindsmedical.com/about/our-services/#psychiatry",
   },
   {
-    title: "Life & Health Coaching",
-    to: "https://www.beautifulmindsmedical.com/about/our-services/#coaching",
+    title: "TMS",
+    to: "https://www.beautifulmindsmedical.com/advanced-tms-therapy",
+  },
+  { title: "Supplements", to: "https://www.beautifulmindsnutrition.com/" },
+  {
+    title: "Counseling",
+    to: "https://www.beautifulmindsmedical.com/about/our-services/#counseling",
   },
   {
     title: "Intensive Outpatient",
     to: "https://beautifulmindsoutpatient.com/",
   },
   {
-    title: "Counseling",
-    to: "https://www.beautifulmindsmedical.com/about/our-services/#counseling",
-  },
-  { title: "Supplements", to: "https://www.beautifulmindsnutrition.com/" },
-  {
-    title: "TMS",
-    to: "https://www.beautifulmindsmedical.com/advanced-tms-therapy",
+    title: "Life & Health Coaching",
+    to: "https://www.beautifulmindsmedical.com/about/our-services/#coaching",
   },
 ];
 

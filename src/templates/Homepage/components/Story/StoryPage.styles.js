@@ -29,6 +29,10 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: baseline;
+
+  @media (min-width: 768px) {
+    width: 90%;
+  }
 `;
 
 export const HeadingWrapper = styled(Heading)`
@@ -37,14 +41,14 @@ export const HeadingWrapper = styled(Heading)`
 
 export const ContentWrapper = styled.div`
   display: grid;
-  grid-gap: 60px;
+  /* grid-gap: 6rem; */
   grid-template-columns: 1fr;
   @media (min-width: 768px) {
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 1fr;
   }
-  @media (min-width: 1200px) {
+  /* @media (min-width: 1200px) {
     grid-gap: 110px;
-  }
+  } */
 `;
 export const Thumbnail = styled.div`
   background-image: url(${Story});

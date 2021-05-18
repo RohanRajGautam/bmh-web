@@ -189,4 +189,8 @@ export const ExploreText = styled.p`
   letter-spacing: 0.1px;
   color: #2c3336;
   margin-right: 2rem;
+
+  &:hover {
+    color: ${primary};
+  }
 `;
