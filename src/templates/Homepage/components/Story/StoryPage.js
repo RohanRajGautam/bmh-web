@@ -23,11 +23,11 @@ const StoryPage = () => {
             Little did I know where my journey would lead me. During my fourth
             year of medical school I went through a transformative process where
             I grew tremendously emotionally, spiritually and relationally. As a
-            result I found a peace and joy I had never had before...
+            result I found a peace and joy I had never had before. One beautiful
+            Saturday morning as I hiked up a Southern California mountainside it
+            hit me-
+            <ButtonWrapper to="/our-story">Read More</ButtonWrapper>
           </TextWrapper>
-          <ButtonWrapper primary="true" md="true" to="/our-story">
-            Read More
-          </ButtonWrapper>
         </Content>
         <Thumbnail />
       </ContentWrapper>

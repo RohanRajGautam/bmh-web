@@ -16,7 +16,6 @@ export const DonateWrapper = styled.div`
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  margin-top: 5rem;
   @media (min-width: 768px) {
     padding: 0;
     padding-top: 36%;

@@ -5,6 +5,7 @@ const graniteGray = "#2C3336";
 
 export const BlogWrapper = styled.div`
   padding: 5vw;
+  padding-bottom: 0;
 `;
 
 export const SliderWrapper = styled.div`
