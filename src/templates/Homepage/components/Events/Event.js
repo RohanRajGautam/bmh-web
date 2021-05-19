@@ -3,13 +3,13 @@ import { isEmpty } from "lodash";
 import Card from "./Card";
 import {
   EventSliderWrapper,
+  EventHeading,
   EventWrapper,
   NavigationButton,
   NavigationButtonWrapper,
   NotFoundContainer,
   NotFoundText,
 } from "./Event.styles";
-import { Heading } from "@components/Heading";
 import MaterialUIPickers from "./EventDatePicker";
 // import EventDialog from "./EventDialog";
 
@@ -47,7 +47,7 @@ const Events = props => {
 
   return (
     <EventWrapper id="events" data-aos="fade-up">
-      <Heading>Here's What's Coming Up</Heading>
+      <EventHeading>Here's What's Coming Up</EventHeading>
       <MaterialUIPickers
         handleDateChange={handleDateChange}
         selectedDate={selectedDate}

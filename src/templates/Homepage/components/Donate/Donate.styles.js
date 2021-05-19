@@ -22,6 +22,10 @@ export const DonateWrapper = styled.div`
     position: relative;
     overflow: hidden;
   }
+
+  @media (max-width: 576px) {
+    margin-top: 5vh;
+  }
 `;
 
 export const DonateStyle = styled.div`

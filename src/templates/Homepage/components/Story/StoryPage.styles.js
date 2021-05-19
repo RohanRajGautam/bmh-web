@@ -30,10 +30,19 @@ export const Content = styled.div`
   justify-content: space-evenly;
   align-items: baseline;
   padding: 5vh 5vw;
+  margin-top: 5vh;
 `;
 
 export const HeadingWrapper = styled(Heading)`
-  font-size: 4rem;
+  @media (max-width: 576px) {
+    font-size: 3rem;
+  }
+  @media (min-width: 1024px) {
+    font-size: 4.5rem;
+  }
+  @media (min-width: 1824px) {
+    font-size: 5rem;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -81,7 +90,6 @@ export const ButtonWrapper = styled(Link)`
   display: inline-block;
   font-size: 2.5rem;
   color: #6ca448;
-  margin-left: 1rem;
   cursor: pointer;
   text-decoration: none;
 

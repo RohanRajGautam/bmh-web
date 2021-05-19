@@ -7,79 +7,81 @@ import {
   LogoContainer,
   Smiley,
 } from "./FullPageText.styles";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import logo from "@images/icons/logo.svg";
 
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
+// if (typeof window !== "undefined") {
+//   gsap.registerPlugin(ScrollTrigger);
+// }
 
 const FullPageText = () => {
-  const ref = useRef(null);
+  // const ref = useRef(null);
 
-  useEffect(() => {
-    const element = ref.current;
+  // useEffect(() => {
+  //   const element = ref.current;
 
-    // Reveal animations
+  // Reveal animations
 
-    // gsap.to(element, {
-    //   backgroundImage:
-    //     "linear-gradient(45deg, #fff 0%, #2c3336 100%, #fff 200%, #2c3336 300%)",
-    //   duration: 2,
-    //   ease: "none",
+  // gsap.to(element, {
+  //   backgroundImage:
+  //     "linear-gradient(45deg, #fff 0%, #2c3336 100%, #fff 200%, #2c3336 300%)",
+  //   duration: 2,
+  //   ease: "none",
 
-    //   scrollTrigger: {
-    //     trigger: element,
-    //     start: "top 100%",
-    //     end: "bottom 0%",
-    //     // end: "bottom left",
-    //     scrub: 1,
-    //     anticipatePin: true,
-    //     // markers: true,
-    //   },
-    // });
+  //   scrollTrigger: {
+  //     trigger: element,
+  //     start: "top 100%",
+  //     end: "bottom 0%",
+  //     // end: "bottom left",
+  //     scrub: 1,
+  //     anticipatePin: true,
+  //     // markers: true,
+  //   },
+  // });
 
-    gsap.to(element, {
-      x: 400,
-      // backgroundPosition: "500px 0",
-      scrollTrigger: {
-        trigger: element,
-        start: "top 100%",
-        end: "center center",
-        scrub: true,
-      },
-    });
+  // text left to right
 
-    // const startTrigger = document.querySelector("#bg-transition");
+  // gsap.to(element, {
+  //   x: 400,
+  //   // backgroundPosition: "500px 0",
+  //   scrollTrigger: {
+  //     trigger: element,
+  //     start: "top 100%",
+  //     end: "center center",
+  //     scrub: true,
+  //   },
+  // });
 
-    // const colorToWhite = gsap.fromTo(
-    //   startTrigger,
-    //   { backgroundColor: "#2C3336" },
-    //   { background: "linear-gradient(to right, #2C3336, #fff)" }
-    // );
+  // const startTrigger = document.querySelector("#bg-transition");
 
-    // ScrollTrigger.create({
-    //   trigger: startTrigger,
-    //   start: "right right",
-    //   end: "+=2",
-    //   markers: true,
-    //   scrub: 1,
-    //   animation: colorToWhite,
-    //   //onEnter: () =>
-    //   //  gsap.to($section, { backgroundColor: "#232E3E", overwrite: "auto" }),
-    //   //onLeaveBack: () =>
-    //   //  gsap.to($section, { backgroundColor: "white", overwrite: "auto" })
-    // });
-  }, []);
+  // const colorToWhite = gsap.fromTo(
+  //   startTrigger,
+  //   { backgroundColor: "#2C3336" },
+  //   { background: "linear-gradient(to right, #2C3336, #fff)" }
+  // );
+
+  // ScrollTrigger.create({
+  //   trigger: startTrigger,
+  //   start: "right right",
+  //   end: "+=2",
+  //   markers: true,
+  //   scrub: 1,
+  //   animation: colorToWhite,
+  //   //onEnter: () =>
+  //   //  gsap.to($section, { backgroundColor: "#232E3E", overwrite: "auto" }),
+  //   //onLeaveBack: () =>
+  //   //  gsap.to($section, { backgroundColor: "white", overwrite: "auto" })
+  // });
+  // }, []);
 
   return (
     <>
-      <TextContainer id="bg-transition">
-        <Message ref={ref}>
+      <TextContainer>
+        <Message data-aos="fade-in">
           Where <Smiley>true</Smiley> healing is <Smiley>found</Smiley>
         </Message>
-        <LogoContainer>
+        <LogoContainer data-aos="fade-in">
           <LogoImg src={logo} alt="bmh-logo" draggable="false" />
           <FadedText>success stories</FadedText>
         </LogoContainer>

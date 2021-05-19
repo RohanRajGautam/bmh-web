@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
 import { BlogCard } from "./components";
-import { Heading } from "@components/Heading";
 import {
   BlogWrapper,
   SliderWrapper,
   HeadingWrapper,
   StyledLink,
+  BlogHeading,
   NavigationButton,
   StyledLinkMobile,
   NavigationButtonWrapper,
@@ -20,7 +20,7 @@ const Blog = props => {
   return (
     <BlogWrapper data-aos="fade-up">
       <HeadingWrapper>
-        <Heading>On The Blog</Heading>
+        <BlogHeading>On The Blog</BlogHeading>
         <StyledLink to="/blog-cat">
           <span>Check our blog</span>
           <svg

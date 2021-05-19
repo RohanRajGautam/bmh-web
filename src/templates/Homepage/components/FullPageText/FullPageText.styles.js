@@ -59,8 +59,8 @@ export const Message = styled.h1`
   left: 50%; */
   background-clip: text;
   -webkit-background-clip: text;
-  position: relative;
-  right: 400px;
+  /* position: relative; */
+  /* right: 400px; */
   /* text-fill-color: transparent;
   -webkit-text-fill-color: transparent; */
   @media (max-width: 576px) {

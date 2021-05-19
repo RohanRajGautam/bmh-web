@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Heading } from "@components/Heading";
 
 const primary = "#6CA448";
 const medicalGrey = "#5F6468";
@@ -55,6 +56,18 @@ export const EventWrapper = styled.div`
   }
   @media (max-width: 600px) {
     margin-top: 5rem;
+  }
+`;
+
+export const EventHeading = styled(Heading)`
+  @media (max-width: 576px) {
+    font-size: 3rem;
+  }
+  @media (min-width: 1024px) {
+    font-size: 4.5rem;
+  }
+  @media (min-width: 1824px) {
+    font-size: 5rem;
   }
 `;
 
@@ -120,7 +133,7 @@ export const EventDate = styled.div`
 `;
 
 export const EventTitle = styled.h2`
-  font-size: 14px;
+  font-size: 2rem;
   font-family: Merriweather;
   transition: color 300ms;
   line-height: 1.6;
@@ -153,7 +166,7 @@ export const EventTime = styled.time`
 
 export const NavigationButtonWrapper = styled.div`
   display: flex;
-  margin-top: 64px;
+  margin-top: 3rem;
 `;
 
 export const NavigationButton = styled.button`
@@ -185,7 +198,7 @@ export const NavigationButton = styled.button`
 
 export const EventDatePickerWrapper = styled.div`
   border: 1px solid ${border};
-  margin-top: 72px;
+  margin-top: 3rem;
   max-width: 250px;
   border-radius: 8px;
   position: relative;

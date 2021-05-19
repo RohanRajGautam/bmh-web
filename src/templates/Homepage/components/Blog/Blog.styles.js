@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { Link } from "gatsby";
+import { Heading } from "@components/Heading";
 
 const graniteGray = "#2C3336";
 
@@ -29,6 +30,18 @@ export const HeadingWrapper = styled.div`
   }
   @media (min-width: 1024px) {
     margin-right: 96px;
+  }
+`;
+
+export const BlogHeading = styled(Heading)`
+  @media (max-width: 576px) {
+    font-size: 3rem;
+  }
+  @media (min-width: 1024px) {
+    font-size: 4.5rem;
+  }
+  @media (min-width: 1824px) {
+    font-size: 5rem;
   }
 `;
 
@@ -115,5 +128,5 @@ export const SpaceBetween = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 64px;
+  margin-top: 3rem;
 `;
