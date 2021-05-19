@@ -45,7 +45,8 @@ const FullPageText = () => {
       // backgroundPosition: "500px 0",
       scrollTrigger: {
         trigger: element,
-        start: "top 90%",
+        start: "top 100%",
+        end: "center center",
         scrub: true,
       },
     });

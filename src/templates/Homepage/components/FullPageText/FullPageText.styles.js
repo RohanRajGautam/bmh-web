@@ -43,7 +43,7 @@ export const Message = styled.h1`
   text-align: center;
   letter-spacing: 0.1px;
   user-select: none;
-  transition: all 0.4s ease;
+  transition: all linear 0.6s;
   color: #fff;
   /* position: absolute;
   top: 25%; */
