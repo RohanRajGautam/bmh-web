@@ -7,7 +7,7 @@ const graniteGrey = "#2C3336";
 const border = "#C5CCD3";
 
 export const EventWrapper = styled.div`
-  padding: 5vw;
+  padding: 5vh 5vw;
   .MuiGrid-container {
     position: relative;
     z-index: 1;
@@ -53,9 +53,6 @@ export const EventWrapper = styled.div`
     .MuiFormControl-root {
       padding: 12px 20px;
     }
-  }
-  @media (max-width: 600px) {
-    margin-top: 5rem;
   }
 `;
 

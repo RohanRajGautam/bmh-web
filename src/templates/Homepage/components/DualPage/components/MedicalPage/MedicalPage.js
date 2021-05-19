@@ -19,7 +19,7 @@ import {
 
 const MedicalPage = () => {
   return (
-    <>
+    <div data-aos="fade-right">
       <LogoContainer src={logo} alt="bhm-logo" />
       <SubtitleWrapper>
         <HorizontalHeading>{MedicalTitle}</HorizontalHeading>
@@ -37,7 +37,7 @@ const MedicalPage = () => {
           ))}
         </ServicesItemWrapper>
       </ServicesWrapper>
-    </>
+    </div>
   );
 };
 

@@ -5,6 +5,8 @@ import { Button } from "@components/Button";
 export const DonateWrapper = styled.div`
   width: 100%;
   padding: 40% 5vw 5vw;
+  margin-top: 5vh;
+
   background: linear-gradient(
       85.72deg,
       rgba(0, 0, 0, 0.5) 28.57%,
@@ -21,10 +23,6 @@ export const DonateWrapper = styled.div`
     padding-top: 36%;
     position: relative;
     overflow: hidden;
-  }
-
-  @media (max-width: 576px) {
-    margin-top: 5vh;
   }
 `;
 

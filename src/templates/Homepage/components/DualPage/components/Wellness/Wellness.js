@@ -21,7 +21,7 @@ import logo from "@images/icons/logoAlt.svg";
 
 const Wellness = () => {
   return (
-    <>
+    <div data-aos="fade-left" style={{ position: "relative" }}>
       <LogoContainer src={logo} alt="bhm-logo" />
       <SubtitleWrapper>
         <HorizontalHeading>{WellnessTitle}</HorizontalHeading>
@@ -59,7 +59,7 @@ const Wellness = () => {
           </svg>
         </span>
       </ExploreWrapper>
-    </>
+    </div>
   );
 };
 

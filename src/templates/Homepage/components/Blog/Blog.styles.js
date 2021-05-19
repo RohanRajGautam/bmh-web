@@ -5,8 +5,11 @@ import { Heading } from "@components/Heading";
 const graniteGray = "#2C3336";
 
 export const BlogWrapper = styled.div`
-  padding: 5vw;
-  padding-bottom: 0;
+  padding: 5vh 5vw;
+
+  @media (min-width: 768px) {
+    margin-top: 5vh;
+  }
 `;
 
 export const SliderWrapper = styled.div`

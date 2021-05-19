@@ -172,12 +172,12 @@ export const ExploreWrapper = styled.a`
   display: flex;
   align-items: center;
   position: absolute;
-  bottom: 5%;
+  bottom: -20%;
   right: 5%;
   text-decoration: none;
 
   @media (max-width: 576px) {
-    bottom: 0%;
+    bottom: -15%;
   }
 
   &:hover {
