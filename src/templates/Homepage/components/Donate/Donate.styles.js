@@ -24,6 +24,9 @@ export const DonateWrapper = styled.div`
     position: relative;
     overflow: hidden;
   }
+  @media (max-width: 768px) {
+    padding: 15vw 0vw;
+  }
 `;
 
 export const DonateStyle = styled.div`
@@ -42,12 +45,13 @@ export const DonateColumn = styled.div`
     width: 80%;
   }
   @media (min-width: 768px) {
-    font-size: 4px;
     position: absolute;
-    top: 45%;
+    top: 50%;
     bottom: 0;
     left: 5%;
     width: 40%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
   @media (min-width: 1025px) {
@@ -73,7 +77,7 @@ export const DonateHeading = styled.h2`
     font-size: 6em;
   }
   @media (min-width: 768px) {
-    margin: 0 0 1em 0;
+    margin: 0;
     width: 80%;
     text-align: left;
   }
@@ -99,12 +103,12 @@ export const DonateParagraph = styled.div`
 export const DonateButton = styled(Button)`
   display: block;
   padding: 2rem 0;
-  max-width: 80%;
-  @media (max-width: 870px) {
-    margin: 0 auto 5vh;
+  width: 80%;
+  margin-top: 2rem;
+  @media (max-width: 767px) {
+    margin: 0 auto;
   }
   @media (min-width: 1024px) {
     max-width: 80%;
-    margin: 5vh 0;
   }
 `;

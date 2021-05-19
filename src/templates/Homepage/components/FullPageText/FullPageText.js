@@ -78,10 +78,14 @@ const FullPageText = () => {
   return (
     <>
       <TextContainer>
-        <Message data-aos="fade-in">
+        <Message
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="50"
+        >
           Where <Smiley>true</Smiley> healing is <Smiley>found</Smiley>
         </Message>
-        <LogoContainer data-aos="fade-in">
+        <LogoContainer data-aos="fade-up" data-aos-duration="1000">
           <LogoImg src={logo} alt="bmh-logo" draggable="false" />
           <FadedText>success stories</FadedText>
         </LogoContainer>

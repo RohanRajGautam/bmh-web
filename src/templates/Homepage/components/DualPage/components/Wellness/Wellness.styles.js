@@ -61,7 +61,7 @@ export const FirstText = styled.p`
 
   @media (min-width: 1024px) {
     margin-bottom: 7rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     width: 80%;
   }
   @media (min-width: 1824px) {
@@ -85,20 +85,15 @@ export const ServicesHeading = styled.h2`
   margin-bottom: 3.6rem;
   display: flex;
   align-items: center;
+  font-size: 2.5rem;
   span {
     margin-left: 1.2rem;
   }
   svg {
     display: block;
   }
-  @media (max-width: 860px) {
-    font-size: 2.4rem;
-  }
   @media (min-width: 1024px) {
     /* margin-right: 28px; */
-    font-size: 2.4rem;
-  }
-  @media (min-width: 1440px) {
     font-size: 3rem;
   }
   @media (min-width: 1824px) {
@@ -172,12 +167,24 @@ export const ExploreWrapper = styled.a`
   display: flex;
   align-items: center;
   position: absolute;
-  bottom: -20%;
+  bottom: -15%;
   right: 5%;
   text-decoration: none;
 
-  @media (max-width: 576px) {
-    bottom: -15%;
+  @media (min-width: 768px) {
+    font-size: 1.6rem;
+    white-space: nowrap;
+  }
+  @media (min-width: 1024px) {
+    font-size: 1.8rem;
+  }
+  @media (min-width: 1440px) {
+    font-size: 2rem;
+    bottom: -20%;
+  }
+  @media (min-width: 1824px) {
+    font-size: 2.4rem;
+    bottom: -20%;
   }
 
   &:hover {

@@ -66,7 +66,7 @@ export const FirstText = styled.p`
 
   @media (min-width: 1024px) {
     margin-bottom: 7rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     width: 80%;
   }
   @media (min-width: 1824px) {
@@ -90,20 +90,15 @@ export const ServicesHeading = styled.h2`
   margin-bottom: 3.6rem;
   display: flex;
   align-items: center;
+  font-size: 2.5rem;
   span {
     margin-left: 1.2rem;
   }
   svg {
     display: block;
   }
-  @media (max-width: 860px) {
-    font-size: 2.4rem;
-  }
   @media (min-width: 1024px) {
     /* margin-right: 28px; */
-    font-size: 2.4rem;
-  }
-  @media (min-width: 1440px) {
     font-size: 3rem;
   }
   @media (min-width: 1824px) {

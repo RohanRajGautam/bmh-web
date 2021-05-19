@@ -33,8 +33,24 @@ export const GlobalStyles = createGlobalStyle`
   .MuiPickersBasePicker-pickerView{
     max-width:250px;
     min-width:250px;
+    {
+      .MuiPickersYearSelection-container {
+        .MuiPickersYear-root {
+          font-size: 2rem;
+        }
+        .MuiPickersYear-yearSelected {
+          font-size: 3rem
+        }
+      }
+    }
   .MuiPickersMonthSelection-container{
     width:250px;
+    .MuiPickersMonth-root {
+      font-size: 1.6rem;
+    }
+    .MuiPickersMonth-monthSelected{
+      font-size: 2rem;
+    }
   }
 }
 }

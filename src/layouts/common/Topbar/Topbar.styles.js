@@ -9,7 +9,7 @@ export const Wrapper = styled.nav`
   justify-content: center;
   align-items: stretch;
 
-  @media (max-width: 576px) {
+  @media (max-width: 860px) {
     display: none;
   }
 `;

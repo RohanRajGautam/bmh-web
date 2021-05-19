@@ -21,7 +21,7 @@ export const Nav = styled.nav`
   width: 100%;
   position: relative;
 
-  @media (min-width: 576px) {
+  @media (min-width: 860px) {
     /* padding-top: 3rem; */
   }
 
@@ -34,7 +34,7 @@ export const Nav = styled.nav`
           height: 80px;
         `};
 
-  @media (max-width: 576px) {
+  @media (max-width: 860px) {
     position: fixed;
     ${({ active }) =>
       active &&
@@ -61,7 +61,7 @@ export const Logolink = styled(Link)`
   img {
     height: 40px;
   }
-  @media (min-width: 576px) {
+  @media (min-width: 860px) {
     img {
       height: auto;
     }
@@ -87,7 +87,7 @@ export const Menulink = styled.div`
   img {
     height: 20px;
   }
-  @media (min-width: 576px) {
+  @media (min-width: 860px) {
     img {
       height: auto;
     }
@@ -99,7 +99,7 @@ export const BigMenu = styled.div`
   width: 0px;
   overflow: hidden;
   background-color: #fff;
-  position: absolute;
+  position: fixed;
   right: calc(5vw + 10px);
   z-index: 100;
   margin-bottom: 2px;
