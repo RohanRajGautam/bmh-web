@@ -38,18 +38,30 @@ export const Message = styled.h1`
   font-family: Merriweather;
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 3.6rem;
   line-height: 140.5%;
   text-align: center;
   letter-spacing: 0.1px;
   user-select: none;
-  transition: 2s ease;
+  transition: all 0.4s ease;
   color: #fff;
   /* position: absolute;
   top: 25%; */
   /* color: ${primary}; */
-  /* background-image: linear-gradient(45deg, #eee -100%, #2c3336 0%);
+  /* background-image: linear-gradient(45deg, #eee -100%, #2c3336 0%); */
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
+    url(${imageBg});
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  /* position: fixed;
+  top: 20%;
+  left: 50%; */
+  background-clip: text;
   -webkit-background-clip: text;
+  position: relative;
+  right: 400px;
+  /* text-fill-color: transparent;
   -webkit-text-fill-color: transparent; */
   @media (max-width: 576px) {
     font-size: 4rem;

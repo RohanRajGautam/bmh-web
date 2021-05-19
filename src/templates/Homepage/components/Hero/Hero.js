@@ -22,7 +22,6 @@ import {
 
 // images
 import HeroDesktop from "@images/hero-desktop.jpg";
-import HeroMobile from "@images/hero-mobile.png";
 
 export default function Hero() {
   let app = useRef(null);
@@ -30,7 +29,7 @@ export default function Hero() {
   let content = useRef(null);
 
   useEffect(() => {
-    let tl = new TimelineLite({ delay: 0.6 });
+    let tl = new TimelineLite({ delay: 0.4 });
     const bgImg = images.children[0];
     const h1Text = content.children[0].children[0];
     const divider = content.children[0].children[1];
@@ -95,12 +94,7 @@ export default function Hero() {
         </HeroItems>
       </HeroContent>
       <HeroBg ref={el => (images = el)}>
-        {/* <Hidden smDown> */}
         <ImageBg src={HeroDesktop} type="image/png" />
-        {/* </Hidden>
-        <Hidden mdUp>
-          <ImageBg src={HeroMobile} type="image/png" />
-        </Hidden> */}
       </HeroBg>
     </HeroContainer>
   );
