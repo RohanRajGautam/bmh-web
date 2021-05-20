@@ -104,6 +104,7 @@ const Navbar = props => {
                 </BigMenuHeading>
               </BigMenuHeadingWrapper>
               <BigMenuDonate
+                md
                 target="_blank"
                 href="https://beautifulmindswellness.org/donate/"
               >

@@ -255,7 +255,7 @@ export const BigMenuHeading = styled.h2`
     margin: 0;
   }
   @media (min-width: 1440px) {
-    font-size: 28px;
+    font-size: 3.4rem;
   }
 `;
 

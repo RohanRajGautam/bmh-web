@@ -180,7 +180,7 @@ export const ExploreWrapper = styled.a`
   }
   @media (min-width: 1440px) {
     font-size: 2rem;
-    bottom: -20%;
+    bottom: -17%;
   }
   @media (min-width: 1824px) {
     font-size: 2.4rem;
