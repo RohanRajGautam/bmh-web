@@ -35,11 +35,13 @@ const Topbar = () => {
         >
           Medical
         </NavLink>
-        <Divider
+        {/* <Divider
           orientation="vertical"
           flexItem
+          variant="middle"
           style={{ background: "#eee" }}
-        />
+        /> */}
+        <span>|</span>
         <NavLink
           href="https://beautifulmindswellness.org/"
           target="_blank"

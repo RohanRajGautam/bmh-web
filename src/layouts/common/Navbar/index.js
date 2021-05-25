@@ -22,7 +22,7 @@ import {
 import { TimelineLite, TweenMax, Power3 } from "gsap";
 import { NavbarItem } from "./Navbar.datas";
 import logo from "@images/icons/full-logo.svg";
-import logoDark from "@images/icons/full-logo.png";
+import logoDark from "@images/icons/full-logo-alt.svg";
 import menu from "@images/icons/Union.svg";
 import menuDark from "@images/icons/Union-Alt.svg";
 

@@ -46,4 +46,9 @@ export const NavMenu = styled.div`
   align-items: center;
   flex-direction: row;
   margin-left: 1.6rem;
+
+  span {
+    color: #fff;
+    font-size: 2rem;
+  }
 `;

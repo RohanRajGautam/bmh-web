@@ -84,7 +84,7 @@ export const LogoContainer = styled.div`
 
 export const FadedText = styled.span`
   font-size: 2.2rem;
-  font-family: "Merriweather";
+  font-family: "MerriweatherSans";
   text-transform: uppercase;
   text-decoration: underline;
   color: #fff;

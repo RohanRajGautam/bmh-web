@@ -110,7 +110,7 @@ export const HeroTextContainer = styled.div`
 export const ButtonWrapper = styled.div`
   background: #6ca448;
   width: 80%;
-  border-radius: 55px;
+  border-radius: 50px;
   box-shadow: 0 1rem 2rem rgb(0 0 0 / 50%);
 
   @media (max-width: 860px) {
@@ -119,6 +119,7 @@ export const ButtonWrapper = styled.div`
   }
 `;
 export const ButtonText = styled.p`
+  font-family: "MerriweatherSans";
   color: #fff;
   font-size: clamp(1rem, 1.6vw, 3rem);
   text-align: center;
