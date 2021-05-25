@@ -206,8 +206,9 @@ export const HeroH1 = styled.h1`
   span {
     font-family: "Smiley";
     font-style: normal;
-    font-variant: all-small-caps;
     letter-spacing: 2px;
+
+    border-bottom: 5px solid #6ca448;
   }
 
   @media (min-width: 860px) {

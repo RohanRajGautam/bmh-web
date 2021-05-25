@@ -61,9 +61,9 @@ export default function Hero() {
         <HeroItems ref={el => (content = el)}>
           <HeroTextContainer>
             <HeroH1>
-              Mental Health for <span>all</span> of You
+              Mental Health for <span>All</span> of You
             </HeroH1>
-            <Divider />
+            {/* <Divider /> */}
             <HeroP>
               We treat and prevent mental illness through
               <span> wholistic medical care & wellness education</span>
