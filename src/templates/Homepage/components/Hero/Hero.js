@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { TimelineLite, TweenMax, Power3 } from "gsap";
-import { Hidden } from "@material-ui/core";
+import { StaticImage } from "gatsby-plugin-image";
 
 // components
 import {
@@ -30,7 +30,7 @@ export default function Hero() {
 
   useEffect(() => {
     let tl = new TimelineLite({ delay: 0.4 });
-    const bgImg = images.children[0];
+    const bgImg = images.children[0].children[0];
     const h1Text = content.children[0].children[0];
     const divider = content.children[0].children[1];
     const pText = content.children[0].children[2];
@@ -94,7 +94,13 @@ export default function Hero() {
         </HeroItems>
       </HeroContent>
       <HeroBg ref={el => (images = el)}>
-        <ImageBg src={HeroDesktop} type="image/png" />
+        <ImageBg>
+          <StaticImage
+            src="../../../../images/hero-desktop.jpg"
+            alt="hero-homepage"
+            style={{ height: "100vh" }}
+          />
+        </ImageBg>
       </HeroBg>
     </HeroContainer>
   );

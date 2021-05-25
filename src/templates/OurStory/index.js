@@ -1,23 +1,23 @@
 import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
+import styled from "styled-components";
 import Layout from "@layouts";
 import Seo from "@layouts/common/seo";
 import { Heading } from "@components/Heading";
-import styled from "styled-components";
-import topImage from "@images/ourstory-bg.jpg";
-import bottomImage from "@images/ourstory-desc.jpg";
 
 import { data } from "./data";
 
-const CoverImage = styled.img`
+const CoverImage = styled.div`
   width: 100vw;
   height: auto;
+  overflow: hidden;
 
   @media (max-width: 576px) {
     width: 180vw;
   }
 `;
 
-const DescImage = styled.img`
+const DescImage = styled.div`
   width: 50%;
   height: auto;
   margin: 3rem 0 3rem 5rem;
@@ -66,14 +66,25 @@ const OurStory = () => {
   return (
     <Layout dark>
       <Seo title="Our Story" />
-      <CoverImage src={topImage} alt="our-story-bg" />
+      <CoverImage>
+        <StaticImage
+          src="../../images/ourstory-bg.jpg"
+          alt="cover-photo"
+          layout="fullWidth"
+        />
+      </CoverImage>
       <Divider />
       <Wrapper>
         <Title>{data.title}</Title>
         <Description>
           <Desc>{data.desc1}</Desc>
           <Desc>{data.desc2}</Desc>
-          <DescImage src={bottomImage} alt="our-story" />
+          <DescImage>
+            <StaticImage
+              src="../../images/ourstory-desc.jpg"
+              alt="desc-photo"
+            />
+          </DescImage>
           <Desc>{data.desc3}</Desc>
           <Desc>{data.desc4}</Desc>
         </Description>

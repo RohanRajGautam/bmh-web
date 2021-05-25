@@ -7,9 +7,9 @@ const medicalGrey = "#5f6468";
 const gray3 = "#828282";
 
 export const LogoContainer = styled.img`
-  width: 350px;
+  width: 30rem;
   @media (min-width: 1824px) {
-    width: min-ImageContent;
+    width: min-content;
   }
 `;
 
@@ -34,7 +34,7 @@ export const HorizontalHeading = styled(Heading)`
   }
   @media (min-width: 1024px) {
     margin-top: 7rem;
-    font-size: 4.5rem;
+    font-size: 3.6rem;
   }
   @media (min-width: 1824px) {
     font-size: 5rem;
@@ -60,9 +60,9 @@ export const FirstText = styled.p`
   }
 
   @media (min-width: 1024px) {
-    margin-bottom: 7rem;
-    font-size: 2.5rem;
-    width: 80%;
+    margin-bottom: 5rem;
+    font-size: 2rem;
+    width: 85%;
   }
   @media (min-width: 1824px) {
     margin-bottom: 7rem;
@@ -85,7 +85,7 @@ export const ServicesHeading = styled.h2`
   margin-bottom: 3.6rem;
   display: flex;
   align-items: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   span {
     margin-left: 1.2rem;
   }
@@ -93,11 +93,11 @@ export const ServicesHeading = styled.h2`
     display: block;
   }
   @media (min-width: 1024px) {
-    /* margin-right: 28px; */
-    font-size: 3rem;
+    font-size: 2.4rem;
+    line-height: 3rem;
   }
   @media (min-width: 1824px) {
-    margin-right: 2.8rem;
+    /* margin-right: 2.8rem; */
     margin-bottom: 4rem;
     font-size: 3.6rem;
   }
@@ -131,9 +131,9 @@ export const ServicesItems = styled.div`
   @media (min-width: 1024px) {
     font-size: 1.8rem;
   }
-  @media (min-width: 1440px) {
+  /* @media (min-width: 1440px) {
     font-size: 2rem;
-  }
+  } */
   @media (min-width: 1824px) {
     font-size: 2.4rem;
   }
@@ -155,9 +155,9 @@ export const Anchor = styled.a`
   @media (min-width: 1024px) {
     font-size: 1.8rem;
   }
-  @media (min-width: 1440px) {
+  /* @media (min-width: 1440px) {
     font-size: 2rem;
-  }
+  } */
   @media (min-width: 1824px) {
     font-size: 2.4rem;
   }

@@ -38,7 +38,7 @@ export const HeadingWrapper = styled(Heading)`
     font-size: 3rem;
   }
   @media (min-width: 1024px) {
-    font-size: 4.5rem;
+    font-size: 3.6rem;
   }
   @media (min-width: 1824px) {
     font-size: 5rem;
@@ -74,7 +74,7 @@ export const TextWrapper = styled.div`
   font-family: Mulish;
   font-style: normal;
   font-weight: normal;
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 160%;
   letter-spacing: 0.1px;
   color: #828282;
@@ -84,14 +84,37 @@ export const TextWrapper = styled.div`
   @media (max-width: 860px) {
     font-size: 2rem;
   }
+
+  @media (min-width: 1824px) {
+    font-size: 2.6rem;
+  }
 `;
 
 export const ButtonWrapper = styled(Link)`
-  display: inline-block;
-  font-size: 2.5rem;
-  color: #6ca448;
-  cursor: pointer;
-  text-decoration: none;
+  &,
+  &:link,
+  &:visited {
+    font-size: 2rem;
+    color: #6ca448;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid #6ca448;
+    padding: 3px;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: #6ca448;
+    color: #fff;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
 
   @media (max-width: 860px) {
     font-size: 2rem;

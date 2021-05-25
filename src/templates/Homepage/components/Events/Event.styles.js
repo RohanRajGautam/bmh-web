@@ -61,7 +61,7 @@ export const EventHeading = styled(Heading)`
     font-size: 3rem;
   }
   @media (min-width: 1024px) {
-    font-size: 4.5rem;
+    font-size: 3.6rem;
   }
   @media (min-width: 1824px) {
     font-size: 5rem;

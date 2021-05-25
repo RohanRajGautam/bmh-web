@@ -17,7 +17,9 @@ export const HeroContainer = styled.div`
     padding-left: 5vw;
     justify-content: flex-start;
     align-items: center;
-    height: 120vh;
+    margin-top: 0;
+    padding-bottom: 10rem;
+    /* height: 120vh; */
     /* margin-top: -80px; */
   }
   // add overlay to the background image
@@ -47,7 +49,7 @@ export const HeroBg = styled.div`
   }
 `;
 
-export const ImageBg = styled.img`
+export const ImageBg = styled.div`
   width: 100%;
   height: 100%;
   background-position: center;
@@ -109,6 +111,7 @@ export const ButtonWrapper = styled.div`
   background: #6ca448;
   width: 80%;
   border-radius: 55px;
+  box-shadow: 0 1rem 2rem rgb(0 0 0 / 50%);
 
   @media (max-width: 860px) {
     background: none;

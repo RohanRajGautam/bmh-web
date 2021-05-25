@@ -25,7 +25,8 @@ const StoryPage = () => {
             I grew tremendously emotionally, spiritually and relationally. As a
             result I found a peace and joy I had never had before. One beautiful
             Saturday morning as I hiked up a Southern California mountainside it
-            hit me - <ButtonWrapper to="/our-story">Read More</ButtonWrapper>
+            hit me -{" "}
+            <ButtonWrapper to="/our-story">Read More &rarr;</ButtonWrapper>
           </TextWrapper>
         </Content>
         <Thumbnail />
