@@ -128,7 +128,7 @@ export const BigMenuWrapper = styled.div`
 
 export const BigMenuInner = styled.div`
   display: grid;
-  grid-template-columns: 40% 50% 10%;
+  grid-template-columns: 30% 60% 10%;
   @media (min-width: 992px) {
     height: 100%;
   }
@@ -139,13 +139,12 @@ export const BigMenuLeft = styled.div`
   font-size: 5px;
   grid-column: 1/3;
   @media (min-width: 600px) {
-    padding: 40px;
-    border-right: 1px solid ${menuBorder};
+    padding-left: 2rem;
   }
   @media (min-width: 992px) {
     grid-column: 1/2;
-    padding: 24em 6em 24em 20em;
     grid-row: 1;
+    margin: auto;
   }
   @media (min-width: 1440px) {
     font-size: 7px;
@@ -167,12 +166,13 @@ export const BigMenuCenter = styled.div`
     padding: 40px;
     grid-column: 1/3;
     border-right: 1px solid ${menuBorder};
+    border-left: 1px solid ${menuBorder};
   }
 
   @media (min-width: 992px) {
     grid-column: 2/3;
     grid-row: 1;
-    padding: 24em 12em;
+    margin: auto;
   }
   @media (min-width: 1440px) {
     font-size: 7px;
@@ -274,6 +274,7 @@ export const BigMenuDonate = styled(Button)`
   color: #fff;
   display: block;
   margin: 0 auto;
+
   @media (min-width: 992px) {
     margin: 0;
   }
@@ -282,10 +283,11 @@ export const BigMenuDonate = styled(Button)`
 export const BigMenuNavs = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  grid-row-gap: 4rem;
+  grid-column-gap: 2rem;
   font-size: 5px;
   @media (min-width: 600px) {
-    grid-gap: 16em;
+    grid-row-gap: 8rem;
   }
   @media (min-width: 1440px) {
     font-size: 7px;

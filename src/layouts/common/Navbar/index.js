@@ -20,7 +20,7 @@ import {
   DonateButton,
 } from "./Navbar.styles";
 import { TimelineLite, TweenMax, Power3 } from "gsap";
-import { NavbarItem } from "./Navbar.datas";
+import { NavbarItem, staticData } from "./Navbar.datas";
 import logo from "@images/icons/full-logo.svg";
 import logoDark from "@images/icons/full-logo-alt.svg";
 import menu from "@images/icons/Union.svg";
@@ -113,13 +113,13 @@ const Navbar = props => {
             </BigMenuLeft>
             <BigMenuCenter>
               <BigMenuNavs>
-                {NavbarItem.length &&
-                  NavbarItem.map((item, index) => (
+                {staticData.length &&
+                  staticData.map((item, index) => (
                     <div key={index}>
                       <BigMenuNavTitle>{item.title}</BigMenuNavTitle>
                       <BigMenuNavItemWrapper>
-                        {item.list.length &&
-                          item.list.map((item, index) => (
+                        {item.items.length &&
+                          item.items.map((item, index) => (
                             <BigMenuNavItem key={index}>
                               <a
                                 target="_blank"

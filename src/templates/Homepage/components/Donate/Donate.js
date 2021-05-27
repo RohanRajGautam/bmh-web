@@ -13,7 +13,7 @@ const Donate = () => {
     <DonateWrapper>
       <DonateStyle>
         <DonateColumn>
-          <DonateHeading data-aos="fade-right">
+          <DonateHeading data-aos="fade-up">
             Let’s start with helping people to get better.
           </DonateHeading>
           {/* <DonateParagraph data-aos="fade-up-right">
@@ -22,7 +22,7 @@ const Donate = () => {
           </DonateParagraph> */}
           <DonateButton
             primary="true"
-            data-aos="fade-right"
+            data-aos="fade-up"
             to="https://beautifulmindswellness.org/donate/"
             target="_blank"
           >

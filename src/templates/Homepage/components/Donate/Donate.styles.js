@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import donate from "@images/donate/donate-homepage.png";
+import donate from "@images/donate-new.jpg";
 import { Button } from "@components/Button";
 
 export const DonateWrapper = styled.div`
@@ -20,7 +20,7 @@ export const DonateWrapper = styled.div`
   background-repeat: no-repeat;
   @media (min-width: 768px) {
     padding: 0;
-    padding-top: 36%;
+    padding-top: 40%;
     position: relative;
     overflow: hidden;
   }
@@ -47,8 +47,8 @@ export const DonateColumn = styled.div`
   @media (min-width: 768px) {
     position: absolute;
     top: 50%;
-    bottom: 0;
-    left: 5%;
+    /* bottom: 0; */
+    right: 0;
     width: 40%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
