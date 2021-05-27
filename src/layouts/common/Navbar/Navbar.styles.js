@@ -294,6 +294,7 @@ export const BigMenuNavs = styled.div`
   }
   @media (min-width: 1824px) {
     font-size: 10px;
+    grid-column-gap: 8rem;
   }
 `;
 

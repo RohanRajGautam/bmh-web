@@ -124,7 +124,7 @@ const Navbar = props => {
                               <a
                                 target="_blank"
                                 href={item.to}
-                                onClick={handleBigMenu}
+                                // onClick={handleBigMenu}
                               >
                                 {item.title}
                               </a>
