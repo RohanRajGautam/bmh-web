@@ -150,7 +150,8 @@ export const ButtonPrimary = styled(Button)`
         transition: all 0.4s;
       }
       circle {
-        stroke-width: 0;
+        opacity: 0;
+        fill: #fff;
       }
     }
     }
