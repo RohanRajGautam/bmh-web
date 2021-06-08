@@ -1,261 +1,210 @@
 import styled from "styled-components";
 import { Button } from "@components/Button";
+import bgimg from "@images/home/banner-bg.jpg";
 
-const primaryColor = "#6CA448";
+export const MainContainer = styled.div`
+  height: 100vh;
+  width: calc(100vw - 11.3rem);
+`;
 
 export const HeroContainer = styled.div`
-  visibility: hidden;
-  background: #fff;
+  background: #0c0c0c;
+  height: 80vh;
+  position: relative;
+  /* margin-top: -80px; */
+  color: #fff;
+  width: 100%;
+`;
+
+export const Message = styled.div`
   display: flex;
-  height: 100vh;
-  width: 100vw;
-  margin-top: -12rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+`;
+export const MessageSecondary = styled.p`
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: #596166;
 
-  @media (max-width: 860px) {
-    position: relative;
-    color: #fff;
-    padding-left: 5vw;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 0;
-    padding-bottom: 10rem;
-    /* height: 120vh; */
-    /* margin-top: -80px; */
+  opacity: 0.5;
+  text-transform: uppercase;
+
+  margin-bottom: 1.2rem;
+`;
+export const MessagePrimary = styled.h3`
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 5rem;
+  line-height: 120%;
+
+  color: #000000;
+
+  span {
+    font-family: Smiley;
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 6rem;
+    letter-spacing: 0em;
   }
-  // add overlay to the background image
-
-  /* :before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 2;
-  } */
 `;
 export const HeroBg = styled.div`
-  width: 50vw;
-
-  @media (max-width: 860px) {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-`;
-
-export const ImageBg = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+`;
+export const ImageBg = styled.div`
+  background: linear-gradient(
+      112.4deg,
+      rgba(0, 0, 0, 0.2) 3.01%,
+      rgba(0, 0, 0, 0) 87.33%
+    ),
+    url(${bgimg});
+  height: 100%;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   -o-object-fit: cover;
   object-fit: cover;
+  position: relative;
+`;
 
-  @media (max-width: 860px) {
-    filter: brightness(50%);
+export const ImageVector = styled.img`
+  width: 100%;
+  position: absolute;
+  bottom: -7rem;
+
+  @media (max-width: 600px) {
+    width: 115%;
+    bottom: -1.5rem;
   }
 `;
 
 export const HeroContent = styled.div`
-  width: 50vw;
   z-index: 3;
-  /* max-height: 100%; */
-  /* padding: 0 5vw; */
+  padding: 5rem 0 0 11.2rem;
+  height: 100%;
 
-  @media screen and (max-width: 860px) {
-    height: calc(100vh - 80px);
-    padding: 0;
-    position: absolute;
-    left: 0;
-    width: auto;
+  @media (max-width: 600px) {
+    padding: 0 5vw;
   }
 `;
 
 export const HeroItems = styled.div`
   display: flex;
   flex-direction: column;
-  /* height: 60vh; */
-  /* max-height: 100%; */
-  padding: 0 5vw;
-  color: #fff;
-  line-height: 1.1;
-  font-weight: bold;
-  margin-right: 5vw;
-  transform: translateY(25vh);
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 4;
 
-  @media screen and (max-width: 860px) {
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    height: 70%;
-    padding: 3rem 0;
-  }
+  height: 100%;
 `;
 
-export const HeroTextContainer = styled.div`
-  width: 100%;
-  padding: 1.5rem 5vw;
-  @media (min-width: 860px) {
-    padding: 0;
-  }
-`;
-
-export const ButtonWrapper = styled.div`
-  background: #6ca448;
-  width: 80%;
-  border-radius: 50px;
-  box-shadow: 0 1rem 2rem rgb(0 0 0 / 50%);
-
-  @media (max-width: 860px) {
-    background: none;
-    width: 100%;
-  }
-`;
-export const ButtonText = styled.p`
-  font-family: "MerriweatherSans";
-  color: #fff;
-  font-size: clamp(1rem, 1.6vw, 3rem);
-  text-align: center;
-  padding: 1rem 0 0.6rem 0;
-
-  @media (max-width: 860px) {
-    /* display: none; */
-    font-size: 2rem;
-    padding: 1rem 0 2rem 0;
-  }
-`;
 export const ButtonContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  /* padding: 1.5rem 5vw; */
-  @media (max-width: 860px) {
+  /* @media (max-width: 860px) {
+    width: 100%;
+    display: flex;
     flex-direction: column;
-    padding: 0;
-    margin-bottom: 5vw;
-}
-  }
-  @media (min-width: 860px) {
-    padding: 0;
-  }
+    justify-content: center;
+    align-items: center;
+  } */
 `;
 
 export const ButtonPrimary = styled(Button)`
-  /* margin-bottom: 2rem; */
-  width: 100%;
-  height: 45px;
-  text-transform: uppercase;
-  border-radius: 0 0 0 50px;
-  margin: 0 0 5px 5px;
-  background: #fff;
-  color: #2c3336;
-  padding: 13px 0 0 0;
-  font-size: 1.7rem;
+  height: 9.6rem;
+  width: 27.1rem;
+  border-radius: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-family: "Merriweather";
+    font-size: 2.1rem;
+  }
+
+  span {
+    margin-left: 2rem;
+    align-self: flex-end;
+    font-size: 3rem;
+  }
+
   &:hover {
-    background-color: #fff;
-    color: ${primaryColor};
-    transform: none;
-  }
-  @media (max-width: 860px) {
-    margin: auto;
-    margin-bottom: 1.5rem;
-    width: 100%;
-    border-radius: 50px;
-    max-width: 90%;
-    padding: 2rem 5rem;
-    font-size: 1.8rem;
-    background: #66a250;
-    height: 60px;
-    color: #fff;
-  }
+    span {
+    svg {
+      path {
+        transform: translateX(1rem);
+        transition: all 0.4s;
+      }
+      circle {
+        stroke-width: 0;
+      }
+    }
+    }
 `;
 
-export const MobileButtonPrimary = styled(Button)`
-  margin-bottom: 1rem;
-`;
+export const HeroTextContainer = styled.div`
+  width: 40rem;
+  /* margin: 8rem 0; */
 
-export const ButtonSecondary = styled(ButtonPrimary)`
-  border-radius: 0 0 50px 0;
-  margin: 0 5px 5px 1px;
-
-  @media (max-width: 860px) {
-    border-radius: 50px;
-    margin: 0 auto;
+  @media (max-width: 600px) {
+    width: 32rem;
+    margin: 7rem 0;
   }
 `;
 
 export const HeroH1 = styled.h1`
+  /* font-size: clamp(2rem, 6vw, 4rem); */
+  /* margin-bottom: 1.5rem; */
   font-family: Merriweather;
   font-style: normal;
-  font-weight: bold;
-  letter-spacing: 0.3px;
+  font-weight: 700;
+  /* font-size: clamp(3rem, 6vw, 6rem); */
+  font-size: 6.8rem;
+  line-height: 8.2rem;
+  letter-spacing: -0.02em;
+  color: #fff;
   user-select: none;
-  color: #2c3336;
-  padding-bottom: 3rem;
-  font-size: 24px;
-  font-style: italic;
+  margin-bottom: 3.2rem;
 
   span {
     font-family: "Smiley";
-    font-style: normal;
-    letter-spacing: 2px;
-
-    border-bottom: 5px solid #6ca448;
+    font-weight: 400;
+    font-size: 6.8rem;
+    line-height: 8.2rem;
   }
 
-  @media (min-width: 860px) {
-    font-size: clamp(3rem, 4vw, 7rem);
-  }
-  @media (max-width: 860px) {
-    font-size: clamp(3.5rem, 10vw, 4rem);
-    color: #fff;
-  }
-`;
+  @media (max-width: 600px) {
+    font-size: 5rem;
 
-export const Divider = styled.div`
-  width: 7rem;
-  height: 5px;
-  position: relative;
-  background: #6ca448;
-  bottom: 30px;
-  @media (max-width: 860px) {
-    width: 6rem;
-    bottom: 20px;
+    span {
+      font-size: 5rem;
+      line-height: 6rem;
+    }
   }
 `;
 
 export const HeroP = styled.p`
   font-family: Mulish;
-  font-weight: 300;
-  color: #2c3336;
-  line-height: 160%;
-  font-size: 18px;
-  padding: 1.5rem 0;
+  line-height: 3.2rem;
+  /* font-size: clamp(1.8rem, 3vw, 3rem); */
+  font-size: 2.4rem;
+  padding-bottom: 3rem;
   font-weight: 400;
-  letter-spacing: 0.3px;
+  color: #fff;
   user-select: none;
-  span {
-    font-family: inherit;
-  }
-  @media (max-width: 860px) {
-    font-size: 2rem;
-    padding: 3rem 0;
-    color: rgba(255, 255, 255, 0.7);
-  }
-  @media (min-width: 860px) {
-    font-size: clamp(2rem, 1.6vw, 2.5rem);
-    padding: 1rem 0 6rem 0;
-    span {
-      display: block;
-    }
-  }
+  opacity: 0.9;
 `;

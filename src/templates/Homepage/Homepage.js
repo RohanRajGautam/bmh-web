@@ -25,12 +25,12 @@ const Homepage = props => {
     <Layout dark>
       <Seo title="Home" />
       <Hero />
-      <FullPageText />
+      {/* <FullPageText />
       <DualPage />
       <StoryPage />
       <Blog data={props.data} />
       <Event data={props.data.events.nodes} />
-      <Donate />
+      <Donate /> */}
     </Layout>
   );
 };

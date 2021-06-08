@@ -10,11 +10,11 @@ const Layout = ({ children, ...props }) => {
   return (
     <div>
       <GlobalStyles />
-      <Topbar />
-      <Navbar dark={props.dark} />
+      {/* <Topbar /> */}
+      {/* <Navbar dark={props.dark} /> */}
       <Scroll showBelow={250} />
       <main>{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
