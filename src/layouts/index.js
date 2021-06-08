@@ -9,7 +9,7 @@ import "../assets/fonts/fonts.css";
 
 const Layout = ({ children, ...props }) => {
   return (
-    <div>
+    <div syle={{ position: "relative" }}>
       <GlobalStyles />
       {/* <Topbar /> */}
       {/* <Navbar dark={props.dark} /> */}

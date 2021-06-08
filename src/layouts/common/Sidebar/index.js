@@ -12,7 +12,7 @@ import {
 } from "./svg";
 
 const Wrapper = styled.div`
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   width: 11.3rem;
@@ -67,6 +67,11 @@ const Item = styled.div`
           fill: #6ca448;
         }
       }
+    }
+
+    &:nth-child(6) {
+      transition: all 0.4s;
+      filter: brightness(1.1);
     }
   }
 `;

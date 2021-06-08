@@ -5,6 +5,8 @@ const Wrapper = styled.div`
 
 &:hover {
   cursor: pointer;
+  transition: all 0.4s;
+  filter: brightness(1.1);
     svg {
       path
 
@@ -15,6 +17,7 @@ const Wrapper = styled.div`
       
       circle {
         stroke-width: 0;
+        stroke: #fff;
       }
     }
     
