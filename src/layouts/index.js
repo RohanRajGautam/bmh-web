@@ -1,10 +1,10 @@
 import * as React from "react";
 import { GlobalStyles } from "@styles/GlobalStyles";
-import Navbar from "./common/Navbar";
-import Topbar from "./common/Topbar";
-import Footer from "./common/Footer";
+// import Navbar from "./common/Navbar";
+// import Topbar from "./common/Topbar";
+// import Footer from "./common/Footer";
 import Sidebar from "./common/Sidebar";
-import Scroll from "@components/ScrollTop";
+// import Scroll from "@components/ScrollTop";
 import "../assets/fonts/fonts.css";
 
 const Layout = ({ children, ...props }) => {
@@ -13,7 +13,7 @@ const Layout = ({ children, ...props }) => {
       <GlobalStyles />
       {/* <Topbar /> */}
       {/* <Navbar dark={props.dark} /> */}
-      <Scroll showBelow={250} />
+      {/* <Scroll showBelow={250} /> */}
 
       <main>{children}</main>
       <Sidebar />

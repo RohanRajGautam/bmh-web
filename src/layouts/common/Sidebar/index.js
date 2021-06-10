@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 import {
@@ -44,6 +44,10 @@ const Item = styled.div`
     padding-top: 0;
   }
 
+  &:nth-child(7) {
+    transition: all 0.4s linear;
+  }
+
   &:hover {
     cursor: pointer;
 
@@ -81,6 +85,25 @@ const Item = styled.div`
 `;
 
 const Sidebar = () => {
+  useEffect(() => {
+    const logo = document.getElementById("bmh-logo");
+
+    const revealLogo = () => {
+      const y = window.scrollY;
+      if (y >= 80) {
+        logo.style.opacity = "1";
+      } else {
+        logo.style.opacity = "0";
+      }
+    };
+
+    window.addEventListener("scroll", revealLogo);
+
+    return () => {
+      window.removeEventListener("scroll", revealLogo);
+    };
+  });
+
   return (
     <Wrapper>
       <Content>
@@ -102,7 +125,7 @@ const Sidebar = () => {
         <Item>
           <Donate />
         </Item>
-        <Item>
+        <Item id="bmh-logo">
           <SmallLogo />
         </Item>
       </Content>
