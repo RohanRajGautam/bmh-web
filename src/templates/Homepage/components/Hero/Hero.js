@@ -50,7 +50,7 @@ export default function Hero() {
                 care & wellness education
               </HeroP>
             </HeroTextContainer>
-            <ButtonPrimary />
+            <ButtonPrimary to="#medical-wellness" />
           </HeroItems>
         </HeroContent>
       </HeroContainer>

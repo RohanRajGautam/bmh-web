@@ -5,7 +5,7 @@ import { Container, Medical, Wellness } from "./DualPage.styles";
 
 const DualPage = () => {
   return (
-    <Container>
+    <Container id="medical-wellness">
       <Medical>
         <MedicalPage />
       </Medical>

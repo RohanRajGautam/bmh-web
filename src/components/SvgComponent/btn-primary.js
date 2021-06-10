@@ -1,7 +1,8 @@
+import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 
-const Wrapper = styled.div`
+const Wrapper = styled(Link)`
 
 &:hover {
   cursor: pointer;
@@ -24,9 +25,9 @@ const Wrapper = styled.div`
 
 `;
 
-const ButtonPrimary = () => {
+const ButtonPrimary = ({ to }) => {
   return (
-    <Wrapper>
+    <Wrapper to={to}>
       <svg
         width="271"
         height="96"
