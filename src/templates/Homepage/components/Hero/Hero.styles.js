@@ -82,9 +82,9 @@ export const ImageBg = styled.div`
 `;
 
 export const ImageVector = styled.img`
-  width: 100%;
   position: absolute;
   bottom: -7rem;
+  width: 100%;
 
   @media (max-width: 600px) {
     width: 115%;

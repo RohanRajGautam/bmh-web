@@ -25,8 +25,8 @@ const Homepage = props => {
     <Layout dark>
       <Seo title="Home" />
       <Hero />
-      {/* <FullPageText />
       <DualPage />
+      {/* <FullPageText />
       <StoryPage />
       <Blog data={props.data} />
       <Event data={props.data.events.nodes} />

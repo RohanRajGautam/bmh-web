@@ -1,5 +1,6 @@
 import React from "react";
-import { MedicalPage, WellnessPage } from "./components";
+import MedicalPage from "./MedicalPage";
+import WellnessPage from "./WellnessPage";
 import { Container, Medical, Wellness } from "./DualPage.styles";
 
 const DualPage = () => {

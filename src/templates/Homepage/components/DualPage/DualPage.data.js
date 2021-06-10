@@ -1,7 +1,6 @@
-export const MedicalTitle = "Diagnose & Treat";
+export const MedicalTitle = "Medical";
 
-export const MedicalDesc =
-  "We seek to revive mind & body through wholistic treatment plans taylor-made for your specific needs.";
+export const MedicalDesc = "Services";
 
 export const MedicalServices = [
   {
@@ -18,19 +17,18 @@ export const MedicalServices = [
     to: "https://www.beautifulmindsmedical.com/about/our-services/#counseling",
   },
   {
-    title: "Intensive Outpatient",
-    to: "https://beautifulmindsoutpatient.com/",
-  },
-  {
     title: "Life & Health Coaching",
     to: "https://www.beautifulmindsmedical.com/about/our-services/#coaching",
   },
+  {
+    title: "Intensive Outpatient",
+    to: "https://beautifulmindsoutpatient.com/",
+  },
 ];
 
-export const WellnessTitle = "Prevent & Optimize";
+export const WellnessTitle = "Wellness";
 
-export const WellnessDesc =
-  "Our educational resources & wellness treatments help you thrive in every way - mentally, physically, & spiritually.";
+export const WellnessDesc = "Services";
 
 export const WellnessServices = [
   {

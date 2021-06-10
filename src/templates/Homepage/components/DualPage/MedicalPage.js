@@ -1,32 +1,26 @@
 import React from "react";
 import {
-  LogoContainer,
-  SubtitleWrapper,
-  HorizontalHeading,
-  FirstText,
+  Wrapper,
+  HeadingWrapper,
+  Title,
+  Subtitle,
   ServicesWrapper,
-  ServicesHeading,
   ServicesItemWrapper,
   ServicesItems,
   Anchor,
-} from "./MedicalPage.styles";
+} from "./DualPage.styles";
+import { MedicalTitle, MedicalDesc, MedicalServices } from "./DualPage.data";
+
 import logo from "@images/icons/Frame.svg";
-import {
-  MedicalTitle,
-  MedicalDesc,
-  MedicalServices,
-} from "../../DualPage.data";
 
 const MedicalPage = () => {
   return (
-    <div data-aos="fade-right">
-      <LogoContainer src={logo} alt="bhm-logo" />
-      <SubtitleWrapper>
-        <HorizontalHeading>{MedicalTitle}</HorizontalHeading>
-      </SubtitleWrapper>
-      <FirstText>{MedicalDesc}</FirstText>
+    <Wrapper>
+      <HeadingWrapper>
+        <Title>{MedicalTitle}</Title>
+        <Subtitle>{MedicalDesc}</Subtitle>
+      </HeadingWrapper>
       <ServicesWrapper>
-        <ServicesHeading>Services</ServicesHeading>
         <ServicesItemWrapper>
           {MedicalServices?.map((item, index) => (
             <ServicesItems key={index}>
@@ -37,7 +31,7 @@ const MedicalPage = () => {
           ))}
         </ServicesItemWrapper>
       </ServicesWrapper>
-    </div>
+    </Wrapper>
   );
 };
 

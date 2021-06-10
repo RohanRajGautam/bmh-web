@@ -12,7 +12,7 @@ import {
 } from "./svg";
 
 const Wrapper = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 11.3rem;
@@ -38,6 +38,10 @@ const Item = styled.div`
   :nth-child(3),
   :nth-child(4) {
     border-bottom: 1px solid #f2f2f2;
+  }
+
+  &:nth-child(6) {
+    padding-top: 0;
   }
 
   &:hover {
