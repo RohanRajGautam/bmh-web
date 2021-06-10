@@ -20,6 +20,19 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Merriweather', 'Mulish', 'Smiley', 'MerriweatherSans';
     overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #1E3F20;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #6CA448;
+      border-radius: 12px; 
+    }
   }
 
   p{
