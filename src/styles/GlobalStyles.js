@@ -8,6 +8,10 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    &::selection {
+      background-color: ${primary};
+      color: #fff;
+    }
     /* overflow-x: clip; */
   }
 
@@ -31,9 +35,11 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     &::-webkit-scrollbar-thumb {
-      background: #6CA448;
+      background: ${primary};
       border-radius: 12px; 
     }
+
+    
   }
 
   p{
