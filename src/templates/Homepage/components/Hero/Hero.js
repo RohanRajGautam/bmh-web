@@ -17,9 +17,10 @@ import {
   ImageBg,
   MobileButtonPrimary,
   ImageVector,
+  Subtitle,
 } from "./Hero.styles";
 
-import { Heading, HeadingPrimary, HeadingSecondary } from "@components/Heading";
+import { Heading, HeadingPrimary } from "@components/Heading";
 
 // images
 import BackgroundImage from "@images/home/banner-bg.jpg";
@@ -59,7 +60,7 @@ export default function Hero() {
         </HeroContent>
       </HeroContainer>
       <HeroHeading>
-        <HeadingSecondary>OUR WHOLISTIC APPROACH</HeadingSecondary>
+        <Subtitle>OUR WHOLISTIC APPROACH</Subtitle>
         <HeadingPrimary>
           Treating <span>and</span> Preventing
         </HeadingPrimary>
