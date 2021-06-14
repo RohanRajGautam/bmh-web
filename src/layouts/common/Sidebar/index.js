@@ -70,6 +70,19 @@ const Item = styled.div`
       }
     }
 
+    &:nth-child(3) {
+      svg {
+        g {
+          path:last-child {
+            fill: #6ca448;
+          }
+          path:not(:last-child) {
+            stroke: #6ca448;
+          }
+        }
+      }
+    }
+
     &:nth-child(4),
     &:nth-child(5) {
       svg {
