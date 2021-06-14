@@ -5,14 +5,15 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import {
   Blog,
-  Hero,
   Donate,
   Event,
   StoryPage,
   FullPageText,
+  Hero,
   DualPage,
-  // HorizontalScroll,
+  Testimonials,
 } from "./components";
+
 const Homepage = props => {
   React.useEffect(() => {
     Aos.init({
@@ -26,6 +27,7 @@ const Homepage = props => {
       <Seo title="Home" />
       <Hero />
       <DualPage />
+      <Testimonials />
       {/* <FullPageText />
       <StoryPage />
       <Blog data={props.data} />
