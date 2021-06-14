@@ -18,6 +18,8 @@ const Wrapper = styled.div`
   width: 11.3rem;
   background: #fff;
   height: 100vh;
+
+  border-left: 1px solid #f5f5ef;
 `;
 
 const Content = styled.div`

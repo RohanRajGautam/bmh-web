@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import styled from "styled-components";
 
 // components
 import {
@@ -17,16 +17,20 @@ import {
   ImageBg,
   MobileButtonPrimary,
   ImageVector,
-  Message,
-  MessagePrimary,
-  MessageSecondary,
 } from "./Hero.styles";
+
+import { Heading, HeadingPrimary, HeadingSecondary } from "@components/Heading";
 
 // images
 import BackgroundImage from "@images/home/banner-bg.jpg";
 import BannerVector from "@images/home/banner-vector.png";
 import HomepageLogo from "@components/SvgComponent/homepage-logo";
 import ButtonPrimary from "@components/SvgComponent/btn-primary";
+
+const HeroHeading = styled(Heading)`
+  height: 20vh;
+  justify-content: flex-end;
+`;
 
 export default function Hero() {
   return (
@@ -54,12 +58,12 @@ export default function Hero() {
           </HeroItems>
         </HeroContent>
       </HeroContainer>
-      <Message>
-        <MessageSecondary>OUR WHOLISTIC APPROACH</MessageSecondary>
-        <MessagePrimary>
+      <HeroHeading>
+        <HeadingSecondary>OUR WHOLISTIC APPROACH</HeadingSecondary>
+        <HeadingPrimary>
           Treating <span>and</span> Preventing
-        </MessagePrimary>
-      </Message>
+        </HeadingPrimary>
+      </HeroHeading>
     </MainContainer>
   );
 }

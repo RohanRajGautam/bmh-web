@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { SPACING } from "@components/constants";
 
 // export export const Heading = styled.h2`
 //   font-size: ${({ big }) => (big ? "4rem;" : "2rem;")};
@@ -52,7 +53,7 @@ export const HeadingSecondary = styled.p`
   opacity: 0.5;
   text-transform: uppercase;
 
-  margin-bottom: 1.2rem;
+  margin-bottom: ${SPACING.sm};
 `;
 export const HeadingPrimary = styled.h3`
   font-family: Merriweather;

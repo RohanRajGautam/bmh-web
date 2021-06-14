@@ -23,8 +23,9 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     box-sizing: border-box;
-    font-family: 'Merriweather', 'Mulish', 'Smiley', 'MerriweatherSans';
+    font-family: 'Merriweather', 'Mulish', 'Smiley', 'MerriweatherSans';  
     overflow-x: hidden;
+
 
     &::-webkit-scrollbar {
       width: 8px;

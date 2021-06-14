@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { Button } from "@components/Button";
+import { Container } from "@components/Container";
 import bgimg from "@images/home/banner-bg.jpg";
 
-export const MainContainer = styled.div`
+export const MainContainer = styled(Container)`
   height: 100vh;
-  width: calc(100vw - 11.3rem);
 `;
 
 export const HeroContainer = styled.div`
@@ -16,44 +16,6 @@ export const HeroContainer = styled.div`
   width: 100%;
 `;
 
-export const Message = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 20vh;
-`;
-export const MessageSecondary = styled.p`
-  font-family: Mulish;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 1.8rem;
-  line-height: 2.4rem;
-  color: #596166;
-
-  opacity: 0.5;
-  text-transform: uppercase;
-
-  margin-bottom: 1.2rem;
-`;
-export const MessagePrimary = styled.h3`
-  font-family: Merriweather;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 5rem;
-  line-height: 120%;
-
-  color: #000000;
-
-  span {
-    font-family: Smiley;
-    font-size: 5rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 6rem;
-    letter-spacing: 0em;
-  }
-`;
 export const HeroBg = styled.div`
   position: absolute;
   top: 0;
@@ -84,11 +46,15 @@ export const ImageBg = styled.div`
 export const ImageVector = styled.img`
   position: absolute;
   bottom: -7rem;
-  width: 100%;
+  width: 100vw;
 
   @media (max-width: 600px) {
     width: 115%;
     bottom: -1.5rem;
+  }
+
+  @media (min-width: 1600px) {
+    bottom: -10rem;
   }
 `;
 

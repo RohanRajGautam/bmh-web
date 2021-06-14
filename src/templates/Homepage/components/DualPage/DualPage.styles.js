@@ -1,8 +1,12 @@
 import styled from "styled-components";
 import hoverImg from "@images/home/hover-img.png";
+import { COLORS, SPACING } from "@components/constants";
+import { Container } from "@components/Container";
 
-export const Container = styled.div`
+export const MainContainer = styled(Container)`
   padding: 0 11.3rem;
+  padding-top: ${SPACING.lg};
+  /* margin-top: ${SPACING.md}; */
 `;
 
 export const Medical = styled.div``;
