@@ -8,8 +8,6 @@ export const MainContainer = styled(Container)`
   margin-top: ${SPACING.xxl};
   padding-top: ${SPACING.xl};
 
-  margin-bottom: 100vh;
-
   /* height: 100vh; */
 
   /* display: flex;

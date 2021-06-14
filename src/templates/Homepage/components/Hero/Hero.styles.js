@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Button } from "@components/Button";
 import { Container } from "@components/Container";
 import bgimg from "@images/home/banner-bg.jpg";
+import { HeadingSecondary } from "@components/Heading";
 
 export const MainContainer = styled(Container)`
   height: 100vh;
@@ -174,4 +175,8 @@ export const HeroP = styled.p`
   color: #fff;
   user-select: none;
   opacity: 0.9;
+`;
+
+export const Subtitle = styled(HeadingSecondary)`
+  margin-bottom: 1.2rem;
 `;

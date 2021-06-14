@@ -15,12 +15,12 @@ import {
 } from "./components";
 
 const Homepage = props => {
-  React.useEffect(() => {
-    Aos.init({
-      duration: 500,
-      // easing: "ease-in-sine",
-    });
-  }, []);
+  // React.useEffect(() => {
+  //   Aos.init({
+  //     duration: 500,
+  //     // easing: "ease-in-sine",
+  //   });
+  // }, []);
 
   return (
     <Layout dark>
@@ -28,8 +28,8 @@ const Homepage = props => {
       <Hero />
       <DualPage />
       <Testimonials />
-      {/* <FullPageText />
       <StoryPage />
+      {/* <FullPageText />
       <Blog data={props.data} />
       <Event data={props.data.events.nodes} />
       <Donate /> */}

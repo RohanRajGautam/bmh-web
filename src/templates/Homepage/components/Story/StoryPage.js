@@ -4,20 +4,28 @@ import {
   TextWrapper,
   StoryContainer,
   ButtonWrapper,
-  HeadingWrapper,
+  Header,
+  Subtitle,
   ContentWrapper,
-  Thumbnail,
+  PhotoWrapper,
 } from "./StoryPage.styles";
+
+import PhotoSvg from "./Photo";
+import Readmore from "./readmore";
+import { HeadingPrimary } from "@components/Heading";
 
 const StoryPage = () => {
   return (
-    <StoryContainer id="our-story" data-aos="fade-up">
+    <StoryContainer id="our-story">
       <ContentWrapper>
         <Content>
-          <HeadingWrapper big>
-            Our Story
-            <br /> Meets Yours
-          </HeadingWrapper>
+          <Header>
+            <Subtitle>About us</Subtitle>
+            <HeadingPrimary>
+              Our Story <br />
+              <span>meets</span> yours
+            </HeadingPrimary>
+          </Header>
           <TextWrapper>
             When I went to medical school I had the dream of becoming a surgeon.
             Little did I know where my journey would lead me. During my fourth
@@ -25,11 +33,15 @@ const StoryPage = () => {
             I grew tremendously emotionally, spiritually and relationally. As a
             result I found a peace and joy I had never had before. One beautiful
             Saturday morning as I hiked up a Southern California mountainside it
-            hit me -{" "}
-            <ButtonWrapper to="/our-story">Read More &rarr;</ButtonWrapper>
+            hit me.
           </TextWrapper>
+          <ButtonWrapper to="/our-story">
+            <Readmore />
+          </ButtonWrapper>
         </Content>
-        <Thumbnail />
+        <PhotoWrapper>
+          <PhotoSvg />
+        </PhotoWrapper>
       </ContentWrapper>
     </StoryContainer>
   );
