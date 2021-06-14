@@ -3,7 +3,6 @@ import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled(Link)`
-
 &:hover {
   cursor: pointer;
   transition: all 0.4s;
@@ -21,8 +20,6 @@ const Wrapper = styled(Link)`
         stroke: #fff;
       }
     }
-    
-
 `;
 
 const ButtonPrimary = ({ to }) => {

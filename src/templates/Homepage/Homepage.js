@@ -12,6 +12,7 @@ import {
   Hero,
   DualPage,
   Testimonials,
+  WellnessCampus,
 } from "./components";
 
 const Homepage = props => {
@@ -29,6 +30,7 @@ const Homepage = props => {
       <DualPage />
       <Testimonials />
       <StoryPage />
+      <WellnessCampus />
       {/* <FullPageText />
       <Blog data={props.data} />
       <Event data={props.data.events.nodes} />
