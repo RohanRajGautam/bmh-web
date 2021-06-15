@@ -5,13 +5,18 @@ import {
   EventSliderWrapper,
   EventHeading,
   EventWrapper,
-  NavigationButton,
-  NavigationButtonWrapper,
   NotFoundContainer,
   NotFoundText,
+  //used
+  Header,
+  Subtitle,
+  HeadingWrapper,
+  DatePickerWrapper,
 } from "./Event.styles";
 import MaterialUIPickers from "./EventDatePicker";
 // import EventDialog from "./EventDialog";
+
+import { HeadingPrimary } from "@components/Heading";
 
 const Events = props => {
   const eventRef = useRef(null);
@@ -30,9 +35,7 @@ const Events = props => {
     let year = selectedDate.getFullYear();
     let month = ("0" + (selectedDate.getMonth() + 1)).slice(-2);
 
-    console.log("date:", selectedDate);
-    console.log("date:", year);
-    console.log("month:", month);
+    console.log("month>>><><><>", month);
 
     // Full month in word
     // let month = selectedDate.toLocaleString("default", { month: "long" });
@@ -46,20 +49,32 @@ const Events = props => {
   console.log(events);
 
   return (
-    <EventWrapper id="events" data-aos="fade-up">
-      <EventHeading>Here's What's Coming Up</EventHeading>
-      <MaterialUIPickers
-        handleDateChange={handleDateChange}
-        selectedDate={selectedDate}
-      />
-      <EventSliderWrapper ref={eventRef}>
+    <EventWrapper>
+      <HeadingWrapper>
+        <Header>
+          <Subtitle>Events</Subtitle>
+          <HeadingPrimary>
+            Next on <br />
+            the <span>calendar</span>
+          </HeadingPrimary>
+        </Header>
+        <DatePickerWrapper>
+          <MaterialUIPickers
+            handleDateChange={handleDateChange}
+            selectedDate={selectedDate}
+          />
+        </DatePickerWrapper>
+      </HeadingWrapper>
+      <EventSliderWrapper>
         {!isEmpty(events) ? (
           events.map((item, index) => (
             <Card
               key={index}
               title={item.title}
               day={item.eventDay}
-              date={item.eventMonth + " " + item.eventYear}
+              date={
+                item.eventDay + "/" + item.eventMonth + "/" + item.eventYear
+              }
               time={item.eventStartTime}
               venue={
                 item.eventLocations.nodes.length &&
@@ -77,38 +92,6 @@ const Events = props => {
           </NotFoundContainer>
         )}
       </EventSliderWrapper>
-      <NavigationButtonWrapper>
-        <NavigationButton onClick={() => scroll(-370)}>
-          <svg
-            width="9"
-            height="17"
-            viewBox="0 0 13 21"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11 1.88721L3 10.8872L11 19.8872"
-              stroke="#5F6468"
-              strokeWidth="3"
-            />
-          </svg>
-        </NavigationButton>
-        <NavigationButton right onClick={() => scroll(370)}>
-          <svg
-            width="9"
-            height="17"
-            viewBox="0 0 13 21"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M2 1.88721L10 10.8872L2 19.8872"
-              stroke="#5F6468"
-              strokeWidth="3"
-            />
-          </svg>
-        </NavigationButton>
-      </NavigationButtonWrapper>
     </EventWrapper>
   );
 };

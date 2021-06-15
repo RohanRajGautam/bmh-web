@@ -1,13 +1,18 @@
+import { Link } from "gatsby";
 import styled, { css } from "styled-components";
-import { Heading } from "@components/Heading";
+import { SPACING, COLORS } from "@components/constants";
+import { Container } from "@components/Container";
+import { HeadingSecondary } from "@components/Heading";
 
 const primary = "#6CA448";
 const medicalGrey = "#5F6468";
 const graniteGrey = "#2C3336";
 const border = "#C5CCD3";
 
-export const EventWrapper = styled.div`
-  padding: 5vh 5vw;
+export const EventWrapper = styled(Container)`
+  padding-top: ${SPACING.xl};
+  padding-bottom: ${SPACING.xxl};
+  padding-left: 11.3rem;
   .MuiGrid-container {
     position: relative;
     z-index: 1;
@@ -56,52 +61,27 @@ export const EventWrapper = styled.div`
   }
 `;
 
-export const EventHeading = styled(Heading)`
-  @media (max-width: 576px) {
-    font-size: 3rem;
-  }
-  @media (min-width: 1024px) {
-    font-size: 3.6rem;
-  }
-  @media (min-width: 1824px) {
-    font-size: 5rem;
-  }
+export const HeadingWrapper = styled.div`
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 `;
 
-export const EventCard = styled.div`
-  border-radius: 12px;
-  padding: 20px;
-  min-width: 250px;
-  border: 1px solid ${medicalGrey};
-  color: ${medicalGrey};
-  transition: all 300ms, color 0ms;
-  margin: 0 5px;
-  &:hover {
-    transition: all 300ms;
-    background-color: ${primary};
-    cursor: pointer;
-    color: #fff;
-    border-color: ${primary};
-    h2 {
-      color: #fff;
-    }
-    time {
-      color: #fff;
-    }
-  }
-  &:first-child {
-    margin-left: 0;
-  }
+export const Header = styled.div`
+  text-align: left;
+`;
 
-  @media (min-width: 600px) {
-    min-width: 450px;
-    padding: 35px;
-    margin: 0 20px;
-  }
+export const Subtitle = styled(HeadingSecondary)`
+  margin-bottom: ${SPACING.xs};
+`;
+
+export const DatePickerWrapper = styled.div`
+  padding-right: ${SPACING.xl};
 `;
 
 export const EventSliderWrapper = styled.div`
-  margin-top: 40px;
+  margin-top: ${SPACING.lg};
+  /* position: relative; */
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -161,50 +141,15 @@ export const EventTime = styled.time`
   }
 `;
 
-export const NavigationButtonWrapper = styled.div`
-  display: flex;
-  margin-top: 3rem;
-`;
-
-export const NavigationButton = styled.button`
-  height: 30px;
-  width: 30px;
-  border: 1px solid #c5ccd3;
-  border-radius: 3px;
-  display: grid;
-  place-items: center;
-  background-color: #fff;
-  cursor: pointer;
-  &:hover {
-    background-color: #f4f4f4;
-  }
-  @media (min-width: 768px) {
-    height: 40px;
-    width: 40px;
-    svg {
-      height: 21px;
-      width: 13px;
-    }
-  }
-  ${props =>
-    props.right &&
-    css`
-      margin-left: 25px;
-    `}
-`;
-
 export const EventDatePickerWrapper = styled.div`
   border: 1px solid ${border};
-  margin-top: 3rem;
-  max-width: 250px;
-  border-radius: 8px;
+  max-width: 20rem;
+  border-radius: 24px;
   position: relative;
   cursor: pointer;
   display: flex;
   align-items: center;
-  svg {
-    margin-left: 20px;
-  }
+  justify-content: center;
 `;
 
 export const EventDatePickerArrow = styled.div`
@@ -214,7 +159,7 @@ export const EventDatePickerArrow = styled.div`
   transform: translateY(-50%);
 `;
 
-export const NotFoundContainer = styled(EventCard)``;
+export const NotFoundContainer = styled.div``;
 export const NotFoundText = styled.p`
   font-size: 3rem;
 `;

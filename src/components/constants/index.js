@@ -1,7 +1,7 @@
 import React from "react";
 
 export const COLORS = {
-  primary: "#1F4CE4",
+  primary: "#6CA448",
   secondary: "#15141a",
   bgGrey: "#f5f5ef",
   bgWhite: "#fffff",

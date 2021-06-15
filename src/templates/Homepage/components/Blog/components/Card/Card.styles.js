@@ -12,6 +12,10 @@ export const Card = styled.div`
       transform: scale(1.05);
       transition: transform 300ms;
     }
+
+    h2 {
+      color: ${COLORS.primary};
+    }
   }
 `;
 
@@ -74,7 +78,7 @@ export const CardDesc = styled.div`
   padding-top: ${SPACING.sm};
 `;
 
-export const CardTitle = styled.h3`
+export const CardTitle = styled.h2`
   font-size: 2.8rem;
   font-weight: bold;
   line-height: 139%;

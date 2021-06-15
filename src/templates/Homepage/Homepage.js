@@ -32,8 +32,8 @@ const Homepage = props => {
       <StoryPage />
       <WellnessCampus />
       <Blog data={props.data} />
-      {/* <FullPageText />
       <Event data={props.data.events.nodes} />
+      {/* <FullPageText />
       <Donate /> */}
     </Layout>
   );
