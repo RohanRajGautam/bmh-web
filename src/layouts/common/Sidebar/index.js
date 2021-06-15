@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React, { useEffect } from "react";
 import styled from "styled-components";
 
@@ -30,7 +31,7 @@ const Content = styled.div`
   margin-top: 3.8rem;
 `;
 
-const Item = styled.div`
+const Item = styled(Link)`
   padding: 3.2rem 0;
   width: 100%;
   text-align: center;
@@ -140,7 +141,7 @@ const Sidebar = () => {
         <Item>
           <Donate />
         </Item>
-        <Item id="bmh-logo">
+        <Item id="bmh-logo" to="/">
           <SmallLogo />
         </Item>
       </Content>

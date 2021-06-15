@@ -19,7 +19,7 @@ const Homepage = props => {
   // React.useEffect(() => {
   //   Aos.init({
   //     duration: 500,
-  //     // easing: "ease-in-sine",
+  //     easing: "ease-in-sine",
   //   });
   // }, []);
 
@@ -31,8 +31,8 @@ const Homepage = props => {
       <Testimonials />
       <StoryPage />
       <WellnessCampus />
-      {/* <FullPageText />
       <Blog data={props.data} />
+      {/* <FullPageText />
       <Event data={props.data.events.nodes} />
       <Donate /> */}
     </Layout>

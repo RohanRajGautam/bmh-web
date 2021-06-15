@@ -1,19 +1,26 @@
 import styled, { css } from "styled-components";
 import { Link } from "gatsby";
-import { Heading } from "@components/Heading";
+import { SPACING, COLORS } from "@components/constants";
+import { Container } from "@components/Container";
+import { HeadingSecondary } from "@components/Heading";
 
-const graniteGray = "#2C3336";
+export const BlogWrapper = styled(Container)`
+  background: ${COLORS.bgGrey};
+  padding-top: ${SPACING.xl};
+  padding-bottom: ${SPACING.xl};
+  padding-left: 11.3rem;
+`;
 
-export const BlogWrapper = styled.div`
-  padding: 5vh 5vw;
+export const Header = styled.div`
+  text-align: left;
+`;
 
-  @media (min-width: 768px) {
-    margin-top: 5vh;
-  }
+export const Subtitle = styled(HeadingSecondary)`
+  margin-bottom: ${SPACING.xs};
 `;
 
 export const SliderWrapper = styled.div`
-  margin-top: 40px;
+  margin-top: 7.3rem;
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -28,56 +35,24 @@ export const SliderWrapper = styled.div`
 export const HeadingWrapper = styled.div`
   display: flex;
   align-items: center;
-  @media (min-width: 768px) {
-    justify-content: space-between;
-  }
-  @media (min-width: 1024px) {
-    margin-right: 96px;
-  }
-`;
-
-export const BlogHeading = styled(Heading)`
-  @media (max-width: 576px) {
-    font-size: 3rem;
-  }
-  @media (min-width: 1024px) {
-    font-size: 3.6rem;
-  }
-  @media (min-width: 1824px) {
-    font-size: 5rem;
-  }
+  justify-content: space-between;
 `;
 
 export const StyledLink = styled(Link)`
-  span {
-    margin-right: 15px;
-  }
-  font-size: 24px;
-  font-weight: 600;
-  font-family: Mulish;
-  letter-spacing: 0.1px;
-  color: ${graniteGray};
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  display: none;
-  @media (min-width: 768px) {
-    display: flex;
-  }
+  padding-right: ${SPACING.xl};
+  svg {
+    &:hover {
+      path:nth-child(1) {
+        fill: #6ca448;
+      }
 
-  &:hover {
-    span {
-      color: #6ca448;
-    }
-    svg {
-      path {
-        transform: translateX(1.5rem);
+      path:nth-child(2) {
+        transform: translateX(1rem);
         transition: all 0.4s;
-        stroke: #6ca448;
+        fill: #6ca448;
       }
       circle {
-        stroke: #6ca448;
-        stroke-width: 2;
+        opacity: 0;
       }
     }
   }
@@ -94,42 +69,4 @@ export const StyledLinkMobile = styled(StyledLink)`
   @media (min-width: 768px) {
     display: none;
   }
-`;
-
-export const NavigationButtonWrapper = styled.div`
-  display: flex;
-`;
-
-export const NavigationButton = styled.button`
-  height: 30px;
-  width: 30px;
-  border: 1px solid #c5ccd3;
-  border-radius: 3px;
-  display: grid;
-  place-items: center;
-  background-color: #fff;
-  cursor: pointer;
-  &:hover {
-    background-color: #f4f4f4;
-  }
-  @media (min-width: 768px) {
-    height: 40px;
-    width: 40px;
-    svg {
-      height: 21px;
-      width: 13px;
-    }
-  }
-  ${props =>
-    props.right &&
-    css`
-      margin-left: 25px;
-    `}
-`;
-
-export const SpaceBetween = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 3rem;
 `;

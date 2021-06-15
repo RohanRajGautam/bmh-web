@@ -1,48 +1,67 @@
-import styled from "styled-components";
 import { Link } from "gatsby";
-
-const medicalGrey = "#5F6468";
-const graniteGrey = "#2C3336";
-const primary = "#6CA448";
-const blueGrey = "#C5CCD3";
+import styled from "styled-components";
+import { SPACING, COLORS } from "@components/constants";
 
 export const Card = styled.div`
-  width: 250px;
+  position: relative;
+  width: 40rem;
+  height: 46rem;
+
   &:hover {
     figure {
       transform: scale(1.05);
       transition: transform 300ms;
     }
   }
-  @media (min-width: 600px) {
-    width: 350px;
-  }
+`;
+
+export const Date = styled.h5`
+  font-family: "Merriweather";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 2.1rem;
+  line-height: 3.2rem;
+  text-align: center;
+  color: ${COLORS.textHeading};
+`;
+
+export const DateWrapper = styled.div`
+  background: #fff;
+  width: 8rem;
+  height: 8.5rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 1rem 1.6rem;
+
+  position: absolute;
+  z-index: 2;
+  top: 5%;
+`;
+
+export const Content = styled.div`
+  padding-left: ${SPACING.md};
 `;
 
 export const StyledLink = styled(Link)`
+  padding-right: ${SPACING.lg};
+
   text-decoration: none;
   display: block;
-  margin: 0 5px;
-  @media (min-width: 600px) {
-    margin: 0 20px;
-  }
-  &:first-child {
-    margin-left: 0;
-  }
 `;
 
 export const CardThumbnailWrapper = styled.div`
   overflow: hidden;
-  height: 200px;
-  border-radius: 12px 12px 0px 0px;
-  @media (min-width: 600px) {
-    height: 340px;
-  }
+  width: 35rem;
+  height: 23rem;
+  border-radius: 24px;
 `;
 
 export const CardThumbnail = styled.figure`
   height: 100%;
-  background-color: ${blueGrey};
+  background-color: ${COLORS.primary};
   background-image: url(${props => props.thumbnail});
   background-position: center center;
   background-size: cover;
@@ -52,53 +71,32 @@ export const CardThumbnail = styled.figure`
 `;
 
 export const CardDesc = styled.div`
-  padding: 12px;
-  border: 1px solid ${medicalGrey};
-  border-radius: 0px 0px 12px 12px;
-  border-top: none;
-  @media (min-width: 600px) {
-    padding: 26px 32px;
-  }
+  padding-top: ${SPACING.sm};
 `;
 
 export const CardTitle = styled.h3`
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 27px;
-  letter-spacing: 0.1px;
-  color: ${graniteGrey};
-  margin-bottom: 18px;
+  font-size: 2.8rem;
+  font-weight: bold;
+  line-height: 139%;
+  color: ${COLORS.textHeading};
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
   -webkit-line-clamp: 2;
-  min-height: 54px;
-  @media (min-width: 600px) {
-    margin-bottom: 24px;
-    font-size: 18px;
-  }
+  min-height: 6rem;
 `;
 
 export const CardText = styled.p`
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 2rem;
+  font-weight: normal;
   font-family: Mulish;
-  line-height: 20px;
-  color: ${medicalGrey};
+  line-height: 32px;
+  color: ${COLORS.textBodyGrey};
   margin-bottom: 18px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
   -webkit-line-clamp: 3;
-  @media (min-width: 600px) {
-    margin-bottom: 24px;
-  }
-`;
 
-export const CardCta = styled.div`
-  font-size: 13px;
-  line-height: 19px;
-  font-family: Mulish;
-  text-decoration: none;
-  color: ${primary};
+  padding: ${SPACING.xs} 0;
 `;

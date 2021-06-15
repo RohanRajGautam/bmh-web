@@ -6,6 +6,7 @@ export const COLORS = {
   bgGrey: "#f5f5ef",
   bgWhite: "#fffff",
   textHeading: "#15141a",
+  textBodyGrey: "#596166",
   textBody: "#43494D",
   textDisable: "#B7BCBF",
   success: "#00B29E",
