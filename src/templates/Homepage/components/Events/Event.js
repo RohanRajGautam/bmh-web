@@ -3,20 +3,17 @@ import { isEmpty } from "lodash";
 import Card from "./Card";
 import {
   EventSliderWrapper,
-  EventHeading,
   EventWrapper,
   NotFoundContainer,
   NotFoundText,
-  //used
   Header,
   Subtitle,
   HeadingWrapper,
   DatePickerWrapper,
 } from "./Event.styles";
 import MaterialUIPickers from "./EventDatePicker";
-// import EventDialog from "./EventDialog";
-
 import { HeadingPrimary } from "@components/Heading";
+import { getMonthName } from "../../../../utility";
 
 const Events = props => {
   const eventRef = useRef(null);
@@ -72,9 +69,7 @@ const Events = props => {
               key={index}
               title={item.title}
               day={item.eventDay}
-              date={
-                item.eventDay + "/" + item.eventMonth + "/" + item.eventYear
-              }
+              date={item.eventDay + " " + getMonthName(item.eventMonth)}
               time={item.eventStartTime}
               venue={
                 item.eventLocations.nodes.length &&
