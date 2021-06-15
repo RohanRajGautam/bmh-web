@@ -145,7 +145,6 @@ export const HeroH1 = styled.h1`
   line-height: 8.2rem;
   letter-spacing: -0.02em;
   color: #fff;
-  user-select: none;
   margin-bottom: 3.2rem;
 
   span {
@@ -173,7 +172,6 @@ export const HeroP = styled.p`
   padding-bottom: 3rem;
   font-weight: 400;
   color: #fff;
-  user-select: none;
   opacity: 0.9;
 `;
 

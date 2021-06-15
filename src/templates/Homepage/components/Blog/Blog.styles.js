@@ -39,7 +39,7 @@ export const HeadingWrapper = styled.div`
 `;
 
 export const StyledLink = styled(Link)`
-  padding-right: ${SPACING.xl};
+  padding-right: ${SPACING.lg};
   svg {
     &:hover {
       path:nth-child(1) {

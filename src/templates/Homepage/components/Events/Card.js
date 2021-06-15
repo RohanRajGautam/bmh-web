@@ -7,6 +7,7 @@ import { SPACING, COLORS } from "@components/constants";
 const EventCard = styled.div`
   margin-right: ${SPACING.lg};
   min-width: 36rem;
+  align-self: flex-end;
   &:hover {
     h2 {
       color: ${COLORS.primary};

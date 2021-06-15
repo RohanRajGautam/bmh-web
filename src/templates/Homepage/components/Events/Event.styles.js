@@ -76,7 +76,8 @@ export const Subtitle = styled(HeadingSecondary)`
 `;
 
 export const DatePickerWrapper = styled.div`
-  padding-right: ${SPACING.xl};
+  padding-right: ${SPACING.lg};
+  margin-bottom: ${SPACING.xs};
 `;
 
 export const EventSliderWrapper = styled.div`

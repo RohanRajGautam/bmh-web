@@ -19,7 +19,7 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: baseline; */
-  padding-right: 9.8rem;
+  padding-right: ${SPACING.lg};
   width: 50%;
 `;
 
