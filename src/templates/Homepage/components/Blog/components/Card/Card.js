@@ -30,20 +30,21 @@ const BlogCard = props => {
   ];
 
   return (
-    <StyledLink to={props.url}>
+    <StyledLink to={props?.url}>
       <Card>
         <DateWrapper>
           <Date>
-            {props.date.slice(8, 10)} {monthNameShort[props.date.slice(6, 7)]}
+            {props?.date?.slice(8, 10)}{" "}
+            {monthNameShort[props?.date?.slice(6, 7)]}
           </Date>
         </DateWrapper>
         <Content>
           <CardThumbnailWrapper>
-            <CardThumbnail thumbnail={props.thumbnail} />
+            <CardThumbnail thumbnail={props?.thumbnail} />
           </CardThumbnailWrapper>
           <CardDesc>
-            <CardTitle>{props.title}</CardTitle>
-            <CardText dangerouslySetInnerHTML={{ __html: props.desc }} />
+            <CardTitle>{props?.title}</CardTitle>
+            <CardText dangerouslySetInnerHTML={{ __html: props?.desc }} />
           </CardDesc>
         </Content>
       </Card>
