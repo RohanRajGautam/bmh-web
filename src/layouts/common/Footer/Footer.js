@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
 import { makeStyles } from "@material-ui/core/styles";
-import Marquee from "react-fast-marquee";
-// import { Link } from "gatsby";
 
 import { StaticBrandLogo, staticData } from "./Footer.datas";
 import {
@@ -22,8 +20,13 @@ import {
   NewsletterTitle,
   NewsletterWrapper,
   NewsletterButton,
+  FooterSecondary,
+  LogoWrapper,
+  LeftAlign,
 } from "./Footer.styles";
 import Logo from "@images/icons/full-logo.svg";
+import BrandLogo from "./BrandLogo";
+import GoToTop from "./GoToTop";
 
 const Alert = props => {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -108,9 +111,9 @@ const Footer = () => {
   return (
     <>
       <FooterWrapper>
-        <FooterLogo to="/">
+        {/* <FooterLogo to="/">
           <img src={Logo} alt="bmh-logo" draggable="false" />
-        </FooterLogo>
+        </FooterLogo> */}
         <FooterMain>
           <FooterDetails>
             {staticData.map((item, index) => (
@@ -128,38 +131,41 @@ const Footer = () => {
               </div>
             ))}
           </FooterDetails>
-          <NewsletterWrapper>
-            <NewsletterTitle>Sign Up For Our Newsletter</NewsletterTitle>
-            <NewsletterInput>
-              <input
-                type="text"
-                onChange={handleChange}
-                value={email}
-                placeholder="Your Email here..."
-              />
-              <NewsletterButton onClick={handleSubmit} disabled={disabled}>
-                Subscribe
-              </NewsletterButton>
-            </NewsletterInput>
-          </NewsletterWrapper>
         </FooterMain>
-        <Marquee pauseOnHover={true} gradient={false}>
-          <FooterBrandLogoWrapper>
-            {StaticBrandLogo.map((item, index) => (
-              <FooterBrandLogo key={index}>
-                <img src={item} alt="brand-logo" draggable="false" />
-              </FooterBrandLogo>
-            ))}
-          </FooterBrandLogoWrapper>
-        </Marquee>
-        <FooterCopyrightWrapper>
-          <FooterCopyright>
-            &copy; {date.getFullYear()} Beautiful Minds Health
-          </FooterCopyright>
-          <FooterCopyright to="/privacy-policy">
-            Terms & Conditions | Privacy Policies
-          </FooterCopyright>
-        </FooterCopyrightWrapper>
+        <FooterSecondary>
+          <LeftAlign>
+            <LogoWrapper to="/">
+              <BrandLogo />
+            </LogoWrapper>
+
+            <NewsletterWrapper>
+              <NewsletterTitle>Sign Up For Our Newsletter</NewsletterTitle>
+              <NewsletterInput>
+                <input
+                  type="email"
+                  id="email"
+                  onChange={handleChange}
+                  value={email}
+                  placeholder="email"
+                />
+                <NewsletterButton onClick={handleSubmit} disabled={disabled}>
+                  Subscribe
+                </NewsletterButton>
+              </NewsletterInput>
+            </NewsletterWrapper>
+          </LeftAlign>
+
+          <GoToTop />
+
+          <FooterCopyrightWrapper>
+            <FooterCopyright to="/privacy-policy">
+              Terms & Conditions | Privacy Policies
+            </FooterCopyright>
+            <FooterCopyright>
+              &copy; {date.getFullYear()} Beautiful Minds Health
+            </FooterCopyright>
+          </FooterCopyrightWrapper>
+        </FooterSecondary>
       </FooterWrapper>
       <Snackbar open={open} autoHideDuration={60000} onClose={handleClose}>
         <Alert onClose={handleClose} severity={status}>

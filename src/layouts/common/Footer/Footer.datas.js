@@ -74,7 +74,6 @@ export const staticData = [
   {
     title: "About",
     items: [
-      { title: "Healing Philosophy", to: "https://brojure.com/bmw/overview/" },
       { title: "Our Story", to: "/#our-story" },
       { title: "Events", to: "/#events" },
       { title: "Blog", to: "/blog-cat" },
