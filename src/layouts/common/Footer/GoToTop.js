@@ -1,8 +1,29 @@
 import React from "react";
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  &:hover {
+    cursor: pointer;
+    svg {
+      path:nth-child(1) {
+        transform: translateY(-1rem);
+        transition: all 0.4s;
+        fill: #6ca448;
+      }
+      circle {
+        opacity: 0;
+      }
+    }
+  }
+`;
 
 const GoToTop = () => {
+  const handleClick = () => {
+    window[`scrollTo`]({ top: 0, behavior: `smooth` });
+  };
+
   return (
-    <div>
+    <Wrapper onClick={handleClick}>
       <svg
         width="47"
         height="65"
@@ -25,7 +46,7 @@ const GoToTop = () => {
           stroke="#8CA8BE"
         />
       </svg>
-    </div>
+    </Wrapper>
   );
 };
 
