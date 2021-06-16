@@ -33,8 +33,7 @@ const Homepage = props => {
       <WellnessCampus />
       <Blog data={props.data} />
       <Event data={props.data.events.nodes} />
-      {/* <FullPageText />
-      <Donate /> */}
+      <Donate />
     </Layout>
   );
 };
