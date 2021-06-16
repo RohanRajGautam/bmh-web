@@ -8,7 +8,7 @@ export const MainContainer = styled(Container)`
   margin-top: ${SPACING.xxl};
   padding-top: ${SPACING.xl};
 
-  /* height: 100vh; */
+  height: 100vh;
 
   /* display: flex;
   justify-content: center;
@@ -61,11 +61,12 @@ export const CTA = styled.div`
 
 export const People = styled.div`
   padding: 11.1rem 7.4rem 3.5rem 5.7rem;
+  text-align: center;
 
-  img {
+  /* img {
     width: 100%;
     height: 100%;
-  }
+  } */
 `;
 
 export const BackgroundVector = styled.div`
