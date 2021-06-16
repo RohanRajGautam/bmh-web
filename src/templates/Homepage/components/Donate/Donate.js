@@ -2,32 +2,25 @@ import React from "react";
 import {
   DonateWrapper,
   DonateStyle,
-  DonateHeading,
-  // DonateParagraph,
   DonateColumn,
-  DonateButton,
+  ButtonContainer,
+  Heading,
 } from "./Donate.styles";
 
+import DonateBtn from "./DonateBtn";
 const Donate = () => {
   return (
     <DonateWrapper>
       <DonateStyle>
         <DonateColumn>
-          <DonateHeading data-aos="fade-up">
-            Let’s start with helping people to get better.
-          </DonateHeading>
-          {/* <DonateParagraph data-aos="fade-up-right">
-            You can support mentally unwell people by donating, we are more than
-            happy with what you share
-          </DonateParagraph> */}
-          <DonateButton
-            primary="true"
-            data-aos="fade-up"
-            to="https://beautifulmindswellness.org/donate/"
-            target="_blank"
-          >
-            Donate
-          </DonateButton>
+          <Heading>
+            Your support can <span>change</span>
+            <br />
+            someone’s life
+          </Heading>
+          <ButtonContainer>
+            <DonateBtn to="https://beautifulmindswellness.org/donate/" />
+          </ButtonContainer>
         </DonateColumn>
       </DonateStyle>
     </DonateWrapper>
