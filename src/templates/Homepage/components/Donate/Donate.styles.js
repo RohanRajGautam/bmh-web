@@ -7,10 +7,10 @@ import { HeadingPrimary } from "@components/Heading";
 export const DonateWrapper = styled(Container)`
   height: 50vh;
   background: url(${donate});
-  background-size: inherit;
+  background-size: cover;
   background-position: top right;
-  background-repeat: round;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
   /* @media (min-width: 768px) {
     padding: 0;
     padding-top: 40%;

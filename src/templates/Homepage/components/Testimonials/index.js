@@ -10,11 +10,11 @@ import {
   ContentWrapper,
   BackgroundVector,
   Parallax,
+  Image,
 } from "./styles";
 import { Heading, HeadingPrimary, HeadingSecondary } from "@components/Heading";
 import PlayButton from "@components/SvgComponent/play-button";
 import Dots from "@components/SvgComponent/dots";
-import person from "@images/testimonial.png";
 
 const Testimonials = () => {
   return (
@@ -36,9 +36,7 @@ const Testimonials = () => {
       <CTA>
         <PlayButton />
       </CTA>
-      <People>
-        <img src={person} alt="testimonial" />
-      </People>
+      <People></People>
       {/* </ContentWrapper> */}
     </MainContainer>
   );
