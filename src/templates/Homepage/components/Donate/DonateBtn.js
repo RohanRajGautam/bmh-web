@@ -1,7 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
-const Donate = styled.a``;
+const Donate = styled.a`
+  &:hover {
+  cursor: pointer;
+  transition: all 0.4s;
+  filter: brightness(1.1);
+    svg {
+      path:nth-child(3) {
+        transform: translateX(1rem);
+        transition: all 0.4s;
+      }
+      
+      path:nth-child(4) {
+        stroke-width: 0;
+        stroke: #fff;
+      }
+    }
+`;
 
 const DonateBtn = ({ to }) => (
   <Donate href={to} target="_blank">
