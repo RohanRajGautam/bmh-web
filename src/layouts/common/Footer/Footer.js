@@ -13,13 +13,13 @@ import {
   FooterItem,
   FooterItemList,
   FooterItemTitle,
-  FooterLogo,
   FooterWrapper,
   FooterMain,
   NewsletterInput,
   NewsletterTitle,
   NewsletterWrapper,
   NewsletterButton,
+  PrivacyPolicy,
   FooterSecondary,
   LogoWrapper,
   LeftAlign,
@@ -111,9 +111,6 @@ const Footer = () => {
   return (
     <>
       <FooterWrapper>
-        {/* <FooterLogo to="/">
-          <img src={Logo} alt="bmh-logo" draggable="false" />
-        </FooterLogo> */}
         <FooterMain>
           <FooterDetails>
             {staticData.map((item, index) => (
@@ -158,9 +155,9 @@ const Footer = () => {
           <GoToTop />
 
           <FooterCopyrightWrapper>
-            <FooterCopyright to="/privacy-policy">
+            <PrivacyPolicy to="/privacy-policy">
               Terms & Conditions | Privacy Policies
-            </FooterCopyright>
+            </PrivacyPolicy>
             <FooterCopyright>
               &copy; {date.getFullYear()} Beautiful Minds Health
             </FooterCopyright>

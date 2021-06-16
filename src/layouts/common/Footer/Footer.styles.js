@@ -83,7 +83,7 @@ export const FooterCopyrightWrapper = styled.div`
   align-items: flex-end;
 `;
 
-export const FooterCopyright = styled(Link)`
+export const PrivacyPolicy = styled(Link)`
   font-family: Mulish;
   color: ${COLORS.textBodyGrey};
   font-size: 1.5rem;
@@ -91,6 +91,17 @@ export const FooterCopyright = styled(Link)`
   font-weight: normal;
   cursor: pointer;
   text-decoration: none;
+
+  &:hover {
+    color: ${COLORS.primary};
+  }
+`;
+export const FooterCopyright = styled.p`
+  font-family: Mulish;
+  color: ${COLORS.textBodyGrey};
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  font-weight: normal;
 `;
 
 export const LeftAlign = styled.div`
