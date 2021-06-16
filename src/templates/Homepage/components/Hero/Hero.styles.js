@@ -178,3 +178,10 @@ export const HeroP = styled.p`
 export const Subtitle = styled(HeadingSecondary)`
   margin-bottom: 1.2rem;
 `;
+
+export const BackgroundVector = styled.div`
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+`;

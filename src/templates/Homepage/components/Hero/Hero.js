@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
+import RellaxWrapper from "react-rellax-wrapper";
 
 // components
 import {
@@ -18,6 +19,7 @@ import {
   MobileButtonPrimary,
   ImageVector,
   Subtitle,
+  BackgroundVector,
 } from "./Hero.styles";
 
 import { Heading, HeadingPrimary } from "@components/Heading";
@@ -27,6 +29,7 @@ import BackgroundImage from "@images/home/banner-bg.jpg";
 import BannerVector from "@images/home/banner-vector.png";
 import HomepageLogo from "@components/SvgComponent/homepage-logo";
 import ButtonPrimary from "@components/SvgComponent/btn-primary";
+import Dots from "@components/SvgComponent/dots";
 
 const HeroHeading = styled(Heading)`
   height: 20vh;
@@ -65,6 +68,11 @@ export default function Hero() {
           Treating <span>and</span> Preventing
         </HeadingPrimary>
       </HeroHeading>
+      <BackgroundVector>
+        <RellaxWrapper speed={3}>
+          <Dots />
+        </RellaxWrapper>
+      </BackgroundVector>
     </MainContainer>
   );
 }

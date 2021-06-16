@@ -1,4 +1,5 @@
 import React from "react";
+import RellaxWrapper from "react-rellax-wrapper";
 
 import {
   MainContainer,
@@ -21,7 +22,9 @@ const Testimonials = () => {
       {/* <Background /> */}
       {/* <ContentWrapper> */}
       <BackgroundVector>
-        <Dots />
+        <RellaxWrapper speed={4} percentage={0.5}>
+          <Dots />
+        </RellaxWrapper>
       </BackgroundVector>
       <Header>
         <HeadingSecondary>TESTIMONIALS</HeadingSecondary>

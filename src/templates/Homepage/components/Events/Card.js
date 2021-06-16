@@ -12,6 +12,8 @@ const EventCard = styled.div`
     h2 {
       color: ${COLORS.primary};
     }
+
+    cursor: pointer;
   }
 `;
 
