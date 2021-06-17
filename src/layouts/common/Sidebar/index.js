@@ -31,7 +31,7 @@ const Content = styled.div`
   margin-top: 3.8rem;
 `;
 
-const Item = styled(Link)`
+const Item = styled.a`
   padding: 3.2rem 0;
   width: 100%;
   text-align: center;
@@ -129,25 +129,25 @@ const Sidebar = () => {
   return (
     <Wrapper>
       <Content>
-        <Item>
+        <Item href="https://www.beautifulmindsmedical.com/" target="_blank">
           <Medical />
         </Item>
-        <Item>
+        <Item href="https://beautifulmindswellness.org/" target="_blank">
           <Wellness />
         </Item>
         <Item>
           <Menu />
         </Item>
-        <Item>
+        <Item href="/blog-cat">
           <Blog />
         </Item>
-        <Item>
+        <Item href="#events">
           <Events />
         </Item>
-        <Item>
+        <Item href="https://beautifulmindswellness.org/donate/" target="_blank">
           <Donate />
         </Item>
-        <Item id="bmh-logo" to="/">
+        <Item id="bmh-logo" href="/">
           <SmallLogo />
         </Item>
       </Content>

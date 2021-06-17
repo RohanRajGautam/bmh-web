@@ -46,7 +46,7 @@ const Events = props => {
   console.log(events);
 
   return (
-    <EventWrapper>
+    <EventWrapper id="events">
       <HeadingWrapper>
         <Header>
           <Subtitle>Events</Subtitle>
