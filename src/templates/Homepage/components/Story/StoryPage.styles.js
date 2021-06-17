@@ -74,6 +74,12 @@ export const TextWrapper = styled.div`
 
 export const ButtonWrapper = styled(Link)`
   svg {
+    path {
+      transition: all 0.4s ease;
+    }
+    circle {
+      transition: all 0.4s ease;
+    }
     &:hover {
       path:nth-child(1) {
         fill: #6ca448;
@@ -81,8 +87,8 @@ export const ButtonWrapper = styled(Link)`
 
       path:nth-child(2) {
         transform: translateX(1rem);
-        transition: all 0.4s;
         fill: #6ca448;
+        transition: all 0.4s ease; s
       }
       circle {
         opacity: 0;
