@@ -32,8 +32,7 @@ import ButtonPrimary from "@components/SvgComponent/btn-primary";
 import Dots from "@components/SvgComponent/dots";
 
 const HeroHeading = styled(Heading)`
-  height: 20vh;
-  justify-content: flex-end;
+  margin-top: 13.6rem;
 `;
 
 export default function Hero() {
@@ -42,7 +41,11 @@ export default function Hero() {
       <HeroContainer>
         <HeroBg>
           <ImageBg>
-            <ImageVector src={BannerVector} type="image/png" />
+            <ImageVector
+              src={BannerVector}
+              type="image/png"
+              draggable="false"
+            />
           </ImageBg>
         </HeroBg>
         <HeroContent>

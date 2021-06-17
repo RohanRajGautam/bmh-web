@@ -10,7 +10,7 @@ export const MainContainer = styled(Container)`
 
 export const HeroContainer = styled.div`
   background: #0c0c0c;
-  height: 80vh;
+  height: 90vh;
   position: relative;
   /* margin-top: -80px; */
   color: #fff;
@@ -46,7 +46,7 @@ export const ImageBg = styled.div`
 
 export const ImageVector = styled.img`
   position: absolute;
-  bottom: -7rem;
+  bottom: -8rem;
   width: 100vw;
 
   @media (max-width: 600px) {
@@ -61,7 +61,7 @@ export const ImageVector = styled.img`
 
 export const HeroContent = styled.div`
   z-index: 3;
-  padding: 5rem 0 0 11.2rem;
+  padding: 7rem 0 0 11.2rem;
   height: 100%;
 
   @media (max-width: 600px) {
