@@ -5,8 +5,8 @@ import { Container } from "@components/Container";
 
 export const MainContainer = styled(Container)`
   padding: 0 11.3rem;
-  padding-top: ${SPACING.lg};
-  /* margin-top: ${SPACING.md}; */
+  /* padding-top: ${SPACING.lg}; */
+  margin-top: 30rem;
 `;
 
 export const Medical = styled.div``;
@@ -60,8 +60,7 @@ export const ServicesItemWrapper = styled.div`
   align-content: space-around;
 
   height: 100%;
-  /* margin-left: 7rem; */
-  margin-top: 3rem;
+  margin-top: 5.3rem;
 `;
 export const ServicesItems = styled.p`
   text-align: left;
@@ -80,6 +79,7 @@ export const ServicesItems = styled.p`
       position: absolute;
       bottom: -200%;
       right: 15%;
+      z-index: -2;
     }
   }
 `;
