@@ -1,6 +1,5 @@
 import { Link } from "gatsby";
-import React, { useEffect } from "react";
-import styled from "styled-components";
+import React, { useEffect, useState } from "react";
 
 import {
   Medical,
@@ -12,101 +11,38 @@ import {
   SmallLogo,
 } from "./svg";
 
-const Wrapper = styled.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 11.3rem;
-  background: #fff;
-  height: 100vh;
+import {
+  Wrapper,
+  Content,
+  Item,
+  DonateStyle,
+  DonateButtonContainer,
+  Heading,
 
-  border-left: 1px solid #f5f5ef;
-`;
+  //big_menu
+  BigMenu,
+  BigMenuInner,
+  BigMenuLeft,
+  BigMenuCenter,
+  BigMenuNavs,
+  BigMenuNavTitle,
+  BigMenuNavItemWrapper,
+  BigMenuNavItem,
+  BigMenuRight,
+  BigMenuClose,
+} from "./styled";
 
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  margin-top: 3.8rem;
-`;
-
-const Item = styled.a`
-  padding: 3.2rem 0;
-  width: 100%;
-  text-align: center;
-
-  svg {
-    path {
-      transition: all 0.4s ease;
-    }
-  }
-
-  &:nth-child(1),
-  :nth-child(2),
-  :nth-child(3),
-  :nth-child(4) {
-    border-bottom: 1px solid #f2f2f2;
-  }
-
-  &:nth-child(6) {
-    padding-top: 0;
-  }
-
-  &:nth-child(7) {
-    transition: all 0.4s ease;
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    &:nth-child(1),
-    :nth-child(2) {
-      svg {
-        path:first-child {
-          fill: #6ca448;
-        }
-        path:not(:first-child) {
-          transform: translateX(1rem);
-          transition: all 0.4s ease;
-          fill: #6ca448;
-        }
-        path:last-child {
-          opacity: 0;
-        }
-      }
-    }
-
-    &:nth-child(3) {
-      svg {
-        g {
-          path:last-child {
-            fill: #6ca448;
-          }
-          path:not(:last-child) {
-            stroke: #6ca448;
-          }
-        }
-      }
-    }
-
-    &:nth-child(4),
-    &:nth-child(5) {
-      svg {
-        path {
-          fill: #6ca448;
-        }
-      }
-    }
-
-    &:nth-child(6) {
-      transition: all 0.4s ease;
-      filter: brightness(1.1);
-    }
-  }
-`;
+import { NavbarItem, staticData } from "../Navbar/Navbar.datas";
+import DonateBtn from "../../../templates/Homepage/components/Donate/DonateBtn";
 
 const Sidebar = () => {
+  const [bigMenu, setBigMenu] = useState(false);
+
+  const handleBigMenu = e => {
+    e.preventDefault();
+    setBigMenu(!bigMenu);
+  };
+
   useEffect(() => {
     const logo = document.getElementById("bmh-logo");
 
@@ -135,7 +71,7 @@ const Sidebar = () => {
         <Item href="https://beautifulmindswellness.org/" target="_blank">
           <Wellness />
         </Item>
-        <Item>
+        <Item onClick={setBigMenu}>
           <Menu />
         </Item>
         <Item href="/blog-cat">
@@ -151,6 +87,74 @@ const Sidebar = () => {
           <SmallLogo />
         </Item>
       </Content>
+      <BigMenu open={bigMenu}>
+        <BigMenuInner>
+          <BigMenuLeft>
+            <DonateStyle>
+              <Heading>
+                Your support
+                <br /> can <span>change</span>
+                <br />
+                someone’s life
+              </Heading>
+              <DonateButtonContainer>
+                <DonateBtn to="https://beautifulmindswellness.org/donate/" />
+              </DonateButtonContainer>
+            </DonateStyle>
+          </BigMenuLeft>
+          <BigMenuCenter>
+            <BigMenuNavs>
+              {staticData.length &&
+                staticData.map((item, index) => (
+                  <div key={index}>
+                    <BigMenuNavTitle>{item.title}</BigMenuNavTitle>
+                    <BigMenuNavItemWrapper>
+                      {item.items.length &&
+                        item.items.map((item, index) => (
+                          <BigMenuNavItem key={index}>
+                            <a
+                              target="_blank"
+                              href={item.to}
+                              // onClick={handleBigMenu}
+                            >
+                              {item.title}
+                            </a>
+                          </BigMenuNavItem>
+                        ))}
+                    </BigMenuNavItemWrapper>
+                  </div>
+                ))}
+            </BigMenuNavs>
+          </BigMenuCenter>
+
+          <BigMenuRight>
+            <BigMenuClose onClick={handleBigMenu}>
+              <svg
+                width="61"
+                height="46"
+                viewBox="0 0 61 46"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17 41L42.4978 15.5022"
+                  stroke="#15141A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M17 16L42.4978 41.4978"
+                  stroke="#15141A"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </BigMenuClose>
+          </BigMenuRight>
+        </BigMenuInner>
+      </BigMenu>
     </Wrapper>
   );
 };

@@ -75,7 +75,7 @@ export const HeroItems = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   position: relative;
-  z-index: 4;
+  /* z-index: 4; */
 
   height: 100%;
 `;
