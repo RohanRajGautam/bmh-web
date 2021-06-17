@@ -36,6 +36,12 @@ const Item = styled(Link)`
   width: 100%;
   text-align: center;
 
+  svg {
+    path {
+      transition: all 0.4s ease;
+    }
+  }
+
   &:nth-child(1),
   :nth-child(2),
   :nth-child(3),
@@ -48,7 +54,7 @@ const Item = styled(Link)`
   }
 
   &:nth-child(7) {
-    transition: all 0.4s linear;
+    transition: all 0.4s ease;
   }
 
   &:hover {
@@ -62,7 +68,7 @@ const Item = styled(Link)`
         }
         path:not(:first-child) {
           transform: translateX(1rem);
-          transition: all 0.4s;
+          transition: all 0.4s ease;
           fill: #6ca448;
         }
         path:last-child {
@@ -94,7 +100,7 @@ const Item = styled(Link)`
     }
 
     &:nth-child(6) {
-      transition: all 0.4s;
+      transition: all 0.4s ease;
       filter: brightness(1.1);
     }
   }

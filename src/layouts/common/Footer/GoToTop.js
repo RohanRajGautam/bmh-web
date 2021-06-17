@@ -2,16 +2,24 @@ import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  &:hover {
-    cursor: pointer;
-    svg {
-      path:nth-child(1) {
+  svg {
+    path {
+      transition: all 0.4s ease;
+    }
+    circle {
+      transition: all 0.4s ease;
+    }
+
+    &:hover {
+      cursor: pointer;
+      path {
         transform: translateY(-1rem);
-        transition: all 0.4s;
         fill: #6ca448;
+        transition: all 0.4s ease;
       }
       circle {
         opacity: 0;
+        transition: all 0.4s ease;
       }
     }
   }

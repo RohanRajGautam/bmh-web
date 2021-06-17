@@ -3,19 +3,22 @@ import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled(Link)`
+svg {
+      path{
+        transition: all .4s ease;
+      }
+    
 &:hover {
   cursor: pointer;
-  transition: all 0.4s;
   filter: brightness(1.1);
-    svg {
       path:nth-child(3) {
         transform: translateX(1rem);
-        transition: all 0.4s;
+        transition: all .4s ease;
       }
       
       path:nth-child(4) {
-        stroke-width: 0;
-        stroke: #fff;
+        opacity: 0;
+        transition: all 0.4s ease;
       }
     }
 `;

@@ -41,6 +41,13 @@ export const HeadingWrapper = styled.div`
 export const StyledLink = styled(Link)`
   padding-right: ${SPACING.lg};
   svg {
+    path {
+      transition: all 0.4s ease;
+    }
+    circle {
+      transition: all 0.4s ease;
+    }
+
     &:hover {
       path:nth-child(1) {
         fill: #6ca448;
@@ -48,11 +55,12 @@ export const StyledLink = styled(Link)`
 
       path:nth-child(2) {
         transform: translateX(1rem);
-        transition: all 0.4s;
         fill: #6ca448;
+        transition: all 0.4s ease;
       }
       circle {
         opacity: 0;
+        transition: all 0.4s ease;
       }
     }
   }
