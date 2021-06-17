@@ -1,8 +1,50 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Button } from "@components/Button";
 import { Container } from "@components/Container";
 import bgimg from "@images/home/banner-bg.jpg";
-import { HeadingSecondary } from "@components/Heading";
+import { Heading, HeadingSecondary } from "@components/Heading";
+
+/* Animation */
+
+const slideFromTop = (type, x) => keyframes`
+  0% {
+    transform: translateY(${x}%)
+  }
+
+  ${type === "title" ? `50% { transform: translateY(${x})%}` : ""}
+
+  100% {
+    transform: translateY(0%)
+  }
+`;
+
+const slideFromBottom = (type, x) => keyframes`
+  0% {
+    transform: translateY(${x}%)
+  }
+
+  ${type === "title" ? `50% { transform: translateY(${x})%}` : ""}
+
+  100% {
+    transform: translateY(0%)
+  }
+`;
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+export const FadingDiv = styled.div`
+  animation: ${fadeIn} 800ms linear;
+`;
 
 export const MainContainer = styled(Container)`
   height: 100vh;
@@ -80,72 +122,28 @@ export const HeroItems = styled.div`
   height: 100%;
 `;
 
-export const ButtonContainer = styled.div`
-  /* @media (max-width: 860px) {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  } */
-`;
-
-export const ButtonPrimary = styled(Button)`
-  height: 9.6rem;
-  width: 27.1rem;
-  border-radius: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  p {
-    font-family: "Merriweather";
-    font-size: 2.1rem;
-  }
-
-  span {
-    margin-left: 2rem;
-    align-self: flex-end;
-    font-size: 3rem;
-  }
-
-  &:hover {
-    span {
-    svg {
-      path {
-        transform: translateX(1rem);
-        transition: all 0.4s;
-      }
-      circle {
-        opacity: 0;
-        fill: #fff;
-      }
-    }
-    }
-`;
-
 export const HeroTextContainer = styled.div`
   width: 40rem;
   /* margin: 8rem 0; */
 
-  @media (max-width: 600px) {
+  /* @media (max-width: 600px) {
     width: 32rem;
     margin: 7rem 0;
-  }
+  } */
 `;
 
 export const HeroH1 = styled.h1`
   /* font-size: clamp(2rem, 6vw, 4rem); */
-  /* margin-bottom: 1.5rem; */
   font-family: Merriweather;
   font-style: normal;
   font-weight: 700;
-  /* font-size: clamp(3rem, 6vw, 6rem); */
   font-size: 6.8rem;
   line-height: 8.2rem;
   letter-spacing: -0.02em;
   color: #fff;
   margin-bottom: 3.2rem;
+
+  animation: ${slideFromBottom("subtitle", 80)} 400ms linear;
 
   span {
     font-family: "Smiley";
@@ -169,14 +167,20 @@ export const HeroP = styled.p`
   line-height: 3.2rem;
   /* font-size: clamp(1.8rem, 3vw, 3rem); */
   font-size: 2.4rem;
-  padding-bottom: 3rem;
   font-weight: 400;
   color: #fff;
   opacity: 0.9;
+  padding-bottom: 3rem;
+
+  animation: ${slideFromBottom("subtitle", 80)} 400ms linear;
 `;
 
 export const Subtitle = styled(HeadingSecondary)`
   margin-bottom: 1.2rem;
+`;
+
+export const HeroHeading = styled(Heading)`
+  margin-top: 13.6rem;
 `;
 
 export const BackgroundVector = styled.div`

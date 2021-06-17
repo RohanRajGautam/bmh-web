@@ -2,11 +2,9 @@ import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import RellaxWrapper from "react-rellax-wrapper";
 
-// components
+// styled-components
 import {
   MainContainer,
-  ButtonContainer,
-  // ButtonPrimary,
   Divider,
   HeroBg,
   HeroContainer,
@@ -16,13 +14,15 @@ import {
   HeroP,
   HeroTextContainer,
   ImageBg,
-  MobileButtonPrimary,
   ImageVector,
   Subtitle,
   BackgroundVector,
+  FadingDiv,
+  HeroHeading,
 } from "./Hero.styles";
 
-import { Heading, HeadingPrimary } from "@components/Heading";
+// component style import
+import { HeadingPrimary } from "@components/Heading";
 
 // images
 import BackgroundImage from "@images/home/banner-bg.jpg";
@@ -30,10 +30,6 @@ import BannerVector from "@images/home/banner-vector.png";
 import HomepageLogo from "@components/SvgComponent/homepage-logo";
 import ButtonPrimary from "@components/SvgComponent/btn-primary";
 import Dots from "@components/SvgComponent/dots";
-
-const HeroHeading = styled(Heading)`
-  margin-top: 13.6rem;
-`;
 
 export default function Hero() {
   return (
@@ -50,7 +46,9 @@ export default function Hero() {
         </HeroBg>
         <HeroContent>
           <HeroItems>
-            <HomepageLogo />
+            <FadingDiv>
+              <HomepageLogo />
+            </FadingDiv>
             <HeroTextContainer>
               <HeroH1>
                 Get Your <br />
@@ -61,7 +59,9 @@ export default function Hero() {
                 care & wellness education
               </HeroP>
             </HeroTextContainer>
-            <ButtonPrimary to="#medical-wellness" />
+            <FadingDiv>
+              <ButtonPrimary to="#medical-wellness" />
+            </FadingDiv>
           </HeroItems>
         </HeroContent>
       </HeroContainer>
