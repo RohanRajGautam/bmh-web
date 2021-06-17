@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import hoverImg from "@images/home/hover-img.png";
 import { COLORS, SPACING } from "@components/constants";
 import { Container } from "@components/Container";
@@ -62,17 +62,39 @@ export const ServicesItemWrapper = styled.div`
   height: 100%;
   margin-top: 5.3rem;
 `;
+
+const showImageOnHover = keyframes`
+  0% {
+    content: ""
+  }
+  100% {
+    content: url(${hoverImg});
+  }
+`;
+
 export const ServicesItems = styled.p`
   text-align: left;
   max-width: 28rem;
   /* width: 30%; */
   margin-right: 3rem;
   flex: 1 1 30%;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  position: relative;
+
+  &::after {
+    content: url(${hoverImg});
+    display: block;
+    position: absolute;
+    bottom: -200%;
+    right: 15%;
+    z-index: -2;
+    opacity: 0;
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+  }
 
   &:hover {
-    position: relative;
-    transition: all 0.2s ease-out;
-
     &::after {
       content: url(${hoverImg});
       display: block;
@@ -80,6 +102,7 @@ export const ServicesItems = styled.p`
       bottom: -200%;
       right: 15%;
       z-index: -2;
+      opacity: 1;
     }
   }
 `;
