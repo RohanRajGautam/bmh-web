@@ -22,7 +22,7 @@ const Testimonials = () => {
       {/* <Background /> */}
       {/* <ContentWrapper> */}
       <BackgroundVector>
-        <RellaxWrapper speed={4} percentage={0.5}>
+        <RellaxWrapper speed={5} percentage={0.3}>
           <Dots />
         </RellaxWrapper>
       </BackgroundVector>

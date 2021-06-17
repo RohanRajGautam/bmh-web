@@ -24,6 +24,7 @@ export const CTA = styled.div`
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  z-index: 5;
   -webkit-backface-visibility: hidden;
 `;
 
