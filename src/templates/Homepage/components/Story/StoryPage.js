@@ -18,7 +18,7 @@ const StoryPage = () => {
   return (
     <StoryContainer id="our-story">
       <ContentWrapper>
-        <Content>
+        <Content data-aos="fade-up">
           <Header>
             <Subtitle>About us</Subtitle>
             <HeadingPrimary>
@@ -39,7 +39,7 @@ const StoryPage = () => {
             <Readmore />
           </ButtonWrapper>
         </Content>
-        <PhotoWrapper>
+        <PhotoWrapper data-aos="fade-up">
           <PhotoSvg />
         </PhotoWrapper>
       </ContentWrapper>

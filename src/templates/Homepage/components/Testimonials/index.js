@@ -20,13 +20,13 @@ const Testimonials = () => {
   return (
     <MainContainer>
       {/* <Background /> */}
-      {/* <ContentWrapper> */}
+      {/* <ContentWrapper > */}
       <BackgroundVector>
         <RellaxWrapper speed={5} percentage={0.3}>
           <Dots />
         </RellaxWrapper>
       </BackgroundVector>
-      <Header>
+      <Header data-aos="fade-up">
         <HeadingSecondary>TESTIMONIALS</HeadingSecondary>
         <HeadingPrimary>
           Stories of <span> true</span> <br />

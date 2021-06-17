@@ -16,12 +16,11 @@ import {
 } from "./components";
 
 const Homepage = props => {
-  // React.useEffect(() => {
-  //   Aos.init({
-  //     duration: 500,
-  //     easing: "ease-in-sine",
-  //   });
-  // }, []);
+  React.useEffect(() => {
+    Aos.init({
+      duration: 400,
+    });
+  }, []);
 
   return (
     <Layout dark>

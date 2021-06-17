@@ -65,14 +65,14 @@ export default function Hero() {
           </HeroItems>
         </HeroContent>
       </HeroContainer>
-      <HeroHeading>
+      <HeroHeading data-aos="fade-up">
         <Subtitle>OUR WHOLISTIC APPROACH</Subtitle>
         <HeadingPrimary>
           Treating <span>and</span> Preventing
         </HeadingPrimary>
       </HeroHeading>
       <BackgroundVector>
-        <RellaxWrapper speed={3}>
+        <RellaxWrapper speed={3} percentage={0.4}>
           <Dots />
         </RellaxWrapper>
       </BackgroundVector>

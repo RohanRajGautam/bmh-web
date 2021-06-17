@@ -13,12 +13,12 @@ const Donate = () => {
     <DonateWrapper>
       <DonateStyle>
         <DonateColumn>
-          <Heading>
+          <Heading data-aos="fade-up">
             Your support can <span>change</span>
             <br />
             someone’s life
           </Heading>
-          <ButtonContainer>
+          <ButtonContainer data-aos="fade-up">
             <DonateBtn to="https://beautifulmindswellness.org/donate/" />
           </ButtonContainer>
         </DonateColumn>

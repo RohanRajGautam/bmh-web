@@ -188,8 +188,9 @@ export const BigMenuClose = styled.div`
   justify-content: center;
   cursor: pointer;
 
-  margin-bottom: 27rem;
-  margin-left: 1rem;
+  margin-bottom: 15rem;
+  /* margin-bottom: 27rem;
+  margin-left: 1rem; */
 
   svg {
     path {

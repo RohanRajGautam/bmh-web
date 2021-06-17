@@ -32,8 +32,6 @@ const Events = props => {
     let year = selectedDate.getFullYear();
     let month = ("0" + (selectedDate.getMonth() + 1)).slice(-2);
 
-    console.log("month>>><><><>", month);
-
     // Full month in word
     // let month = selectedDate.toLocaleString("default", { month: "long" });
 
@@ -47,7 +45,7 @@ const Events = props => {
 
   return (
     <EventWrapper id="events">
-      <HeadingWrapper>
+      <HeadingWrapper data-aos="fade-up">
         <Header>
           <Subtitle>Events</Subtitle>
           <HeadingPrimary>
@@ -62,7 +60,7 @@ const Events = props => {
           />
         </DatePickerWrapper>
       </HeadingWrapper>
-      <EventSliderWrapper>
+      <EventSliderWrapper data-aos="fade-up">
         {!isEmpty(events) ? (
           events.map((item, index) => (
             <Card

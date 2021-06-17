@@ -61,15 +61,15 @@ const Title = styled.h3`
 const WellnessCampus = () => {
   return (
     <Wrapper>
-      <Content>
+      <Content data-aos="fade-up">
         <Heading>
           <Subtitle>Wellness campus</Subtitle>
           <Title>
             The <span>future</span> of mental health care
           </Title>
         </Heading>
-        <ButtonWrapper>
-          <ExploreSvg />
+        <ButtonWrapper data-aos="fade-up">
+          <ExploreSvg to="https://brojure.com/bmw/overview/" />
         </ButtonWrapper>
       </Content>
     </Wrapper>

@@ -20,7 +20,7 @@ const Blog = props => {
   console.log(props);
   return (
     <BlogWrapper>
-      <HeadingWrapper>
+      <HeadingWrapper data-aos="fade-up">
         <Header>
           <Subtitle>The blog</Subtitle>
           <HeadingPrimary>
@@ -31,7 +31,7 @@ const Blog = props => {
           <CheckOurBlog />
         </StyledLink>
       </HeadingWrapper>
-      <SliderWrapper>
+      <SliderWrapper data-aos="fade-up">
         {props.data.allPost.nodes.length &&
           props.data.allPost.nodes.map((item, index) => (
             <BlogCard

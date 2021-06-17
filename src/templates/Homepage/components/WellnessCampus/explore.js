@@ -1,8 +1,7 @@
-import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 
-const Wrapper = styled(Link)`
+const Wrapper = styled.a`
 svg {
       path{
         transition: all .4s ease;
@@ -24,7 +23,7 @@ svg {
 `;
 
 const ExploreSvg = ({ to }) => (
-  <Wrapper to={to}>
+  <Wrapper href={to} target="_blank">
     <svg
       width="207"
       height="86"
