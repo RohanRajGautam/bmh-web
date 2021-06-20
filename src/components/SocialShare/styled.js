@@ -1,4 +1,6 @@
-.social-share {
+import styled from "styled-components";
+
+export const Wrapper = styled.div`
   ul {
     display: flex;
     align-items: center;
@@ -19,4 +21,4 @@
       }
     }
   }
-}
+`;

@@ -4,7 +4,7 @@ import Facebook from "@images/share/facebook.png";
 import LinkedIn from "@images/share/linkedin.png";
 import Twitter from "@images/share/twitter.png";
 
-import "./index.scss";
+import { Wrapper } from "./styled";
 
 const SocialShare = ({ slug, title }) => {
   // const {
@@ -33,7 +33,7 @@ const SocialShare = ({ slug, title }) => {
   };
 
   return (
-    <div className="social-share">
+    <Wrapper>
       <ul>
         <li>
           <a href={() => false} onClick={handleClick} onKeyDown={handleClick}>
@@ -59,7 +59,7 @@ const SocialShare = ({ slug, title }) => {
           </a>
         </li>
       </ul>
-    </div>
+    </Wrapper>
   );
 };
 
