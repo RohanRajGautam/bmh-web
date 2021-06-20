@@ -27,8 +27,17 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: baseline; */
+  /* width: 50%; */
   padding-right: ${SPACING.lg};
-  width: 50%;
+  flex: 0 0 49%;
+
+  ${mediaQueries("lg")`
+    flex: 0 0 45%;
+  `}
+  ${mediaQueries("md")`
+    padding-right: 0;
+    margin-bottom: 5.2rem;
+  `}
 `;
 
 export const Header = styled.div`
@@ -41,6 +50,11 @@ export const Subtitle = styled(HeadingSecondary)`
 
 export const ContentWrapper = styled.div`
   display: flex;
+
+  ${mediaQueries("md")`
+    flex-direction: column;
+    align-items: center;
+  `}
 `;
 
 export const PhotoWrapper = styled.div`
@@ -54,7 +68,11 @@ export const PhotoWrapper = styled.div`
   @media (min-width: 768px) {
     display: block;
   } */
-  width: 50%;
+  max-width: 65rem;
+  max-height: 50rem;
+  flex: 0 0 60%;
+
+  /* width: auto; */
 
   svg {
     g {
@@ -67,6 +85,11 @@ export const PhotoWrapper = styled.div`
       }
     }
   }
+
+  ${mediaQueries("md")`
+    width: auto;
+    text-align: center;
+  `}
 `;
 
 export const TextWrapper = styled.div`
