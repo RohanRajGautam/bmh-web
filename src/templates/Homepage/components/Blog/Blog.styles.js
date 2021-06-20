@@ -3,12 +3,17 @@ import { Link } from "gatsby";
 import { SPACING, COLORS } from "@components/constants";
 import { Container } from "@components/Container";
 import { HeadingSecondary } from "@components/Heading";
+import { mediaQueries } from "@components/MediaQueries";
 
 export const BlogWrapper = styled(Container)`
   background: ${COLORS.bgGrey};
   padding-top: ${SPACING.xl};
   padding-bottom: ${SPACING.xl};
   padding-left: 11.3rem;
+
+  ${mediaQueries("lg")`
+    padding-left: 5vw;
+  `}
 `;
 
 export const Header = styled.div`
@@ -30,6 +35,10 @@ export const SliderWrapper = styled.div`
   ::-webkit-scrollbar {
     display: none;
   }
+
+  ${mediaQueries("sm")`
+    margin-top: 6rem;
+  `}
 `;
 
 export const HeadingWrapper = styled.div`
@@ -64,17 +73,8 @@ export const StyledLink = styled(Link)`
       }
     }
   }
-`;
 
-export const StyledLinkMobile = styled(StyledLink)`
-  display: flex;
-  justify-content: flex-end;
-  font-size: 14px;
-  svg {
-    height: 14px;
-    width: 26px;
-  }
-  @media (min-width: 768px) {
+  ${mediaQueries("sm")`
     display: none;
-  }
+  `}
 `;

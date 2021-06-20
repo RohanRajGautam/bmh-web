@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import donate from "@images/homepage-donate.png";
+import donateM from "@images/nav-donate.png";
 import { Container } from "@components/Container";
 import { SPACING } from "@components/constants";
 import { HeadingPrimary } from "@components/Heading";
+import { mediaQueries } from "@components/MediaQueries";
 
 export const DonateWrapper = styled(Container)`
   height: 50vh;
@@ -10,16 +12,16 @@ export const DonateWrapper = styled(Container)`
   background-size: cover;
   background-position: top right;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
-  /* @media (min-width: 768px) {
-    padding: 0;
-    padding-top: 40%;
-    position: relative;
-    overflow: hidden;
+
+  @media (max-width: 600px) {
+    height: 70vh;
+    background: url(${donateM});
+    background-position: center;
+
+    span {
+      font-family: Merriweather;
+    }
   }
-  @media (max-width: 768px) {
-    padding: 15vw 0vw;
-  } */
 `;
 
 export const DonateStyle = styled.div`
@@ -31,9 +33,9 @@ export const DonateStyle = styled.div`
 
   height: 100%;
 
-  /* @media (min-width: 768px) {
-    justify-content: flex-end;
-  } */
+  ${mediaQueries("lg")`
+    padding-left: 5vw;
+  `}
 `;
 
 export const DonateColumn = styled.div``;

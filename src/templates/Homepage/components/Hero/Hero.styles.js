@@ -2,6 +2,8 @@ import styled, { keyframes } from "styled-components";
 import { Container } from "@components/Container";
 import bgimg from "@images/home/banner-bg.jpg";
 import { Heading, HeadingSecondary } from "@components/Heading";
+import { mediaQueries } from "@components/MediaQueries";
+import { SPACING } from "@components/constants";
 
 /* Animation */
 
@@ -78,10 +80,13 @@ export const ImageVector = styled.img`
   bottom: -8rem;
   width: 100vw;
 
-  @media (max-width: 600px) {
+  ${mediaQueries("sm")`
     width: 115%;
-    bottom: -1.5rem;
-  }
+    bottom: -6%;
+    transform: rotate(1deg);
+    height: 10%;
+    left: -5%;
+  `}
 
   @media (min-width: 1600px) {
     bottom: -10rem;
@@ -93,9 +98,10 @@ export const HeroContent = styled.div`
   padding: 7rem 0 0 11.2rem;
   height: 100%;
 
-  @media (max-width: 600px) {
-    padding: 0 5vw;
-  }
+  ${mediaQueries("lg")`
+    padding-top: 5vh;
+    padding-left: 5vw;
+  `}
 `;
 
 export const HeroItems = styled.div`
@@ -110,7 +116,7 @@ export const HeroItems = styled.div`
 `;
 
 export const HeroTextContainer = styled.div`
-  width: 40rem;
+  max-width: 40rem;
   /* margin: 8rem 0; */
 
   /* @media (max-width: 600px) {
@@ -164,10 +170,14 @@ export const HeroP = styled.p`
 
 export const Subtitle = styled(HeadingSecondary)`
   margin-bottom: 1.2rem;
+
+  ${mediaQueries("md")`
+    margin-bottom: 2rem;
+  `}
 `;
 
 export const HeroHeading = styled(Heading)`
-  margin-top: 13.6rem;
+  margin-top: ${SPACING.xl};
 `;
 
 export const BackgroundVector = styled.div`
@@ -176,4 +186,8 @@ export const BackgroundVector = styled.div`
   right: 0;
   text-align: center;
   z-index: -5;
+
+  ${mediaQueries("md")`
+    display: none;
+  `}
 `;

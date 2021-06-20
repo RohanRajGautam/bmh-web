@@ -1,11 +1,16 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
 import { SPACING, COLORS } from "@components/constants";
+import { mediaQueries } from "@components/MediaQueries";
 
 export const Card = styled.div`
   position: relative;
   width: 40rem;
   height: 46rem;
+
+  ${mediaQueries("sm")`
+    width: inherit;
+  `}
 
   &:hover {
     figure {
@@ -43,10 +48,18 @@ export const DateWrapper = styled.div`
   position: absolute;
   z-index: 2;
   top: 5%;
+
+  ${mediaQueries("sm")`
+    display: none;
+  `}
 `;
 
 export const Content = styled.div`
   padding-left: ${SPACING.md};
+
+  ${mediaQueries("sm")`
+    padding-left: 0;
+  `}
 `;
 
 export const StyledLink = styled(Link)`
@@ -54,6 +67,10 @@ export const StyledLink = styled(Link)`
 
   text-decoration: none;
   display: block;
+
+  ${mediaQueries("sm")`
+    padding-right: 5.2rem;
+  `}
 `;
 
 export const CardThumbnailWrapper = styled.div`

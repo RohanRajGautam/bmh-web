@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { SPACING, COLORS } from "@components/constants";
 import { Container } from "@components/Container";
 import { HeadingSecondary } from "@components/Heading";
+import { mediaQueries } from "@components/MediaQueries";
 
 const graniteGrey = "#2C3336";
 const border = "#C5CCD3";
@@ -10,6 +11,11 @@ export const EventWrapper = styled(Container)`
   padding-top: ${SPACING.xl};
   padding-bottom: ${SPACING.xxl};
   padding-left: 11.3rem;
+
+  ${mediaQueries("lg")`
+    padding-left: 5vw;
+  `}
+
   .MuiGrid-container {
     position: relative;
     z-index: 1;
@@ -75,6 +81,10 @@ export const Subtitle = styled(HeadingSecondary)`
 export const DatePickerWrapper = styled.div`
   padding-right: ${SPACING.lg};
   margin-bottom: ${SPACING.xs};
+
+  ${mediaQueries("sm")`
+    display: none;
+  `}
 `;
 
 export const EventSliderWrapper = styled.div`

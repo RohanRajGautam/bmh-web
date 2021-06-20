@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { SPACING } from "@components/constants";
 import { Container } from "@components/Container";
 import { HeadingSecondary } from "@components/Heading";
+import { mediaQueries } from "@components/MediaQueries";
 
 import Story from "@images/our-story.jpg";
 
@@ -11,6 +12,13 @@ export const StoryContainer = styled(Container)`
   margin-top: ${SPACING.xxl};
   position: relative;
   max-width: 135rem;
+
+  ${mediaQueries("lg")`
+    padding: 0 5vw;
+  `}
+  ${mediaQueries("md")`
+    margin-top: 13.6rem;
+  `}
 `;
 
 export const Content = styled.div`
@@ -19,8 +27,17 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: baseline; */
+  /* width: 50%; */
   padding-right: ${SPACING.lg};
-  width: 50%;
+  flex: 0 0 49%;
+
+  ${mediaQueries("lg")`
+    flex: 0 0 45%;
+  `}
+  ${mediaQueries("md")`
+    padding-right: 0;
+    margin-bottom: 5.2rem;
+  `}
 `;
 
 export const Header = styled.div`
@@ -33,6 +50,11 @@ export const Subtitle = styled(HeadingSecondary)`
 
 export const ContentWrapper = styled.div`
   display: flex;
+
+  ${mediaQueries("md")`
+    flex-direction: column;
+    align-items: center;
+  `}
 `;
 
 export const PhotoWrapper = styled.div`
@@ -46,7 +68,11 @@ export const PhotoWrapper = styled.div`
   @media (min-width: 768px) {
     display: block;
   } */
-  width: 50%;
+  max-width: 65rem;
+  max-height: 50rem;
+  flex: 0 0 60%;
+
+  /* width: auto; */
 
   svg {
     g {
@@ -59,6 +85,11 @@ export const PhotoWrapper = styled.div`
       }
     }
   }
+
+  ${mediaQueries("md")`
+    width: auto;
+    text-align: center;
+  `}
 `;
 
 export const TextWrapper = styled.div`

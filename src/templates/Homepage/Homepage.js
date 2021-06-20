@@ -19,6 +19,7 @@ const Homepage = props => {
   React.useEffect(() => {
     Aos.init({
       duration: 400,
+      once: true,
     });
   }, []);
 

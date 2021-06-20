@@ -2,11 +2,16 @@ import styled from "styled-components";
 import hoverImg from "@images/home/hover-img.png";
 import { SPACING } from "@components/constants";
 import { Container } from "@components/Container";
+import { mediaQueries } from "@components/MediaQueries";
 
 export const MainContainer = styled(Container)`
   /* padding-top: ${SPACING.lg}; */
   padding: 0 11.3rem;
   margin-top: 30rem;
+
+  ${mediaQueries("lg")`
+    padding: 0 5vw;
+  `}
 `;
 
 export const Medical = styled.div``;
@@ -20,6 +25,10 @@ export const Wrapper = styled.div`
   max-width: 140rem;
   min-height: 35vh;
   margin-top: 10rem;
+
+  ${mediaQueries("sm")`
+    flex-direction: column;
+  `}
 `;
 
 export const HeadingWrapper = styled.div`
@@ -65,13 +74,16 @@ export const ServicesItemWrapper = styled.div`
 
 export const ServicesItems = styled.p`
   text-align: left;
-  max-width: 28rem;
   /* width: 30%; */
   margin-right: 3rem;
   flex: 1 1 30%;
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
   position: relative;
+
+  @media (min-width: 1200px) {
+    max-width: 28rem;
+  }
 
   &::after {
     content: url(${hoverImg});
@@ -94,7 +106,18 @@ export const ServicesItems = styled.p`
       right: 15%;
       z-index: -2;
       opacity: 1;
+
+      ${mediaQueries("sm")`
+        content: none;
+      `}
     }
+  }
+
+  &:not(:first-child) {
+    ${mediaQueries("sm")`
+    flex: 1 1 100%;
+    margin-top: 5.1rem;
+  `}
   }
 `;
 
