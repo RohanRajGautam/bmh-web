@@ -2,10 +2,18 @@ import { Link } from "gatsby";
 import styled, { css } from "styled-components";
 import { Container } from "@components/Container";
 import { SPACING, COLORS } from "@components/constants";
+import { mediaQueries } from "@components/MediaQueries";
 
 export const FooterWrapper = styled(Container)`
   padding: ${SPACING.xl} 11.3rem;
   max-width: 140rem;
+
+  ${mediaQueries("lg")`
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 6.7rem;
+    padding-top: 13.6rem;
+  `}
 `;
 
 export const FooterMain = styled.div``;
@@ -14,7 +22,7 @@ export const FooterDetails = styled.div`
   display: grid;
   grid-template-columns: repeat(1fr);
   grid-gap: 2rem;
-  @media (min-width: 576px) {
+  @media (min-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
   }
   @media (min-width: 992px) {
@@ -24,6 +32,9 @@ export const FooterDetails = styled.div`
   @media (min-width: 1200px) {
     grid-template-columns: repeat(4, auto);
     justify-items: flex-start;
+  }
+  @media (max-width: 600px) {
+    grid-gap: 8.4rem;
   }
 `;
 
@@ -70,7 +81,14 @@ export const FooterSecondary = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 11.6rem;
+  }
 `;
+
 export const LogoWrapper = styled(Link)`
   margin-right: 4.2rem;
 `;
@@ -79,6 +97,11 @@ export const FooterCopyrightWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  @media (max-width: 600px) {
+    margin-top: 8.4rem;
+    align-self: flex-end;
+  }
 `;
 
 export const PrivacyPolicy = styled(Link)`
@@ -104,10 +127,19 @@ export const FooterCopyright = styled.p`
 
 export const LeftAlign = styled.div`
   display: flex;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 export const NewsletterWrapper = styled.div`
   width: 40rem;
+
+  @media (max-width: 600px) {
+    margin-top: 3.8rem;
+    width: auto;
+  }
 `;
 
 export const NewsletterTitle = styled.h2`
@@ -144,6 +176,10 @@ export const NewsletterInput = styled.div`
       left: 0;
       color: ${COLORS.textDisable};
     }
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
   }
 `;
 
@@ -166,5 +202,10 @@ export const NewsletterButton = styled.div`
 
   &:hover {
     color: ${COLORS.primary};
+  }
+
+  @media (max-width: 600px) {
+      margin-top: 3.2rem;
+    }
   }
 `;

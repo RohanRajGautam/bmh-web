@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+
 import { Heading, HeadingSecondary } from "@components/Heading";
-import ExploreSvg from "./explore";
 import wellnessBg from "@images/wellness-campus.png";
 import { SPACING } from "@components/constants";
 import { Container } from "@components/Container";
+import { mediaQueries } from "@components/MediaQueries";
+
+import ExploreSvg from "./explore";
 import arrow from "./Arrow.svg";
 
 const Wrapper = styled(Container)`
@@ -14,6 +17,11 @@ const Wrapper = styled(Container)`
   background-position: center center;
   background-attachment: fixed;
   text-align: center;
+
+  ${mediaQueries("sm")`
+    background-attachment: inherit;
+    padding: 5vh 10vw 0 10vw;
+  `}
 `;
 
 const Content = styled.div`
@@ -27,6 +35,10 @@ const Content = styled.div`
 const ButtonWrapper = styled.div`
   text-align: center;
   margin-top: ${SPACING.md};
+
+  ${mediaQueries("sm")`
+      margin-top: 2.5rem;
+  `}
 `;
 
 const Subtitle = styled(HeadingSecondary)`
@@ -54,6 +66,10 @@ const Title = styled.h3`
       left: -5%;
       width: 20px;
       height: 20px;
+
+      ${mediaQueries("sm")`
+        content: none;    
+      `}
     }
   }
 `;
@@ -62,7 +78,7 @@ const WellnessCampus = () => {
   return (
     <Wrapper>
       <Content data-aos="fade-up">
-        <Heading>
+        <Heading center>
           <Subtitle>Wellness campus</Subtitle>
           <Title>
             The <span>future</span> of mental health care

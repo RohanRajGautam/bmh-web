@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import { SPACING, COLORS } from "@components/constants";
 import { HeadingPrimary } from "@components/Heading";
 import donate from "@images/nav-donate.png";
+import { mediaQueries } from "@components/MediaQueries";
 
 export const Wrapper = styled.div`
   position: fixed;
@@ -12,6 +13,10 @@ export const Wrapper = styled.div`
   height: 100vh;
 
   border-left: 1px solid #f5f5ef;
+
+  ${mediaQueries("md")`
+    display: none;
+  `}
 `;
 
 export const Content = styled.div`

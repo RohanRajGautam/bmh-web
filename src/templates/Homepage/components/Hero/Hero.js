@@ -62,7 +62,7 @@ export default function Hero() {
           </HeroItems>
         </HeroContent>
       </HeroContainer>
-      <HeroHeading data-aos="fade-up">
+      <HeroHeading center data-aos="fade-up">
         <Subtitle>OUR WHOLISTIC APPROACH</Subtitle>
         <HeadingPrimary>
           Treating <span>and</span> Preventing

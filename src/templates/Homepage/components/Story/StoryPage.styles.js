@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { SPACING } from "@components/constants";
 import { Container } from "@components/Container";
 import { HeadingSecondary } from "@components/Heading";
+import { mediaQueries } from "@components/MediaQueries";
 
 import Story from "@images/our-story.jpg";
 
@@ -11,6 +12,13 @@ export const StoryContainer = styled(Container)`
   margin-top: ${SPACING.xxl};
   position: relative;
   max-width: 135rem;
+
+  ${mediaQueries("lg")`
+    padding: 0 5vw;
+  `}
+  ${mediaQueries("md")`
+    margin-top: 13.6rem;
+  `}
 `;
 
 export const Content = styled.div`

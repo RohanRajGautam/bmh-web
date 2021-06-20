@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { SPACING } from "@components/constants";
 import { Container } from "@components/Container";
 import person from "@images/testimonial.png";
+import { mediaQueries } from "@components/MediaQueries";
 
 export const MainContainer = styled(Container)`
   background: #f5f5ef;
@@ -10,6 +11,11 @@ export const MainContainer = styled(Container)`
   padding-top: ${SPACING.xl};
 
   height: 120vh;
+
+  ${mediaQueries("sm")`
+    margin-top: 13.6rem;
+    padding-top: 8.4rem;
+  `}
 `;
 
 export const Header = styled.div`
@@ -41,4 +47,8 @@ export const BackgroundVector = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  ${mediaQueries("md")`
+    display: none;
+  `}
 `;
