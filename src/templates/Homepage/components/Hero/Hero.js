@@ -1,11 +1,9 @@
-import React, { useEffect, useRef } from "react";
-import styled from "styled-components";
+import React from "react";
 import RellaxWrapper from "react-rellax-wrapper";
 
 // styled-components
 import {
   MainContainer,
-  Divider,
   HeroBg,
   HeroContainer,
   HeroContent,
@@ -25,7 +23,6 @@ import {
 import { HeadingPrimary } from "@components/Heading";
 
 // images
-import BackgroundImage from "@images/home/banner-bg.jpg";
 import BannerVector from "@images/home/banner-vector.png";
 import HomepageLogo from "@components/SvgComponent/homepage-logo";
 import ButtonPrimary from "@components/SvgComponent/btn-primary";

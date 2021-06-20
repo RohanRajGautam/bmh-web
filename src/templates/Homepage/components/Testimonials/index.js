@@ -4,22 +4,18 @@ import RellaxWrapper from "react-rellax-wrapper";
 import {
   MainContainer,
   Header,
-  CTA,
+  Cta,
   People,
-  Background,
-  ContentWrapper,
   BackgroundVector,
-  Parallax,
-  Image,
+  // ContentWrapper,
 } from "./styles";
-import { Heading, HeadingPrimary, HeadingSecondary } from "@components/Heading";
+import { HeadingPrimary, HeadingSecondary } from "@components/Heading";
 import PlayButton from "@components/SvgComponent/play-button";
 import Dots from "@components/SvgComponent/dots";
 
 const Testimonials = () => {
   return (
     <MainContainer>
-      {/* <Background /> */}
       {/* <ContentWrapper > */}
       <BackgroundVector>
         <RellaxWrapper speed={5} percentage={0.3}>
@@ -33,9 +29,9 @@ const Testimonials = () => {
           hope and healing
         </HeadingPrimary>
       </Header>
-      <CTA>
+      <Cta>
         <PlayButton />
-      </CTA>
+      </Cta>
       <People></People>
       {/* </ContentWrapper> */}
     </MainContainer>

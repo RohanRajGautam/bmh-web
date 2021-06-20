@@ -1,11 +1,11 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import hoverImg from "@images/home/hover-img.png";
-import { COLORS, SPACING } from "@components/constants";
+import { SPACING } from "@components/constants";
 import { Container } from "@components/Container";
 
 export const MainContainer = styled(Container)`
-  padding: 0 11.3rem;
   /* padding-top: ${SPACING.lg}; */
+  padding: 0 11.3rem;
   margin-top: 30rem;
 `;
 
@@ -61,15 +61,6 @@ export const ServicesItemWrapper = styled.div`
 
   height: 100%;
   margin-top: 5.3rem;
-`;
-
-const showImageOnHover = keyframes`
-  0% {
-    content: ""
-  }
-  100% {
-    content: url(${hoverImg});
-  }
 `;
 
 export const ServicesItems = styled.p`

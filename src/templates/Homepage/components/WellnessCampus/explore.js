@@ -23,7 +23,7 @@ svg {
 `;
 
 const ExploreSvg = ({ to }) => (
-  <Wrapper href={to} target="_blank">
+  <Wrapper href={to} target="_blank" rel="noopener noreferrer">
     <svg
       width="207"
       height="86"

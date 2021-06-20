@@ -12,7 +12,6 @@ import {
   Title,
   Value,
   EventTitle,
-  Image,
   Divider,
 } from "./EventDialog.styles";
 
@@ -27,7 +26,6 @@ const useStyles = makeStyles(() => ({
 
 const EventDialog = ({ open, handleClose, props, onClose }) => {
   const classes = useStyles();
-  console.log(props);
   return (
     <div>
       <Dialog

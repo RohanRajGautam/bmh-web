@@ -3,8 +3,6 @@ import styled, { css } from "styled-components";
 import { Container } from "@components/Container";
 import { SPACING, COLORS } from "@components/constants";
 
-const lightBlueGrey = "#C5CCD3";
-
 export const FooterWrapper = styled(Container)`
   padding: ${SPACING.xl} 11.3rem;
   max-width: 140rem;

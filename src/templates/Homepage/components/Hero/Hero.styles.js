@@ -1,22 +1,9 @@
 import styled, { keyframes } from "styled-components";
-import { Button } from "@components/Button";
 import { Container } from "@components/Container";
 import bgimg from "@images/home/banner-bg.jpg";
 import { Heading, HeadingSecondary } from "@components/Heading";
 
 /* Animation */
-
-const slideFromTop = (type, x) => keyframes`
-  0% {
-    transform: translateY(${x}%)
-  }
-
-  ${type === "title" ? `50% { transform: translateY(${x})%}` : ""}
-
-  100% {
-    transform: translateY(0%)
-  }
-`;
 
 const slideFromBottom = (type, x) => keyframes`
   0% {

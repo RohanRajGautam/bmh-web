@@ -21,22 +21,22 @@ const SocialShare = ({ slug, title }) => {
   //   }
   // `);
 
-  const url = "https://dev0-1.dpt18gi992xkp.amplifyapp.com/";
+  const url = "https://www.beautifulmindshealth.org/";
+
+  const handleClick = () => {
+    window?.open(
+      "https://www.facebook.com/sharer/sharer.php?u=" + url + slug,
+      "facebook-share-dialog",
+      "width=626,height=436"
+    );
+    return false;
+  };
 
   return (
     <div className="social-share">
       <ul>
         <li>
-          <a
-            onClick={() => {
-              window?.open(
-                "https://www.facebook.com/sharer/sharer.php?u=" + url + slug,
-                "facebook-share-dialog",
-                "width=626,height=436"
-              );
-              return false;
-            }}
-          >
+          <a href={() => false} onClick={handleClick} onKeyDown={handleClick}>
             <img src={Facebook} alt="facebook" draggable={false} />
           </a>
         </li>

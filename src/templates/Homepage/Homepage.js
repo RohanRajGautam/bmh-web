@@ -1,19 +1,19 @@
 import * as React from "react";
-import Layout from "@layouts";
-import Seo from "@layouts/common/seo";
 import Aos from "aos";
 import "aos/dist/aos.css";
+
 import {
   Blog,
   Donate,
   Event,
   StoryPage,
-  FullPageText,
   Hero,
   DualPage,
   Testimonials,
   WellnessCampus,
 } from "./components";
+import Layout from "@layouts";
+import Seo from "@layouts/common/seo";
 
 const Homepage = props => {
   React.useEffect(() => {

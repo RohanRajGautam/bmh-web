@@ -85,6 +85,7 @@ const Navbar = props => {
           primary
           to="https://beautifulmindswellness.org/donate/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Donate
         </DonateButton>
@@ -106,6 +107,7 @@ const Navbar = props => {
               <BigMenuDonate
                 md
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://beautifulmindswellness.org/donate/"
               >
                 Donate
@@ -123,6 +125,7 @@ const Navbar = props => {
                             <BigMenuNavItem key={index}>
                               <a
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 href={item.to}
                                 // onClick={handleBigMenu}
                               >

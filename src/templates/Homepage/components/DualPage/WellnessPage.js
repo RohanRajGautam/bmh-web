@@ -22,7 +22,7 @@ const WellnessPage = () => {
         <ServicesItemWrapper style={{ maxWidth: "85rem" }}>
           {WellnessServices.map((item, index) => (
             <WellnessServicesItems key={index}>
-              <Anchor href={item.to} target="_blank">
+              <Anchor href={item.to} target="_blank" rel="noopener noreferrer">
                 {item.title}
               </Anchor>
             </WellnessServicesItems>

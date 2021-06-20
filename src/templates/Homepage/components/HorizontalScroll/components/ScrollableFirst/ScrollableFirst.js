@@ -42,7 +42,11 @@ const ScrollableFirst = () => {
           {Services &&
             Services.map((item, index) => (
               <ServicesItems key={index}>
-                <Anchor href={item.to} target="_blank">
+                <Anchor
+                  href={item.to}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {item.title}
                 </Anchor>
               </ServicesItems>

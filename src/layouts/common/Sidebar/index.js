@@ -1,4 +1,3 @@
-import { Link } from "gatsby";
 import React, { useEffect, useState } from "react";
 
 import {
@@ -32,7 +31,7 @@ import {
   BigMenuClose,
 } from "./styled";
 
-import { NavbarItem, staticData } from "../Navbar/Navbar.datas";
+import { staticData } from "../Navbar/Navbar.datas";
 import DonateBtn from "../../../templates/Homepage/components/Donate/DonateBtn";
 
 const Sidebar = () => {
@@ -65,10 +64,18 @@ const Sidebar = () => {
   return (
     <Wrapper>
       <Content>
-        <Item href="https://www.beautifulmindsmedical.com/" target="_blank">
+        <Item
+          href="https://www.beautifulmindsmedical.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Medical />
         </Item>
-        <Item href="https://beautifulmindswellness.org/" target="_blank">
+        <Item
+          href="https://beautifulmindswellness.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Wellness />
         </Item>
         <Item onClick={setBigMenu}>
@@ -80,7 +87,11 @@ const Sidebar = () => {
         <Item href="#events">
           <Events />
         </Item>
-        <Item href="https://beautifulmindswellness.org/donate/" target="_blank">
+        <Item
+          href="https://beautifulmindswellness.org/donate/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Donate />
         </Item>
         <Item id="bmh-logo" href="/">
@@ -114,6 +125,7 @@ const Sidebar = () => {
                           <BigMenuNavItem key={index}>
                             <a
                               target="_blank"
+                              rel="noopener noreferrer"
                               href={item.to}
                               // onClick={handleBigMenu}
                             >

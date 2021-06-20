@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { isEmpty } from "lodash";
 import Card from "./Card";
 import {
@@ -16,13 +16,13 @@ import { HeadingPrimary } from "@components/Heading";
 import { getMonthName } from "../../../../utility";
 
 const Events = props => {
-  const eventRef = useRef(null);
-  const scroll = scrollOffset => {
-    eventRef.current.scrollLeft += scrollOffset;
-  };
-
+  // const eventRef = useRef(null);
   const [selectedDate, setSelectedDate] = useState(new Date("2021-05-01"));
   const [events, setEvents] = useState([]);
+
+  // const scroll = scrollOffset => {
+  //   eventRef.current.scrollLeft += scrollOffset;
+  // };
 
   const handleDateChange = date => {
     setSelectedDate(date);
@@ -35,13 +35,13 @@ const Events = props => {
     // Full month in word
     // let month = selectedDate.toLocaleString("default", { month: "long" });
 
+    // Return events of date equal to or greater than the selected date
     const data = props?.data.filter(function (item) {
       return item.eventYear >= `${year}` && item.eventMonth >= `${month}`;
     });
-    setEvents(data);
-  }, [selectedDate]);
 
-  console.log(events);
+    setEvents(data);
+  }, [selectedDate, props]);
 
   return (
     <EventWrapper id="events">

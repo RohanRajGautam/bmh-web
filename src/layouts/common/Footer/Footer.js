@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
-import { makeStyles } from "@material-ui/core/styles";
 
-import { StaticBrandLogo, staticData } from "./Footer.datas";
 import {
-  FooterBrandLogo,
-  FooterBrandLogoWrapper,
   FooterCopyright,
   FooterCopyrightWrapper,
   FooterDetails,
@@ -24,7 +20,7 @@ import {
   LogoWrapper,
   LeftAlign,
 } from "./Footer.styles";
-import Logo from "@images/icons/full-logo.svg";
+import { staticData } from "./Footer.datas";
 import BrandLogo from "./BrandLogo";
 import GoToTop from "./GoToTop";
 
@@ -32,18 +28,7 @@ const Alert = props => {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 };
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: "100%",
-    "& > * + *": {
-      marginTop: theme.spacing(10),
-    },
-  },
-}));
-
 const Footer = () => {
-  const classes = useStyles();
-
   const date = new Date();
 
   const FormUrl = `https://api.convertkit.com/v3/forms/2253998/subscribe`;
@@ -106,8 +91,6 @@ const Footer = () => {
     setEmail(value);
   };
 
-  console.log(open);
-
   return (
     <>
       <FooterWrapper>
@@ -119,7 +102,11 @@ const Footer = () => {
                 <FooterItemList>
                   {item.items.map((obj, index) => (
                     <FooterItem key={index}>
-                      <a href={obj.to} target="_blank">
+                      <a
+                        href={obj.to}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         {obj.title}
                       </a>
                     </FooterItem>

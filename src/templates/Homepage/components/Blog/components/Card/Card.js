@@ -4,7 +4,6 @@ import {
   Date,
   DateWrapper,
   Content,
-  CardCta,
   CardDesc,
   CardText,
   CardThumbnail,

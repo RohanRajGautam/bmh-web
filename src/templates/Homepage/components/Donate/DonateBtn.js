@@ -23,7 +23,7 @@ const Donate = styled.a`
 `;
 
 const DonateBtn = ({ to }) => (
-  <Donate href={to} target="_blank">
+  <Donate href={to} target="_blank" rel="noopener noreferrer">
     <svg
       width="201"
       height="86"

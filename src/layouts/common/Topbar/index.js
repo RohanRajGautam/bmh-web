@@ -31,6 +31,7 @@ const Topbar = () => {
         <NavLink
           href="https://www.beautifulmindsmedical.com/"
           target="_blank"
+          rel="noopener noreferrer"
           activeClassName="active"
         >
           Medical
@@ -45,6 +46,7 @@ const Topbar = () => {
         <NavLink
           href="https://beautifulmindswellness.org/"
           target="_blank"
+          rel="noopener noreferrer"
           activeClassName="active"
         >
           Wellness

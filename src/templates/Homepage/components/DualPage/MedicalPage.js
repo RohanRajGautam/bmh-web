@@ -11,8 +11,6 @@ import {
 } from "./DualPage.styles";
 import { MedicalTitle, MedicalDesc, MedicalServices } from "./DualPage.data";
 
-import logo from "@images/icons/Frame.svg";
-
 const MedicalPage = () => {
   return (
     <Wrapper>
@@ -24,7 +22,7 @@ const MedicalPage = () => {
         <ServicesItemWrapper>
           {MedicalServices?.map((item, index) => (
             <ServicesItems key={index}>
-              <Anchor href={item.to} target="_blank">
+              <Anchor href={item.to} target="_blank" rel="noopener noreferrer">
                 {item.title}
               </Anchor>
             </ServicesItems>

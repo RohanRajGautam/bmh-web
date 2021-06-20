@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 
 export const COLORS = {
   primary: "#6CA448",
@@ -39,12 +39,12 @@ export const FONT = {
   h6: "1.6rem",
   h6H: 1.6,
 
-  p1: "1.5rem",
-  p1H: 1.6,
-  p2: "2rem",
-  p1H: 1.6,
-  p3: "1.3rem",
+  p1: "2rem",
   p1H: 1.6,
   p2: "1.8rem",
-  p1H: 1.6,
+  p2H: 1.6,
+  p3: "1.5rem",
+  p3H: 1.6,
+  p4: "1.3rem",
+  p4H: 1.6,
 };

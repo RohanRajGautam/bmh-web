@@ -1,20 +1,11 @@
 import "date-fns";
-import React, { useState } from "react";
+import React from "react";
 import Grid from "@material-ui/core/Grid";
 import DateFnsUtils from "@date-io/date-fns";
 import { MuiPickersUtilsProvider, DatePicker } from "@material-ui/pickers";
 import { EventDatePickerWrapper, EventDatePickerArrow } from "./Event.styles";
 
 export default function MaterialUIPickers({ selectedDate, handleDateChange }) {
-  // const [selectedDate, setSelectedDate] = useState(new Date());
-
-  // const handleDateChange = date => {
-  //   setSelectedDate(date);
-  //   console.log(date);
-  // };
-
-  // console.log(selectedDate);
-
   return (
     <EventDatePickerWrapper>
       <MuiPickersUtilsProvider utils={DateFnsUtils}>

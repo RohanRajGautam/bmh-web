@@ -16,7 +16,7 @@ export const Header = styled.div`
   text-align: center;
 `;
 
-export const CTA = styled.div`
+export const Cta = styled.div`
   text-align: center;
   margin-top: 10.2rem;
   position: absolute;

@@ -1,11 +1,8 @@
-import { Link } from "gatsby";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { SPACING, COLORS } from "@components/constants";
 import { Container } from "@components/Container";
 import { HeadingSecondary } from "@components/Heading";
 
-const primary = "#6CA448";
-const medicalGrey = "#5F6468";
 const graniteGrey = "#2C3336";
 const border = "#C5CCD3";
 
@@ -101,7 +98,7 @@ export const EventDay = styled.time`
   transition: color 300ms;
   font-family: Merriweather;
   line-height: 55px;
-  color: ${primary};
+  color: ${COLORS.primary};
 `;
 
 export const EventDate = styled.div`
@@ -119,7 +116,7 @@ export const EventTitle = styled.h2`
   letter-spacing: 0.1px;
   margin-top: 120px;
   margin-bottom: 20px;
-  color: ${primary};
+  color: ${COLORS.primary};
   min-height: 76px;
   @media (min-width: 600px) {
     font-size: 3rem;

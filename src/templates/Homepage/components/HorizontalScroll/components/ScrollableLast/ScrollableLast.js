@@ -39,7 +39,11 @@ const ScrollableLast = () => {
           <ServicesItemWrapper>
             {ServicesSecond?.map((item, index) => (
               <ServicesItems key={index}>
-                <Anchor href={item.to} target="_blank">
+                <Anchor
+                  href={item.to}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {item.title}
                 </Anchor>
               </ServicesItems>
@@ -57,6 +61,7 @@ const ScrollableLast = () => {
             primary
             href="https://brojure.com/bmw/overview/"
             target="_blank"
+            rel="noopener noreferrer"
           >
             view wellness center plans
           </ButtonWrapper>
