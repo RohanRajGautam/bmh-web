@@ -48,6 +48,7 @@ const Sidebar = () => {
           href="https://www.beautifulmindsmedical.com/"
           target="_blank"
           rel="noopener noreferrer"
+          clicked={bigMenu}
         >
           <Medical />
         </Item>
@@ -55,26 +56,28 @@ const Sidebar = () => {
           href="https://beautifulmindswellness.org/"
           target="_blank"
           rel="noopener noreferrer"
+          clicked={bigMenu}
         >
           <Wellness />
         </Item>
-        <Item onClick={handleBigMenu}>
-          <Menu />
+        <Item onClick={handleBigMenu} clicked={bigMenu}>
+          <Menu bigMenu={bigMenu} />
         </Item>
-        <Item href="/blog-cat">
+        <Item href="/blog-cat" clicked={bigMenu}>
           <Blog />
         </Item>
-        <Item href="#events">
+        <Item href="#events" clicked={bigMenu}>
           <Events />
         </Item>
         <Item
           href="https://beautifulmindswellness.org/donate/"
           target="_blank"
           rel="noopener noreferrer"
+          clicked={bigMenu}
         >
           <Donate />
         </Item>
-        <Item id="bmh-logo" href="/">
+        <Item id="bmh-logo" href="/" clicked={bigMenu}>
           <SmallLogo />
         </Item>
       </Content>

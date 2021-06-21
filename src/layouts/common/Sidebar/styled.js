@@ -29,6 +29,7 @@ export const Item = styled.a`
   padding: 3.2rem 0;
   width: 100%;
   text-align: center;
+  transition: all 0.4s ease;
 
   svg {
     path {
@@ -36,11 +37,19 @@ export const Item = styled.a`
     }
   }
 
+  // hide all other items in sidebar when menu-icon is clicked
+  &:not(:nth-child(3)) {
+    opacity: ${props => (props.clicked ? "0" : "1")};
+  }
+
   &:nth-child(1),
   :nth-child(2),
-  :nth-child(3),
   :nth-child(4) {
     border-bottom: 1px solid #f2f2f2;
+  }
+
+  &:nth-child(4) {
+    border-top: 1px solid #f2f2f2;
   }
 
   &:nth-child(6) {
