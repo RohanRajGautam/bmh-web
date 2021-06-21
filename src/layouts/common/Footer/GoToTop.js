@@ -24,7 +24,7 @@ const Wrapper = styled.div`
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 1200px) {
     display: none;
   }
 `;

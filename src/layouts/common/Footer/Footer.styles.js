@@ -82,6 +82,11 @@ export const FooterSecondary = styled.div`
   align-items: center;
   justify-content: space-between;
 
+  @media (max-width: 1080px) {
+    flex-direction: column;
+    align-items: inherit;
+  }
+
   @media (max-width: 600px) {
     flex-direction: column;
     align-items: flex-start;
@@ -97,6 +102,10 @@ export const FooterCopyrightWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  @media (max-width: 1080px) {
+    margin-top: 5.2rem;
+  }
 
   @media (max-width: 600px) {
     margin-top: 8.4rem;
@@ -130,6 +139,7 @@ export const LeftAlign = styled.div`
 
   @media (max-width: 600px) {
     flex-direction: column;
+    width: 100%;
   }
 `;
 
@@ -176,9 +186,13 @@ export const NewsletterInput = styled.div`
       left: 0;
       color: ${COLORS.textDisable};
     }
+  }
 
-    @media (max-width: 600px) {
-      flex-direction: column;
+  @media (max-width: 600px) {
+    flex-direction: column;
+
+    input[type="email"] {
+      width: 100%;
     }
   }
 `;
