@@ -37,6 +37,16 @@ export const FadingDiv = styled.div`
 
 export const MainContainer = styled(Container)`
   height: 100vh;
+
+  ${mediaQueries("md")`
+    margin-top: 5.2rem;
+  `}
+`;
+
+export const LogoContainer = styled.div`
+  ${mediaQueries("md")`
+    display: none;
+  `}
 `;
 
 export const HeroContainer = styled.div`

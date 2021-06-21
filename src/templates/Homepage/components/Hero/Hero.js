@@ -17,6 +17,7 @@ import {
   BackgroundVector,
   FadingDiv,
   HeroHeading,
+  LogoContainer,
 } from "./Hero.styles";
 
 // component style import
@@ -44,7 +45,9 @@ export default function Hero() {
         <HeroContent>
           <HeroItems>
             <FadingDiv>
-              <HomepageLogo />
+              <LogoContainer>
+                <HomepageLogo />
+              </LogoContainer>
             </FadingDiv>
             <HeroTextContainer>
               <HeroH1>
