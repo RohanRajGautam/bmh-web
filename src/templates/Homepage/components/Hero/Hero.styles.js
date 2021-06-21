@@ -32,7 +32,7 @@ const fadeIn = keyframes`
 `;
 
 export const FadingDiv = styled.div`
-  animation: ${fadeIn} 800ms linear;
+  animation: ${fadeIn} 300ms linear;
 `;
 
 export const MainContainer = styled(Container)`
@@ -154,7 +154,7 @@ export const HeroH1 = styled.h1`
   color: #fff;
   margin-bottom: 3.2rem;
 
-  animation: ${slideFromBottom("subtitle", 80)} 400ms linear;
+  animation: ${slideFromBottom("title", 80)} 300ms ease-in-out;
 
   span {
     font-family: "Smiley";
@@ -183,7 +183,11 @@ export const HeroP = styled.p`
   opacity: 0.9;
   padding-bottom: 3rem;
 
-  animation: ${slideFromBottom("subtitle", 80)} 400ms linear;
+  animation: ${slideFromBottom("title", 80)} 400ms ease-in-out;
+`;
+
+export const ButtonContainer = styled.div`
+  animation: ${slideFromBottom("title", 80)} 500ms ease-in-out;
 `;
 
 export const Subtitle = styled(HeadingSecondary)`

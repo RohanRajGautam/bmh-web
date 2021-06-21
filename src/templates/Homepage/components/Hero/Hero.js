@@ -15,9 +15,9 @@ import {
   ImageVector,
   Subtitle,
   BackgroundVector,
-  FadingDiv,
   HeroHeading,
   LogoContainer,
+  ButtonContainer,
 } from "./Hero.styles";
 
 // component style import
@@ -44,11 +44,9 @@ export default function Hero() {
         </HeroBg>
         <HeroContent>
           <HeroItems>
-            <FadingDiv>
-              <LogoContainer>
-                <HomepageLogo />
-              </LogoContainer>
-            </FadingDiv>
+            <LogoContainer>
+              <HomepageLogo />
+            </LogoContainer>
             <HeroTextContainer>
               <HeroH1>
                 Get Your <br />
@@ -59,9 +57,9 @@ export default function Hero() {
                 care & wellness education
               </HeroP>
             </HeroTextContainer>
-            <FadingDiv>
+            <ButtonContainer>
               <ButtonPrimary to="#medical-wellness" />
-            </FadingDiv>
+            </ButtonContainer>
           </HeroItems>
         </HeroContent>
       </HeroContainer>
