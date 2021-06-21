@@ -80,6 +80,14 @@ export const ImageVector = styled.img`
   bottom: -8rem;
   width: 100vw;
 
+  ${mediaQueries("lg")`
+    bottom: -5rem;
+  `}
+
+  ${mediaQueries("md")`
+    bottom: -3rem;
+  `}
+
   ${mediaQueries("sm")`
     width: 115%;
     bottom: -6%;

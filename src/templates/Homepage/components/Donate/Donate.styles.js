@@ -7,16 +7,17 @@ import { HeadingPrimary } from "@components/Heading";
 import { mediaQueries } from "@components/MediaQueries";
 
 export const DonateWrapper = styled(Container)`
-  height: 50vh;
   background: url(${donate});
   background-size: cover;
   background-position: top right;
   background-repeat: no-repeat;
 
   @media (max-width: 600px) {
-    height: 70vh;
+    /* height: 70vh; */
     background: url(${donateM});
+    background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 
     span {
       font-family: Merriweather;
@@ -30,6 +31,8 @@ export const DonateStyle = styled.div`
   align-items: flex-start;
   justify-content: center;
   padding-left: 11.3rem;
+  padding-top: 13.2rem;
+  padding-bottom: 13.2rem;
 
   height: 100%;
 
