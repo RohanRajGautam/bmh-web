@@ -31,7 +31,7 @@ export const Cta = styled.div`
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  z-index: 5;
+  z-index: 0;
   -webkit-backface-visibility: hidden;
 `;
 

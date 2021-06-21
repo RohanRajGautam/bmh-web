@@ -2,11 +2,34 @@ import React from "react";
 import styled from "styled-components";
 
 const MenuWrapper = styled.div`
+  svg {
+    transition: all 0.4s ease;
+
+    path:nth-child(1) {
+      transform: ${props =>
+        props.clicked
+          ? "rotate(45deg) translateY(-23px) translateX(10px)"
+          : "rotate(0) translateY(0) translateX(0)"};
+    }
+
+    path:nth-child(2) {
+      transform: ${props =>
+        props.clicked
+          ? "rotate(-45deg) translateY(5px) translateX(-30px)"
+          : "rotate(0) translateY(0) translateX(0)"};
+    }
+
+    path:nth-child(3) {
+      opacity: ${props => (props.clicked ? "0" : "1")};
+    }
+  }
+
   &:hover {
     svg {
       g {
         path:last-child {
           fill: #6ca448;
+          transform: translateY(-3px);
         }
         path:not(:last-child) {
           stroke: #6ca448;
@@ -66,8 +89,8 @@ export const Wellness = () => (
     />
   </svg>
 );
-export const Menu = () => (
-  <MenuWrapper>
+export const Menu = ({ bigMenu }) => (
+  <MenuWrapper clicked={bigMenu}>
     <svg
       width="61"
       height="46"

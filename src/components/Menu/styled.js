@@ -1,8 +1,11 @@
 import styled, { css } from "styled-components";
+
 import { SPACING, COLORS } from "@components/constants";
 import { HeadingPrimary } from "@components/Heading";
-import donate from "@images/nav-donate.png";
+import { Container } from "@components/Container";
 import { mediaQueries } from "@components/MediaQueries";
+
+import donate from "@images/nav-donate.png";
 
 /********************************
  * BIG MENU ********************
@@ -32,23 +35,23 @@ export const DonateButtonContainer = styled.div`
   margin-top: ${SPACING.md};
 `;
 
-export const BigMenu = styled.div`
+export const BigMenu = styled(Container)`
   position: fixed;
   height: 100vh;
-  width: 100%;
-  right: 0;
+  /* width: 100%; */
+  left: 0;
   top: 0;
-  transform: translateX(100%);
+  transform: translateY(-100%);
   overflow: hidden;
   z-index: 9;
   background-color: #fff;
-  transition: all 0.8s ease;
+  transition: all 0.4s ease;
   ${({ open }) =>
     open &&
     css`
       /* height: 100vh;
      width: 100%; */
-      transition: all 0.8s ease;
+      transition: all 0.4s ease;
       transform: translateX(0);
       /* right: 0;
      top: 0; */
@@ -89,18 +92,6 @@ export const BigMenuLeft = styled.div`
 
 export const BigMenuCenter = styled.div`
   margin: auto 0;
-`;
-
-export const BigMenuRight = styled.div`
-  width: 13.3rem;
-  border-left: 1px solid ${COLORS.bgGrey};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  ${mediaQueries("md")`
-   display: none;
- `}
 `;
 
 export const BigMenuClose = styled.div`

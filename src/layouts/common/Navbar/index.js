@@ -20,7 +20,7 @@ const Navbar = () => {
           <LogoAlt />
         </Logolink>
         <Menulink onClick={handleBigMenu}>
-          <Menu />
+          <Menu bigMenu={bigMenu} />
         </Menulink>
       </Nav>
       <BigMenuComponent handleBigMenu={handleBigMenu} bigMenu={bigMenu} />

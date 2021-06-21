@@ -21,6 +21,12 @@ export const Logolink = styled(Link)`
 export const Menulink = styled.div`
   text-decoration: none;
   cursor: pointer;
+
+  svg {
+    path {
+      transition: all 0.4s ease;
+    }
+  }
 `;
 
 export const Wrapper = styled.div`
