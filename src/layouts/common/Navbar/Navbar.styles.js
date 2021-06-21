@@ -24,7 +24,7 @@ export const Menulink = styled.div`
 
   svg {
     path {
-      transition: all 0.4s ease;
+      transition: all 0.3s ease-in-out;
     }
   }
 `;

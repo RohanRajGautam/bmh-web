@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Donate = styled.a`
   svg {
       path{
-        transition: all .4s ease;
+        transition: all .3s ease-in-out;
       }
     
 &:hover {
@@ -12,12 +12,12 @@ const Donate = styled.a`
   filter: brightness(1.1);
       path:nth-child(3) {
         transform: translateX(1rem);
-        transition: all .4s ease;
+        transition: all .3s ease-in-out;
       }
       
       path:nth-child(4) {
         opacity: 0;
-        transition: all 0.4s ease;
+        transition: all 0.3s ease-in-out;
       }
     }
 `;

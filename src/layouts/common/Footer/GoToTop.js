@@ -4,10 +4,10 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   svg {
     path {
-      transition: all 0.4s ease;
+      transition: all 0.3s ease-in-out;
     }
     circle {
-      transition: all 0.4s ease;
+      transition: all 0.3s ease-in-out;
     }
 
     &:hover {
@@ -15,11 +15,11 @@ const Wrapper = styled.div`
       path {
         transform: translateY(-1rem);
         fill: #6ca448;
-        transition: all 0.4s ease;
+        transition: all 0.3s ease-in-out;
       }
       circle {
         opacity: 0;
-        transition: all 0.4s ease;
+        transition: all 0.3s ease-in-out;
       }
     }
   }

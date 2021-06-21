@@ -29,11 +29,11 @@ export const Item = styled.a`
   padding: 3.2rem 0;
   width: 100%;
   text-align: center;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease-in-out;
 
   svg {
     path {
-      transition: all 0.4s ease;
+      transition: all 0.3s ease-in-out;
     }
   }
 
@@ -57,7 +57,7 @@ export const Item = styled.a`
   }
 
   &:nth-child(7) {
-    transition: all 0.4s ease;
+    transition: all 0.3s ease-in-out;
   }
 
   &:hover {
@@ -71,7 +71,7 @@ export const Item = styled.a`
         }
         path:not(:first-child) {
           transform: translateX(1rem);
-          transition: all 0.4s ease;
+          transition: all 0.3s ease-in-out;
           fill: #6ca448;
         }
         path:last-child {
@@ -103,7 +103,7 @@ export const Item = styled.a`
     }
 
     &:nth-child(6) {
-      transition: all 0.4s ease;
+      transition: all 0.3s ease-in-out;
       filter: brightness(1.1);
     }
   }

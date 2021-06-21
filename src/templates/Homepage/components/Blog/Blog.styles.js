@@ -51,10 +51,10 @@ export const StyledLink = styled(Link)`
   padding-right: ${SPACING.lg};
   svg {
     path {
-      transition: all 0.4s ease;
+      transition: all 0.3s ease-in-out;
     }
     circle {
-      transition: all 0.4s ease;
+      transition: all 0.3s ease-in-out;
     }
 
     &:hover {
@@ -65,11 +65,11 @@ export const StyledLink = styled(Link)`
       path:nth-child(2) {
         transform: translateX(1rem);
         fill: #6ca448;
-        transition: all 0.4s ease;
+        transition: all 0.3s ease-in-out;
       }
       circle {
         opacity: 0;
-        transition: all 0.4s ease;
+        transition: all 0.3s ease-in-out;
       }
     }
   }

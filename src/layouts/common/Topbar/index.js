@@ -16,10 +16,10 @@ const Topbar = () => {
   //   TweenMax.to(bar, 0, { css: { visibility: "visible" } });
 
   //   //Content Animation
-  //   tl.from(top, 0.6, { y: -40, ease: Power3.easeIn }, "Start").from(
+  //   tl.from(top, 0.6, { y: -40, ease-in-out: Power3.easeIn }, "Start").from(
   //     top,
   //     0.4,
-  //     { scale: 1.6, ease: Power3.easeIn },
+  //     { scale: 1.6, ease-in-out: Power3.easeIn },
   //     0.2
   //   );
   // }, []);

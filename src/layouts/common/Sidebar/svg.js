@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const MenuWrapper = styled.div`
   svg {
-    transition: all 0.4s ease;
+    transition: all 0.3s ease-in-out;
 
     path:nth-child(1) {
       transform: ${props =>

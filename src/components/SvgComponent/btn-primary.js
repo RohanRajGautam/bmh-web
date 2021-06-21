@@ -5,10 +5,10 @@ import styled from "styled-components";
 const Wrapper = styled(Link)`
 svg {
   path {
-    transition: all .4s ease;
+    transition: all .3s ease-in-out;
   }
   circle {
-    transition: all 0.4s ease;
+    transition: all 0.3s ease-in-out;
   }
 
 &:hover {
@@ -18,12 +18,12 @@ svg {
 
       :nth-child(3) {
         transform: translateX(1rem);
-        transition: all 0.4s ease;
+        transition: all 0.3s ease-in-out;
       }
       
       circle {
         opacity: 0;
-        transition: all 0.4s ease;
+        transition: all 0.3s ease-in-out;
       }
     }
 `;

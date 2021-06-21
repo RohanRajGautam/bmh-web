@@ -19,7 +19,7 @@ const pulse = keyframes`
 const Play = styled.div`
   cursor: pointer;
   display: inline-flex;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   width: 130px;
   height: 130px;
   border-radius: 50%;

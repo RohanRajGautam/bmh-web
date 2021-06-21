@@ -77,8 +77,8 @@ export const ServicesItems = styled.p`
   /* width: 30%; */
   margin-right: 3rem;
   flex: 1 1 30%;
-  -webkit-transition: all 0.8s ease;
-  transition: all 0.8s ease;
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
   position: relative;
 
   @media (min-width: 1200px) {
@@ -93,8 +93,8 @@ export const ServicesItems = styled.p`
     right: 15%;
     z-index: -2;
     opacity: 0;
-    -webkit-transition: all 0.8s ease;
-    transition: all 0.8s ease;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   &:hover {
@@ -149,7 +149,7 @@ export const Anchor = styled.a`
     left: 0;
     background-color: #5b8a3c;
     transform-origin: bottom left;
-    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-in-out;
   }
 
   &:hover {
