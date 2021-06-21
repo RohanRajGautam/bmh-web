@@ -15,6 +15,7 @@ export const MainContainer = styled(Container)`
   ${mediaQueries("sm")`
     margin-top: 13.6rem;
     padding-top: 8.4rem;
+    height: 130vh;
   `}
 `;
 
@@ -38,8 +39,19 @@ export const People = styled.div`
   /* padding: 11.1rem 7.4rem 3.5rem 5.7rem; */
   text-align: center;
   background: url(${person}) no-repeat center;
-  background-position: 50% 50%;
+  background-position: center;
   height: 70%;
+
+  ${mediaQueries("sm")`
+      height: 100%;
+      width: 200%;
+  `}
+
+  ${mediaQueries("xs")`
+      height: 80%;
+      width: 230%;
+      background-position: right;
+  `}
 `;
 
 export const BackgroundVector = styled.div`

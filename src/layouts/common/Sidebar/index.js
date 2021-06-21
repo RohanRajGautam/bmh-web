@@ -35,7 +35,7 @@ import { staticData } from "../Navbar/Navbar.datas";
 import DonateBtn from "../../../templates/Homepage/components/Donate/DonateBtn";
 
 const Sidebar = () => {
-  const [bigMenu, setBigMenu] = useState(false);
+  const [bigMenu, setBigMenu] = React.useState(false);
 
   const handleBigMenu = e => {
     e.preventDefault();
@@ -78,7 +78,7 @@ const Sidebar = () => {
         >
           <Wellness />
         </Item>
-        <Item onClick={setBigMenu}>
+        <Item onClick={handleBigMenu}>
           <Menu />
         </Item>
         <Item href="/blog-cat">

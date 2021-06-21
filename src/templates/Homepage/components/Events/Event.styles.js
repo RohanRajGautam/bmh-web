@@ -68,6 +68,11 @@ export const HeadingWrapper = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+
+  ${mediaQueries("sm")`
+    flex-direction: column;
+    align-items: flex-start;
+  `}
 `;
 
 export const Header = styled.div`
@@ -83,7 +88,7 @@ export const DatePickerWrapper = styled.div`
   margin-bottom: ${SPACING.xs};
 
   ${mediaQueries("sm")`
-    display: none;
+    margin-top: 5.2rem;
   `}
 `;
 
