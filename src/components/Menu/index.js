@@ -3,6 +3,7 @@ import React from "react";
 import {
   Wrapper,
   DonateStyle,
+  LogoContainer,
   DonateButtonContainer,
   Heading,
   BigMenu,
@@ -17,6 +18,7 @@ import {
 
 import { staticData } from "@layouts/common/Navbar/Navbar.datas";
 import DonateBtn from "../../templates/Homepage/components/Donate/DonateBtn";
+import HomepageLogo from "@components/SvgComponent/homepage-logo";
 
 const BigMenuComponent = ({ handleBigMenu, bigMenu }) => {
   return (
@@ -25,6 +27,9 @@ const BigMenuComponent = ({ handleBigMenu, bigMenu }) => {
         <BigMenuInner>
           <BigMenuLeft>
             <DonateStyle>
+              <LogoContainer>
+                <HomepageLogo />
+              </LogoContainer>
               <Heading>
                 Your support
                 <br /> can <span>change</span>

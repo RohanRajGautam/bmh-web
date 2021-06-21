@@ -31,6 +31,10 @@ export const Heading = styled(HeadingPrimary)`
   color: #fff;
 `;
 
+export const LogoContainer = styled.div`
+  margin-bottom: auto;
+`;
+
 export const DonateButtonContainer = styled.div`
   margin-top: ${SPACING.md};
 `;
