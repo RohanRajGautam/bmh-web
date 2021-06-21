@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import EventDialog from "./EventDialog";
 import { SPACING, COLORS } from "@components/constants";
+import { mediaQueries } from "@components/MediaQueries";
 
 const EventCard = styled.div`
   margin-right: ${SPACING.lg};
@@ -12,9 +13,13 @@ const EventCard = styled.div`
     h2 {
       color: ${COLORS.primary};
     }
-
     cursor: pointer;
   }
+
+  ${mediaQueries("sm")`
+    margin-right: 5.2rem;
+    min-width: 33rem;
+  `}
 `;
 
 const ContentWrapper = styled.div`

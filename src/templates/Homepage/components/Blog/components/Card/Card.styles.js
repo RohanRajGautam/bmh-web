@@ -78,6 +78,10 @@ export const CardThumbnailWrapper = styled.div`
   width: 35rem;
   height: 23rem;
   border-radius: 24px;
+
+  ${mediaQueries("sm")`
+      width: 30rem;
+  `}
 `;
 
 export const CardThumbnail = styled.figure`
