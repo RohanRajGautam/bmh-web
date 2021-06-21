@@ -220,6 +220,7 @@ export const NewsletterButton = styled.div`
 
   @media (max-width: 600px) {
       margin-top: 3.2rem;
+      text-align: left;
     }
   }
 `;
