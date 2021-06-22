@@ -15,7 +15,7 @@ import { dragSlider } from "../../../../utility";
 
 const Blog = props => {
   useEffect(() => {
-    dragSlider("#slider");
+    dragSlider("#blog-slider");
   }, []);
 
   return (
@@ -31,7 +31,7 @@ const Blog = props => {
           <CheckOurBlog />
         </StyledLink>
       </HeadingWrapper>
-      <SliderWrapper data-aos="fade-up" id="slider">
+      <SliderWrapper data-aos="fade-up" id="blog-slider">
         {props.data.allPost.nodes.length &&
           props.data.allPost.nodes.map((item, index) => (
             <BlogCard
