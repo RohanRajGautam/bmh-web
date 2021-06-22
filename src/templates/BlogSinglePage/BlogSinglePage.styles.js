@@ -1,5 +1,7 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
+
+import { SPACING, COLORS } from "@components/constants";
 import { Container } from "@components/Container";
 
 const blue = "#427CC5";
@@ -8,7 +10,7 @@ const graniteGrey = "#2C3336";
 const primary = "#6CA448";
 
 export const BlogPageHero = styled(Container)`
-  height: calc(100vh - 40px);
+  height: 80vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -33,29 +35,31 @@ export const BlogPageHero = styled(Container)`
 export const BlogPageHeroInner = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 40px 25px;
+  padding: 4.6rem 11.2rem;
+  height: 90%;
   position: relative;
-  @media (min-width: 768px) {
-    padding: 52px 93px;
+
+  @media (max-width: 960px) {
+    padding: 5vh 5vw;
+    height: initial;
+  }
+`;
+
+export const LogoContainer = styled.div`
+  margin-bottom: auto;
+
+  @media (max-width: 960px) {
+    display: none;
   }
 `;
 
 export const BlogPageTextWrapper = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  font-size: 8px;
-  flex-direction: column;
-  align-items: flex-start;
-  grid-gap: 2rem;
-  @media (min-width: 768px) {
-    font-size: 12px;
-    flex-direction: row;
-    align-items: center;
-  }
-  @media (min-width: 1024px) {
-    font-size: 16px;
+  align-items: flex-end;
+  flex-direction: row;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
   }
 `;
 
@@ -66,30 +70,32 @@ export const BlogPageTitleWrapper = styled.div`
 `;
 
 export const BlogPageTitle = styled.h1`
-  font-size: 3em;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  line-height: 1.25;
+  font-size: 6.8rem;
+  font-weight: bold;
+  line-height: 8.2rem;
   color: #fff;
   font-family: Merriweather;
-  margin-bottom: 12px;
+  margin-bottom: 2rem;
+
+  @media (max-width: 600px) {
+    font-size: 5.2rem;
+    line-height: 1.2;
+  }
 `;
 
 export const BlogPageMetaWrapper = styled.div`
   display: flex;
   align-items: center;
-  font-size: 12px;
-  color: #fff;
-  font-family: Mulish;
-  @media (min-width: 768px) {
-    font-size: 14px;
-  }
 `;
 
 export const BlogPageMeta = styled.div`
-  margin-right: 13px;
-  letter-spacing: 0.3px;
-  font-family: inherit;
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: Mulish;
+
+  span {
+    margin: 0 9px;
+  }
 `;
 
 export const BlogPageShare = styled.div`
@@ -121,9 +127,9 @@ export const BlogPageShare = styled.div`
 `;
 
 export const BlogContentWrapper = styled(Container)`
-  /* padding-top: 64px; */
+  padding: 5vh 5vw;
   @media (min-width: 1024px) {
-    padding: 5vh 5vw;
+    padding: 8.2rem 11.2rem;
   }
 `;
 
@@ -134,20 +140,18 @@ export const BlogContentWithSidebar = styled.div`
 `;
 
 export const BlogContent = styled.div`
-  font-size: 16px;
-  -webkit-letter-spacing: 0.3px;
-  -moz-letter-spacing: 0.3px;
-  -ms-letter-spacing: 0.3px;
-  letter-spacing: 0.3px;
+  padding-left: 0 !important;
+  font-size: 2rem;
   font-family: Mulish;
-  color: ${medicalGrey};
-  line-height: 2;
+  color: ${COLORS.textBodyGrey};
+  line-height: 3.2rem;
   text-align: justify;
   width: 100%;
+  @media (min-width: 1024px) {
+    padding-right: 8.2rem !important;
+  }
   .fusion-fullwidth {
-    @media (min-width: 1024px) {
-      padding-right: 120px !important;
-    }
+    padding: 0 !important;
   }
   .fusion-layout-column {
     width: 100% !important;
@@ -205,13 +209,14 @@ export const BlogSidebar = styled.div`
 `;
 
 export const BlogSidebarTitle = styled.div`
-  font-family: Mulish;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 2;
-  letter-spacing: 0.3px;
-  color: ${graniteGrey};
-  margin-bottom: 49px;
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.8rem;
+  line-height: 3.9rem;
+  color: #2c3336;
+  margin-bottom: 3.2rem;
+  padding-left: 5.2rem;
 `;
 
 export const BlogArticleWrapper = styled.div`
