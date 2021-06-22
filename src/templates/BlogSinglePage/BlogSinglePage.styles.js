@@ -1,13 +1,8 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
 
-import { SPACING, COLORS } from "@components/constants";
+import { COLORS } from "@components/constants";
 import { Container } from "@components/Container";
-
-const blue = "#427CC5";
-const medicalGrey = "#5F6468";
-const graniteGrey = "#2C3336";
-const primary = "#6CA448";
 
 export const BlogPageHero = styled(Container)`
   height: 80vh;
@@ -101,7 +96,6 @@ export const BlogPageMeta = styled.div`
 export const BlogPageShare = styled.div`
   padding: 2px 12px;
   border-radius: 6px;
-  background-color: ${blue};
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -235,7 +229,7 @@ export const BlogArticleWrapper = styled.div`
 export const BlogViewMore = styled(Link)`
   text-align: center;
   font-size: 18px;
-  color: ${primary};
+  color: ${COLORS.primary};
   font-family: Mulish;
   margin: 25px 0;
   display: block;

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Layout from "@layouts";
 import Seo from "@layouts/common/seo";
 import { Container } from "@components/Container";
-import { Categories, CategorySlider, RecentPost } from "./components";
+import { Categories, CategorySlider } from "./components";
 
 const BlogPageWrapper = styled(Container)`
   padding: 8.4rem 10rem;

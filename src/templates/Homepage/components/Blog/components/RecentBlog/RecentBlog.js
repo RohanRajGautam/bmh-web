@@ -1,6 +1,5 @@
 import React from "react";
-import ArticleCard from "@components/ArticleCard";
-import { BlogWrapper, BlogArticleWrapper } from "./RecentBlog.styles";
+import { BlogWrapper } from "./RecentBlog.styles";
 import { graphql, StaticQuery } from "gatsby";
 import BlogCard from "../Card/Card";
 

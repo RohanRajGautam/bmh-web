@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { SPACING, COLORS } from "@components/constants";
-import { Container } from "@components/Container";
+import { SPACING } from "@components/constants";
 
 export const CategorySliderBlockWrapper = styled.div`
   margin-top: ${SPACING.xl};
