@@ -2,23 +2,33 @@ import React from "react";
 import {
   CategorySliderBlockWrapper,
   CategorySliderWrapper,
+  HeadingWrapper,
 } from "./CategorySlider.styles";
-import BlogCard from "../../../Homepage/components/Blog/components/Card";
-import { Heading } from "../../../../components/Heading";
+// import BlogCard from "../../../Homepage/components/Blog/components/Card";
+import BlogCard from "./BlogCard";
+import { HeadingPrimary } from "@components/Heading";
 
 const CategorySlider = props => {
   return (
     <CategorySliderBlockWrapper>
-      <Heading clean>Mental Wellness Articles</Heading>
+      <HeadingWrapper>
+        <HeadingPrimary>
+          Mental Wellness <span>Articles</span>
+        </HeadingPrimary>
+      </HeadingWrapper>
       <CategorySliderWrapper>
         {props.data.length &&
           props.data.map((item, index) => (
             <BlogCard
+              url={item.uri}
               title={item.title}
-              thumbnail={item.featuredImage.node?.sourceUrl}
+              date={item.date}
+              thumbnail={
+                item.featuredImage.node && item.featuredImage.node.sourceUrl
+              }
               desc={item.excerpt.replace(/<[^>]+>/g, "")}
               key={index}
-              url={item.uri}
+              blogcat
             />
           ))}
       </CategorySliderWrapper>

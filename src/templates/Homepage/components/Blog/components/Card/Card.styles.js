@@ -124,5 +124,5 @@ export const CardText = styled.p`
   overflow: hidden;
   -webkit-line-clamp: 3;
 
-  padding: ${SPACING.xs} 0;
+  padding-top: ${SPACING.xs};
 `;

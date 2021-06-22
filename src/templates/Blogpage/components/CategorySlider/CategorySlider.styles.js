@@ -1,24 +1,23 @@
 import styled from "styled-components";
+import { SPACING } from "@components/constants";
 
 export const CategorySliderBlockWrapper = styled.div`
-  margin: 40px 20px;
-  @media (min-width: 768px) {
-    margin: 80px 40px;
-  }
-  @media (min-width: 1024px) {
-    margin: 120px 90px;
-  }
+  margin-top: ${SPACING.xl};
+`;
+
+export const HeadingWrapper = styled.div`
+  margin-bottom: ${SPACING.lg};
 `;
 
 export const CategorySliderWrapper = styled.div`
-  margin-top: 48px;
   display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none;
-  scroll-behavior: smooth;
-  ::-webkit-scrollbar {
-    display: none;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  margin-left: -5rem;
+
+  @media (max-width: 600px) {
+    margin-left: 0;
   }
 `;

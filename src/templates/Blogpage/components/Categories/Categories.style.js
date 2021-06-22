@@ -1,42 +1,22 @@
 import styled from "styled-components";
-import { Heading } from "@components/Heading";
 import { Link } from "gatsby";
+import { SPACING, COLORS } from "@components/constants";
 
-const medicalGrey = "#5F6468";
-
-export const CategoryWrapper = styled.div`
-  margin: 40px 20px;
-  @media (min-width: 768px) {
-    margin: 80px 40px;
-  }
-  @media (min-width: 1024px) {
-    margin: 120px 90px;
-  }
-`;
-
-export const BlogHeading = styled(Heading)`
-  @media (max-width: 576px) {
-    margin-top: 13rem;
-    margin-bottom: 2rem;
-    color: #6ca448;
-    font-size: 4rem;
-  }
-`;
+export const CategoryWrapper = styled.div``;
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
 export const CategoryBlockWrapper = styled.div`
-  margin-top: 72px;
+  margin-top: ${SPACING.md};
 `;
 
 export const CategoryBlock = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 10px;
+  grid-gap: 8px;
   overflow: hidden;
-  font-size: 6px;
   @media (min-width: 767px) {
     grid-template-columns: 1fr 1fr;
   }
@@ -44,13 +24,8 @@ export const CategoryBlock = styled.div`
     grid-template-columns: repeat(11, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
-  @media (min-width: 1200px) {
-    font-size: 7px;
-  }
-
   @media (min-width: 1440px) {
-    font-size: 8px;
-    grid-template-rows: repeat(3, 220px);
+    grid-template-rows: repeat(3, 170px);
   }
 `;
 
@@ -60,6 +35,7 @@ export const CategoryBlogCardWrapper = styled.div`
     &:nth-child(1) {
       grid-column: 1 / span 5;
       grid-row: 1 / span 3;
+      border-radius: 24px 0 0 24px;
     }
     &:nth-child(2) {
       grid-column: 6 / span 3;
@@ -68,6 +44,7 @@ export const CategoryBlogCardWrapper = styled.div`
     &:nth-child(3) {
       grid-column: 9 / span3;
       grid-row: 1 / span 2;
+      border-radius: 0 24px 0 0;
     }
     &:nth-child(4) {
       grid-column: 6 / span 2;
@@ -80,6 +57,7 @@ export const CategoryBlogCardWrapper = styled.div`
     &:nth-child(6) {
       grid-column: 10 / span 3;
       grid-row: 3;
+      border-radius: 0 0 24px 0;
     }
     &:nth-child(4),
     &:nth-child(5),
@@ -88,7 +66,8 @@ export const CategoryBlogCardWrapper = styled.div`
         display: none;
       }
       h2 {
-        font-size: 2em;
+        font-size: 1.6rem;
+        line-height: 2.5rem;
       }
     }
   }
@@ -115,10 +94,17 @@ export const CategoryBlogCard = styled.div`
   @media (min-width: 1440px) {
     padding-top: 0;
   }
+
   &:hover {
-    transform: scale(1.02);
-    transition: transform 300ms;
+    &:not(h2):not(p) {
+      transform: scale(1.01);
+      transition: transform 300ms ease-in-out;
+    }
   }
+`;
+
+export const HeaderContainer = styled.div`
+  margin-top: 1rem;
 `;
 
 export const CategoryTextWrapper = styled.div`
@@ -135,34 +121,53 @@ export const CategoryTextWrapper = styled.div`
 `;
 
 export const CategoryTitle = styled.h2`
-  font-size: 3em;
-  letter-spacing: 0.3px;
-  line-height: 1.35;
+  font-size: 2.8rem;
+  line-height: 3.9rem;
   font-family: Merriweather;
-  font-weight: 700;
+  font-weight: bold;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `;
 
 export const CategoryMetaWrapper = styled.p`
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 1rem;
 `;
 
 export const CategoryAuthor = styled.span`
-  font-size: 11px;
-  letter-spacing: 0.3px;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  font-weight: normal;
   font-family: Mulish;
-  margin-right: 8px;
-  @media (min-width: 1200px) {
-    font-size: 13px;
-  }
+  margin-right: 5px;
+`;
+
+export const CategoryDate = styled.span`
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  font-weight: normal;
+  font-family: Mulish;
+  margin-left: 5px;
 `;
 
 export const BlogBreadCrum = styled.span`
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 1.3rem;
+  font-weight: normal;
   font-family: Mulish;
-  letter-spacing: 0.3px;
-  color: ${medicalGrey};
-  margin-top: 18px;
+  color: ${COLORS.textBodyGrey};
+
+  a {
+    text-decoration: none;
+    font: inherit;
+    color: inherit;
+  }
+
+  span {
+    color: ${COLORS.textDisable};
+    font: inherit;
+  }
 `;

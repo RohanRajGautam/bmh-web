@@ -7,6 +7,7 @@ import {
   CategoryBlogCardWrapper,
   CategoryTitle,
   StyledLink,
+  CategoryDate,
 } from "./Categories.style";
 
 const CategoryCard = props => {
@@ -18,7 +19,8 @@ const CategoryCard = props => {
             <CategoryTitle>{props.title}</CategoryTitle>
             <CategoryMetaWrapper>
               <CategoryAuthor>{props.author}</CategoryAuthor>
-              <CategoryAuthor>{props.date}</CategoryAuthor>
+              {"-"}
+              <CategoryDate>{props.date}</CategoryDate>
             </CategoryMetaWrapper>
           </CategoryTextWrapper>
         </CategoryBlogCard>
