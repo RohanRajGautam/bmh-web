@@ -7,6 +7,7 @@ export const Card = styled.div`
   position: relative;
   width: 40rem;
   height: 46rem;
+  user-select: none;
 
   ${mediaQueries("sm")`
     width: inherit;
@@ -63,13 +64,13 @@ export const Content = styled.div`
 `;
 
 export const StyledLink = styled(Link)`
-  padding-right: ${SPACING.lg};
+  margin-right: ${SPACING.lg};
 
   text-decoration: none;
   display: block;
 
   ${mediaQueries("sm")`
-    padding-right: 5.2rem;
+    margin-right: 5.2rem;
   `}
 `;
 
