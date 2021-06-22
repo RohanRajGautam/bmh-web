@@ -1,12 +1,13 @@
-import styled from "styled-components";
 import { Link } from "gatsby";
+import styled from "styled-components";
+import { Container } from "@components/Container";
 
 const blue = "#427CC5";
 const medicalGrey = "#5F6468";
 const graniteGrey = "#2C3336";
 const primary = "#6CA448";
 
-export const BlogPageHero = styled.div`
+export const BlogPageHero = styled(Container)`
   height: calc(100vh - 40px);
   width: 100%;
   display: flex;
@@ -119,7 +120,7 @@ export const BlogPageShare = styled.div`
   }
 `;
 
-export const BlogContentWrapper = styled.div`
+export const BlogContentWrapper = styled(Container)`
   /* padding-top: 64px; */
   @media (min-width: 1024px) {
     padding: 5vh 5vw;
