@@ -45,7 +45,7 @@ export const MainContainer = styled(Container)`
 
 export const LogoContainer = styled.div`
   ${mediaQueries("md")`
-    display: none;
+    opacity: 0;
   `}
 `;
 
