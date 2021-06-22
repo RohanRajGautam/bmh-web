@@ -74,7 +74,7 @@ export const ImageBg = styled.div`
       rgba(0, 0, 0, 0.2) 3.01%,
       rgba(0, 0, 0, 0) 87.33%
     ),
-    url(${bgimg});
+    url(${bgimg}), #6ca448;
   height: 100%;
   width: 100%;
   background-position: center;
