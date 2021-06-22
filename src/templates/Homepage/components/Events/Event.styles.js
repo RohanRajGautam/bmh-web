@@ -98,6 +98,8 @@ export const EventSliderWrapper = styled.div`
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
+  user-select: none;
+  cursor: grab;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;
   scroll-behavior: smooth;

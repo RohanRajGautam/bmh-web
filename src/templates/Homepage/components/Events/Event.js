@@ -13,7 +13,7 @@ import {
 } from "./Event.styles";
 import MaterialUIPickers from "./EventDatePicker";
 import { HeadingPrimary } from "@components/Heading";
-import { getMonthName } from "../../../../utility";
+import { getMonthName, dragSlider } from "../../../../utility";
 
 const Events = props => {
   // const eventRef = useRef(null);
@@ -43,6 +43,10 @@ const Events = props => {
     setEvents(data);
   }, [selectedDate, props]);
 
+  useEffect(() => {
+    dragSlider("#event-slider");
+  }, []);
+
   return (
     <EventWrapper id="events">
       <HeadingWrapper data-aos="fade-up">
@@ -60,7 +64,7 @@ const Events = props => {
           />
         </DatePickerWrapper>
       </HeadingWrapper>
-      <EventSliderWrapper data-aos="fade-up">
+      <EventSliderWrapper data-aos="fade-up" id="event-slider">
         {!isEmpty(events) ? (
           events.map((item, index) => (
             <Card
