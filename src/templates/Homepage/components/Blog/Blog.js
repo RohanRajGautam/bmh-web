@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   BlogWrapper,
   SliderWrapper,
@@ -11,13 +11,13 @@ import {
 import { BlogCard } from "./components";
 import { HeadingPrimary } from "@components/Heading";
 import CheckOurBlog from "./CheckOurBlog";
+import { dragSlider } from "../../../../utility";
 
 const Blog = props => {
-  // const sliderRef = useRef(null);
-  // const scroll = scrollOffset => {
-  //   sliderRef.current.scrollLeft += scrollOffset;
-  // };
-  console.log(props);
+  useEffect(() => {
+    dragSlider("#blog-slider");
+  }, []);
+
   return (
     <BlogWrapper>
       <HeadingWrapper data-aos="fade-up">
@@ -31,7 +31,7 @@ const Blog = props => {
           <CheckOurBlog />
         </StyledLink>
       </HeadingWrapper>
-      <SliderWrapper data-aos="fade-up">
+      <SliderWrapper data-aos="fade-up" id="blog-slider">
         {props.data.allPost.nodes.length &&
           props.data.allPost.nodes.map((item, index) => (
             <BlogCard
