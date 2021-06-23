@@ -49,7 +49,7 @@ export const People = styled.div`
 
   ${mediaQueries("xs")`
       height: 80%;
-      width: 230%;
+      width: 205%;
       background-position: right;
   `}
 `;
