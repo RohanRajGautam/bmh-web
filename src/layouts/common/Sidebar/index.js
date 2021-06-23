@@ -23,7 +23,7 @@ const Sidebar = () => {
   };
 
   useEffect(() => {
-    const logo = document.getElementById("bmh-logo");
+    const logo = document.querySelector(".bmh-logo-sidebar");
 
     const revealLogo = () => {
       const y = window.scrollY;
@@ -77,7 +77,7 @@ const Sidebar = () => {
         >
           <Donate />
         </Item>
-        <Item id="bmh-logo" href="/" clicked={bigMenu}>
+        <Item className="bmh-logo-sidebar" href="/" clicked={bigMenu}>
           <SmallLogo />
         </Item>
       </Content>

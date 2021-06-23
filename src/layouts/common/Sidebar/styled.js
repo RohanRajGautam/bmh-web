@@ -39,7 +39,7 @@ export const Item = styled.a`
 
   // hide all other items in sidebar when menu-icon is clicked
   &:not(:nth-child(3)) {
-    opacity: ${props => (props.clicked ? "0" : "1")} !important;
+    opacity: ${props => (props.clicked ? "0 !important" : "1")};
   }
 
   &:nth-child(1),
