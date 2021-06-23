@@ -50,15 +50,12 @@ export const BigMenu = styled(Container)`
   z-index: 9;
   background-color: #fff;
   transition: all 0.3s ease-in-out;
+
   ${({ open }) =>
     open &&
     css`
-      /* height: 100vh;
-     width: 100%; */
       transition: all 0.3s ease-in-out;
       transform: translateX(0);
-      /* right: 0;
-     top: 0; */
     `}
 
   ${mediaQueries("md")`
