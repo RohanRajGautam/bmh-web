@@ -34,8 +34,10 @@ export const BlogPageHeroInner = styled.div`
   height: 90%;
   position: relative;
 
-  @media (max-width: 960px) {
+  @media (max-width: 1280px) {
     padding: 5vh 5vw;
+  }
+  @media (max-width: 960px) {
     height: initial;
   }
 `;
@@ -72,7 +74,7 @@ export const BlogPageTitle = styled.h1`
   font-family: Merriweather;
   margin-bottom: 2rem;
 
-  @media (max-width: 600px) {
+  @media (max-width: 1280px) {
     font-size: 5.2rem;
     line-height: 1.2;
   }
@@ -122,7 +124,7 @@ export const BlogPageShare = styled.div`
 
 export const BlogContentWrapper = styled(Container)`
   padding: 5vh 5vw;
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     padding: 8.2rem 11.2rem;
   }
 `;
@@ -141,7 +143,7 @@ export const BlogContent = styled.div`
   line-height: 3.2rem;
   text-align: justify;
   width: 100%;
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     padding-right: 8.2rem !important;
   }
   .fusion-fullwidth {
@@ -168,7 +170,7 @@ export const BlogContent = styled.div`
     display: none;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     width: calc(100% - 350px);
   }
 
@@ -189,17 +191,18 @@ export const BlogContent = styled.div`
 export const BlogWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  @media (min-width: 1024px) {
-    flex-direction: column;
+  flex-direction: column;
+
+  @media (max-width: 1280px) {
+    flex-direction: unset;
+    justify-content: center;
   }
 `;
 
 export const BlogSidebar = styled.div`
-  padding: 30px;
-  @media (min-width: 1024px) {
-    width: 350px;
-    padding: 0;
-  }
+  width: 350px;
+  padding: 0;
+  text-align: left;
 `;
 
 export const BlogSidebarTitle = styled.div`
@@ -211,6 +214,10 @@ export const BlogSidebarTitle = styled.div`
   color: #2c3336;
   margin-bottom: 3.2rem;
   padding-left: 5.2rem;
+
+  @media (max-width: 1280px) {
+    margin-top: 13.6rem;
+  }
 `;
 
 export const BlogArticleWrapper = styled.div`
@@ -220,7 +227,7 @@ export const BlogArticleWrapper = styled.div`
     width: 30%;
     margin-right: 20px;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     margin-right: 0;
     width: 350px;
   }
