@@ -1,44 +1,83 @@
 import { Link } from "gatsby";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import React from "react";
+import PropTypes from "prop-types";
 
-export const Button = styled(Link)`
-  background: ${({ primary }) => (primary ? "#66a250" : "#fff")};
-  color: ${({ primary }) => (primary ? "#fff" : "#66a250")};
-  white-space: nowrap;
-  /* width: 15em; */
-  max-width: 95%;
-  padding: ${({ md }) => (md ? "20px 100px" : "25px 120px")};
-  border: none;
-  border-radius: ${({ round }) => (round ? "50px" : "8px")};
+const Wrapper = styled(Link)`
   display: flex;
-  text-align: center;
+  align-items: center;
   justify-content: center;
   text-decoration: none;
-  display: inline-block;
-  font-family: Mulish;
-  font-size: 24px;
-  font-weight: bold;
-  outline: none;
-  text-align: center;
-  transition: 0.3s !important;
   cursor: pointer;
 
   &:hover {
-    transform: translateY(-2px);
-  }
-
-  @media screen and (max-width: 860px) {
-    padding: 1.5rem 5rem;
-    font-size: 14px;
-    width: 20em;
-    max-width: 80%;
-  }
-  ${props =>
-    props.hover &&
-    css`
-      &:hover {
-        background-color: #fff;
-        color: #66a250;
+    svg {
+      path {
+        transform: translateX(1rem);
+        fill: #6ca448;
+        transition: all 0.3s ease-in-out;
       }
-    `}
+      circle {
+        opacity: 0;
+      }
+    }
+  }
 `;
+
+const Text = styled.h6`
+  //styleName: P2;
+  font-family: Mulish;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.2rem;
+  letter-spacing: 0em;
+
+  color: #6ca448;
+`;
+
+const Arrow = styled.span`
+  padding-top: 1rem;
+  padding-left: 1rem;
+
+  svg {
+    path {
+      transition: all 0.3s ease-in-out;
+    }
+    circle {
+      transition: all 0.3s ease-in-out;
+    }
+  }
+`;
+
+const Button = ({ to, text }) => {
+  return (
+    <Wrapper to={to}>
+      <Text>{text}</Text>
+      <Arrow>
+        <svg
+          width="38"
+          height="27"
+          viewBox="0 0 38 27"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M23.8536 8.64645C23.6583 8.45118 23.3417 8.45118 23.1464 8.64645C22.9512 8.84171 22.9512 9.15829 23.1464 9.35355L26.2929 12.5L0.5 12.5C0.223858 12.5 0 12.7239 0 13C0 13.2761 0.223858 13.5 0.5 13.5L26.2929 13.5L23.1464 16.6464C22.9512 16.8417 22.9512 17.1583 23.1464 17.3536C23.3417 17.5488 23.6583 17.5488 23.8536 17.3536L27.8536 13.3536C28.0488 13.1583 28.0488 12.8417 27.8536 12.6464L23.8536 8.64645Z"
+            fill="black"
+          />
+          <circle opacity="0.2" cx="24" cy="13.5" r="13" stroke="#8CA8BE" />
+        </svg>
+      </Arrow>
+    </Wrapper>
+  );
+};
+
+Button.propTypes = {
+  text: PropTypes.string,
+  to: PropTypes.string.isRequired,
+};
+
+export default Button;
