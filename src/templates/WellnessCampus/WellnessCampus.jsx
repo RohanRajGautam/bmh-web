@@ -6,6 +6,12 @@ import Seo from "@layouts/common/seo";
 import { Container } from "@components/Container";
 
 import { Banner } from "./components";
+import {
+  FutureSectionWholistic,
+  FutureSectionHealthy,
+} from "./components/FutureSection";
+import { ImageSliderFirst, ImageSliderSecond } from "./components/ImageSlider";
+import FullPageImage from "./components/FullPageImage";
 
 const WellnessContainer = styled(Container)``;
 
@@ -15,6 +21,11 @@ const WellnessCampus = ({ title }) => {
       <Seo title={title} />
       <WellnessContainer>
         <Banner />
+        <FutureSectionWholistic />
+        <ImageSliderFirst />
+        <FutureSectionHealthy />
+        <ImageSliderSecond />
+        <FullPageImage />
       </WellnessContainer>
     </Layout>
   );

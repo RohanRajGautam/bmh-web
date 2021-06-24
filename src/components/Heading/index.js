@@ -28,7 +28,7 @@ export const HeadingSecondary = styled.p`
     margin-bottom: 2rem;
   `}
 `;
-export const HeadingPrimary = styled.h3`
+export const HeadingPrimary = styled.h2`
   font-family: Merriweather;
   font-style: normal;
   font-weight: bold;
