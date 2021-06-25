@@ -21,6 +21,10 @@ const BlogPageWrapper = styled(Container)`
 
 const LogoWrapper = styled.div`
   margin-bottom: 5.2rem;
+
+  @media (max-width: 960px) {
+    display: none;
+  }
 `;
 
 const BlogPage = props => {
