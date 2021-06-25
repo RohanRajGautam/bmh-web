@@ -125,7 +125,10 @@ export const ServicesItems = styled.div`
 `;
 
 export const WellnessServicesItems = styled(ServicesItems)`
-  &:nth-child(even) {
+  /* &:nth-child(even) {
+    max-width: 32rem;
+  } */
+  @media (min-width: 1200px) {
     max-width: 32rem;
   }
 `;

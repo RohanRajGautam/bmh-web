@@ -105,7 +105,6 @@ const PlaceholderLogo = styled.div`
 const ServicePopup = ({ open, handleClose, props, onClose }) => {
   const classes = useStyles();
 
-  console.log(props);
   return (
     <Container>
       <Dialog
