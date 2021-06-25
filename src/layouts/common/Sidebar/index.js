@@ -66,7 +66,7 @@ const Sidebar = () => {
         <Item href="/blog-cat" clicked={bigMenu}>
           <Blog />
         </Item>
-        <Item href="#events" clicked={bigMenu}>
+        <Item href="/#events" clicked={bigMenu}>
           <Events />
         </Item>
         <Item
