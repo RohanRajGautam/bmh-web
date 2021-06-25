@@ -5,8 +5,6 @@ import { Container } from "@components/Container";
 import { HeadingSecondary } from "@components/Heading";
 import { mediaQueries } from "@components/MediaQueries";
 
-import Story from "@images/our-story.jpg";
-
 export const StoryContainer = styled(Container)`
   padding: 0 11.3rem;
   margin-top: ${SPACING.xxl};

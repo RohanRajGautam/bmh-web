@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import React from "react";
 
 const FullLogoAlt = ({ to }) => (
-  <div to={to}>
+  <Link to={to}>
     <svg
       width="259"
       height="49"
@@ -75,7 +75,7 @@ const FullLogoAlt = ({ to }) => (
         fill="#2C3336"
       />
     </svg>
-  </div>
+  </Link>
 );
 
 export default FullLogoAlt;

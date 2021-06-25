@@ -10,6 +10,26 @@ import {
   Anchor,
 } from "./DualPage.styles";
 import { WellnessTitle, WellnessDesc, WellnessServices } from "./DualPage.data";
+import ServicePopup from "./ServicePopup";
+
+const ItemWrapper = ({ props }) => {
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+  return (
+    <>
+      <WellnessServicesItems img={props.img}>
+        <Anchor onClick={handleClickOpen}>{props.title}</Anchor>
+      </WellnessServicesItems>
+      <ServicePopup open={open} handleClose={handleClose} props={props} />
+    </>
+  );
+};
 
 const WellnessPage = () => {
   return (
@@ -21,11 +41,7 @@ const WellnessPage = () => {
       <ServicesWrapper>
         <ServicesItemWrapper style={{ maxWidth: "85rem" }}>
           {WellnessServices.map((item, index) => (
-            <WellnessServicesItems key={index}>
-              <Anchor href={item.to} target="_blank" rel="noopener noreferrer">
-                {item.title}
-              </Anchor>
-            </WellnessServicesItems>
+            <ItemWrapper key={index} props={item} />
           ))}
         </ServicesItemWrapper>
       </ServicesWrapper>

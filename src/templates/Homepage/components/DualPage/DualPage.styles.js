@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import hoverImg from "@images/home/hover-img.png";
 import { SPACING } from "@components/constants";
 import { Container } from "@components/Container";
 import { mediaQueries } from "@components/MediaQueries";
@@ -23,7 +22,7 @@ export const Wellness = styled.div``;
 export const Wrapper = styled.div`
   display: flex;
   max-width: 140rem;
-  min-height: 35vh;
+  min-height: 40vh;
   margin-top: 10rem;
 
   ${mediaQueries("sm")`
@@ -72,7 +71,7 @@ export const ServicesItemWrapper = styled.div`
   margin-top: 5.3rem;
 `;
 
-export const ServicesItems = styled.p`
+export const ServicesItems = styled.div`
   text-align: left;
   /* width: 30%; */
   margin-right: 3rem;
@@ -86,7 +85,7 @@ export const ServicesItems = styled.p`
   }
 
   &::after {
-    content: url(${hoverImg});
+    content: url("${props => props.img}");
     display: block;
     position: absolute;
     bottom: -200%;
@@ -99,13 +98,13 @@ export const ServicesItems = styled.p`
 
   &:hover {
     &::after {
-      content: url(${hoverImg});
+      content: url(${props => props.img});
       display: block;
       position: absolute;
       bottom: -200%;
       right: 15%;
       z-index: -2;
-      opacity: 1;
+      opacity: 0.7;
 
       ${mediaQueries("sm")`
         content: none;
@@ -126,9 +125,9 @@ export const WellnessServicesItems = styled(ServicesItems)`
     max-width: 32rem;
   }
 `;
-export const Anchor = styled.a`
+export const Anchor = styled.p`
   font-family: Mulish;
-  font-size: 30px;
+  font-size: 3rem;
   line-height: 32px;
   letter-spacing: 0em;
   text-decoration: none;
