@@ -209,8 +209,8 @@ export const Subtitle = styled(HeadingSecondary)`
 `;
 
 export const HeroHeading = styled(Heading)`
-  margin-top: ${SPACING.lg};
-  padding-top: ${SPACING.md};
+  /* margin-top: ${SPACING.md}; */
+  padding-top: ${SPACING.xl};
 `;
 
 export const BackgroundVector = styled.div`
