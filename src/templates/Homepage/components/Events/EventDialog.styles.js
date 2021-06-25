@@ -69,6 +69,8 @@ export const TextContainer = styled.div`
   flex-direction: column;
   padding-bottom: 3rem;
   padding-top: 1rem;
+  z-index: 1;
+  position: relative;
 `;
 
 export const Title = styled.h6`
