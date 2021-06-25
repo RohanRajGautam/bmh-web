@@ -7,13 +7,21 @@ import CloseIcon from "@material-ui/icons/Close";
 import {
   Wrapper,
   DialogContent,
-  DialogTitle,
   TextContainer,
   Title,
   Value,
   EventTitle,
   Divider,
+  DialogHeader,
+  SecondaryTextMain,
+  Cost,
+  SecondaryText,
+  SecondaryTitle,
+  SecondaryValue,
+  PlaceholderLogo,
 } from "./EventDialog.styles";
+
+import placeholderImg from "@images/icons/placeholder-logo.png";
 
 const useStyles = makeStyles(() => ({
   closeButton: {
@@ -33,14 +41,26 @@ const EventDialog = ({ open, handleClose, props, onClose }) => {
         aria-labelledby="customized-dialog-title"
         open={open}
         fullWidth={true}
-        maxWidth={"md"}
+        fullWidth={true}
+        PaperProps={{
+          style: {
+            borderRadius: 24,
+            maxWidth: 450,
+            maxHeight: 610,
+            width: 450,
+            height: 610,
+          },
+        }}
       >
         <Wrapper>
-          <DialogTitle>
+          <DialogHeader>
             <EventTitle>{props.title}</EventTitle>
-            <Divider />
-          </DialogTitle>
-          <DialogContent>
+            {props.instructor && (
+              <TextContainer>
+                <Title>Featured Speaker:</Title>
+                <Value>{props.instructor}</Value>
+              </TextContainer>
+            )}
             <IconButton
               aria-label="close"
               className={classes.closeButton}
@@ -48,29 +68,31 @@ const EventDialog = ({ open, handleClose, props, onClose }) => {
             >
               <CloseIcon />
             </IconButton>
-            {props.instructor && (
-              <TextContainer>
-                <Title>Featured Speaker -</Title>
-                <Value>{props.instructor}</Value>
-              </TextContainer>
-            )}
+            <PlaceholderLogo>
+              <img
+                src={placeholderImg}
+                alt="placeholder-logo"
+                draggable={false}
+              />
+            </PlaceholderLogo>
+          </DialogHeader>
+          <DialogContent>
             {props.cost && (
-              <TextContainer>
-                <Title>Entrance cost -</Title>
-                <Value>${props.cost}</Value>
-              </TextContainer>
+              <SecondaryTextMain>
+                <Cost>Cost: ${props.cost}</Cost>
+              </SecondaryTextMain>
             )}
             {props.time && (
-              <TextContainer>
-                <Title>Time -</Title>
-                <Value>{props.time}</Value>
-              </TextContainer>
+              <SecondaryText>
+                <SecondaryTitle>Time: </SecondaryTitle>
+                <SecondaryValue>{props.time}</SecondaryValue>
+              </SecondaryText>
             )}
             {props.venue && (
-              <TextContainer>
-                <Title>Address -</Title>
-                <Value>{props.venue}</Value>
-              </TextContainer>
+              <SecondaryText>
+                <SecondaryTitle>Address: </SecondaryTitle>
+                <SecondaryValue>{props.venue}</SecondaryValue>
+              </SecondaryText>
             )}
           </DialogContent>
         </Wrapper>

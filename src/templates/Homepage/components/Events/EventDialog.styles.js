@@ -34,40 +34,35 @@ export const EventWrapper = styled.div`
 
 export const Wrapper = styled.div`
   width: 100%;
-  min-height: 50vh;
+  height: 100%;
   display: flex;
+  flex-direction: column;
 `;
 
-export const DialogTitle = styled.div`
-  /* height: 100%; */
-  width: 50%;
-  background: linear-gradient(285.38deg, #f7d525 -12.17%, #86cf57 81.52%);
+export const DialogHeader = styled.div`
+  height: 60%;
+  padding: 3.2rem;
+  position: relative;
 `;
 
 export const DialogContent = styled.div`
-  /* height: 100%; */
-  width: 50%;
-  border-radius: 12px;
-  margin: 4rem 0 0 3rem;
-
-  @media (max-width: 576px) {
-    margin: 4rem 2rem;
-  }
+  height: 40%;
+  background: #6ca448;
+  padding: 3.2rem;
 `;
 
-export const EventTitle = styled.h2`
-  font-size: 4rem;
+export const EventTitle = styled.h4`
   font-family: Merriweather;
-  transition: color 300ms;
-  line-height: 1.6;
-  font-weight: 900;
-  letter-spacing: 0.1px;
-  color: #fff;
-  margin: 4rem 3rem 1rem;
-  @media (max-width: 600px) {
-    font-size: 2.3rem;
-    margin: 4rem 2rem 1rem;
-  }
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  margin-bottom: 3.2rem;
+
+  width: 90%;
 `;
 
 export const TextContainer = styled.div`
@@ -77,33 +72,77 @@ export const TextContainer = styled.div`
   padding-top: 1rem;
 `;
 
-export const Title = styled.p`
-  font-family: Mulish;
+export const Title = styled.h6`
+  //styleName: H6;
+  font-family: Merriweather;
+  font-size: 1.6rem;
   font-style: normal;
-  font-weight: normal;
-  font-size: 1.8rem;
-  line-height: 147.69%;
-  letter-spacing: 0.1px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+
   color: #5f6468;
 `;
 export const Value = styled.p`
+  //styleName: P2;
   font-family: Mulish;
+  font-size: 2rem;
   font-style: normal;
-  font-weight: bold;
-  font-size: 1.6rem;
-  line-height: 147.69%;
-  letter-spacing: 0.1px;
-  color: ${COLORS.primary};
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #596166;
 `;
 
-export const Divider = styled.div`
-  width: 5rem;
-  height: 5px;
-  position: relative;
-  background: #fff;
-  left: 3rem;
+export const SecondaryTextMain = styled.div`
+  margin-bottom: 2.4rem;
+`;
+export const Cost = styled.h5`
+  //styleName: H5;
+  font-family: Merriweather;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+`;
 
-  @media (max-width: 576px) {
-    left: 2rem;
-  }
+export const SecondaryText = styled.div`
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: baseline;
+`;
+export const SecondaryTitle = styled.h6`
+  //styleName: H6;
+  font-family: Merriweather;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+
+  min-width: 10rem;
+`;
+export const SecondaryValue = styled.p`
+  //styleName: P2;
+  font-family: Mulish;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #f5f5ef;
+`;
+
+export const PlaceholderLogo = styled.div`
+  position: absolute;
+  right: 0;
+  bottom: 0;
 `;
