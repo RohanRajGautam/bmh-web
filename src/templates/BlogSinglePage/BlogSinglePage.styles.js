@@ -1,4 +1,3 @@
-import { Link } from "gatsby";
 import styled from "styled-components";
 
 import { COLORS } from "@components/constants";
@@ -231,14 +230,4 @@ export const BlogArticleWrapper = styled.div`
     margin-right: 0;
     width: 350px;
   }
-`;
-
-export const BlogViewMore = styled(Link)`
-  text-align: center;
-  font-size: 18px;
-  color: ${COLORS.primary};
-  font-family: Mulish;
-  margin: 25px 0;
-  display: block;
-  text-decoration: none;
 `;

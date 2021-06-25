@@ -17,7 +17,6 @@ import {
   BlogContent,
   BlogSidebar,
   BlogSidebarTitle,
-  BlogViewMore,
 } from "./BlogSinglePage.styles";
 import { RecentBlog } from "../Homepage/components/Blog/components";
 import SocialShare from "@components/SocialShare";
@@ -56,7 +55,6 @@ const BlogSinglePage = ({ data, ...props }) => {
           <BlogSidebar>
             <BlogSidebarTitle>Recent Articles</BlogSidebarTitle>
             <RecentBlog />
-            <BlogViewMore to="/blogs">View More</BlogViewMore>
           </BlogSidebar>
         </BlogContentWithSidebar>
       </BlogContentWrapper>

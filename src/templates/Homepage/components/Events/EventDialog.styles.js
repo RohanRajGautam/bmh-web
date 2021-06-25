@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { COLORS } from "@components/constants";
 
 const graniteGrey = "#2C3336";
 

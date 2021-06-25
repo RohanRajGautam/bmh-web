@@ -11,7 +11,6 @@ import {
   Title,
   Value,
   EventTitle,
-  Divider,
   DialogHeader,
   SecondaryTextMain,
   Cost,
@@ -40,7 +39,6 @@ const EventDialog = ({ open, handleClose, props, onClose }) => {
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
-        fullWidth={true}
         fullWidth={true}
         PaperProps={{
           style: {
