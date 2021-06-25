@@ -1,9 +1,8 @@
-import { Link } from "gatsby";
 import styled from "styled-components";
 import React from "react";
 import PropTypes from "prop-types";
 
-const Wrapper = styled(Link)`
+const Wrapper = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,9 +49,13 @@ const Arrow = styled.span`
   }
 `;
 
-const Button = ({ to, text }) => {
+const Button = ({ to, text, nextPage }) => {
   return (
-    <Wrapper to={to}>
+    <Wrapper
+      href={to}
+      target={nextPage ? "_blank" : "_self"}
+      rel="noopener noreferrer"
+    >
       <Text>{text}</Text>
       <Arrow>
         <svg
@@ -76,8 +79,9 @@ const Button = ({ to, text }) => {
 };
 
 Button.propTypes = {
-  text: PropTypes.string,
   to: PropTypes.string.isRequired,
+  text: PropTypes.string,
+  nextPage: PropTypes.string,
 };
 
 export default Button;
