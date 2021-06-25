@@ -74,7 +74,7 @@ export const ImageBg = styled.div`
       rgba(0, 0, 0, 0.2) 3.01%,
       rgba(0, 0, 0, 0) 87.33%
     ),
-    url(${bgimg}), #6ca448;
+    url(${bgimg});
   height: 100%;
   width: 100%;
   background-position: center;
@@ -154,7 +154,7 @@ export const HeroH1 = styled.h1`
   color: #fff;
   margin-bottom: 3.2rem;
 
-  animation: ${slideFromBottom("title", 80)} 300ms ease-in-out;
+  animation: ${slideFromBottom("title", 80)} 500ms ease-in-out;
 
   span {
     font-family: "Smiley";
@@ -183,11 +183,11 @@ export const HeroP = styled.p`
   opacity: 0.9;
   padding-bottom: 3rem;
 
-  animation: ${slideFromBottom("title", 80)} 400ms ease-in-out;
+  animation: ${slideFromBottom("title", 80)} 600ms ease-in-out;
 `;
 
 export const ButtonContainer = styled.div`
-  animation: ${slideFromBottom("title", 80)} 500ms ease-in-out;
+  animation: ${slideFromBottom("title", 80)} 700ms ease-in-out;
 `;
 
 export const Subtitle = styled(HeadingSecondary)`
