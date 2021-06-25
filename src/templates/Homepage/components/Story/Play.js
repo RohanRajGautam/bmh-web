@@ -10,10 +10,10 @@ const bounce = keyframes`
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-20px);
+    transform: translateY(-10px);
   }
   60% {
-    transform: translateY(-12px);
+    transform: translateY(-6px);
   }
 `;
 
@@ -23,11 +23,12 @@ const PlayButton = styled.a`
   left: 4%;
   bottom: 13%;
 
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   -webkit-animation: ${bounce} 2s infinite;
   animation: ${bounce} 2s infinite;
 
   &:hover {
+    transition: all 0.3s ease-in-out;
     transform: scale(0.9);
     -webkit-animation: none;
     animation: none;
