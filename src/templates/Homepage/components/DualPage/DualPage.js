@@ -5,7 +5,7 @@ import { MainContainer, Medical, Wellness } from "./DualPage.styles";
 
 const DualPage = () => {
   return (
-    <MainContainer id="medical-wellness">
+    <MainContainer>
       <Medical>
         <MedicalPage />
       </Medical>
