@@ -5,6 +5,7 @@ import Layout from "@layouts";
 import Seo from "@layouts/common/seo";
 import { Container } from "@components/Container";
 import { Categories, CategorySlider } from "./components";
+import FullLogoAlt from "@images/icons/full-logo-alt";
 
 const BlogPageWrapper = styled(Container)`
   padding: 8.4rem 10rem;
@@ -18,11 +19,18 @@ const BlogPageWrapper = styled(Container)`
   }
 `;
 
+const LogoWrapper = styled.div`
+  margin-bottom: 5.2rem;
+`;
+
 const BlogPage = props => {
   return (
     <Layout dark>
       <Seo title="Blog" />
       <BlogPageWrapper>
+        <LogoWrapper>
+          <FullLogoAlt to="/" />
+        </LogoWrapper>
         <Categories data={props && props.data.category.edges[0].node} />
         {/* <RecentPost data={props && props.data.categoryTwo.edges[0].node} /> */}
         <CategorySlider data={props.data.allPost.nodes} />
