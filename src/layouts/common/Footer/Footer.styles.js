@@ -5,7 +5,7 @@ import { SPACING, COLORS } from "@components/constants";
 import { mediaQueries } from "@components/MediaQueries";
 
 export const FooterWrapper = styled(Container)`
-  padding: ${SPACING.xl} 11.3rem;
+  padding: ${SPACING.xl} 11.3rem 8.4rem 11.3rem;
   max-width: 140rem;
 
   ${mediaQueries("lg")`
