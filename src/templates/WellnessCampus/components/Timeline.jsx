@@ -5,6 +5,16 @@ import logoXs from "@images/icons/logo-xs-white.png";
 
 const Container = styled.div`
   margin: 13.6rem 0;
+
+  overflow-x: scroll;
+  overflow-y: hidden;
+  user-select: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 const TimelineContainer = styled.div`

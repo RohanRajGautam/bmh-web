@@ -9,6 +9,11 @@ import { BackArrw } from "@components/SvgComponent/back-arrow.js";
 const ImageContainer = styled.div`
   min-height: 100vh;
   height: 100vh;
+
+  @media (max-width: 960px) {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
 `;
 
 const ImageBg = styled.div`

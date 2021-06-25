@@ -23,7 +23,7 @@ const Container = styled.div`
     display: none;
   }
 
-  margin-left: 11.3rem;
+  padding-left: 11.3rem;
 `;
 
 const ImgContainer = styled.div`

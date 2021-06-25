@@ -23,12 +23,24 @@ const ImageContainer = styled.div`
     height: 100%;
     width: 100%;
   }
+
+  @media (max-width: 960px) {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+`;
+
+const TextContainer = styled(TextWrapper)`
+  @media (max-width: 960px) {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
 `;
 
 const FullPageImage = () => {
   return (
     <MainContainer>
-      <TextWrapper>
+      <TextContainer>
         <Heading>
           <HeadingPrimary>
             The future <br />
@@ -36,7 +48,7 @@ const FullPageImage = () => {
           </HeadingPrimary>
         </Heading>
         <Content />
-      </TextWrapper>
+      </TextContainer>
       <Timeline />
       <ImageContainer>
         <img src={fullpageimg} alt="full-page-img" loading="lazy" />

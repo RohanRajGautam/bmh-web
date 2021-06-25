@@ -5,6 +5,8 @@ import Layout from "@layouts";
 import Seo from "@layouts/common/seo";
 import { Heading } from "@components/Heading";
 
+import { Container } from "@components/Container";
+
 import { data } from "./data";
 
 const CoverImage = styled.div`
@@ -28,7 +30,7 @@ const DescImage = styled.div`
   }
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled(Container)`
   height: auto;
   padding: 5vh 5vw;
 `;

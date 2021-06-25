@@ -8,18 +8,31 @@ import Button from "@components/Button";
 const Container = styled.div`
   padding-top: ${SPACING.xxl};
   padding-bottom: ${SPACING.xl};
+
+  @media (max-width: 960px) {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
 `;
 
 export const TextWrapper = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: center;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 export const Heading = styled.div`
   margin-right: 8rem;
   span {
     color: ${COLORS.primary};
+  }
+
+  @media (max-width: 600px) {
+    margin-bottom: 5.2rem;
   }
 `;
 
@@ -28,7 +41,6 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: flex-start;
   max-width: 47.5rem;
-  width: 47.5rem;
 `;
 
 const Paragraph = styled.p`
