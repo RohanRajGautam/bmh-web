@@ -33,6 +33,8 @@ const useStyles = makeStyles(() => ({
 
 const EventDialog = ({ open, handleClose, props, onClose }) => {
   const classes = useStyles();
+
+  console.log(props);
   return (
     <div>
       <Dialog
@@ -83,7 +85,9 @@ const EventDialog = ({ open, handleClose, props, onClose }) => {
             {props.time && (
               <SecondaryText>
                 <SecondaryTitle>Time: </SecondaryTitle>
-                <SecondaryValue>{props.time}</SecondaryValue>
+                <SecondaryValue>
+                  {props.date} - {props.time}
+                </SecondaryValue>
               </SecondaryText>
             )}
             {props.venue && (
