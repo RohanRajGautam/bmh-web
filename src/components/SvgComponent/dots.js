@@ -1,9 +1,18 @@
 import React from "react";
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  @media (min-width: 1294px) {
+    svg {
+      width: 1294px;
+    }
+  }
+`;
 
 const Dots = () => (
-  <div>
+  <Wrapper>
     <svg
-      width="1294"
+      width="960"
       height="597"
       viewBox="0 0 1294 597"
       fill="none"
@@ -60,7 +69,7 @@ const Dots = () => (
         fill="#6CA448"
       />
     </svg>
-  </div>
+  </Wrapper>
 );
 
 export default Dots;
