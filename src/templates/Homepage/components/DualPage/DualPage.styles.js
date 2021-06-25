@@ -8,6 +8,10 @@ export const MainContainer = styled(Container)`
   padding: 0 11.3rem;
   margin-top: 30rem;
 
+  @media (min-height: 1200px) {
+    margin-top: 0;
+  }
+
   ${mediaQueries("lg")`
     padding: 0 5vw;
   `}

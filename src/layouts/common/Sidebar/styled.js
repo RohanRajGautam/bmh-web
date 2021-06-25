@@ -37,6 +37,10 @@ export const Item = styled.a`
     }
   }
 
+  @media (min-height: 1000px) {
+    padding: 5.2rem 0;
+  }
+
   // hide all other items in sidebar when menu-icon is clicked
   &:not(:nth-child(3)) {
     opacity: ${props => (props.clicked ? "0 !important" : "1")};

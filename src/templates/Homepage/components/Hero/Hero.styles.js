@@ -56,6 +56,7 @@ export const HeroContainer = styled.div`
   /* margin-top: -80px; */
   color: #fff;
   width: 100%;
+  max-height: 90rem;
 `;
 
 export const HeroBg = styled.div`
@@ -137,10 +138,9 @@ export const HeroTextContainer = styled.div`
   max-width: 40rem;
   /* margin: 8rem 0; */
 
-  /* @media (max-width: 600px) {
-    width: 32rem;
-    margin: 7rem 0;
-  } */
+  @media (min-width: 1600px) {
+    max-width: 60rem;
+  }
 `;
 
 export const HeroH1 = styled.h1`
@@ -171,6 +171,12 @@ export const HeroH1 = styled.h1`
       line-height: 6rem;
     }
   }
+
+  @media (min-width: 1600px) {
+    br {
+      display: none;
+    }
+  }
 `;
 
 export const HeroP = styled.p`
@@ -184,6 +190,10 @@ export const HeroP = styled.p`
   padding-bottom: 3rem;
 
   animation: ${slideFromBottom("title", 80)} 600ms ease-in-out;
+
+  @media (min-width: 1600px) {
+    max-width: 50rem;
+  }
 `;
 
 export const ButtonContainer = styled.div`

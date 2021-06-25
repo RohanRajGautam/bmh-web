@@ -18,10 +18,6 @@ export const DonateWrapper = styled(Container)`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-    span {
-      font-family: Merriweather;
-    }
   }
 `;
 
