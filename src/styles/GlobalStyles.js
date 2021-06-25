@@ -26,7 +26,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Merriweather', 'Mulish', 'Smiley', 'MerriweatherSans';  
     overflow-x: hidden;
 
-
+/* 
     &::-webkit-scrollbar {
       width: 8px;
     }
@@ -38,7 +38,7 @@ export const GlobalStyles = createGlobalStyle`
     &::-webkit-scrollbar-thumb {
       background: ${primary};
       border-radius: 12px; 
-    }
+    } */
 
     
   }
