@@ -5,7 +5,9 @@ import styled from "styled-components";
 
 import { data, items } from "./data";
 
-const Wrapper = styled.div`
+import { Container } from "@components/Container";
+
+const Wrapper = styled(Container)`
   height: auto;
   padding: 5vh 5vw;
 `;
