@@ -1,29 +1,30 @@
+import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 
-const Wrapper = styled.a`
-svg {
-      path{
-        transition: all .3s ease-in-out;
-      }
-    
-&:hover {
-  cursor: pointer;
-  filter: brightness(1.1);
+const Wrapper = styled(Link)`
+  svg {
+    path {
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      cursor: pointer;
+      filter: brightness(1.1);
       path:nth-child(3) {
         transform: translateX(1rem);
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
       }
-      
       path:nth-child(4) {
         opacity: 0;
         transition: all 0.3s ease-in-out;
       }
     }
+  }
 `;
 
 const ExploreSvg = ({ to }) => (
-  <Wrapper href={to} target="_blank" rel="noopener noreferrer">
+  <Wrapper to={to}>
     <svg
       width="207"
       height="86"
