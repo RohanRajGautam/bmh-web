@@ -14,6 +14,10 @@ export const FooterWrapper = styled(Container)`
     padding-bottom: 6.7rem;
     padding-top: 13.6rem;
   `}
+
+  @media (min-width: 1600px) {
+    max-width: 180rem;
+  }
 `;
 
 export const FooterMain = styled.div``;

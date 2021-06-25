@@ -37,7 +37,7 @@ export const Item = styled.a`
     }
   }
 
-  @media (min-height: 1000px) {
+  @media (min-height: 1100px) {
     padding: 5.2rem 0;
   }
 
