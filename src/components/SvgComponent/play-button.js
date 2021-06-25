@@ -24,10 +24,12 @@ const Play = styled.div`
   height: 130px;
   border-radius: 50%;
   -webkit-animation: ${pulse} 2s infinite;
+  animation: ${pulse} 2s infinite;
 
   &:hover {
     transform: scale(0.9);
     -webkit-animation: none;
+    animation: none;
   }
 `;
 

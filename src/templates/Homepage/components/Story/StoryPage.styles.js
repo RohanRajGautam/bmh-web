@@ -22,12 +22,6 @@ export const StoryContainer = styled(Container)`
 `;
 
 export const Content = styled.div`
-  /* position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: baseline; */
-  /* width: 50%; */
   padding-right: ${SPACING.lg};
   flex: 0 0 49%;
 
@@ -58,33 +52,9 @@ export const ContentWrapper = styled.div`
 `;
 
 export const PhotoWrapper = styled.div`
-  /* background-image: url(${Story});
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  padding-bottom: 80%;
-  display: none;
-  @media (min-width: 768px) {
-    display: block;
-  } */
   max-width: 65rem;
   max-height: 50rem;
   flex: 0 0 60%;
-
-  /* width: auto; */
-
-  svg {
-    g {
-      &:hover {
-        circle,
-        path {
-          cursor: pointer;
-          /* transform: scale(0.9); */
-        }
-      }
-    }
-  }
 
   ${mediaQueries("md")`
     width: auto;

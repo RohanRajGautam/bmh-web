@@ -85,7 +85,7 @@ const WellnessCampus = () => {
           </Title>
         </Heading>
         <ButtonWrapper data-aos="fade-up">
-          <ExploreSvg to="https://brojure.com/bmw/overview/" />
+          <ExploreSvg to="/wellness-campus" />
         </ButtonWrapper>
       </Content>
     </Wrapper>

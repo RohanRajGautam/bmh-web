@@ -11,6 +11,7 @@ import {
 } from "./StoryPage.styles";
 
 import PhotoSvg from "./Photo";
+import Play from "./Play";
 import Readmore from "./readmore";
 import { HeadingPrimary } from "@components/Heading";
 
@@ -40,7 +41,10 @@ const StoryPage = () => {
           </ButtonWrapper>
         </Content>
         <PhotoWrapper data-aos="fade-up">
-          <PhotoSvg />
+          <div style={{ position: "relative" }}>
+            <PhotoSvg />
+            <Play to="https://vimeo.com/368513589" />
+          </div>
         </PhotoWrapper>
       </ContentWrapper>
     </StoryContainer>
