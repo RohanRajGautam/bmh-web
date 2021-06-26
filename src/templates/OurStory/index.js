@@ -1,12 +1,11 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import Layout from "@layouts";
 import Seo from "@layouts/common/seo";
 import { Heading } from "@components/Heading";
 
 import { Container } from "@components/Container";
-
+import Image from "@components/Image";
 import { data } from "./data";
 
 const CoverImage = styled.div`
@@ -69,11 +68,7 @@ const OurStory = () => {
     <Layout dark>
       <Seo title="Our Story" />
       <CoverImage>
-        <StaticImage
-          src="../../images/ourstory-bg.jpg"
-          alt="cover-photo"
-          layout="fullWidth"
-        />
+        <Image src="ourstory-bg.jpg" />
       </CoverImage>
       <Divider />
       <Wrapper>
@@ -82,10 +77,7 @@ const OurStory = () => {
           <Desc>{data.desc1}</Desc>
           <Desc>{data.desc2}</Desc>
           <DescImage>
-            <StaticImage
-              src="../../images/ourstory-desc.jpg"
-              alt="desc-photo"
-            />
+            <Image src="ourstory-desc.jpg" style={{ borderRadius: "24px" }} />
           </DescImage>
           <Desc>{data.desc3}</Desc>
           <Desc>{data.desc4}</Desc>
