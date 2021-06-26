@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
-import wellnessBanner from "@images/wellness-campus/banner.png";
+import wellnessBanner from "@images/wellness-campus/banner.jpg";
 import LogoWithText from "@components/LogoWithText";
 import MainText from "@components/MainText";
 import { BackArrw } from "@components/SvgComponent/back-arrow.js";
@@ -17,11 +17,7 @@ const ImageContainer = styled.div`
 `;
 
 const ImageBg = styled.div`
-  background: linear-gradient(
-      112.4deg,
-      rgba(0, 0, 0, 0.2) 3.01%,
-      rgba(0, 0, 0, 0) 87.33%
-    ),
+  background: linear-gradient(0deg, rgba(38, 8, 8, 0.24), rgba(38, 8, 8, 0.24)),
     url(${wellnessBanner}), #6ca448;
   height: 100%;
   width: 100%;
