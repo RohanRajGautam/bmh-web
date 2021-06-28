@@ -5,17 +5,14 @@ const changeText = keyframes`
   0% {
     content: 'wholistic'
   }
-  30% {
+  33% {
     content: 'healthy'
   }
-  60% {
+  66% {
     content: 'happy'
   }
-  90% {
-    content: 'coming'
-  }
   100% {
-    content: 'wholistic'
+    content: 'coming'
   }
 `;
 
