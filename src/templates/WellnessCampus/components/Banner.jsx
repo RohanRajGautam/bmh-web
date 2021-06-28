@@ -72,7 +72,7 @@ const Banner = () => {
       </HeroBg>
       <HeroContent>
         <HeroItems>
-          <LogoWithText />
+          <LogoWithText text="wellness campus" />
           <TextContainer>
             <MainText />
           </TextContainer>
