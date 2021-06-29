@@ -33,11 +33,11 @@ const LogoImg = styled.img`
   bottom: -50%;
 `;
 
-const LogoWithText = () => {
+const LogoWithText = ({ text }) => {
   return (
     <LogoContainer>
       <LogoImg src={logo} alt="bmh-logo" draggable="false" />
-      <FadedText>wellness campus</FadedText>
+      <FadedText>{text}</FadedText>
     </LogoContainer>
   );
 };
