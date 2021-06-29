@@ -19,18 +19,19 @@ const FadedText = styled.span`
   text-transform: uppercase;
   color: #fff;
   /* z-index: 1; */
-  position: relative;
+  /* position: relative; */
   text-align: center;
 `;
 
 const LogoImg = styled.img`
-  opacity: 0.25;
+  opacity: 0.3;
   width: 70px;
-  margin-top: 7rem;
+  /* margin-top: 7rem; */
   filter: grayscale(1);
   position: absolute;
-  left: 30%;
-  bottom: -50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 `;
 
 const LogoWithText = ({ text }) => {

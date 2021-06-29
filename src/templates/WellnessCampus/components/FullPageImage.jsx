@@ -18,15 +18,18 @@ const MainContainer = styled.div`
   background: #f5f5ef;
   padding-top: 13.3rem;
   margin-top: 9.3rem;
+  margin-bottom: 9.3rem;
 `;
 
 const ImageContainer = styled.div`
   position: relative;
   height: 150vh;
 
-  @media (max-width: 960px) {
-    padding-left: 5vw;
-    padding-right: 5vw;
+  @media (max-width: 1024px) {
+    height: 80vh;
+  }
+  @media (max-width: 600px) {
+    height: 100vh;
   }
 `;
 
@@ -43,10 +46,17 @@ const Image = styled.div`
   left: 50%;
   transform: translate(-50%, -50%) scale(1.1);
   filter: brightness(1);
+
+  @media (max-width: 1024px) {
+    height: 90%;
+    width: 100%;
+    filter: brightness(0.5);
+
+  }
 `;
 
 const TextContainer = styled(TextWrapper)`
-  @media (max-width: 960px) {
+  @media (max-width: 1024px) {
     padding-left: 5vw;
     padding-right: 5vw;
   }
@@ -84,6 +94,12 @@ const ImageContent = styled.div`
   align-items: center;
 
   opacity: 0;
+
+  @media (max-width: 1024px) {
+    opacity: 1;
+    top: 50%;
+    width: 100%;
+  }
 `;
 
 const ImageTextContainer = styled.div`
@@ -100,40 +116,44 @@ const FullPageImage = () => {
     // const ImageContainer = imgRef.current;
     const imageFull = imgRef.current.children[0];
     const imageContent = imgRef.current.children[1];
-    gsap.to(imageFull, {
-      scrollTrigger: {
-        trigger: imageFull,
-        start: "center 40%",
-        end: "+=1000",
-        scrub: 1, // for animation
-        pinSpacing: false,
-        // toggleActions: "restart complete reverse reset",
-      },
-      width: "100%",
-      height: "100%",
-    });
+    ScrollTrigger.matchMedia({
+      '(min-width: 1024px)': () => {
+        gsap.to(imageFull, {
+          scrollTrigger: {
+            trigger: imageFull,
+            start: "center 40%",
+            end: "+=1000",
+            scrub: 1, // for animation
+            pinSpacing: false,
+            // toggleActions: "restart complete reverse reset",
+          },
+          width: "100%",
+          height: "100%",
+        });
 
-    gsap.to(imageContent, {
-      scrollTrigger: {
-        trigger: imageFull,
-        start: "center+=620 center",
-        scrub: 1,
-        toggleActions: "restart complete reverse reset",
-      },
-      opacity: 1,
-      ease: "expo.easeInOut",
-    });
+        gsap.to(imageContent, {
+          scrollTrigger: {
+            trigger: imageFull,
+            start: "center+=620 center",
+            scrub: 1,
+            toggleActions: "restart complete reverse reset",
+          },
+          opacity: 1,
+          ease: "expo.easeInOut",
+        });
 
-    gsap.to(imageFull, {
-      scrollTrigger: {
-        trigger: imageFull,
-        start: "center+=620 center",
-        scrub: 1,
-        toggleActions: "restart complete reverse reset",
-      },
-      filter: "brightness(0.5)",
-      ease: "expo.easeInOut",
-    });
+        gsap.to(imageFull, {
+          scrollTrigger: {
+            trigger: imageFull,
+            start: "center+=620 center",
+            scrub: 1,
+            toggleActions: "restart complete reverse reset",
+          },
+          filter: "brightness(0.5)",
+          ease: "expo.easeInOut",
+        });
+      }
+    })
   }, []);
 
   return (
