@@ -16,28 +16,13 @@ if (typeof window !== "undefined") {
 
 const MainContainer = styled.div`
   background: #f5f5ef;
-  padding: 13.3rem 0;
+  padding-top: 13.3rem;
   margin-top: 9.3rem;
 `;
 
 const ImageContainer = styled.div`
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-
   position: relative;
   height: 150vh;
-  /* width: 800px; */
-
-  /* padding: 0 13.3rem; */
-
-  /* img {
-    height: 100%;
-    width: 100%;
-  } */
-
-  /* height: 80vh; */
-  /* width: 80vw; */
 
   @media (max-width: 960px) {
     padding-left: 5vw;
@@ -89,7 +74,7 @@ const Text = styled.h1`
 
 const ImageContent = styled.div`
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -119,14 +104,10 @@ const FullPageImage = () => {
       scrollTrigger: {
         trigger: imageFull,
         start: "center 40%",
-        // end: "top top",
         end: "+=1000",
-        // scrub: 1, // for animation speed
-        // pin: true,
-        scrub: true,
+        scrub: 1, // for animation
         pinSpacing: false,
         // toggleActions: "restart complete reverse reset",
-        markers: true,
       },
       width: "100%",
       height: "100%",
@@ -136,6 +117,7 @@ const FullPageImage = () => {
       scrollTrigger: {
         trigger: imageFull,
         start: "center+=620 center",
+        scrub: 1,
         toggleActions: "restart complete reverse reset",
       },
       opacity: 1,
@@ -146,6 +128,7 @@ const FullPageImage = () => {
       scrollTrigger: {
         trigger: imageFull,
         start: "center+=620 center",
+        scrub: 1,
         toggleActions: "restart complete reverse reset",
       },
       filter: "brightness(0.5)",
