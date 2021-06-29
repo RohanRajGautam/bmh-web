@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -39,35 +39,38 @@ const HorizontalWrapper = styled.div`
 `;
 
 export const ImageSliderFirst = () => {
-  React.useEffect(() => {
-    // let sections = document.querySelectorAll('#container');
-    let sections = gsap.utils.toArray("#img-container-first");
-    console.log(sections);
+  const firstSlider = useRef(null);
+
+  useEffect(() => {
+    const sliderContainer = firstSlider.current;
+    const horizontalWrapper = firstSlider.current.children[0].children;
+
+    const sections = gsap.utils.toArray(horizontalWrapper);
 
     gsap.to(sections, {
       xPercent: -100,
       ease: "none",
       scrollTrigger: {
-        trigger: "#container-first",
+        trigger: sliderContainer,
         // pin: true,
         start: "top center",
         scrub: 1,
         end: () =>
-          "+=" + document.querySelector("#img-container-first").offsetWidth / 3,
+          "+=" + firstSlider.current.children[0].children[0].offsetWidth / 3,
       },
     });
   }, []);
 
   return (
-    <Container id="container-first">
+    <Container ref={firstSlider}>
       <HorizontalWrapper style={{ paddingLeft: "11.3rem" }}>
-        <ImgContainer id="img-container-first">
+        <ImgContainer>
           <img src={img1} alt="slide-img-1" loading="lazy" />
         </ImgContainer>
-        <ImgContainer id="img-container-first">
+        <ImgContainer>
           <img src={img2} alt="slide-img-2" loading="lazy" />
         </ImgContainer>
-        <ImgContainer id="img-container-first">
+        <ImgContainer>
           <img src={img3} alt="slide-img-3" loading="lazy" />
         </ImgContainer>
       </HorizontalWrapper>
@@ -76,40 +79,43 @@ export const ImageSliderFirst = () => {
 };
 
 export const ImageSliderSecond = () => {
-  React.useEffect(() => {
-    // let sections = document.querySelectorAll('#container');
-    let sections = gsap.utils.toArray("#img-container-second");
-    console.log(sections);
+  const secondSlider = useRef(null);
+
+  useEffect(() => {
+    const sliderContainer = secondSlider.current;
+    const horizontalWrapper = secondSlider.current.children[0].children;
+
+    const sections = gsap.utils.toArray(horizontalWrapper);
 
     gsap.to(sections, {
       xPercent: 100,
       ease: "none",
       scrollTrigger: {
-        trigger: "#container-second",
+        trigger: sliderContainer,
         // pin: true,
-        start: "top center",
+        start: "top top+=150",
         scrub: 1,
         end: () =>
           "+=" +
-          document.querySelector("#img-container-second").offsetWidth / 3,
+          secondSlider.current.children[0].children[0].offsetWidth / 3,
       },
     });
   }, []);
   return (
-    <Container id="container-second">
+    <Container ref={secondSlider}>
       <HorizontalWrapper
         style={{
           paddingRight: "13.3rem",
           flexDirection: "row-reverse",
         }}
       >
-        <ImgContainer id="img-container-second">
+        <ImgContainer>
           <img src={img4} alt="slide-img-4" loading="lazy" />
         </ImgContainer>
-        <ImgContainer id="img-container-second">
+        <ImgContainer>
           <img src={img5} alt="slide-img-5" loading="lazy" />
         </ImgContainer>
-        <ImgContainer id="img-container-second">
+        <ImgContainer>
           <img src={img6} alt="slide-img-6" loading="lazy" />
         </ImgContainer>
       </HorizontalWrapper>
