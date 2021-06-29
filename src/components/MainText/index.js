@@ -3,16 +3,24 @@ import styled, { keyframes } from "styled-components";
 
 const changeText = keyframes`
   0% {
-    content: 'wholistic'
+    content: 'wholistic';
+    /* opacity: 1; */
   }
-  33% {
-    content: 'healthy'
+  25% {
+    content: 'healthy';
+    /* opacity: 1; */
   }
-  66% {
-    content: 'happy'
+  50% {
+    content: 'happy';
+    /* opacity: 1; */
+  }
+  75% {
+    content: 'coming';
+    /* opacity: 1; */
   }
   100% {
-    content: 'coming'
+    content: 'wholistic';
+    /* opacity: 1; */
   }
 `;
 
@@ -38,7 +46,6 @@ const Text = styled.h1`
     font-weight: 400;
     line-height: 8.2rem;
     letter-spacing: -0.02em;
-    transition: all 0.3s ease-in-out;
 
     &::before {
       content: "";
