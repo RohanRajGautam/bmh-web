@@ -4,7 +4,9 @@ import styled from "styled-components";
 import wellnessBanner from "@images/wellness-campus/banner.jpg";
 import LogoWithText from "@components/LogoWithText";
 import MainText from "@components/MainText";
-import { BackArrw } from "@components/SvgComponent/back-arrow.js";
+
+// import { BackArrw } from "@components/SvgComponent/back-arrow.js";
+import HomepageLogo from "@components/SvgComponent/homepage-logo";
 
 const ImageContainer = styled.div`
   min-height: 100vh;
@@ -40,11 +42,11 @@ export const HeroBg = styled.div`
   overflow: hidden;
 `;
 
-const GoBack = styled(Link)`
-  position: absolute;
-  left: 5rem;
-  top: 5rem;
-`;
+// const GoBack = styled(Link)`
+//   position: absolute;
+//   left: 5rem;
+//   top: 5rem;
+// `;
 
 export const HeroContent = styled.div`
   height: 100%;
@@ -64,12 +66,23 @@ const TextContainer = styled.div`
   margin-top: 3.2rem;
 `;
 
+const LogoContainer = styled.div`
+  position: absolute;
+  top: 3vh;
+  left: 5rem;
+
+  @media (max-width: 960px) {
+    display: none;
+  }
+`;
+
 const Banner = () => {
   return (
     <ImageContainer>
       <HeroBg>
         <ImageBg />
       </HeroBg>
+      
       <HeroContent>
         <HeroItems>
           <LogoWithText text="wellness campus" />
@@ -78,9 +91,12 @@ const Banner = () => {
           </TextContainer>
         </HeroItems>
       </HeroContent>
-      <GoBack to="/">
+      {/* <GoBack to="/">
         <BackArrw />
-      </GoBack>
+      </GoBack> */}
+      <LogoContainer>
+        <HomepageLogo />
+      </LogoContainer>
     </ImageContainer>
   );
 };
