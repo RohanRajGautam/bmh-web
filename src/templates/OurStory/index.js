@@ -97,11 +97,10 @@ const Desc = styled.p`
 `;
 
 const LogoWrapper = styled.div`
-  a{
+  a {
     position: absolute;
     top: 3vh;
     left: 5vw;
-    z-index: 1;
   }
 `;
 
@@ -110,27 +109,27 @@ const OurStory = () => {
     <Layout dark>
       <Seo title="Our Story" />
       <Container>
-      <CoverImage>
+          <CoverImage>
+            <Image src="ourstory-bg.png" />
           <LogoWrapper>
-          <FullLogoAlt to="/" />
-        </LogoWrapper>
-        <Image src="ourstory-bg.png" />
-      </CoverImage>
-      <Divider />
-      <Wrapper>
-        <Title>
-          Our Story <span>meets</span> Yours
-        </Title>
-        <Description>
-          <Desc>{data.desc1}</Desc>
-          <Desc>{data.desc2}</Desc>
-          <DescImage>
-            <Image src="ourstory-desc.jpg" style={{ borderRadius: "24px" }} />
-          </DescImage>
-          <Desc>{data.desc3}</Desc>
-          <Desc>{data.desc4}</Desc>
-        </Description>
-      </Wrapper>
+              <FullLogoAlt to="/" />
+            </LogoWrapper>
+          </CoverImage>
+          <Divider />
+          <Wrapper>
+            <Title>
+              Our Story <span>meets</span> Yours
+            </Title>
+            <Description>
+              <Desc>{data.desc1}</Desc>
+              <Desc>{data.desc2}</Desc>
+              <DescImage>
+                <Image src="ourstory-desc.jpg" style={{ borderRadius: "24px" }} />
+              </DescImage>
+              <Desc>{data.desc3}</Desc>
+              <Desc>{data.desc4}</Desc>
+            </Description>
+          </Wrapper>
       </Container>
     </Layout>
   );
