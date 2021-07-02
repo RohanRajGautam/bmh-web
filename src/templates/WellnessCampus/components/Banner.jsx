@@ -1,4 +1,4 @@
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 import wellnessBanner from "@images/wellness-campus/banner.jpg";
@@ -82,7 +82,7 @@ const Banner = () => {
       <HeroBg>
         <ImageBg />
       </HeroBg>
-      
+
       <HeroContent>
         <HeroItems>
           <LogoWithText text="wellness campus" />

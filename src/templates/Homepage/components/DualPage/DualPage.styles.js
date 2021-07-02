@@ -164,4 +164,10 @@ export const Anchor = styled.p`
       transform-origin: bottom left;
     }
   }
+
+  @media (max-width: 1420px) {
+    br {
+      display: none;
+    }
+  }
 `;

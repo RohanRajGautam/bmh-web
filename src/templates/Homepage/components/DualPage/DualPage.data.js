@@ -38,7 +38,7 @@ export const MedicalServices = [
     img: `${img3}`,
   },
   {
-    title: "Counseling",
+    title: `<br>Counseling`,
     to: "https://www.beautifulmindsmedical.com/about/our-services/#counseling",
     desc: `Counseling provides an environment for you to come and process life. Whether
     you're struggling with sadness, stress, a relationship issue, family problems, or just trying to

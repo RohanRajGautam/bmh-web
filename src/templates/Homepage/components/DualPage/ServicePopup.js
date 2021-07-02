@@ -118,7 +118,7 @@ const ServicePopup = ({ open, handleClose, props, onClose }) => {
       >
         <Wrapper>
           <DialogTitle>
-            <EventTitle>{props.title}</EventTitle>
+            <EventTitle dangerouslySetInnerHTML={{ __html: props?.title }} />
             <IconButton
               aria-label="close"
               className={classes.closeButton}

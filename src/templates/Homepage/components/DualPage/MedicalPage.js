@@ -24,7 +24,10 @@ const ItemWrapper = ({ props }) => {
   return (
     <>
       <ServicesItems img={props.img}>
-        <Anchor onClick={handleClickOpen}>{props.title}</Anchor>
+        <Anchor
+          onClick={handleClickOpen}
+          dangerouslySetInnerHTML={{ __html: props?.title }}
+        />
       </ServicesItems>
       <ServicePopup open={open} handleClose={handleClose} props={props} />
     </>
