@@ -13,7 +13,7 @@ const CategorySlider = props => {
     <CategorySliderBlockWrapper>
       <HeadingWrapper>
         <HeadingPrimary>
-          Mental Wellness <span>Articles</span>
+          Recent Mental Health <span> Articles</span>
         </HeadingPrimary>
       </HeadingWrapper>
       <CategorySliderWrapper>

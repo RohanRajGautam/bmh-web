@@ -19,8 +19,7 @@ const Categories = props => {
       </BlogBreadCrum>
       <HeaderContainer>
         <HeadingPrimary>
-          Mental Health &<br />
-          <span>Awareness</span> Articles
+          Featured <span> Articles</span>
         </HeadingPrimary>
       </HeaderContainer>
       <CategoryBlockWrapper>
