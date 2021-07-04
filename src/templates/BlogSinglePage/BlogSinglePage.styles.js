@@ -174,7 +174,13 @@ export const BlogContent = styled.div`
   }
 
   p {
-    margin-bottom: 25px;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 32px;
+
+    color: #596166;
   }
   .fusion-widget-area {
     display: none;

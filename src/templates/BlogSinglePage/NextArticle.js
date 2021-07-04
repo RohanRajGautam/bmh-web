@@ -1,4 +1,4 @@
-import { graphql, StaticQuery } from "gatsby";
+import { graphql, Link, StaticQuery } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 
@@ -112,17 +112,19 @@ const NextArticle = () => {
       render={data => (
         <>
           {data?.category?.nodes?.map((item, index) => (
-            <Wrapper>
+            <Wrapper key={index}>
               <Title>Next Article</Title>
-              <ImageContainer image={item?.featuredImage?.node?.sourceUrl}>
-                <TextContainer>
-                  <Heading>{item?.title}</Heading>
-                  <SubHeading>
-                    <Author>By {item?.author?.node?.name}</Author>
-                    <Date>&nbsp;-&nbsp;{item?.date?.substring(0, 10)}</Date>
-                  </SubHeading>
-                </TextContainer>
-              </ImageContainer>
+              <Link to={item.uri}>
+                <ImageContainer image={item?.featuredImage?.node?.sourceUrl}>
+                  <TextContainer>
+                    <Heading>{item?.title}</Heading>
+                    <SubHeading>
+                      <Author>By {item?.author?.node?.name}</Author>
+                      <Date>&nbsp;-&nbsp;{item?.date?.substring(0, 10)}</Date>
+                    </SubHeading>
+                  </TextContainer>
+                </ImageContainer>
+              </Link>
             </Wrapper>
           ))}
         </>
