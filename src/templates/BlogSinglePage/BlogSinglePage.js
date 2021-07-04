@@ -19,6 +19,7 @@ import {
   BlogSidebarTitle,
 } from "./BlogSinglePage.styles";
 import { RecentBlog } from "../Homepage/components/Blog/components";
+import NextArticle from "./NextArticle";
 import SocialShare from "@components/SocialShare";
 import HomepageLogo from "@components/SvgComponent/homepage-logo";
 
@@ -57,6 +58,7 @@ const BlogSinglePage = ({ data, ...props }) => {
             <RecentBlog />
           </BlogSidebar>
         </BlogContentWithSidebar>
+        <NextArticle />
       </BlogContentWrapper>
     </Layout>
   );
