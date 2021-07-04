@@ -53,10 +53,9 @@ export const ImageSliderFirst = () => {
       scrollTrigger: {
         trigger: sliderContainer,
         // pin: true,
-        start: "top center",
-        scrub: 1,
-        end: () =>
-          "+=" + firstSlider.current.children[0].children[0].offsetWidth / 3,
+        start: "bottom bottom",
+        end: "top top",
+        scrub: 2,
       },
     });
   }, []);
@@ -72,6 +71,9 @@ export const ImageSliderFirst = () => {
         </ImgContainer>
         <ImgContainer>
           <img src={img3} alt="slide-img-3" loading="lazy" />
+        </ImgContainer>
+        <ImgContainer>
+          <img src={img1} alt="slide-img-1" loading="lazy" />
         </ImgContainer>
       </HorizontalWrapper>
     </Container>
@@ -93,11 +95,9 @@ export const ImageSliderSecond = () => {
       scrollTrigger: {
         trigger: sliderContainer,
         // pin: true,
-        start: "top top+=150",
-        scrub: 1,
-        end: () =>
-          "+=" +
-          secondSlider.current.children[0].children[0].offsetWidth / 3,
+        start: "bottom bottom",
+        end: "top top",
+        scrub: 2,
       },
     });
   }, []);
@@ -117,6 +117,9 @@ export const ImageSliderSecond = () => {
         </ImgContainer>
         <ImgContainer>
           <img src={img6} alt="slide-img-6" loading="lazy" />
+        </ImgContainer>
+        <ImgContainer>
+          <img src={img4} alt="slide-img-4" loading="lazy" />
         </ImgContainer>
       </HorizontalWrapper>
     </Container>
