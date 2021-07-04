@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { COLORS } from "@components/constants";
-import logoXs from "@images/icons/logo-xs-white.png";
 
 const Container = styled.div`
   margin: 13.6rem 0;

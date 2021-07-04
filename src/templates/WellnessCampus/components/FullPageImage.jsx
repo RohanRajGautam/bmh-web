@@ -40,6 +40,7 @@ const Image = styled.div`
 
   height: 60%;
   width: 60%;
+  border-radius: 24px;
 
   position: absolute;
   top: 50%;
@@ -51,7 +52,6 @@ const Image = styled.div`
     height: 90%;
     width: 100%;
     filter: brightness(0.5);
-
   }
 `;
 
