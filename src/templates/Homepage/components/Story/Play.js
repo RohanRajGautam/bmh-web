@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
+/* bounce animation */
 const bounce = keyframes`
   0%,
   25%,
@@ -17,21 +18,41 @@ const bounce = keyframes`
   }
 `;
 
+/* pulse animation */
+const pulse = keyframes`
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(54, 82, 36, 0.5);
+    box-shadow: 0 0 0 0 rgba(54, 82, 36, 0.5);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 50px rgba(54, 82, 36, 0);
+    box-shadow: 0 0 0 50px rgba(54, 82, 36, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(54, 82, 36, 0);
+    box-shadow: 0 0 0 0 rgba(54, 82, 36, 0);
+  }
+`;
+
 const PlayButton = styled.a`
   cursor: pointer;
   position: absolute;
   left: 4%;
   bottom: 13%;
 
-  transition: all 0.3s ease-in-out;
-  -webkit-animation: ${bounce} 2s infinite;
-  animation: ${bounce} 2s infinite;
+  border-radius: 50%;
+  display: inline-flex;
+  transition: transform 0.3s ease-in-out;
+
+  /* -webkit-animation: ${bounce} 2s infinite;
+  animation: ${bounce} 2s infinite; */
+  /* -webkit-animation: ${pulse} 2s infinite;
+  animation: ${pulse} 2s infinite; */
 
   &:hover {
-    transition: all 0.3s ease-in-out;
     transform: scale(0.9);
     -webkit-animation: none;
-    animation: none;
+    /* animation: none; */
   }
 `;
 
