@@ -8,14 +8,14 @@ import { Categories, CategorySlider } from "./components";
 import FullLogoAlt from "@images/icons/full-logo-alt";
 
 const BlogPageWrapper = styled(Container)`
-  padding: 8.4rem 10rem;
+  padding: 5.2rem 10rem;
 
   @media (max-width: 1500px) {
-    padding: 8.4rem 7rem;
+    padding: 5.2rem 7rem;
   }
 
   @media (max-width: 1024px) {
-    padding: 13.3rem 5vw;
+    padding: 5.2rem 5vw;
   }
 `;
 

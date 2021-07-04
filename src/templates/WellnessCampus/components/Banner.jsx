@@ -20,7 +20,7 @@ const ImageContainer = styled.div`
 
 const ImageBg = styled.div`
   background: linear-gradient(0deg, rgba(38, 8, 8, 0.24), rgba(38, 8, 8, 0.24)),
-    url(${wellnessBanner}), #6ca448;
+    url(${wellnessBanner});
   height: 100%;
   width: 100%;
   background-position: center;
@@ -68,8 +68,8 @@ const TextContainer = styled.div`
 
 const LogoContainer = styled.div`
   position: absolute;
-  top: 3vh;
-  left: 5rem;
+  top: 5.2rem;
+  left: 11.3rem;
 
   @media (max-width: 960px) {
     display: none;

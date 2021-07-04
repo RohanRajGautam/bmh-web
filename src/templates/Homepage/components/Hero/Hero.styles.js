@@ -114,7 +114,7 @@ export const ImageVector = styled.img`
 
 export const HeroContent = styled.div`
   z-index: 3;
-  padding: 7rem 0 0 11.2rem;
+  padding: 5.2rem 0 0 11.2rem;
   height: 100%;
 
   ${mediaQueries("lg")`

@@ -29,7 +29,7 @@ export const BlogPageHero = styled(Container)`
 export const BlogPageHeroInner = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 4.6rem 11.2rem;
+  padding: 5.2rem 11.2rem;
   height: 90%;
   position: relative;
 
