@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
     display: flex;
     align-items: center;
     li {
-      padding-right: 1.2rem;
+      padding-right: 8px;
       list-style-type: none;
       button,
       a {
