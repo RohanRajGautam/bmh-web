@@ -7,15 +7,19 @@ import { HeadingPrimary } from "@components/Heading";
 import { Container } from "@components/Container";
 import Image from "@components/Image";
 import { data } from "./data";
+import { mediaQueries } from "@components/MediaQueries";
 
+// import HomepageLogo from "@components/SvgComponent/homepage-logo";
+import BannerVector from "@images/home/banner-vector.png";
 import FullLogoAlt from "@images/icons/full-logo-alt";
-
+import bannerImage from '@images/ourstory-bg.png';
+import PhotoSvg from "../Homepage/components/Story/Photo";
+import Play from "../Homepage/components/Story/Play";
 
 const CoverImage = styled.div`
   width: 100vw;
   height: auto;
   overflow: hidden;
-
   position: relative;
 
   @media (max-width: 960px) {
@@ -24,32 +28,27 @@ const CoverImage = styled.div`
 `;
 
 const DescImage = styled.div`
+  width: 100%;
   height: auto;
-    width: 100%;
-
-    padding: 5.2rem 0;
-
-  @media (min-width: 860px) {
-  width: 50%;
-    padding: 0 0 5.2rem 5.2rem;
-  float: right;
-
-  }
+  margin-bottom: 5.2rem;
 `;
 
 const Wrapper = styled.div`
   height: auto;
-  padding: 5vh 5vw;
-  max-width: 140rem;
-  margin: 0 auto;
+  padding: 0 5vw;
+  max-width: 160rem;
+
+  @media (min-width: 1260px) {
+    padding: 0 11.2rem;
+  }
 `;
 const Title = styled(HeadingPrimary)`
-  /* H2 */
   font-family: Merriweather;
   font-style: normal;
   font-weight: bold;
   font-size: 6.8rem;
   line-height: 8.2rem;
+  letter-spacing: -0.02em;
 
   span {
     font-size: inherit;
@@ -57,28 +56,50 @@ const Title = styled(HeadingPrimary)`
   }
 
   /* Text/Hd-Grey-01 */
-  color: #15141a;
+  color: #fff;
 
-  @media (max-width: 576px) {
+  @media (max-width: 600px) {
     font-size: 5rem;
-  line-height: 1.2;
-
-  
-
-    
+    line-height: 1.2;
   }
 `;
 
-const Divider = styled.div`
-  width: 5rem;
-  height: 5px;
-  position: relative;
-  background: #fff;
-  left: 3rem;
-`;
+const HeadingWrapper = styled.div`
+  position: absolute;
+  bottom: 15%;
+  left: 5vw;
+
+  @media (min-width: 1260px) {
+    left: 11.2rem;
+  }
+`
+
 const Description = styled.div`
   margin-top: 4rem;
+  display: grid;
+  grid-gap: 9.6rem;
+  grid-template-columns: .8fr 1fr;
+
+  @media (max-width: 960px) {
+    grid-gap: 5.2rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 1500px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
 `;
+
+const ContentLeft = styled.div`
+  /* flex: 0 0 90% */
+`;
+
+const ContentRight = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 const Desc = styled.p`
   padding-bottom: 5.2rem;
   text-align-last: initial;
@@ -96,13 +117,53 @@ const Desc = styled.p`
   color: #596166;
 `;
 
-const LogoWrapper = styled.div`
-  a {
-    position: absolute;
-    top: 3vh;
-    left: 5vw;
+const DescLast = styled(Desc)`
+  @media (min-width: 960px) and (max-width: 1500px) {
+    width: 85%;
   }
 `;
+
+const LogoWrapper = styled.div`
+  position: absolute;
+  top: 5.2rem;
+  left: 5vw;
+
+  @media (max-width: 960px) {
+    display: none;
+  }
+
+  @media (min-width: 1260px) {
+    left: 11.2rem;
+  }
+`;
+
+export const ImageVector = styled.img`
+  position: absolute;
+  bottom: -8rem;
+  width: 100vw;
+
+  ${mediaQueries("lg")`
+    bottom: -5rem;
+  `}
+
+  ${mediaQueries("md")`
+    bottom: -3rem;
+  `}
+
+  ${mediaQueries("sm")`
+    width: 115%;
+    bottom: -6%;
+    transform: rotate(1deg);
+    height: 10%;
+    left: -5%;
+  `}
+
+  @media (min-width: 1600px) {
+    bottom: -10rem;
+  }
+`;
+
+const ImageWrapper = styled.div``;
 
 const OurStory = () => {
   return (
@@ -110,24 +171,41 @@ const OurStory = () => {
       <Seo title="Our Story" />
       <Container>
           <CoverImage>
-            <Image src="ourstory-bg.png" />
-          <LogoWrapper>
+            <ImageWrapper>
+              <Image src="ourstory-bg.png" />
+            </ImageWrapper>
+            <LogoWrapper>
+              {/* <HomepageLogo /> */}
               <FullLogoAlt to="/" />
             </LogoWrapper>
+            <ImageVector
+              src={BannerVector}
+              type="image/png"
+              draggable="false"
+            />
+            <HeadingWrapper>
+              <Title>
+                Our Story <span>meets</span> <br/>Yours
+              </Title>
+            </HeadingWrapper>
           </CoverImage>
-          <Divider />
           <Wrapper>
-            <Title>
-              Our Story <span>meets</span> Yours
-            </Title>
             <Description>
-              <Desc>{data.desc1}</Desc>
-              <Desc>{data.desc2}</Desc>
-              <DescImage>
-                <Image src="ourstory-desc.jpg" style={{ borderRadius: "24px" }} />
-              </DescImage>
-              <Desc>{data.desc3}</Desc>
-              <Desc>{data.desc4}</Desc>
+              <ContentLeft>
+                <Desc>{data.desc1}</Desc>
+                <Desc>{data.desc2}</Desc>
+                <Desc>{data.desc3}</Desc>
+              </ContentLeft>
+              <ContentRight>
+                <DescImage>
+                  {/* <Image src="ourstory-desc.jpg" style={{ borderRadius: "24px" }} /> */}
+                  <div style={{ position: "relative" }}>
+                    <PhotoSvg />
+                    <Play to="https://vimeo.com/368513589" />
+                  </div>
+                </DescImage>
+                <DescLast>{data.desc4}</DescLast>
+              </ContentRight>
             </Description>
           </Wrapper>
       </Container>

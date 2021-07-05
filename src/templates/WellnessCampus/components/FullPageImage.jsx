@@ -136,7 +136,7 @@ const FullPageImage = () => {
             trigger: imageFull,
             start: "center+=620 center",
             scrub: 1,
-            toggleActions: "restart complete reverse reset",
+            // toggleActions: "restart complete reverse reset",
           },
           opacity: 1,
           ease: "expo.easeInOut",
