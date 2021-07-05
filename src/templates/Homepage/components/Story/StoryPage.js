@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   Content,
   TextWrapper,
@@ -14,8 +14,19 @@ import PhotoSvg from "./Photo";
 import Play from "./Play";
 import Readmore from "./readmore";
 import { HeadingPrimary } from "@components/Heading";
+import VideoModal from "@components/VideoModal";
 
 const StoryPage = () => {
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  console.log(open);
   return (
     <StoryContainer id="our-story">
       <ContentWrapper>
@@ -43,10 +54,18 @@ const StoryPage = () => {
         <PhotoWrapper data-aos="fade-up">
           <div style={{ position: "relative" }}>
             <PhotoSvg />
-            <Play to="https://vimeo.com/368513589" />
+            <div onClick={handleClickOpen}>
+              <Play />
+            </div>
           </div>
         </PhotoWrapper>
       </ContentWrapper>
+      <VideoModal
+          channel="vimeo"
+          videoId="368513589"
+          open={open}
+          handleClose={handleClose}
+      />
     </StoryContainer>
   );
 };
