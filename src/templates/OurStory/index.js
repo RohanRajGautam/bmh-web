@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Layout from "@layouts";
 import Seo from "@layouts/common/seo";
@@ -15,6 +15,8 @@ import FullLogoAlt from "@images/icons/full-logo-alt";
 import bannerImage from '@images/ourstory-bg.png';
 import PhotoSvg from "../Homepage/components/Story/Photo";
 import Play from "../Homepage/components/Story/Play";
+import VideoModal from "@components/VideoModal";
+
 
 const CoverImage = styled.div`
   width: 100vw;
@@ -163,17 +165,37 @@ export const ImageVector = styled.img`
   }
 `;
 
-const ImageWrapper = styled.div``;
+const ImageWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(11.06deg, #2C3336 -15.64%, rgba(44, 51, 54, 0) 75.3%);
+`;
 
 const OurStory = () => {
+
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <Layout dark>
       <Seo title="Our Story" />
       <Container>
           <CoverImage>
-            <ImageWrapper>
+            <ImageWrapper />
               <Image src="ourstory-bg.png" />
-            </ImageWrapper>
+            {/* </ImageWrapper> */}
             <LogoWrapper>
               {/* <HomepageLogo /> */}
               <FullLogoAlt to="/" />
@@ -201,13 +223,21 @@ const OurStory = () => {
                   {/* <Image src="ourstory-desc.jpg" style={{ borderRadius: "24px" }} /> */}
                   <div style={{ position: "relative" }}>
                     <PhotoSvg />
-                    <Play to="https://vimeo.com/368513589" />
+                    <div onClick={handleClickOpen}>
+                      <Play />
+                    </div>
                   </div>
                 </DescImage>
                 <DescLast>{data.desc4}</DescLast>
               </ContentRight>
             </Description>
           </Wrapper>
+          <VideoModal
+            channel="vimeo"
+            videoId="368513589"
+            open={open}
+            handleClose={handleClose}
+          />
       </Container>
     </Layout>
   );
