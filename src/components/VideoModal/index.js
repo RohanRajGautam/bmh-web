@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ModalVideo from "react-modal-video";
-import "react-modal-video/scss/modal-video.scss";
+// import "react-modal-video/scss/modal-video.scss";
 
 const VideoModal = props => {
   const { channel, videoId, open, handleClose } = props;
