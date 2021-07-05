@@ -165,17 +165,7 @@ export const ImageVector = styled.img`
   }
 `;
 
-const ImageWrapper = styled.div`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: linear-gradient(11.06deg, #2C3336 -15.64%, rgba(44, 51, 54, 0) 75.3%);
-`;
+const ImageWrapper = styled.div``;
 
 const OurStory = () => {
 
@@ -193,9 +183,9 @@ const OurStory = () => {
       <Seo title="Our Story" />
       <Container>
           <CoverImage>
-            <ImageWrapper />
+            <ImageWrapper>
               <Image src="ourstory-bg.png" />
-            {/* </ImageWrapper> */}
+            </ImageWrapper>
             <LogoWrapper>
               {/* <HomepageLogo /> */}
               <FullLogoAlt to="/" />
