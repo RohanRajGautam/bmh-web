@@ -1,5 +1,6 @@
 const path = require("path");
-exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+// exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
@@ -13,18 +14,18 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
     },
   });
 
-  if (stage === "build-html") {
-    actions.setWebpackConfig({
-      module: {
-        rules: [
-          {
-            test: /react-modal-video/,
-            use: loaders.null(),
-          },
-        ],
-      },
-    });;
-  }
+  // if (stage === "build-html") {
+  //   actions.setWebpackConfig({
+  //     module: {
+  //       rules: [
+  //         {
+  //           test: /react-modal-video/,
+  //           use: loaders.null(),
+  //         },
+  //       ],
+  //     },
+  //   });;
+  // }
 };
 
 const { slash } = require(`gatsby-core-utils`);
