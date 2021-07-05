@@ -166,7 +166,9 @@ export const BlogContent = styled.div`
   img {
     /* height: auto;
     max-width: 100%; */
-    display: none;
+    /* display: none; */
+    border-radius: 24px;
+    margin: 5.2rem auto;
   }
 
   @media (min-width: 1280px) {
@@ -190,6 +192,29 @@ export const BlogContent = styled.div`
   }
   figure {
     max-width: 100%;
+  }
+
+  h1,
+  h2,
+  h3 {
+    padding: 5.2rem 0 1.2rem 0;
+    span {
+      color: #6ca448 !important;
+    }
+  }
+
+  em {
+    padding-bottom: 3.2rem;
+  }
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+
+    &:hover {
+      color: #6ca448;
+    }
   }
 `;
 
