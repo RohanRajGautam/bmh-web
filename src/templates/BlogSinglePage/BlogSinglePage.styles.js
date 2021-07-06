@@ -171,6 +171,22 @@ export const BlogContent = styled.div`
     margin: 5.2rem auto;
   }
 
+  picture {
+    img {
+      margin: 0;
+    }
+  }
+
+  .ck_form_fields {
+    padding: 5% 0;
+
+    form {
+      button {
+        background: #6ca448 !important;
+      }
+    }
+  }
+
   @media (min-width: 1280px) {
     width: calc(100% - 350px);
   }
@@ -183,6 +199,7 @@ export const BlogContent = styled.div`
     line-height: 32px;
 
     color: #596166;
+    margin-bottom: 2rem;
   }
   .fusion-widget-area {
     display: none;
@@ -214,6 +231,16 @@ export const BlogContent = styled.div`
 
     &:hover {
       color: #6ca448;
+    }
+  }
+
+  blockquote {
+    background-color: #f6f3f3;
+    border-left: 3px solid #6ca448;
+    margin: 2rem 0;
+
+    * {
+      padding: 2rem;
     }
   }
 `;
