@@ -11,22 +11,27 @@ import { mediaQueries } from "@components/MediaQueries";
 
 import HomepageLogo from "@components/SvgComponent/homepage-logo";
 import BannerVector from "@images/home/banner-vector.png";
-// import FullLogoAlt from "@images/icons/full-logo-alt";
-import bannerImage from '@images/ourstory-bg.png';
+import bannerImage from "@images/ourstory-bg.png";
 import PhotoSvg from "../Homepage/components/Story/Photo";
 import Play from "../Homepage/components/Story/Play";
 import VideoModal from "@components/VideoModal";
 
-
 const CoverImage = styled.div`
-  width: 100vw;
-  height: auto;
   overflow: hidden;
   position: relative;
 
-  @media (max-width: 960px) {
-    width: 180vw;
-  }
+  width: 100%;
+  height: 80vh;
+  background-image: linear-gradient(
+      11.06deg,
+      #2c3336 -15.64%,
+      rgba(44, 51, 54, 0) 75.3%
+    ),
+    linear-gradient(173.86deg, #2c3336 -10.11%, rgba(44, 51, 54, 0) 73.68%),
+    url(${bannerImage});
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 `;
 
 const DescImage = styled.div`
@@ -51,14 +56,12 @@ const Title = styled(HeadingPrimary)`
   font-size: 6.8rem;
   line-height: 8.2rem;
   letter-spacing: -0.02em;
+  color: #fff;
 
   span {
     font-size: inherit;
     line-height: inherit;
   }
-
-  /* Text/Hd-Grey-01 */
-  color: #fff;
 
   @media (max-width: 600px) {
     font-size: 5rem;
@@ -74,13 +77,13 @@ const HeadingWrapper = styled.div`
   @media (min-width: 1260px) {
     left: 11.2rem;
   }
-`
+`;
 
 const Description = styled.div`
   margin-top: 4rem;
   display: grid;
   grid-gap: 9.6rem;
-  grid-template-columns: .8fr 1fr;
+  grid-template-columns: 0.8fr 1fr;
 
   @media (max-width: 960px) {
     grid-gap: 5.2rem;
@@ -90,7 +93,6 @@ const Description = styled.div`
   @media (min-width: 1500px) {
     grid-template-columns: 1fr 1fr;
   }
-
 `;
 
 const ContentLeft = styled.div`
@@ -165,10 +167,7 @@ export const ImageVector = styled.img`
   }
 `;
 
-const ImageWrapper = styled.div``;
-
 const OurStory = () => {
-
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -182,52 +181,44 @@ const OurStory = () => {
     <Layout dark>
       <Seo title="Our Story" />
       <Container>
-          <CoverImage>
-            <ImageWrapper>
-              <Image src="ourstory-bg.png" />
-            </ImageWrapper>
-            <LogoWrapper>
-              <HomepageLogo />
-              {/* <FullLogoAlt to="/" /> */}
-            </LogoWrapper>
-            <ImageVector
-              src={BannerVector}
-              type="image/png"
-              draggable="false"
-            />
-            <HeadingWrapper>
-              <Title>
-                Our Story <span>meets</span> <br/>Yours
-              </Title>
-            </HeadingWrapper>
-          </CoverImage>
-          <Wrapper>
-            <Description>
-              <ContentLeft>
-                <Desc>{data.desc1}</Desc>
-                <Desc>{data.desc2}</Desc>
-                <Desc>{data.desc3}</Desc>
-              </ContentLeft>
-              <ContentRight>
-                <DescImage>
-                  {/* <Image src="ourstory-desc.jpg" style={{ borderRadius: "24px" }} /> */}
-                  <div style={{ position: "relative" }}>
-                    <PhotoSvg />
-                    <div onClick={handleClickOpen}>
-                      <Play />
-                    </div>
+        <CoverImage>
+          <LogoWrapper>
+            <HomepageLogo />
+          </LogoWrapper>
+          <ImageVector src={BannerVector} type="image/png" draggable="false" />
+          <HeadingWrapper>
+            <Title>
+              Our Story <span>meets</span> <br />
+              Yours
+            </Title>
+          </HeadingWrapper>
+        </CoverImage>
+        <Wrapper>
+          <Description>
+            <ContentLeft>
+              <Desc>{data.desc1}</Desc>
+              <Desc>{data.desc2}</Desc>
+              <Desc>{data.desc3}</Desc>
+            </ContentLeft>
+            <ContentRight>
+              <DescImage>
+                <div style={{ position: "relative" }}>
+                  <PhotoSvg />
+                  <div onClick={handleClickOpen}>
+                    <Play />
                   </div>
-                </DescImage>
-                <DescLast>{data.desc4}</DescLast>
-              </ContentRight>
-            </Description>
-          </Wrapper>
-          <VideoModal
-            channel="vimeo"
-            videoId="368513589"
-            open={open}
-            handleClose={handleClose}
-          />
+                </div>
+              </DescImage>
+              <DescLast>{data.desc4}</DescLast>
+            </ContentRight>
+          </Description>
+        </Wrapper>
+        <VideoModal
+          channel="vimeo"
+          videoId="368513589"
+          open={open}
+          handleClose={handleClose}
+        />
       </Container>
     </Layout>
   );
