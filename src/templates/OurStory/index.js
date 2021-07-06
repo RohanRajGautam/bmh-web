@@ -9,13 +9,13 @@ import Image from "@components/Image";
 import { data } from "./data";
 import { mediaQueries } from "@components/MediaQueries";
 
-// import HomepageLogo from "@components/SvgComponent/homepage-logo";
+import HomepageLogo from "@components/SvgComponent/homepage-logo";
 import BannerVector from "@images/home/banner-vector.png";
-import FullLogoAlt from "@images/icons/full-logo-alt";
+// import FullLogoAlt from "@images/icons/full-logo-alt";
 import bannerImage from '@images/ourstory-bg.png';
 import PhotoSvg from "../Homepage/components/Story/Photo";
 import Play from "../Homepage/components/Story/Play";
-// import VideoModal from "@components/VideoModal";
+import VideoModal from "@components/VideoModal";
 
 
 const CoverImage = styled.div`
@@ -169,14 +169,14 @@ const ImageWrapper = styled.div``;
 
 const OurStory = () => {
 
-  // const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
-  // const handleClickOpen = () => {
-  //   setOpen(true);
-  // };
-  // const handleClose = () => {
-  //   setOpen(false);
-  // };
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <Layout dark>
@@ -187,8 +187,8 @@ const OurStory = () => {
               <Image src="ourstory-bg.png" />
             </ImageWrapper>
             <LogoWrapper>
-              {/* <HomepageLogo /> */}
-              <FullLogoAlt to="/" />
+              <HomepageLogo />
+              {/* <FullLogoAlt to="/" /> */}
             </LogoWrapper>
             <ImageVector
               src={BannerVector}
@@ -213,21 +213,21 @@ const OurStory = () => {
                   {/* <Image src="ourstory-desc.jpg" style={{ borderRadius: "24px" }} /> */}
                   <div style={{ position: "relative" }}>
                     <PhotoSvg />
-                    {/* <div onClick={handleClickOpen}> */}
+                    <div onClick={handleClickOpen}>
                       <Play />
-                    {/* </div> */}
+                    </div>
                   </div>
                 </DescImage>
                 <DescLast>{data.desc4}</DescLast>
               </ContentRight>
             </Description>
           </Wrapper>
-          {/* <VideoModal
+          <VideoModal
             channel="vimeo"
             videoId="368513589"
             open={open}
             handleClose={handleClose}
-          /> */}
+          />
       </Container>
     </Layout>
   );
