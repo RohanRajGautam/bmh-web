@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {
   Content,
   TextWrapper,
@@ -53,17 +53,21 @@ const StoryPage = () => {
         <PhotoWrapper data-aos="fade-up">
           <div style={{ position: "relative" }}>
             <PhotoSvg />
-            <div onClick={handleClickOpen}>
+            <div
+              role="presentation"
+              onClick={handleClickOpen}
+              onKeyDown={handleClickOpen}
+            >
               <Play />
             </div>
           </div>
         </PhotoWrapper>
       </ContentWrapper>
       <VideoModal
-          channel="vimeo"
-          videoId="368513589"
-          open={open}
-          handleClose={handleClose}
+        channel="vimeo"
+        videoId="368513589"
+        open={open}
+        handleClose={handleClose}
       />
     </StoryContainer>
   );

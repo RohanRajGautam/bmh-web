@@ -5,7 +5,6 @@ import Seo from "@layouts/common/seo";
 import { HeadingPrimary } from "@components/Heading";
 
 import { Container } from "@components/Container";
-import Image from "@components/Image";
 import { data } from "./data";
 import { mediaQueries } from "@components/MediaQueries";
 
@@ -204,7 +203,11 @@ const OurStory = () => {
               <DescImage>
                 <div style={{ position: "relative" }}>
                   <PhotoSvg />
-                  <div onClick={handleClickOpen}>
+                  <div
+                    role="presentation"
+                    onClick={handleClickOpen}
+                    onKeyDown={handleClickOpen}
+                  >
                     <Play />
                   </div>
                 </div>

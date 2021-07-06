@@ -42,7 +42,11 @@ const Testimonials = () => {
           </HeadingPrimary>
         </Header>
         <Cta>
-          <div onClick={handleClickOpen}>
+          <div
+            role="presentation"
+            onClick={handleClickOpen}
+            onKeyDown={handleClickOpen}
+          >
             <PlayButton />
           </div>
         </Cta>
