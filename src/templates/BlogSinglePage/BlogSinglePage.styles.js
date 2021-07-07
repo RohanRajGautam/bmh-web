@@ -195,11 +195,11 @@ export const BlogContent = styled.div`
     font-family: Mulish;
     font-style: normal;
     font-weight: normal;
-    font-size: 2rem;
-    line-height: 32px;
+    font-size: 1.6rem;
+    line-height: 1.6;
 
     color: #596166;
-    margin-bottom: 2rem;
+    margin-bottom: 1.2rem;
   }
   .fusion-widget-area {
     display: none;
@@ -214,7 +214,7 @@ export const BlogContent = styled.div`
   h1,
   h2,
   h3 {
-    padding: 5.2rem 0 1.2rem 0;
+    padding: 2rem 0 1.2rem 0;
     span {
       color: #6ca448 !important;
     }
