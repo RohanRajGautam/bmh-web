@@ -50,7 +50,7 @@ const Text = styled.h1`
     &::before {
       content: "";
       transition: all 0.3s ease-in-out;
-      animation: ${changeText} infinite 8s ease-in-out;
+      animation: ${changeText} infinite 9s ease-in-out;
     }
   }
 `;
