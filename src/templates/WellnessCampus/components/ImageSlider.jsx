@@ -9,6 +9,8 @@ import img3 from "@images/wellness-campus/image3.png";
 import img4 from "@images/wellness-campus/image4.png";
 import img5 from "@images/wellness-campus/image5.png";
 import img6 from "@images/wellness-campus/image6.png";
+import img7 from "@images/wellness-campus/image7.png";
+import img8 from "@images/wellness-campus/image8.png";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -73,7 +75,7 @@ export const ImageSliderFirst = () => {
           <img src={img3} alt="slide-img-3" loading="lazy" />
         </ImgContainer>
         <ImgContainer>
-          <img src={img1} alt="slide-img-1" loading="lazy" />
+          <img src={img7} alt="slide-img-1" loading="lazy" />
         </ImgContainer>
       </HorizontalWrapper>
     </Container>
@@ -119,7 +121,7 @@ export const ImageSliderSecond = () => {
           <img src={img6} alt="slide-img-6" loading="lazy" />
         </ImgContainer>
         <ImgContainer>
-          <img src={img4} alt="slide-img-4" loading="lazy" />
+          <img src={img8} alt="slide-img-4" loading="lazy" />
         </ImgContainer>
       </HorizontalWrapper>
     </Container>
