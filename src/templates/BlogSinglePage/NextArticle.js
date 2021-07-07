@@ -1,4 +1,4 @@
-import { graphql, Link, StaticQuery } from "gatsby";
+import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 
@@ -85,51 +85,22 @@ const Author = styled.p`
 
 const Date = styled(Author)``;
 
-const NextArticle = () => {
+const NextArticle = ({ nextPage }) => {
   return (
-    <StaticQuery
-      query={graphql`
-        query {
-          category: allWpPost(sort: { fields: date, order: DESC }, limit: 1) {
-            nodes {
-              title
-              date
-              uri
-              author {
-                node {
-                  name
-                }
-              }
-              featuredImage {
-                node {
-                  sourceUrl
-                }
-              }
-            }
-          }
-        }
-      `}
-      render={data => (
-        <>
-          {data?.category?.nodes?.map((item, index) => (
-            <Wrapper key={index}>
-              <Title>Next Article</Title>
-              <Link to={item.uri}>
-                <ImageContainer image={item?.featuredImage?.node?.sourceUrl}>
-                  <TextContainer>
-                    <Heading>{item?.title}</Heading>
-                    <SubHeading>
-                      <Author>By {item?.author?.node?.name}</Author>
-                      <Date>&nbsp;-&nbsp;{item?.date?.substring(0, 10)}</Date>
-                    </SubHeading>
-                  </TextContainer>
-                </ImageContainer>
-              </Link>
-            </Wrapper>
-          ))}
-        </>
-      )}
-    />
+    <Wrapper>
+      <Title>Next Article</Title>
+      <Link to={nextPage?.uri}>
+        <ImageContainer image={nextPage?.featuredImage?.node?.sourceUrl}>
+          <TextContainer>
+            <Heading>{nextPage?.title}</Heading>
+            <SubHeading>
+              <Author>By {nextPage?.author?.node?.name}</Author>
+              <Date>&nbsp;-&nbsp;{nextPage?.date?.substring(0, 10)}</Date>
+            </SubHeading>
+          </TextContainer>
+        </ImageContainer>
+      </Link>
+    </Wrapper>
   );
 };
 
