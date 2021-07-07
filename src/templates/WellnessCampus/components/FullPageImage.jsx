@@ -19,6 +19,10 @@ const MainContainer = styled.div`
   padding-top: 13.3rem;
   margin-top: 9.3rem;
   margin-bottom: 9.3rem;
+
+  @media (max-width: 600px) {
+    margin-bottom: 0;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -53,6 +57,10 @@ const Image = styled.div`
     width: 100%;
     filter: brightness(0.5);
   }
+
+  @media (max-width: 600px) {
+    height: 100%;
+  }
 `;
 
 const TextContainer = styled(TextWrapper)`
@@ -80,6 +88,16 @@ const Text = styled.h1`
     line-height: 8.2rem;
     letter-spacing: -0.02em;
   }
+
+  @media (max-width: 600px) {
+    font-size: 5rem;
+    line-height: 6rem;
+
+    span {
+      font-size: 5rem;
+      line-height: 6rem;
+    }
+  }
 `;
 
 const ImageContent = styled.div`
@@ -103,10 +121,22 @@ const ImageContent = styled.div`
 `;
 
 const ImageTextContainer = styled.div`
-  margin-top: 4rem;
+  margin-top: 5.2rem;
 `;
 const ButtonContainer = styled.div`
   margin-top: 5.2rem;
+`;
+
+const TimelineHeading = styled(HeadingPrimary)`
+  @media (max-width: 600px) {
+    font-size: 5rem;
+    line-height: 6rem;
+
+    span {
+      font-size: 5.5rem;
+      line-height: 6rem;
+    }
+  }
 `;
 
 const FullPageImage = () => {
@@ -117,7 +147,7 @@ const FullPageImage = () => {
     const imageFull = imgRef.current.children[0];
     const imageContent = imgRef.current.children[1];
     ScrollTrigger.matchMedia({
-      '(min-width: 1024px)': () => {
+      "(min-width: 1024px)": () => {
         gsap.to(imageFull, {
           scrollTrigger: {
             trigger: imageFull,
@@ -152,18 +182,18 @@ const FullPageImage = () => {
           filter: "brightness(0.5)",
           ease: "expo.easeInOut",
         });
-      }
-    })
+      },
+    });
   }, []);
 
   return (
     <MainContainer>
       <TextContainer>
         <Heading>
-          <HeadingPrimary>
+          <TimelineHeading>
             The future <br />
             is <span>coming</span>
-          </HeadingPrimary>
+          </TimelineHeading>
         </Heading>
         <Content />
       </TextContainer>
