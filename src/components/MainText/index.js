@@ -41,17 +41,21 @@ const Text = styled.h1`
 
   span {
     font-family: Smiley;
-    font-size: 6.8rem;
-    font-style: normal;
+    font-size: inherit;
+    font-style: inherit;
     font-weight: 400;
-    line-height: 8.2rem;
-    letter-spacing: -0.02em;
+    line-height: inherit;
+    letter-spacing: inherit;
 
     &::before {
       content: "";
       transition: all 0.3s ease-in-out;
       animation: ${changeText} infinite 9s ease-in-out;
     }
+  }
+
+  @media (max-width: 600px) {
+    font-size: 5rem;
   }
 `;
 
