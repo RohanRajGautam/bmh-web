@@ -23,8 +23,9 @@ import NextArticle from "./NextArticle";
 import SocialShare from "@components/SocialShare";
 import HomepageLogo from "@components/SvgComponent/homepage-logo";
 
-const BlogSinglePage = ({ data, ...props }) => {
+const BlogSinglePage = ({ data, pageContext, ...props }) => {
   const post = data?.allWpPost?.edges[0].node;
+  const nextPage = pageContext.next;
   return (
     <Layout>
       <Seo title={post?.title} />
@@ -58,7 +59,7 @@ const BlogSinglePage = ({ data, ...props }) => {
             <RecentBlog />
           </BlogSidebar>
         </BlogContentWithSidebar>
-        <NextArticle />
+        <NextArticle nextPage={nextPage} />
       </BlogContentWrapper>
     </Layout>
   );

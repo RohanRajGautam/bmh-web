@@ -10,7 +10,7 @@ import { mediaQueries } from "@components/MediaQueries";
 
 import HomepageLogo from "@components/SvgComponent/homepage-logo";
 import BannerVector from "@images/home/banner-vector.png";
-import bannerImage from "@images/ourstory-bg.png";
+import bannerImage from "@images/ourstory-bg.jpg";
 import PhotoSvg from "../Homepage/components/Story/Photo";
 import Play from "../Homepage/components/Story/Play";
 import VideoModal from "@components/VideoModal";

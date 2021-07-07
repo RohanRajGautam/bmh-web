@@ -1,5 +1,4 @@
 const path = require("path");
-// exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
@@ -13,19 +12,6 @@ exports.onCreateWebpackConfig = ({ actions }) => {
       },
     },
   });
-
-  // if (stage === "build-html") {
-  //   actions.setWebpackConfig({
-  //     module: {
-  //       rules: [
-  //         {
-  //           test: /react-modal-video/,
-  //           use: loaders.null(),
-  //         },
-  //       ],
-  //     },
-  //   });;
-  // }
 };
 
 const { slash } = require(`gatsby-core-utils`);
@@ -40,11 +26,23 @@ exports.createPages = async ({ graphql, actions }) => {
     },
   } = await graphql(`
     query {
-      allWpPost {
+      allWpPost(sort: { order: DESC, fields: [date] }) {
         nodes {
           id
           uri
           title
+          slug
+          date
+          author {
+            node {
+              name
+            }
+          }
+          featuredImage {
+            node {
+              sourceUrl
+            }
+          }
         }
       }
     }
@@ -54,16 +52,14 @@ exports.createPages = async ({ graphql, actions }) => {
     `./src/templates/BlogSinglePage/BlogSinglePage.js`
   );
 
-  allPosts.forEach(post => {
+  allPosts.forEach((post, i) => {
     createPage({
-      // will be the url for the page
       path: post.uri,
-      // specify the component template of your choice
       component: slash(postTemplate),
-      // In the ^template's GraphQL query, 'id' will be available
-      // as a GraphQL variable to query for this post's data.
       context: {
         id: post.id,
+        prev: i === 0 ? null : allPosts[i - 1],
+        next: i === allPosts.length - 1 ? null : allPosts[i + 1],
       },
     });
   });
