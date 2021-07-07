@@ -14,6 +14,12 @@ const Container = styled.div`
   ::-webkit-scrollbar {
     display: none;
   }
+
+  @media (max-width: 600px) {
+    overflow-x: hidden;
+    margin-top: 3.2rem;
+    margin-bottom: 13.6rem;
+  }
 `;
 
 const TimelineContainer = styled.div`
@@ -29,6 +35,18 @@ const TimelineContainer = styled.div`
     height: 1px;
     background: #15141a;
   }
+
+  @media (max-width: 600px) {
+    padding-left: 5vw;
+
+    &::before {
+      top: 0;
+      left: 33%;
+      width: 1px;
+      height: 100%;
+      bottom: 0;
+    }
+  }
 `;
 
 const ItemsWrapper = styled.ul`
@@ -36,17 +54,26 @@ const ItemsWrapper = styled.ul`
   padding: 0;
   display: flex;
   justify-content: space-evenly;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 const Item = styled.li`
   list-style: none;
   position: relative;
   margin-right: 6.7rem;
+
+  @media (max-width: 600px) {
+    margin-right: 0;
+    margin-bottom: 5.2rem;
+  }
 `;
 
 const Top = styled.div`
   color: #15141a;
-  padding-bottom: 8rem;
+  padding-bottom: 4rem;
   position: relative;
 
   &::after {
@@ -82,18 +109,20 @@ const Top = styled.div`
     color: inherit;
   }
 
-  @media (min-width: 1085px) {
-    padding-bottom: 6rem;
-  }
+  @media (max-width: 600px) {
+    padding-bottom: 0;
+    position: absolute;
 
-  @media (min-width: 1265px) {
-    padding-bottom: 4rem;
+    &::after {
+      content: none;
+    }
   }
 `;
 
 const Bottom = styled.div`
   padding-top: 5rem;
   position: relative;
+  min-width: max-content;
 
   &::after {
     background: ${COLORS.primary};
@@ -103,6 +132,14 @@ const Bottom = styled.div`
     right: 0;
     width: 1px;
     height: 100%;
+  }
+
+  @media (max-width: 600px) {
+    padding-top: 0;
+
+    &::after {
+      content: none;
+    }
   }
 `;
 
@@ -128,6 +165,18 @@ const EventDesc = styled.p`
     height: 100%;
     border-radius: 50px;
   }
+
+  @media (max-width: 600px) {
+    text-align: left;
+    padding-left: 40%;
+
+    &::after {
+      bottom: 1rem;
+      left: 29%;
+      width: 4px;
+      height: 6px;
+    }
+  }
 `;
 
 const LastItem = styled.li`
@@ -135,8 +184,14 @@ const LastItem = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   margin-right: 8.2rem;
+
+  @media (max-width: 600px) {
+    margin-right: 0;
+    padding: 5.2rem 0;
+    flex-direction: row;
+    position: relative;
+  }
 `;
 
 const LastTop = styled.div`
@@ -165,7 +220,13 @@ const LastTop = styled.div`
     text-align: right;
     color: inherit;
   }
+
+  @media (max-width: 600px) {
+    padding-bottom: 0;
+    position: absolute;
+  }
 `;
+
 const LastBottom = styled.div`
   width: 7rem;
   padding-top: 5rem;
@@ -178,6 +239,16 @@ const LastBottom = styled.div`
     line-height: 2rem;
     letter-spacing: 0em;
     text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    padding-top: 0;
+    width: max-content;
+    padding-left: 40%;
+
+    &::after {
+      content: none;
+    }
   }
 `;
 
@@ -201,6 +272,11 @@ const MiddleLogo = styled.div`
 
   @media (min-width: 1265px) {
     top: 35%;
+  }
+
+  @media (max-width: 600px) {
+    top: 30%;
+    left: 25%;
   }
 `;
 

@@ -13,6 +13,11 @@ const Container = styled.div`
     padding-left: 5vw;
     padding-right: 5vw;
   }
+
+  @media (max-width: 600px) {
+    padding-top: 13.6rem;
+    padding-bottom: 5.2rem;
+  }
 `;
 
 export const TextWrapper = styled.div`
@@ -33,6 +38,7 @@ export const Heading = styled.div`
 
   @media (max-width: 600px) {
     margin-bottom: 5.2rem;
+    margin-right: 0;
   }
 `;
 
@@ -42,6 +48,10 @@ export const Content = styled.div`
   align-items: flex-start;
   max-width: 47.5rem;
   width: 47.5rem;
+
+  @media (max-width: 600px) {
+    width: auto;
+  }
 `;
 
 const Paragraph = styled.p`
@@ -57,15 +67,27 @@ const ButtonWrapper = styled.div`
   margin-top: ${SPACING.lg};
 `;
 
+const FutureHeading = styled(HeadingPrimary)`
+  @media (max-width: 600px) {
+    font-size: 5rem;
+    line-height: 6rem;
+
+    span {
+      font-size: 5.5rem;
+      line-height: 6rem;
+    }
+  }
+`;
+
 export const FutureSectionWholistic = () => {
   return (
     <Container>
       <TextWrapper>
         <Heading>
-          <HeadingPrimary>
+          <FutureHeading>
             The future <br />
             is <span>wholistic</span>
-          </HeadingPrimary>
+          </FutureHeading>
         </Heading>
         <Content>
           <Paragraph>
@@ -90,10 +112,10 @@ export const FutureSectionHealthy = () => {
     <Container>
       <TextWrapper>
         <Heading>
-          <HeadingPrimary>
+          <FutureHeading>
             The future <br />
             is <span>healthy</span>
-          </HeadingPrimary>
+          </FutureHeading>
         </Heading>
         <Content>
           <Paragraph>

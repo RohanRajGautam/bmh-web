@@ -60,6 +60,10 @@ const HeroItems = styled.div`
 
   position: relative;
   height: 80%;
+
+  @media (max-width: 600px) {
+    height: 100%;
+  }
 `;
 
 const TextContainer = styled.div`

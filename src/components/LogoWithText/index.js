@@ -2,11 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const LogoContainer = styled.div`
-  /* display: flex;
-  flex-direction: column;
-  justify-items: center; */
   position: relative;
-  /* top: 5rem; */
 `;
 
 const FadedText = styled.span`
@@ -16,20 +12,15 @@ const FadedText = styled.span`
   line-height: 3rem;
   text-transform: uppercase;
   color: #fff;
-  /* z-index: 1; */
-  /* position: relative; */
   text-align: center;
 `;
 
 const LogoImg = styled.div`
-  /* opacity: 0.3; */
   width: 70px;
-  /* margin-top: 7rem; */
-  /* filter: grayscale(1); */
   position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const LogoWithText = ({ text }) => {
@@ -45,11 +36,11 @@ const LogoWithText = ({ text }) => {
           xmlnsXlink="http://www.w3.org/1999/xlink"
         >
           <rect
-            opacity="0.25"
+            opacity="0.5"
             x="0.181641"
             y="0.577148"
-            width="95.8461"
-            height="95.8461"
+            width="85.8461"
+            height="85.8461"
             fill="url(#pattern0)"
           />
           <defs>
