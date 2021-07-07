@@ -1,78 +1,103 @@
 import React from "react";
-import { withStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
+import { makeStyles } from "@material-ui/core/styles";
 import Dialog from "@material-ui/core/Dialog";
-import MuiDialogTitle from "@material-ui/core/DialogTitle";
-import MuiDialogContent from "@material-ui/core/DialogContent";
-import MuiDialogActions from "@material-ui/core/DialogActions";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
-import Typography from "@material-ui/core/Typography";
 
 import {
-  EventCard,
-  EventDate,
-  EventDay,
-  EventTime,
+  Wrapper,
+  DialogContent,
+  TextContainer,
+  Title,
+  Value,
   EventTitle,
+  DialogHeader,
+  SecondaryTextMain,
+  Cost,
+  SecondaryText,
+  SecondaryTitle,
+  SecondaryValue,
+  PlaceholderLogo,
 } from "./EventDialog.styles";
 
-const styles = theme => ({
-  root: {
-    margin: 0,
-    padding: theme.spacing(2),
-    background: "#6ca448",
-  },
+import placeholderImg from "@images/icons/placeholder-logo.png";
+
+const useStyles = makeStyles(() => ({
   closeButton: {
     position: "absolute",
-    right: theme.spacing(1),
-    top: theme.spacing(1),
-    color: "#fff",
+    right: "1rem",
+    top: "1rem",
+    color: "#6CA448",
   },
-});
+}));
 
-const DialogTitle = withStyles(styles)(props => {
-  const { children, classes, onClose, ...other } = props;
-  return (
-    <MuiDialogTitle disableTypography className={classes.root} {...other}>
-      {onClose ? (
-        <IconButton
-          aria-label="close"
-          className={classes.closeButton}
-          onClick={onClose}
-        >
-          <CloseIcon />
-        </IconButton>
-      ) : null}
-    </MuiDialogTitle>
-  );
-});
+const EventDialog = ({ open, handleClose, props, onClose }) => {
+  const classes = useStyles();
 
-const DialogContent = withStyles(theme => ({
-  root: {
-    padding: theme.spacing(2),
-    background: "#6CA448",
-  },
-}))(MuiDialogContent);
-
-const EventDialog = ({ open, handleClose, props }) => {
+  console.log(props);
   return (
     <div>
       <Dialog
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
+        fullWidth={true}
+        PaperProps={{
+          style: {
+            borderRadius: 24,
+            maxWidth: 450,
+            maxHeight: 610,
+            width: 450,
+            height: 610,
+          },
+        }}
       >
-        <DialogTitle onClose={handleClose} />
-        <DialogContent>
-          <EventCard>
-            <EventDay>{props.day}</EventDay>
-            <EventDate>{props.date}</EventDate>
+        <Wrapper>
+          <DialogHeader>
             <EventTitle>{props.title}</EventTitle>
-            <EventTime>{props.time}</EventTime>
-            <EventTime>{props.venue}</EventTime>
-          </EventCard>
-        </DialogContent>
+            {props.instructor && (
+              <TextContainer>
+                <Title>Featured Speaker:</Title>
+                <Value>{props.instructor}</Value>
+              </TextContainer>
+            )}
+            <IconButton
+              aria-label="close"
+              className={classes.closeButton}
+              onClick={handleClose}
+            >
+              <CloseIcon />
+            </IconButton>
+            <PlaceholderLogo>
+              <img
+                src={placeholderImg}
+                alt="placeholder-logo"
+                draggable={false}
+              />
+            </PlaceholderLogo>
+          </DialogHeader>
+          <DialogContent>
+            {props.cost && (
+              <SecondaryTextMain>
+                <Cost>Cost: ${props.cost}</Cost>
+              </SecondaryTextMain>
+            )}
+            {props.time && (
+              <SecondaryText>
+                <SecondaryTitle>Time: </SecondaryTitle>
+                <SecondaryValue>
+                  {props.date} - {props.time}
+                </SecondaryValue>
+              </SecondaryText>
+            )}
+            {props.venue && (
+              <SecondaryText>
+                <SecondaryTitle>Address: </SecondaryTitle>
+                <SecondaryValue>{props.venue}</SecondaryValue>
+              </SecondaryText>
+            )}
+          </DialogContent>
+        </Wrapper>
       </Dialog>
     </div>
   );

@@ -1,9 +1,6 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-const primary = "#6CA448";
-const medicalGrey = "#5F6468";
 const graniteGrey = "#2C3336";
-const border = "#C5CCD3";
 
 export const EventWrapper = styled.div`
   padding: 5vw;
@@ -34,148 +31,119 @@ export const EventWrapper = styled.div`
   }
 `;
 
-export const EventCard = styled.div`
-  border-radius: 12px;
-  padding: 20px;
-  min-width: 250px;
-  /* border: 1px solid ${medicalGrey}; */
-  /* color: ${medicalGrey}; */
-  /* transition: all 300ms, color 0ms; */
-  margin: 0 5px;
-  /* &:hover { */
-  transition: all 300ms;
-  background-color: ${primary};
-  cursor: pointer;
-  color: #fff;
-  border-color: ${primary};
-  h2 {
-    color: #fff;
-  }
-  time {
-    color: #fff;
-  }
-  /* } */
-  &:first-child {
-    margin-left: 0;
-  }
-
-  @media (min-width: 600px) {
-    min-width: 450px;
-    padding: 35px;
-    margin: 0 20px;
-  }
-`;
-
-export const EventSliderWrapper = styled.div`
-  margin-top: 40px;
+export const Wrapper = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none;
-  scroll-behavior: smooth;
-  ::-webkit-scrollbar {
-    display: none;
-  }
+  flex-direction: column;
 `;
 
-export const EventDay = styled.time`
-  font-size: 36px;
-  letter-spacing: 0.1px;
-  font-weight: 700;
-  transition: color 300ms;
-  font-family: Merriweather;
-  line-height: 55px;
-  color: ${primary};
-`;
-
-export const EventDate = styled.div`
-  font-size: 18px;
-  transition: color 300ms;
-  letter-spacing: 0.1px;
-`;
-
-export const EventTitle = styled.h2`
-  font-size: 14px;
-  font-family: Merriweather;
-  transition: color 300ms;
-  line-height: 1.6;
-  font-weight: 900;
-  letter-spacing: 0.1px;
-  margin-top: 120px;
-  margin-bottom: 20px;
-  color: ${primary};
-  min-height: 76px;
-  @media (min-width: 600px) {
-    font-size: 3rem;
-    margin-bottom: 36px;
-    margin-top: 210px;
-  }
-`;
-
-export const EventTime = styled.time`
-  font-size: 12px;
-  font-weight: 600;
-  transition: color 300ms;
-  letter-spacing: 0.1px;
-  font-family: Mulish;
-  margin-bottom: 6px;
-  display: block;
-  @media (min-width: 600px) {
-    margin-bottom: 4px;
-    font-size: 16px;
-  }
-`;
-
-export const NavigationButtonWrapper = styled.div`
-  display: flex;
-  margin-top: 64px;
-`;
-
-export const NavigationButton = styled.button`
-  height: 30px;
-  width: 30px;
-  border: 1px solid #c5ccd3;
-  border-radius: 3px;
-  display: grid;
-  place-items: center;
-  background-color: #fff;
-  cursor: pointer;
-  &:hover {
-    background-color: #f4f4f4;
-  }
-  @media (min-width: 768px) {
-    height: 40px;
-    width: 40px;
-    svg {
-      height: 21px;
-      width: 13px;
-    }
-  }
-  ${props =>
-    props.right &&
-    css`
-      margin-left: 25px;
-    `}
-`;
-
-export const EventDatePickerWrapper = styled.div`
-  border: 1px solid ${border};
-  margin-top: 72px;
-  max-width: 250px;
-  border-radius: 8px;
+export const DialogHeader = styled.div`
+  height: 60%;
+  padding: 3.2rem;
   position: relative;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  svg {
-    margin-left: 20px;
-  }
 `;
 
-export const EventDatePickerArrow = styled.div`
+export const DialogContent = styled.div`
+  height: 40%;
+  background: #6ca448;
+  padding: 3.2rem;
+`;
+
+export const EventTitle = styled.h4`
+  font-family: Merriweather;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  margin-bottom: 3.2rem;
+
+  width: 90%;
+`;
+
+export const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+  padding-top: 1rem;
+  z-index: 1;
+  position: relative;
+`;
+
+export const Title = styled.h6`
+  //styleName: H6;
+  font-family: Merriweather;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  color: #5f6468;
+`;
+export const Value = styled.p`
+  //styleName: P2;
+  font-family: Mulish;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #596166;
+`;
+
+export const SecondaryTextMain = styled.div`
+  margin-bottom: 2.4rem;
+`;
+export const Cost = styled.h5`
+  //styleName: H5;
+  font-family: Merriweather;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+`;
+
+export const SecondaryText = styled.div`
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: baseline;
+`;
+export const SecondaryTitle = styled.h6`
+  //styleName: H6;
+  font-family: Merriweather;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+
+  min-width: 10rem;
+`;
+export const SecondaryValue = styled.p`
+  //styleName: P2;
+  font-family: Mulish;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #f5f5ef;
+`;
+
+export const PlaceholderLogo = styled.div`
   position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 0;
+  bottom: 0;
 `;

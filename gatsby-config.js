@@ -34,23 +34,16 @@ module.exports = {
               maxWidth: 630,
             },
           },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
+
           `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
         ],
       },
     },
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-sass`,
     `gatsby-plugin-remove-trailing-slashes`,
+    `gatsby-plugin-sass`,
 
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
@@ -80,6 +73,7 @@ module.exports = {
         schema: {
           //Prefixes all WP Types with "Wp" so "Post and allPost" become "WpPost and allWpPost".
           typePrefix: `Wp`,
+          perPage: 30, // nodes per page
           timeout: 180000,
         },
         develop: {
@@ -93,7 +87,7 @@ module.exports = {
                 ? // Lets just pull 50 posts in development to make it easy on ourselves (aka. faster).
                   50
                 : // and we don't actually need more than 5000 in production for this particular site
-                  5000,
+                  null,
           },
         },
       },

@@ -1,97 +1,101 @@
+import { Link } from "gatsby";
 import styled from "styled-components";
-import { Heading } from "@components/Heading";
-import { Button } from "@components/Button";
-import Story from "@images/our-story.jpg";
+import { SPACING } from "@components/constants";
+import { Container } from "@components/Container";
+import { HeadingSecondary } from "@components/Heading";
+import { mediaQueries } from "@components/MediaQueries";
 
-export const StoryContainer = styled.div`
+export const StoryContainer = styled(Container)`
+  padding: 0 11.3rem;
+  margin-top: ${SPACING.xxl};
   position: relative;
-  font-size: 6px;
-  padding: 64px 5vw;
-  @media (min-width: 768px) {
-    font-size: 8px;
-  }
-  @media (min-width: 1024px) {
-    font-size: 10px;
-  }
-  @media (min-width: 1200px) {
-    font-size: 12px;
-  }
-  @media (min-width: 1440px) {
-    font-size: 16px;
+  max-width: 135rem;
+
+  ${mediaQueries("lg")`
     padding: 0 5vw;
-    margin: 175px 0;
+  `}
+  ${mediaQueries("md")`
+    margin-top: 13.6rem;
+  `}
+
+  @media (min-width: 1600px) {
+    max-width: 180rem;
   }
 `;
 
 export const Content = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: baseline;
+  padding-right: ${SPACING.lg};
+  flex: 0 0 49%;
+
+  ${mediaQueries("lg")`
+    flex: 0 0 45%;
+  `}
+  ${mediaQueries("md")`
+    padding-right: 0;
+    margin-bottom: 5.2rem;
+  `}
 `;
 
-export const HeadingWrapper = styled(Heading)`
-  font-size: 4em;
+export const Header = styled.div`
+  text-align: left;
+`;
+
+export const Subtitle = styled(HeadingSecondary)`
+  margin-bottom: ${SPACING.xs};
 `;
 
 export const ContentWrapper = styled.div`
-  display: grid;
-  grid-gap: 60px;
-  grid-template-columns: 1fr;
-  @media (min-width: 768px) {
-    grid-template-columns: 2fr 3fr;
-  }
-  @media (min-width: 1200px) {
-    grid-gap: 110px;
-  }
+  display: flex;
+
+  ${mediaQueries("md")`
+    flex-direction: column;
+    align-items: center;
+  `}
 `;
-export const Thumbnail = styled.div`
-  background-image: url(${Story});
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  padding-bottom: 80%;
-  display: none;
-  @media (min-width: 768px) {
-    display: block;
-  }
+
+export const PhotoWrapper = styled.div`
+  max-width: 65rem;
+  max-height: 50rem;
+  flex: 0 0 60%;
+
+  ${mediaQueries("md")`
+    width: auto;
+    text-align: center;
+  `}
 `;
 
 export const TextWrapper = styled.div`
   font-family: Mulish;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 160%;
-  letter-spacing: 0.1px;
-  color: #828282;
-  text-align: justify;
-  padding: 40px 0;
-  @media (min-width: 576px) {
-    font-size: 3em;
-  }
-  @media (min-width: 768px) {
-    font-size: 1.5em;
-  }
+  font-size: 2rem;
+  line-height: 32px;
+  color: #596166;
+  /* text-align: justify; */
+  padding: ${SPACING.sm} 0;
 `;
 
-export const ButtonWrapper = styled(Button)`
-  bottom: 0;
-  max-width: 100%;
-  font-size: 18px;
-  width: 100%;
-  @media (min-width: 768px) {
-    padding: 16px 80px;
-    width: auto;
-  }
-  @media (min-width: 1200px) {
-    padding: 18px 120px;
-    font-size: 20px;
-  }
-  @media (min-width: 1440px) {
-    padding: 25px 162px;
-    font-size: 24px;
+export const ButtonWrapper = styled(Link)`
+  svg {
+    path {
+      transition: all 0.3s ease-in-out;
+    }
+    circle {
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+      path:nth-child(1) {
+        fill: #6ca448;
+      }
+
+      path:nth-child(2) {
+        transform: translateX(1rem);
+        fill: #6ca448;
+        transition: all 0.3s ease-in-out;
+      }
+      circle {
+        opacity: 0;
+      }
+    }
   }
 `;

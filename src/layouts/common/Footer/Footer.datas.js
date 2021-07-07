@@ -74,7 +74,6 @@ export const staticData = [
   {
     title: "About",
     items: [
-      { title: "Healing Philosophy", to: "https://brojure.com/bmw/overview/" },
       { title: "Our Story", to: "/#our-story" },
       { title: "Events", to: "/#events" },
       { title: "Blog", to: "/blog-cat" },
@@ -84,7 +83,7 @@ export const staticData = [
     title: "Get in Touch",
     items: [
       { title: "Donate", to: "https://beautifulmindswellness.org/donate/" },
-      { title: "Volunter", to: "/" },
+      // { title: "Volunter", to: "/" },
       {
         title: "Visit us",
         to: "https://www.beautifulmindsmedical.com/about/photo-gallery",

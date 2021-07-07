@@ -4,27 +4,49 @@ const primary = "#6CA448";
 
 export const GlobalStyles = createGlobalStyle`
   * {
-    font-family: 'Merriweather', 'Mulish';
+    font-family: 'Merriweather', 'Mulish', 'Smiley', 'MerriweatherSans';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    &::selection {
+      background-color: ${primary};
+      color: #fff;
+    }
     /* overflow-x: clip; */
   }
 
   html {
     font-size: 62.5%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
 
   body {
     box-sizing: border-box;
-    font-family: "Merriweather", serif;
+    font-family: 'Merriweather', 'Mulish', 'Smiley', 'MerriweatherSans';  
     overflow-x: hidden;
+
+/* 
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #1E3F20;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: ${primary};
+      border-radius: 12px; 
+    } */
+
+    
   }
 
   p{
     line-height:1.7;
   }
+
 
 .MuiPopover-paper{
   max-width:250px !important;
@@ -32,8 +54,24 @@ export const GlobalStyles = createGlobalStyle`
   .MuiPickersBasePicker-pickerView{
     max-width:250px;
     min-width:250px;
+    {
+      .MuiPickersYearSelection-container {
+        .MuiPickersYear-root {
+          font-size: 2rem;
+        }
+        .MuiPickersYear-yearSelected {
+          font-size: 3rem
+        }
+      }
+    }
   .MuiPickersMonthSelection-container{
     width:250px;
+    .MuiPickersMonth-root {
+      font-size: 1.6rem;
+    }
+    .MuiPickersMonth-monthSelected{
+      font-size: 2rem;
+    }
   }
 }
 }

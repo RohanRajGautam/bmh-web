@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.nav`
-  visibility: hidden;
+  /* visibility: hidden; */
   height: 4rem;
   width: 100%;
   background: #6ca448;
@@ -9,7 +9,7 @@ export const Wrapper = styled.nav`
   justify-content: center;
   align-items: stretch;
 
-  @media (max-width: 576px) {
+  @media (max-width: 860px) {
     display: none;
   }
 `;
@@ -45,4 +45,10 @@ export const NavMenu = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
+  margin-left: 1.6rem;
+
+  span {
+    color: #fff;
+    font-size: 2rem;
+  }
 `;

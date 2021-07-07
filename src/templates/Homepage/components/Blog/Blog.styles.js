@@ -1,101 +1,82 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { Link } from "gatsby";
+import { SPACING, COLORS } from "@components/constants";
+import { Container } from "@components/Container";
+import { HeadingSecondary } from "@components/Heading";
+import { mediaQueries } from "@components/MediaQueries";
 
-const graniteGray = "#2C3336";
+export const BlogWrapper = styled(Container)`
+  background: ${COLORS.bgGrey};
+  padding-top: ${SPACING.xl};
+  padding-bottom: ${SPACING.xl};
+  padding-left: 11.3rem;
 
-export const BlogWrapper = styled.div`
-  padding: 5vw;
+  ${mediaQueries("lg")`
+    padding-left: 5vw;
+  `}
+`;
+
+export const Header = styled.div`
+  text-align: left;
+`;
+
+export const Subtitle = styled(HeadingSecondary)`
+  margin-bottom: ${SPACING.xs};
 `;
 
 export const SliderWrapper = styled.div`
-  margin-top: 40px;
+  margin-top: 7.3rem;
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
+  user-select: none;
+  cursor: grab;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;
   scroll-behavior: smooth;
   ::-webkit-scrollbar {
     display: none;
   }
+
+  ${mediaQueries("sm")`
+    margin-top: 6rem;
+  `}
 `;
 
 export const HeadingWrapper = styled.div`
   display: flex;
   align-items: center;
-  @media (min-width: 768px) {
-    justify-content: space-between;
-  }
-  @media (min-width: 1024px) {
-    margin-right: 96px;
-  }
+  justify-content: space-between;
 `;
 
 export const StyledLink = styled(Link)`
-  span {
-    margin-right: 15px;
-  }
-  font-size: 24px;
-  font-weight: 600;
-  font-family: Mulish;
-  letter-spacing: 0.1px;
-  color: ${graniteGray};
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  display: none;
-  @media (min-width: 768px) {
-    display: flex;
-  }
-`;
-
-export const StyledLinkMobile = styled(StyledLink)`
-  display: flex;
-  justify-content: flex-end;
-  font-size: 14px;
+  padding-right: ${SPACING.lg};
   svg {
-    height: 14px;
-    width: 26px;
-  }
-  @media (min-width: 768px) {
-    display: none;
-  }
-`;
+    path {
+      transition: all 0.3s ease-in-out;
+    }
+    circle {
+      transition: all 0.3s ease-in-out;
+    }
 
-export const NavigationButtonWrapper = styled.div`
-  display: flex;
-`;
+    &:hover {
+      path:nth-child(1) {
+        fill: #6ca448;
+      }
 
-export const NavigationButton = styled.button`
-  height: 30px;
-  width: 30px;
-  border: 1px solid #c5ccd3;
-  border-radius: 3px;
-  display: grid;
-  place-items: center;
-  background-color: #fff;
-  cursor: pointer;
-  &:hover {
-    background-color: #f4f4f4;
-  }
-  @media (min-width: 768px) {
-    height: 40px;
-    width: 40px;
-    svg {
-      height: 21px;
-      width: 13px;
+      path:nth-child(2) {
+        transform: translateX(1rem);
+        fill: #6ca448;
+        transition: all 0.3s ease-in-out;
+      }
+      circle {
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+      }
     }
   }
-  ${props =>
-    props.right &&
-    css`
-      margin-left: 25px;
-    `}
-`;
 
-export const SpaceBetween = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 64px;
+  ${mediaQueries("sm")`
+    display: none;
+  `}
 `;

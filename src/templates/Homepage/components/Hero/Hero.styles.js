@@ -1,36 +1,64 @@
-import styled from "styled-components";
-import { Button } from "@components/Button";
+import styled, { keyframes } from "styled-components";
+import { Container } from "@components/Container";
+import bgimg from "@images/home/banner-bg.jpg";
+import { Heading, HeadingSecondary } from "@components/Heading";
+import { mediaQueries } from "@components/MediaQueries";
+import { SPACING } from "@components/constants";
 
-const primaryColor = "#6CA448";
+/* Animation */
+
+const slideFromBottom = (type, x) => keyframes`
+  0% {
+    transform: translateY(${x}%)
+  }
+
+  ${type === "title" ? `50% { transform: translateY(${x})%}` : ""}
+
+  100% {
+    transform: translateY(0%)
+  }
+`;
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+export const FadingDiv = styled.div`
+  animation: ${fadeIn} 300ms linear;
+`;
+
+export const MainContainer = styled(Container)`
+  height: 100vh;
+
+  ${mediaQueries("md")`
+    margin-top: 5.2rem;
+  `}
+`;
+
+export const LogoContainer = styled.div`
+  ${mediaQueries("md")`
+    opacity: 0;
+  `}
+`;
 
 export const HeroContainer = styled.div`
-  visibility: hidden;
-  background: #fff;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
+  background: #0c0c0c;
+  height: 90vh;
   position: relative;
-  margin-top: -80px;
+  /* margin-top: -80px; */
   color: #fff;
-  padding-left: 5vw;
-
-  @media (max-width: 576px) {
-    height: 110vh;
-  }
-  // add overlay to the background image
-
-  /* :before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 2;
-  } */
+  width: 100%;
+  max-height: 90rem;
 `;
+
 export const HeroBg = styled.div`
   position: absolute;
   top: 0;
@@ -41,186 +69,158 @@ export const HeroBg = styled.div`
   height: 100%;
   overflow: hidden;
 `;
-
-export const ImageBg = styled.img`
-  width: 100%;
+export const ImageBg = styled.div`
+  background: linear-gradient(
+      112.4deg,
+      rgba(0, 0, 0, 0.2) 3.01%,
+      rgba(0, 0, 0, 0) 87.33%
+    ),
+    url(${bgimg});
   height: 100%;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   -o-object-fit: cover;
   object-fit: cover;
+  position: relative;
+`;
 
-  @media (max-width: 576px) {
-    filter: brightness(50%);
+export const ImageVector = styled.img`
+  position: absolute;
+  bottom: -8rem;
+  width: 100vw;
+
+  ${mediaQueries("lg")`
+    bottom: -5rem;
+  `}
+
+  ${mediaQueries("md")`
+    bottom: -3rem;
+  `}
+
+  ${mediaQueries("sm")`
+    width: 115%;
+    bottom: -6%;
+    transform: rotate(1deg);
+    height: 10%;
+    left: -5%;
+  `}
+
+  @media (min-width: 1600px) {
+    bottom: -10rem;
   }
 `;
 
 export const HeroContent = styled.div`
   z-index: 3;
-  height: calc(100vh - 80px);
-  max-height: 100%;
-  /* padding: 0 5vw; */
+  padding: 5.2rem 0 0 11.2rem;
+  height: 100%;
 
-  @media screen and (max-width: 860px) {
-    padding: 0;
-    position: absolute;
-    left: 0;
-  }
+  ${mediaQueries("lg")`
+    padding-top: 5vh;
+    padding-left: 5vw;
+  `}
 `;
 
 export const HeroItems = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
-  /* height: 60vh; */
-  max-height: 100%;
-  padding: 3rem 0;
-  color: #fff;
-  line-height: 1.1;
-  font-weight: bold;
-  transform: translateY(25vh);
+  position: relative;
+  /* z-index: 4; */
 
-  @media screen and (max-width: 576px) {
-    width: 100%;
-    height: 70%;
-  }
+  height: 100%;
 `;
 
 export const HeroTextContainer = styled.div`
-  width: 100%;
-  padding: 1.5rem 5vw;
-  @media (min-width: 1024px) {
-    padding: 0;
-  }
-`;
+  max-width: 40rem;
+  /* margin: 8rem 0; */
 
-export const ButtonWrapper = styled.div`
-  background: #6ca448;
-  width: 100%;
-  border-radius: 55px;
-
-  @media (max-width: 768px) {
-    background: none;
-  }
-`;
-export const ButtonText = styled.p`
-  color: #fff;
-  font-size: 3rem;
-  text-align: center;
-  padding: 1rem 0 0.6rem 0;
-
-  @media (max-width: 768px) {
-    /* display: none; */
-    font-size: 2rem;
-    padding: 1rem 0 2rem 0;
-  }
-`;
-export const ButtonContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  /* padding: 1.5rem 5vw; */
-  @media (max-width: 768px) {
-    flex-direction: column;
-    padding: 0;
-    margin-bottom: 5vw;
-}
-  }
-  @media (min-width: 1024px) {
-    padding: 0;
-  }
-`;
-
-export const ButtonPrimary = styled(Button)`
-  /* margin-bottom: 2rem; */
-  width: 100%;
-  height: 60px;
-  text-transform: uppercase;
-  border-radius: 0 0 0 50px;
-  margin: 0 0 5px 5px;
-  background: #2c3336;
-  padding: 15px 0 0 0;
-  &:hover {
-    background-color: #fff;
-    color: ${primaryColor};
-    transform: none;
-  }
-  @media (max-width: 768px) {
-    margin: auto;
-    margin-bottom: 1.5rem;
-    width: 100%;
-    border-radius: 50px;
-    max-width: 90%;
-    padding: 2rem 5rem;
-    font-size: 20px;
-    background: #66a250;
-  }
-`;
-
-export const MobileButtonPrimary = styled(Button)`
-  margin-bottom: 1rem;
-`;
-
-export const ButtonSecondary = styled(ButtonPrimary)`
-  border-radius: 0 0 50px 0;
-  margin: 0 5px 5px 1px;
-
-  @media (max-width: 768px) {
-    border-radius: 50px;
-    margin: 0 auto;
+  @media (min-width: 1600px) {
+    max-width: 60rem;
   }
 `;
 
 export const HeroH1 = styled.h1`
+  /* font-size: clamp(2rem, 6vw, 4rem); */
   font-family: Merriweather;
   font-style: normal;
-  font-weight: bold;
-  letter-spacing: 0.3px;
-  user-select: none;
-  padding-bottom: 3rem;
-  font-size: 24px;
-  font-style: italic;
-  @media (min-width: 1024px) {
-    font-size: clamp(3rem, 6vw, 6rem);
-  }
-  @media (max-width: 576px) {
-    font-size: 3.5rem;
-  }
-`;
+  font-weight: 700;
+  font-size: 6.8rem;
+  line-height: 8.2rem;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 3.2rem;
 
-export const Divider = styled.div`
-  width: 11rem;
-  height: 0px;
-  background: #6ca448;
-  border: 2px solid #6ca448;
+  animation: ${slideFromBottom("title", 80)} 500ms ease-in-out;
+
+  span {
+    font-family: "Smiley";
+    font-weight: 400;
+    font-size: 6.8rem;
+    line-height: 8.2rem;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 5rem;
+
+    span {
+      font-size: 5rem;
+      line-height: 6rem;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    br {
+      display: none;
+    }
+  }
 `;
 
 export const HeroP = styled.p`
   font-family: Mulish;
-  font-weight: 300;
-  line-height: 160%;
-  font-size: 18px;
-  padding: 1.5rem 0;
+  line-height: 3.2rem;
+  /* font-size: clamp(1.8rem, 3vw, 3rem); */
+  font-size: 2.4rem;
   font-weight: 400;
-  letter-spacing: 0.3px;
-  color: rgba(255, 255, 255, 0.7);
-  user-select: none;
-  span {
-    font-family: inherit;
+  color: #fff;
+  opacity: 0.9;
+  padding-bottom: 3rem;
+
+  animation: ${slideFromBottom("title", 80)} 600ms ease-in-out;
+
+  @media (min-width: 1600px) {
+    max-width: 50rem;
   }
-  @media (max-width: 576px) {
-    font-size: 2rem;
-    padding: 3rem 0;
-  }
-  @media (min-width: 1024px) {
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
-    padding: 64px 0;
-    span {
-      display: block;
-    }
-  }
+`;
+
+export const ButtonContainer = styled.div`
+  animation: ${slideFromBottom("title", 80)} 700ms ease-in-out;
+`;
+
+export const Subtitle = styled(HeadingSecondary)`
+  margin-bottom: 1.2rem;
+
+  ${mediaQueries("md")`
+    margin-bottom: 2rem;
+  `}
+`;
+
+export const HeroHeading = styled(Heading)`
+  /* margin-top: ${SPACING.md}; */
+  padding-top: ${SPACING.xl};
+`;
+
+export const BackgroundVector = styled.div`
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: -5;
+
+  ${mediaQueries("md")`
+    display: none;
+  `}
 `;

@@ -1,8 +1,12 @@
+import { graphql } from "gatsby";
 import React from "react";
+
 import Layout from "@layouts";
+import Seo from "@layouts/common/seo";
 import {
   BlogPageHero,
   BlogPageHeroInner,
+  LogoContainer,
   BlogPageMeta,
   BlogPageMetaWrapper,
   BlogPageTextWrapper,
@@ -13,12 +17,11 @@ import {
   BlogContent,
   BlogSidebar,
   BlogSidebarTitle,
-  BlogViewMore,
 } from "./BlogSinglePage.styles";
-import Seo from "@layouts/common/seo";
-import { graphql } from "gatsby";
 import { RecentBlog } from "../Homepage/components/Blog/components";
+import NextArticle from "./NextArticle";
 import SocialShare from "@components/SocialShare";
+import HomepageLogo from "@components/SvgComponent/homepage-logo";
 
 const BlogSinglePage = ({ data, ...props }) => {
   const post = data?.allWpPost?.edges[0].node;
@@ -27,12 +30,18 @@ const BlogSinglePage = ({ data, ...props }) => {
       <Seo title={post?.title} />
       <BlogPageHero image={post?.featuredImage.node.sourceUrl}>
         <BlogPageHeroInner>
+          <LogoContainer>
+            <HomepageLogo />
+          </LogoContainer>
           <BlogPageTextWrapper>
             <BlogPageTitleWrapper>
               <BlogPageTitle>{post?.title}</BlogPageTitle>
               <BlogPageMetaWrapper>
-                <BlogPageMeta>{post?.author.node.name}</BlogPageMeta>
-                <BlogPageMeta>- {post?.date.substring(0, 10)}</BlogPageMeta>
+                <BlogPageMeta>
+                  By {post?.author.node.name}
+                  <span>-</span>
+                </BlogPageMeta>
+                <BlogPageMeta>{post?.date.substring(0, 10)}</BlogPageMeta>
               </BlogPageMetaWrapper>
             </BlogPageTitleWrapper>
             <SocialShare slug={post?.slug} title={post?.title} />
@@ -47,9 +56,9 @@ const BlogSinglePage = ({ data, ...props }) => {
           <BlogSidebar>
             <BlogSidebarTitle>Recent Articles</BlogSidebarTitle>
             <RecentBlog />
-            <BlogViewMore to="/blogs">View More</BlogViewMore>
           </BlogSidebar>
         </BlogContentWithSidebar>
+        <NextArticle />
       </BlogContentWrapper>
     </Layout>
   );

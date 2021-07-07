@@ -10,3 +10,4 @@ import "typeface-merriweather";
 
 // Highlighting for code blocks
 import "prismjs/themes/prism.css";
+import "react-modal-video/scss/modal-video.scss";

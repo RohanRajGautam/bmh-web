@@ -1,18 +1,19 @@
 import * as React from "react";
+
 import { GlobalStyles } from "@styles/GlobalStyles";
-import Navbar from "./common/Navbar";
-import Topbar from "./common/Topbar";
+import "../assets/fonts/fonts.css";
+
 import Footer from "./common/Footer";
-import Scroll from "@components/ScrollTop";
+import Sidebar from "./common/Sidebar";
+import Navbar from "./common/Navbar";
 
 const Layout = ({ children, ...props }) => {
   return (
-    <div>
+    <div syle={{ position: "relative" }}>
       <GlobalStyles />
-      <Topbar />
-      <Navbar dark={props.dark} />
-      <Scroll showBelow={250} />
+      <Navbar />
       <main>{children}</main>
+      <Sidebar />
       <Footer />
     </div>
   );

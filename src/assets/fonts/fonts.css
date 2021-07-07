@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Smiley";
+  src: local("Smiley"), url("./Smiley.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "MerriweatherSans";
+  src: local("MerriweatherSans"),
+    url("./MerriweatherSans-Bold.ttf") format("truetype");
+}

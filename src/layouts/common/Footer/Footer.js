@@ -1,45 +1,34 @@
 import React, { useState } from "react";
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
-import { makeStyles } from "@material-ui/core/styles";
-// import { Link } from "gatsby";
 
-import { StaticBrandLogo, staticData } from "./Footer.datas";
 import {
-  FooterBrandLogo,
-  FooterBrandLogoWrapper,
   FooterCopyright,
   FooterCopyrightWrapper,
   FooterDetails,
   FooterItem,
   FooterItemList,
   FooterItemTitle,
-  FooterLogo,
   FooterWrapper,
   FooterMain,
   NewsletterInput,
   NewsletterTitle,
   NewsletterWrapper,
   NewsletterButton,
+  PrivacyPolicy,
+  FooterSecondary,
+  LogoWrapper,
+  LeftAlign,
 } from "./Footer.styles";
-import Logo from "@images/icons/full-logo.svg";
+import { staticData } from "./Footer.datas";
+import BrandLogo from "./BrandLogo";
+import GoToTop from "./GoToTop";
 
 const Alert = props => {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 };
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: "100%",
-    "& > * + *": {
-      marginTop: theme.spacing(10),
-    },
-  },
-}));
-
 const Footer = () => {
-  const classes = useStyles();
-
   const date = new Date();
 
   const FormUrl = `https://api.convertkit.com/v3/forms/2253998/subscribe`;
@@ -102,14 +91,9 @@ const Footer = () => {
     setEmail(value);
   };
 
-  console.log(open);
-
   return (
     <>
       <FooterWrapper>
-        <FooterLogo to="/">
-          <img src={Logo} alt="bmh-logo" draggable="false" />
-        </FooterLogo>
         <FooterMain>
           <FooterDetails>
             {staticData.map((item, index) => (
@@ -118,7 +102,11 @@ const Footer = () => {
                 <FooterItemList>
                   {item.items.map((obj, index) => (
                     <FooterItem key={index}>
-                      <a href={obj.to} target="_blank">
+                      <a
+                        href={obj.to}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         {obj.title}
                       </a>
                     </FooterItem>
@@ -127,36 +115,41 @@ const Footer = () => {
               </div>
             ))}
           </FooterDetails>
-          <NewsletterWrapper>
-            <NewsletterTitle>Sign Up For Our Newsletter</NewsletterTitle>
-            <NewsletterInput>
-              <input
-                type="text"
-                onChange={handleChange}
-                value={email}
-                placeholder="Your Email here..."
-              />
-              <NewsletterButton onClick={handleSubmit} disabled={disabled}>
-                Subscribe
-              </NewsletterButton>
-            </NewsletterInput>
-          </NewsletterWrapper>
         </FooterMain>
-        <FooterBrandLogoWrapper>
-          {StaticBrandLogo.map((item, index) => (
-            <FooterBrandLogo key={index}>
-              <img src={item} alt="brand-logo" draggable="false" />
-            </FooterBrandLogo>
-          ))}
-        </FooterBrandLogoWrapper>
-        <FooterCopyrightWrapper>
-          <FooterCopyright>
-            &copy; {date.getFullYear()} Beautiful Minds Health
-          </FooterCopyright>
-          <FooterCopyright to="/privacy-policy">
-            Terms & Conditions | Privacy Policies
-          </FooterCopyright>
-        </FooterCopyrightWrapper>
+        <FooterSecondary>
+          <LeftAlign>
+            <LogoWrapper to="/">
+              <BrandLogo />
+            </LogoWrapper>
+
+            <NewsletterWrapper>
+              <NewsletterTitle>Sign Up For Our Newsletter</NewsletterTitle>
+              <NewsletterInput>
+                <input
+                  type="email"
+                  id="email"
+                  onChange={handleChange}
+                  value={email}
+                  placeholder="email"
+                />
+                <NewsletterButton onClick={handleSubmit} disabled={disabled}>
+                  Subscribe
+                </NewsletterButton>
+              </NewsletterInput>
+            </NewsletterWrapper>
+          </LeftAlign>
+
+          <GoToTop />
+
+          <FooterCopyrightWrapper>
+            <PrivacyPolicy to="/privacy-policy">
+              Terms & Conditions | Privacy Policies
+            </PrivacyPolicy>
+            <FooterCopyright>
+              &copy; {date.getFullYear()} Beautiful Minds Health
+            </FooterCopyright>
+          </FooterCopyrightWrapper>
+        </FooterSecondary>
       </FooterWrapper>
       <Snackbar open={open} autoHideDuration={60000} onClose={handleClose}>
         <Alert onClose={handleClose} severity={status}>
