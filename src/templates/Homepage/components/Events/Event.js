@@ -17,7 +17,7 @@ import { getMonthName, dragSlider } from "../../../../utility";
 
 const Events = props => {
   // const eventRef = useRef(null);
-  const [selectedDate, setSelectedDate] = useState(new Date("2021-05-01"));
+  const [selectedDate, setSelectedDate] = useState(new Date());
   const [events, setEvents] = useState([]);
 
   // const scroll = scrollOffset => {

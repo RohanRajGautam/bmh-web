@@ -54,6 +54,13 @@ export const DonateColumn = styled.div``;
 
 export const Heading = styled(HeadingPrimary)`
   color: #fff;
+
+  @media (max-width: 600px) {
+    span {
+      font-size: 5.2rem;
+      line-height: 1.6;
+    }
+  }
 `;
 
 export const ButtonContainer = styled.div`

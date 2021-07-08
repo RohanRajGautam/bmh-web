@@ -118,6 +118,10 @@ const ImageContent = styled.div`
     top: 50%;
     width: 100%;
   }
+
+  @media (max-width: 600px) {
+    padding: 0 5vw;
+  }
 `;
 
 const ImageTextContainer = styled.div`
