@@ -97,6 +97,14 @@ export const ImageBg = styled.div`
       ),
       linear-gradient(11.06deg, #2c3336 -15.64%, rgba(44, 51, 54, 0) 75.3%),
       url(${bgimg});
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: relative;
   }
 `;
 
