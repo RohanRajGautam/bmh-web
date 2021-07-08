@@ -54,6 +54,13 @@ const PlayButton = styled.a`
     -webkit-animation: none;
     /* animation: none; */
   }
+
+  @media (max-width: 960px) {
+    bottom: 10%;
+    svg {
+      width: 56px;
+    }
+  }
 `;
 
 const Play = ({ to }) => {
