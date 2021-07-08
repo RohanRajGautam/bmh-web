@@ -57,6 +57,10 @@ export const HeroContainer = styled.div`
   color: #fff;
   width: 100%;
   max-height: 90rem;
+
+  ${mediaQueries("md")`
+    height: 80vh;
+  `}
 `;
 
 export const HeroBg = styled.div`
@@ -84,6 +88,24 @@ export const ImageBg = styled.div`
   -o-object-fit: cover;
   object-fit: cover;
   position: relative;
+
+  @media (max-width: 600px) {
+    background: linear-gradient(
+        173.86deg,
+        #2c3336 -10.11%,
+        rgba(44, 51, 54, 0) 73.68%
+      ),
+      linear-gradient(11.06deg, #2c3336 -15.64%, rgba(44, 51, 54, 0) 75.3%),
+      url(${bgimg});
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: relative;
+  }
 `;
 
 export const ImageVector = styled.img`

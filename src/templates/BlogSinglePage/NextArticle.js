@@ -9,6 +9,10 @@ const Wrapper = styled.div`
 
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 600px) {
+    margin-top: 0;
+  } ;
 `;
 
 const Title = styled.h5`
@@ -44,6 +48,10 @@ const ImageContainer = styled.div`
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+
+  @media (max-width: 600px) {
+    height: 50rem;
+  } ;
 `;
 
 const TextContainer = styled.div`
@@ -52,6 +60,11 @@ const TextContainer = styled.div`
   bottom: 5.2rem;
 
   max-width: 84rem;
+
+  @media (max-width: 600px) {
+    left: 5vw;
+    right: 5vw;
+  } ;
 `;
 
 const Heading = styled.h1`
@@ -64,6 +77,11 @@ const Heading = styled.h1`
   letter-spacing: -0.02em;
   text-align: left;
   color: #ffffff;
+
+  @media (max-width: 600px) {
+    font-size: 3.2rem;
+    line-height: 1.5;
+  } ;
 `;
 
 const SubHeading = styled.div`
