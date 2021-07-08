@@ -39,6 +39,9 @@ export const BlogPageHeroInner = styled.div`
   @media (max-width: 960px) {
     height: initial;
   }
+  @media (max-width: 600px) {
+    height: 60%;
+  }
 `;
 
 export const LogoContainer = styled.div`
