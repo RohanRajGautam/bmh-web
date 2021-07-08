@@ -38,7 +38,7 @@ export const FooterDetails = styled.div`
     justify-items: flex-start;
   }
   @media (max-width: 600px) {
-    grid-gap: 8.4rem;
+    grid-gap: 5.2rem;
   }
 `;
 
