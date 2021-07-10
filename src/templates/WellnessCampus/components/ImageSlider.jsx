@@ -17,7 +17,7 @@ if (typeof window !== "undefined") {
 }
 
 const Container = styled.div`
-  margin: 8.2rem 0;
+  /* margin: 8.2rem 0; */
 `;
 
 const ImgContainer = styled.div`
