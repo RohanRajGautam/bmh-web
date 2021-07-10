@@ -9,7 +9,7 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-plugin-image`,
+    `gatsby-plugin-preact`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -24,6 +24,7 @@ module.exports = {
         display: "swap",
       },
     },
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -34,11 +35,10 @@ module.exports = {
               maxWidth: 630,
             },
           },
-
-          `gatsby-remark-prismjs`,
         ],
       },
     },
+    `gatsby-remark-prismjs`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
