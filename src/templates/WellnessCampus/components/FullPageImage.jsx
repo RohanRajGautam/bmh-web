@@ -16,8 +16,8 @@ if (typeof window !== "undefined") {
 
 const MainContainer = styled.div`
   background: #f5f5ef;
-  padding-top: 13.3rem;
-  margin-top: 9.3rem;
+  padding-top: 13.6rem;
+  margin-top: 13.6rem;
   margin-bottom: 9.3rem;
 
   @media (max-width: 600px) {
