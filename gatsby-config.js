@@ -44,7 +44,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-sass`,
-
+    "gatsby-plugin-optimize-svgs",
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
