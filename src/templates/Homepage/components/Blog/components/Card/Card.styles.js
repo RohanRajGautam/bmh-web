@@ -1,5 +1,6 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
+import Img from "gatsby-image";
 import { SPACING, COLORS } from "@components/constants";
 import { mediaQueries } from "@components/MediaQueries";
 
@@ -47,7 +48,6 @@ export const DateWrapper = styled.div`
   padding: 1rem 1.6rem;
 
   position: absolute;
-  z-index: 2;
   top: 5%;
 
   ${mediaQueries("sm")`
@@ -85,15 +85,12 @@ export const CardThumbnailWrapper = styled.div`
   `}
 `;
 
-export const CardThumbnail = styled.figure`
+export const CardThumbnail = styled(Img)`
   height: 100%;
   background-color: ${COLORS.primary};
-  background-image: url(${props => props.thumbnail});
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
   overflow: hidden;
   transition: transform 300ms;
+  z-index: -1;
 `;
 
 export const CardDesc = styled.div`

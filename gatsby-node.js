@@ -41,6 +41,13 @@ exports.createPages = async ({ graphql, actions }) => {
           featuredImage {
             node {
               sourceUrl
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 800) {
+                    src
+                  }
+                }
+              }
             }
           }
         }

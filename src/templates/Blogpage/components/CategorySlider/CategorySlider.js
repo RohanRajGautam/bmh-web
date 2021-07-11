@@ -24,7 +24,7 @@ const CategorySlider = props => {
               title={item.title}
               date={item.date}
               thumbnail={
-                item.featuredImage.node && item.featuredImage.node.sourceUrl
+                item.featuredImage.node.localFile.childImageSharp.fluid
               }
               desc={item.excerpt.replace(/<[^>]+>/g, "")}
               key={index}

@@ -21,7 +21,9 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
 
-  margin-top: 3.8rem;
+  @media (min-height: 960px) {
+    margin-top: 3.8rem;
+  }
 `;
 
 export const Text = styled.p`
@@ -53,6 +55,9 @@ export const ItemWrapper = styled.div`
 
   &:nth-child(4) {
     border-top: 1px solid #f2f2f2;
+  }
+  &:nth-child(6) {
+    padding-top: 0;
   }
 
   &:hover {

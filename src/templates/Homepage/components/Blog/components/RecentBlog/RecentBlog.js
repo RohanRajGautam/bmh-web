@@ -16,6 +16,13 @@ const RecentBlog = ({ data }) => {
               featuredImage {
                 node {
                   sourceUrl
+                  localFile {
+                    childImageSharp {
+                      fluid(maxWidth: 600) {
+                        ...GatsbyImageSharpFluid_withWebp
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -42,7 +49,8 @@ const RecentBlog = ({ data }) => {
                 title={item.title}
                 date={item.date}
                 thumbnail={
-                  item.featuredImage.node && item.featuredImage.node.sourceUrl
+                  item.featuredImage.node &&
+                  item.featuredImage.node.localFile.childImageSharp.fluid
                 }
                 key={index}
               />

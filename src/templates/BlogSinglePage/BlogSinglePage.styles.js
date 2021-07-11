@@ -1,29 +1,23 @@
 import styled from "styled-components";
-
+import Img from "gatsby-image";
 import { COLORS } from "@components/constants";
 import { Container } from "@components/Container";
 
 export const BlogPageHero = styled(Container)`
   height: 80vh;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   margin-top: -80px;
-  background-image: linear-gradient(
-      11.06deg,
-      #2c3336 -15.64%,
-      rgba(44, 51, 54, 0) 75.3%
-    ),
-    linear-gradient(173.86deg, #2c3336 -10.11%, rgba(44, 51, 54, 0) 73.68%),
-    url(${props => props.image});
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  position: relative;
 
   @media (max-width: 576px) {
     height: 111vh;
   }
+`;
+
+export const BlogPageImage = styled(Img)`
+  height: 100%;
+  width: 100%;
+  filter: brightness(0.7);
 `;
 
 export const BlogPageHeroInner = styled.div`
@@ -31,7 +25,8 @@ export const BlogPageHeroInner = styled.div`
   flex-direction: column;
   padding: 5.2rem 11.2rem;
   height: 90%;
-  position: relative;
+  position: absolute;
+  bottom: 0;
 
   @media (max-width: 1280px) {
     padding: 5vh 5vw;

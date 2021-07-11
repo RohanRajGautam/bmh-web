@@ -9,7 +9,6 @@ import {
 import { BlogCard } from "../Homepage/components/Blog/components";
 
 const AllBlogs = ({ data }) => {
-  console.log(data);
   return (
     <Layout dark>
       <Seo title="Blog" />
@@ -23,7 +22,7 @@ const AllBlogs = ({ data }) => {
                 url={item.uri}
                 title={item.title}
                 thumbnail={
-                  item.featuredImage.node && item.featuredImage.node.sourceUrl
+                  item.featuredImage.node.localFile.childImageSharp.fluid
                 }
                 desc={item.excerpt?.replace(/<[^>]+>/g, "")}
               />
