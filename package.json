@@ -52,7 +52,6 @@
     "typeface-montserrat": "^1.1.13"
   },
   "devDependencies": {
-    "env-cmd": "^10.1.0",
     "gatsby-plugin-material-ui": "^2.1.10",
     "gatsby-plugin-remove-trailing-slashes": "^3.3.0",
     "prettier": "2.2.1"
@@ -69,7 +68,7 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "develop": "env-cmd -f .env.development gatsby develop",
+    "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
