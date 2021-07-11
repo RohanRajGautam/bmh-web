@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import { SPACING, COLORS } from "@components/constants";
 import { mediaQueries } from "@components/MediaQueries";
 
 export const Wrapper = styled.div`
@@ -25,21 +24,21 @@ export const Content = styled.div`
   margin-top: 3.8rem;
 `;
 
-export const Item = styled.a`
+export const Text = styled.p`
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+
+  color: #15141a;
+`;
+
+export const ItemWrapper = styled.div`
   padding: 3.2rem 0;
   width: 100%;
   text-align: center;
   transition: all 0.3s ease-in-out;
-
-  svg {
-    path {
-      transition: all 0.3s ease-in-out;
-    }
-  }
-
-  @media (min-height: 1100px) {
-    padding: 5.2rem 0;
-  }
 
   // hide all other items in sidebar when menu-icon is clicked
   &:not(:nth-child(3)) {
@@ -56,24 +55,15 @@ export const Item = styled.a`
     border-top: 1px solid #f2f2f2;
   }
 
-  &:nth-child(6) {
-    padding-top: 0;
-  }
-
-  &:nth-child(7) {
-    transition: all 0.3s ease-in-out;
-  }
-
   &:hover {
-    cursor: pointer;
+    p {
+      color: #6ca448;
+    }
 
     &:nth-child(1),
     :nth-child(2) {
       svg {
         path:first-child {
-          fill: #6ca448;
-        }
-        path:not(:first-child) {
           transform: translateX(1rem);
           transition: all 0.3s ease-in-out;
           fill: #6ca448;
@@ -84,31 +74,32 @@ export const Item = styled.a`
       }
     }
 
-    /* &:nth-child(3) {
-      svg {
-        g {
-          path:last-child {
-            fill: #6ca448;
-          }
-          path:not(:last-child) {
-            stroke: #6ca448;
-          }
-        }
-      }
-    } */
-
-    &:nth-child(4),
-    &:nth-child(5) {
-      svg {
-        path {
-          fill: #6ca448;
-        }
-      }
-    }
-
     &:nth-child(6) {
-      transition: all 0.3s ease-in-out;
       filter: brightness(1.1);
     }
+  }
+
+  @media (min-height: 1100px) {
+    padding: 5.2rem 0;
+  }
+`;
+
+export const Item = styled.a`
+  text-decoration: none;
+
+  transition: all 0.3s ease-in-out;
+
+  svg {
+    path {
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &:nth-child(6) {
+    padding-top: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 `;

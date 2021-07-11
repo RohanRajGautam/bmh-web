@@ -18,7 +18,7 @@ import Seo from "@layouts/common/seo";
 const Homepage = props => {
   React.useEffect(() => {
     Aos.init({
-      duration: 400,
+      // duration: 400,
       once: true,
     });
   }, []);
