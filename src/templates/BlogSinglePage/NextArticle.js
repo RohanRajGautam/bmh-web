@@ -1,5 +1,6 @@
 import { Link } from "gatsby";
 import React from "react";
+import Img from "gatsby-image";
 import styled from "styled-components";
 
 import { COLORS } from "@components/constants";
@@ -31,27 +32,22 @@ const Title = styled.h5`
 
 const ImageContainer = styled.div`
   position: relative;
-
   width: 100%;
   max-width: 140rem;
   height: 60rem;
-
-  border-radius: 24px;
-
   background-color: ${COLORS.primary};
-  background: linear-gradient(
-      11.06deg,
-      #2c3336 -15.64%,
-      rgba(44, 51, 54, 0) 75.3%
-    ),
-    url(${props => props.image});
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  border-radius: 24px;
 
   @media (max-width: 600px) {
     height: 50rem;
-  } ;
+  }
+`;
+
+const Image = styled(Img)`
+  height: 100%;
+  width: 100%;
+  filter: brightness(0.7);
+  border-radius: 24px;
 `;
 
 const TextContainer = styled.div`
@@ -108,7 +104,12 @@ const NextArticle = ({ nextPage }) => {
     <Wrapper>
       <Title>Next Article</Title>
       <Link to={nextPage?.uri}>
-        <ImageContainer image={nextPage?.featuredImage?.node?.sourceUrl}>
+        <ImageContainer>
+          <Image
+            fluid={
+              nextPage?.featuredImage?.node?.localFile.childImageSharp.fluid
+            }
+          />
           <TextContainer>
             <Heading>{nextPage?.title}</Heading>
             <SubHeading>

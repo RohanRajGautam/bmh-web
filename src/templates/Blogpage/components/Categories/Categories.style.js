@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
+import Img from "gatsby-image";
 import { SPACING, COLORS } from "@components/constants";
 
 export const CategoryWrapper = styled.div``;
@@ -73,32 +74,23 @@ export const CategoryBlogCardWrapper = styled.div`
   }
 `;
 
+export const ImageContainer = styled(Img)`
+  height: 100%;
+  width: 100%;
+  filter: brightness(0.7);
+  z-index: -1;
+`;
+
 export const CategoryBlogCard = styled.div`
   position: relative;
   height: 100%;
   width: 100%;
-  padding-top: 100%;
   cursor: pointer;
-  background-image: linear-gradient(
-      11.06deg,
-      #2c3336 -15.64%,
-      rgba(44, 51, 54, 0) 75.3%
-    ),
-    linear-gradient(173.86deg, #2c3336 -10.11%, rgba(44, 51, 54, 0) 73.68%),
-    url(${props => props.image});
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: transform 300ms;
-
-  @media (min-width: 1440px) {
-    padding-top: 0;
-  }
+  transition: all 300ms ease-in-out;
 
   &:hover {
-    &:not(h2):not(p) {
+    img {
       transform: scale(1.01);
-      transition: transform 300ms ease-in-out;
     }
   }
 `;

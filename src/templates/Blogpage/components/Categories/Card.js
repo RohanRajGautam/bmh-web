@@ -8,13 +8,14 @@ import {
   CategoryTitle,
   StyledLink,
   CategoryDate,
+  ImageContainer,
 } from "./Categories.style";
 
 const CategoryCard = props => {
   return (
     <CategoryBlogCardWrapper>
       <StyledLink to={props?.url}>
-        <CategoryBlogCard image={props.image}>
+        <CategoryBlogCard>
           <CategoryTextWrapper>
             <CategoryTitle>{props.title}</CategoryTitle>
             <CategoryMetaWrapper>
@@ -23,6 +24,7 @@ const CategoryCard = props => {
               <CategoryDate>{props.date}</CategoryDate>
             </CategoryMetaWrapper>
           </CategoryTextWrapper>
+          <ImageContainer fluid={props?.image} />
         </CategoryBlogCard>
       </StyledLink>
     </CategoryBlogCardWrapper>
