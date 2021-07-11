@@ -34,6 +34,10 @@ const Wrapper = styled.div`
   box-shadow: 5px 4px 45px rgba(0, 0, 0, 0.12);
   padding: 3.2rem;
   position: relative;
+
+  @media (max-width: 700px) {
+    height: 100%;
+  }
 `;
 const ContentWrapper = styled.div`
   display: flex;
@@ -54,6 +58,8 @@ const ImageWrapper = styled.div`
 
   @media (max-width: 700px) {
     margin-bottom: 3.2rem;
+    width: 100%;
+    height: 250px;
   }
 `;
 const ContentDesc = styled.div`
@@ -113,7 +119,17 @@ const ServicePopup = ({ open, handleClose, props, onClose }) => {
         open={open}
         fullWidth={true}
         PaperProps={{
-          style: { borderRadius: 24, maxWidth: 635 },
+          style: {
+            borderRadius: 24,
+            maxWidth: 635,
+            // eslint-disable-line no-useless-computed-key
+            // ["@media (max-width:700px)"]: {
+            //   width: "100%",
+            //   height: "100%",
+            //   maxHeight: '100%',
+            //   margin: '0'
+            // },
+          },
         }}
       >
         <Wrapper>
