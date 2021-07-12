@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 import { Heading, HeadingSecondary } from "@components/Heading";
-import wellnessBg from "@images/wellness-campus.png";
 import { SPACING } from "@components/constants";
 import { Container } from "@components/Container";
 import { mediaQueries } from "@components/MediaQueries";
@@ -12,16 +13,20 @@ import arrow from "./Arrow.svg";
 
 const Wrapper = styled(Container)`
   margin-top: ${SPACING.xl};
-  background: url(${wellnessBg});
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
+  position: relative;
   text-align: center;
-
-  ${mediaQueries("sm")`
+  @media (max-width: 1260px) {
+    height: 40rem;
+  }
+  @media (max-width: 600px) {
+    height: 60vh;
     background-attachment: inherit;
     padding: 5vh 10vw 0 10vw;
-  `}
+  }
+`;
+
+const ImageMain = styled(Img)`
+height: 100%;
 `;
 
 const Content = styled.div`
@@ -29,7 +34,14 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 60vh;
+
+  position: absolute;
+  /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+  top: 0;
+  width: 100%;
+  height: 100%;
 `;
 
 const ButtonWrapper = styled.div`
@@ -75,8 +87,25 @@ const Title = styled.h3`
 `;
 
 const WellnessCampus = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "wellness-campus.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <Wrapper>
+      <ImageMain
+        fluid={data.file.childImageSharp.fluid}
+        alt="Donate"
+        backgroundAttachment="fixed"
+      />
       <Content data-aos="fade-up">
         <Heading center>
           <Subtitle>Wellness campus</Subtitle>

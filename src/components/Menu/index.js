@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
 import {
   Wrapper,
@@ -14,6 +15,7 @@ import {
   BigMenuNavTitle,
   BigMenuNavItemWrapper,
   BigMenuNavItem,
+  MenuImage,
 } from "./styled";
 
 import { staticData } from "@layouts/common/Navbar/Navbar.datas";
@@ -21,20 +23,36 @@ import DonateBtn from "../../templates/Homepage/components/Donate/DonateBtn";
 import HomepageLogo from "@components/SvgComponent/homepage-logo";
 
 const BigMenuComponent = ({ handleBigMenu, bigMenu }) => {
-  useEffect(() => {
-    // disable body-scrolling when modal is open
-    if (bigMenu) {
-      document.body.style.position = "fixed";
-    } else {
-      document.body.style.position = "initial";
+  // React.useEffect(() => {
+  //   // disable body-scrolling when modal is open
+  //   if (bigMenu) {
+  //     document.body.style.position = "fixed";
+  //   } else {
+  //     document.body.style.position = "initial";
+  //   }
+  // }, [bigMenu]);
+
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "nav-donate.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
-  }, [bigMenu]);
+  `);
 
   return (
     <Wrapper>
       <BigMenu open={bigMenu}>
         <BigMenuInner>
           <BigMenuLeft>
+            <MenuImage
+              fluid={data.file.childImageSharp.fluid}
+              alt="donate-nav"
+            />
             <DonateStyle>
               <LogoContainer>
                 <HomepageLogo />
