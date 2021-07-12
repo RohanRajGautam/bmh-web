@@ -1,24 +1,22 @@
 import styled from "styled-components";
-import donate from "@images/homepage-donate.png";
-import donateM from "@images/nav-donate.png";
+import Img from "gatsby-image";
 import { Container } from "@components/Container";
 import { SPACING } from "@components/constants";
 import { HeadingPrimary } from "@components/Heading";
 import { mediaQueries } from "@components/MediaQueries";
 
 export const DonateWrapper = styled(Container)`
-  background: url(${donate});
-  background-size: cover;
-  background-position: top right;
-  background-repeat: no-repeat;
-
-  @media (max-width: 600px) {
-    /* height: 70vh; */
-    background: url(${donateM});
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  position: relative;
+  @media (max-width: 1260px) {
+    height: 40rem;
   }
+  @media (max-width: 600px) {
+    height: 60vh;
+  }
+`;
+
+export const DonateImage = styled(Img)`
+  height: 100%;
 `;
 
 export const DonateStyle = styled.div`
@@ -31,6 +29,9 @@ export const DonateStyle = styled.div`
   padding-bottom: 13.2rem;
 
   height: 100%;
+
+  position: absolute;
+  top: 0;
 
   ${mediaQueries("lg")`
     padding-left: 5vw;
