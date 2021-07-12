@@ -1,9 +1,25 @@
-import * as React from "react";
-import Page from "../templates/Homepage";
 import { graphql } from "gatsby";
+import * as React from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import Layout from "@layouts";
+import Seo from "@layouts/common/seo";
+import Page from "../templates/Homepage";
 
 const Index = ({ data }) => {
-  return <Page data={data} title="Home" />;
+  React.useEffect(() => {
+    Aos.init({
+      // duration: 400,
+      once: true,
+    });
+  }, []);
+
+  return (
+    <Layout dark>
+      <Seo title="Home" />
+      <Page data={data} />
+    </Layout>
+  );
 };
 
 export const query = graphql`
