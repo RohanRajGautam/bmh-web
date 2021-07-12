@@ -8,7 +8,7 @@ import { mediaQueries } from "@components/MediaQueries";
 export const DonateWrapper = styled(Container)`
   position: relative;
   @media (max-width: 1260px) {
-    height: 40vh;
+    height: 40rem;
   }
   @media (max-width: 600px) {
     height: 60vh;
