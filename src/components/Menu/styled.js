@@ -1,11 +1,10 @@
+import Img from "gatsby-image";
 import styled, { css } from "styled-components";
 
 import { SPACING, COLORS } from "@components/constants";
 import { HeadingPrimary } from "@components/Heading";
 import { Container } from "@components/Container";
 import { mediaQueries } from "@components/MediaQueries";
-
-import donate from "@images/nav-donate.png";
 
 /********************************
  * BIG MENU ********************
@@ -21,6 +20,9 @@ export const DonateStyle = styled.div`
 
   padding: 5.2rem;
   height: 100%;
+
+  position: absolute;
+  top: 0;
 
   /* @media (min-width: 768px) {
     justify-content: flex-end;
@@ -81,14 +83,19 @@ export const BigMenuInner = styled.div`
 export const BigMenuLeft = styled.div`
   width: 50rem;
   height: 100%;
-  background: url(${donate});
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
+  position: relative;
 
   ${mediaQueries("md")`
    display: none;
  `}
+`;
+
+export const MenuImage = styled(Img)`
+height: 100%;
+width: 100%; 
 `;
 
 export const BigMenuCenter = styled.div`
