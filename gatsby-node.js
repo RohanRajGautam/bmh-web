@@ -41,6 +41,13 @@ exports.createPages = async ({ graphql, actions }) => {
           featuredImage {
             node {
               sourceUrl
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 800) {
+                    src
+                  }
+                }
+              }
             }
           }
         }
@@ -54,7 +61,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   allPosts.forEach((post, i) => {
     createPage({
-      path: post.uri,
+      path: `${post.uri}`,
       component: slash(postTemplate),
       context: {
         id: post.id,

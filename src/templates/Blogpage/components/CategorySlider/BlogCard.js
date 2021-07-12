@@ -1,6 +1,5 @@
-import React from "react";
-
 import { Link } from "gatsby";
+import React from "react";
 import styled from "styled-components";
 import {
   Card,
@@ -61,7 +60,7 @@ const BlogCard = props => {
         </DateWrapper>
         <Content>
           <CardThumbnailWrapper>
-            <CardThumbnail thumbnail={props?.thumbnail} />
+            <CardThumbnail fluid={props?.thumbnail} />
           </CardThumbnailWrapper>
           <CardDesc>
             <CardTitle>{props?.title}</CardTitle>

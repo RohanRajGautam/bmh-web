@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
+import Img from "gatsby-image";
 
 const borderColor = "#C5CCD3";
 const graniteGrey = "#2C3336";
@@ -61,16 +62,16 @@ export const RecentCardInner = styled.div`
   }
 `;
 
-export const RecentCardImage = styled.figure`
+export const RecentCardImage = styled(Img)`
   width: 100%;
   height: 190px;
-  background-image: linear-gradient(
+  background: linear-gradient(
       11.06deg,
       #2c3336 -15.64%,
       rgba(44, 51, 54, 0) 75.3%
     ),
-    linear-gradient(173.86deg, #2c3336 -10.11%, rgba(44, 51, 54, 0) 73.68%),
-    url(${props => props.image});
+    linear-gradient(173.86deg, #2c3336 -10.11%, rgba(44, 51, 54, 0) 73.68%);
+  /* url(${props => props.image}); */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

@@ -75,11 +75,11 @@ export const HeroBg = styled.div`
 `;
 export const ImageBg = styled.div`
   background: linear-gradient(
-      112.4deg,
-      rgba(0, 0, 0, 0.2) 3.01%,
-      rgba(0, 0, 0, 0) 87.33%
-    ),
-    url(${bgimg});
+    112.4deg,
+    rgba(0, 0, 0, 0.2) 3.01%,
+    rgba(0, 0, 0, 0) 87.33%
+  );
+  /* url(${bgimg}); */
   height: 100%;
   width: 100%;
   background-position: center;
@@ -95,8 +95,8 @@ export const ImageBg = styled.div`
         #2c3336 -10.11%,
         rgba(44, 51, 54, 0) 73.68%
       ),
-      linear-gradient(11.06deg, #2c3336 -15.64%, rgba(44, 51, 54, 0) 75.3%),
-      url(${bgimg});
+      linear-gradient(11.06deg, #2c3336 -15.64%, rgba(44, 51, 54, 0) 75.3%);
+    /* url(${bgimg}); */
     height: 100%;
     width: 100%;
     background-position: center;

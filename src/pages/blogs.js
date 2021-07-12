@@ -17,6 +17,13 @@ export const query = graphql`
         featuredImage {
           node {
             sourceUrl
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 600) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
           }
         }
       }

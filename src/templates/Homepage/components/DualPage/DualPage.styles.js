@@ -15,6 +15,10 @@ export const MainContainer = styled(Container)`
   ${mediaQueries("lg")`
     padding: 0 5vw;
   `}
+
+  @media (max-width: 600px) {
+    margin-top: 22rem;
+  }
 `;
 
 export const Medical = styled.div``;
@@ -27,7 +31,7 @@ export const Wrapper = styled.div`
   display: flex;
   max-width: 140rem;
   min-height: 40vh;
-  margin-top: 10rem;
+  margin-top: 8.4rem;
 
   ${mediaQueries("sm")`
     flex-direction: column;
@@ -46,10 +50,16 @@ export const Title = styled.h3`
   line-height: 4.4rem;
   letter-spacing: -0.02em;
   text-align: left;
+
+  @media (max-width: 600px) {
+    font-size: 2.8rem;
+    line-height: 3.9rem;
+  }
 `;
+
 export const Subtitle = styled.p`
   font-family: Mulish;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-style: normal;
   font-weight: 400;
   line-height: 2.4rem;
@@ -168,6 +178,12 @@ export const Anchor = styled.p`
   @media (max-width: 1420px) {
     br {
       display: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    &::after {
+      transform: scaleX(1);
     }
   }
 `;

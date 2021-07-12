@@ -1,11 +1,11 @@
 // images
-import BrandLogo from "@images/brand-logo/brand-logo.svg";
-import BrandLogo1 from "@images/brand-logo/brand-logo1.svg";
-import BrandLogo2 from "@images/brand-logo/brand-logo2.svg";
-import BrandLogo3 from "@images/brand-logo/brand-logo3.svg";
-import BrandLogo4 from "@images/brand-logo/brand-logo4.svg";
-import BrandLogo5 from "@images/brand-logo/brand-logo5.svg";
-import BrandLogo6 from "@images/brand-logo/brand-logo6.svg";
+// import BrandLogo from "@images/brand-logo/brand-logo.svg";
+// import BrandLogo1 from "@images/brand-logo/brand-logo1.svg";
+// import BrandLogo2 from "@images/brand-logo/brand-logo2.svg";
+// import BrandLogo3 from "@images/brand-logo/brand-logo3.svg";
+// import BrandLogo4 from "@images/brand-logo/brand-logo4.svg";
+// import BrandLogo5 from "@images/brand-logo/brand-logo5.svg";
+// import BrandLogo6 from "@images/brand-logo/brand-logo6.svg";
 
 export const staticData = [
   {
@@ -92,12 +92,12 @@ export const staticData = [
   },
 ];
 
-export const StaticBrandLogo = [
-  BrandLogo,
-  BrandLogo1,
-  BrandLogo2,
-  BrandLogo3,
-  BrandLogo4,
-  BrandLogo5,
-  BrandLogo6,
-];
+// export const StaticBrandLogo = [
+//   BrandLogo,
+//   BrandLogo1,
+//   BrandLogo2,
+//   BrandLogo3,
+//   BrandLogo4,
+//   BrandLogo5,
+//   BrandLogo6,
+// ];

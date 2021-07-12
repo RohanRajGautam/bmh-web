@@ -17,6 +17,7 @@ import {
   BlogContent,
   BlogSidebar,
   BlogSidebarTitle,
+  BlogPageImage,
 } from "./BlogSinglePage.styles";
 import { RecentBlog } from "../Homepage/components/Blog/components";
 import NextArticle from "./NextArticle";
@@ -29,7 +30,10 @@ const BlogSinglePage = ({ data, pageContext, ...props }) => {
   return (
     <Layout>
       <Seo title={post?.title} />
-      <BlogPageHero image={post?.featuredImage.node.sourceUrl}>
+      <BlogPageHero>
+        <BlogPageImage
+          fluid={post?.featuredImage.node.localFile.childImageSharp.fluid}
+        />
         <BlogPageHeroInner>
           <LogoContainer>
             <HomepageLogo />
@@ -84,6 +88,13 @@ export const query = graphql`
           featuredImage {
             node {
               sourceUrl
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 1260) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
             }
           }
           content

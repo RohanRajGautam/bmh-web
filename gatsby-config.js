@@ -9,7 +9,7 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-plugin-image`,
+    `gatsby-plugin-preact`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -24,6 +24,7 @@ module.exports = {
         display: "swap",
       },
     },
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -34,17 +35,16 @@ module.exports = {
               maxWidth: 630,
             },
           },
-
-          `gatsby-remark-prismjs`,
         ],
       },
     },
+    `gatsby-remark-prismjs`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-sass`,
-
+    "gatsby-plugin-optimize-svgs",
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
@@ -96,7 +96,7 @@ module.exports = {
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
 
     {
       resolve: "gatsby-plugin-robots-txt",

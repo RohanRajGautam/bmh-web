@@ -22,6 +22,7 @@ import {
 
 // component style import
 import { HeadingPrimary } from "@components/Heading";
+import Image from "@components/Image";
 
 // images
 import BannerVector from "@images/home/banner-vector.png";
@@ -35,6 +36,7 @@ export default function Hero() {
       <HeroContainer>
         <HeroBg>
           <ImageBg>
+            <Image src="home/banner-bg.jpg" style={{ height: "100%" }} />
             <ImageVector
               src={BannerVector}
               type="image/png"
