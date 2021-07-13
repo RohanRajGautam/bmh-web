@@ -73,7 +73,7 @@ export const BlogPageTitle = styled.h1`
   margin-bottom: 2rem;
 
   @media (max-width: 1280px) {
-    font-size: 5.2rem;
+    font-size: 5rem;
     line-height: 1.2;
   }
 `;
