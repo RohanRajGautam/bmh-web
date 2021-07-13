@@ -21,7 +21,7 @@ const Wrapper = styled(Container)`
   @media (max-width: 600px) {
     height: 60vh;
     background-attachment: inherit;
-    padding: 5vh 10vw 0 10vw;
+    /* padding: 5vh 10vw 0 10vw; */
   }
 `;
 
