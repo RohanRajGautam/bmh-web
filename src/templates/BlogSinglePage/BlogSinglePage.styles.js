@@ -25,6 +25,7 @@ export const BlogPageHeroInner = styled.div`
   flex-direction: column;
   padding: 5.2rem 11.2rem;
   height: 90%;
+  width: 100%;
   position: absolute;
   bottom: 0;
 
@@ -72,7 +73,7 @@ export const BlogPageTitle = styled.h1`
   margin-bottom: 2rem;
 
   @media (max-width: 1280px) {
-    font-size: 5.2rem;
+    font-size: 5rem;
     line-height: 1.2;
   }
 `;
@@ -135,7 +136,7 @@ export const BlogContentWithSidebar = styled.div`
 export const BlogContent = styled.div`
   padding-left: 0 !important;
   font-size: 2rem;
-  font-family: Mulish;
+  font-family: Mulish !important;
   color: ${COLORS.textBodyGrey};
   line-height: 3.2rem;
   text-align: justify;
@@ -162,11 +163,12 @@ export const BlogContent = styled.div`
   }
 
   img {
-    /* height: auto;
-    max-width: 100%; */
-    /* display: none; */
     border-radius: 24px;
     margin: 5.2rem auto;
+    max-height: 100%;
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
   }
 
   picture {
@@ -196,12 +198,44 @@ export const BlogContent = styled.div`
     font-size: 1.6rem;
     line-height: 1.6;
 
-    color: #596166;
+    color: #596166 !important;
     margin-bottom: 1.2rem;
+
+    span {
+      font: inherit;
+      color: #596166 !important;
+    }
   }
   .fusion-widget-area {
     display: none;
   }
+
+  .entry-title {
+    display: none;
+  }
+
+  #attachment_6473 {
+    width: 100%;
+  }
+
+  ul,
+  ol {
+    padding: 2rem 0 2rem 2rem;
+    li {
+      font-family: Mulish;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.6rem;
+      line-height: 1.6;
+
+      color: #596166;
+      span {
+        font: inherit;
+        color: inherit;
+      }
+    }
+  }
+
   iframe {
     max-width: 100%;
   }
@@ -213,8 +247,45 @@ export const BlogContent = styled.div`
   h2,
   h3 {
     padding: 2rem 0 1.2rem 0;
+    color: #6ca448 !important;
     span {
       color: #6ca448 !important;
+    }
+  }
+
+  h2 {
+    font-family: "Merriweather";
+    font-size: 3.7rem;
+    line-height: 1.2;
+    font-weight: bold;
+    font-style: normal;
+
+    span {
+      font: inherit;
+    }
+  }
+
+  h2 {
+    font-family: "Merriweather";
+    font-size: 2.8rem;
+    line-height: 1.4;
+    font-weight: bold;
+    font-style: normal;
+
+    span {
+      font: inherit;
+    }
+  }
+
+  h3 {
+    font-family: "Merriweather";
+    font-size: 2.1rem;
+    line-height: 1.4;
+    font-weight: bold;
+    font-style: normal;
+
+    span {
+      font: inherit;
     }
   }
 
@@ -230,6 +301,13 @@ export const BlogContent = styled.div`
     &:hover {
       color: #6ca448;
     }
+  }
+
+  figcaption {
+    font-style: oblique;
+    font-size: 1.2rem;
+    text-align: right;
+    margin-top: -4rem;
   }
 
   blockquote {
