@@ -8,7 +8,7 @@ import CloseIcon from "@material-ui/icons/Close";
 import Button from "@components/Button";
 import placeholderImg from "@images/icons/placeholder-logo.png";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles(theme => ({
   closeButton: {
     position: "absolute",
     right: "1rem",
@@ -19,13 +19,22 @@ const useStyles = makeStyles(() => ({
       color: "#6CA448",
     },
   },
+
+  dialogPaper: {
+    borderRadius: 24,
+    maxWidth: 635,
+
+    [theme.breakpoints.down("xs")]: {
+      width: "100%",
+      borderRadius: 0,
+      height: "100%",
+      maxHeight: "100%",
+      margin: 0,
+    },
+  },
 }));
 
-const Container = styled.div`
-  .MuiDialog-paperWidthSm {
-    max-width: 635px;
-  }
-`;
+const Container = styled.div``;
 
 const Wrapper = styled.div`
   display: flex;
@@ -118,19 +127,7 @@ const ServicePopup = ({ open, handleClose, props, onClose }) => {
         aria-labelledby="customized-dialog-title"
         open={open}
         fullWidth={true}
-        PaperProps={{
-          style: {
-            borderRadius: 24,
-            maxWidth: 635,
-            // eslint-disable-line no-useless-computed-key
-            // ["@media (max-width:700px)"]: {
-            //   width: "100%",
-            //   height: "100%",
-            //   maxHeight: '100%',
-            //   margin: '0'
-            // },
-          },
-        }}
+        PaperProps={{ classes: { root: classes.dialogPaper } }}
       >
         <Wrapper>
           <DialogTitle>
