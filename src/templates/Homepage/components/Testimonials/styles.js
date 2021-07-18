@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { SPACING } from "@components/constants";
 import { Container } from "@components/Container";
 import person from "@images/testimonial.png";
+import personMobile from "@images/test-mobile.png";
 import { mediaQueries } from "@components/MediaQueries";
 
 export const MainContainer = styled(Container)`
@@ -42,16 +43,10 @@ export const People = styled.div`
   background-position: center;
   height: 70%;
 
-  ${mediaQueries("sm")`
-      height: 100%;
-      width: 200%;
-  `}
-
-  ${mediaQueries("xs")`
-      height: 80%;
-      width: 205%;
-      background-position: right;
-  `}
+  @media (max-width: 600px) {
+    background: url(${personMobile}) no-repeat center;
+    height: 100%;
+  }
 `;
 
 export const BackgroundVector = styled.div`
