@@ -24,7 +24,7 @@ const Index = ({ data }) => {
 
 export const query = graphql`
   query {
-    allPost: allWpPost {
+    allPost: allWpPost(limit: 10)  {
       nodes {
         id
         uri
