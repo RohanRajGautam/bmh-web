@@ -51,6 +51,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-remove-trailing-slashes`,
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-sass`,
     "gatsby-plugin-optimize-svgs",
     // {
