@@ -11,7 +11,7 @@ import {
   FutureSectionHealthy,
 } from "./components/FutureSection";
 import { ImageSliderFirst, ImageSliderSecond } from "./components/ImageSlider";
-import FullPageImage from "./components/FullPageImage";
+import FullPageImage from "../../../FullPageImage";
 
 const WellnessContainer = styled(Container)``;
 

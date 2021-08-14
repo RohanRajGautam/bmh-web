@@ -31,19 +31,8 @@ const RecentBlog = ({ data }) => {
       `}
       render={data => (
         <BlogWrapper>
-          {console.log(data)}
           {data?.category.nodes.length &&
             data.category.nodes.map((item, index) => (
-              // <>
-              //   <BlogArticleWrapper key={index}>
-              //     <ArticleCard
-              //       title={item.title}
-              //       date={item.date.substring(0, 10)}
-              //       image={item.featuredImage.node.sourceUrl}
-              //       url={item.uri}
-              //     />
-              //   </BlogArticleWrapper>
-              // </>
               <BlogCard
                 url={item.uri}
                 title={item.title}

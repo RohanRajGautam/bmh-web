@@ -10,11 +10,11 @@ import {
   PhotoWrapper,
 } from "./StoryPage.styles";
 
-import PhotoSvg from "./Photo";
 import Play from "./Play";
 import Readmore from "./readmore";
 import { HeadingPrimary } from "@components/Heading";
 import VideoModal from "@components/VideoModal";
+import Image from "@components/Image";
 
 const StoryPage = () => {
   const [open, setOpen] = useState(false);
@@ -52,7 +52,10 @@ const StoryPage = () => {
         </Content>
         <PhotoWrapper data-aos="fade-up">
           <div style={{ position: "relative" }}>
-            <PhotoSvg />
+            <Image
+              src="our-story-group.png"
+              style={{ height: "100%", width: "100%" }}
+            />
             <div
               role="presentation"
               onClick={handleClickOpen}

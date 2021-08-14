@@ -1,5 +1,4 @@
 import React from "react";
-import RellaxWrapper from "react-rellax-wrapper";
 
 // styled-components
 import {
@@ -13,22 +12,17 @@ import {
   HeroTextContainer,
   ImageBg,
   ImageVector,
-  Subtitle,
-  BackgroundVector,
-  HeroHeading,
   LogoContainer,
   ButtonContainer,
 } from "./Hero.styles";
 
 // component style import
-import { HeadingPrimary } from "@components/Heading";
 import Image from "@components/Image";
 
 // images
 import BannerVector from "@images/home/banner-vector.png";
 import HomepageLogo from "@components/SvgComponent/homepage-logo";
 import ButtonPrimary from "@components/SvgComponent/btn-primary";
-import Dots from "@components/SvgComponent/dots";
 
 export default function Hero() {
   return (
@@ -65,17 +59,6 @@ export default function Hero() {
           </HeroItems>
         </HeroContent>
       </HeroContainer>
-      <HeroHeading center data-aos="fade-up" id="medical-wellness">
-        <Subtitle>OUR WHOLISTIC APPROACH</Subtitle>
-        <HeadingPrimary>
-          Treating <span>and</span> Preventing
-        </HeadingPrimary>
-      </HeroHeading>
-      <BackgroundVector>
-        <RellaxWrapper speed={3} percentage={0.4}>
-          <Dots />
-        </RellaxWrapper>
-      </BackgroundVector>
     </MainContainer>
   );
 }

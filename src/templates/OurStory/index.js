@@ -4,6 +4,7 @@ import Layout from "@layouts";
 import Seo from "@layouts/common/seo";
 import { HeadingPrimary } from "@components/Heading";
 
+import Image from "@components/Image";
 import { Container } from "@components/Container";
 import { data } from "./data";
 import { mediaQueries } from "@components/MediaQueries";
@@ -11,7 +12,6 @@ import { mediaQueries } from "@components/MediaQueries";
 import HomepageLogo from "@components/SvgComponent/homepage-logo";
 import BannerVector from "@images/home/banner-vector.png";
 import bannerImage from "@images/ourstory-bg.jpg";
-import PhotoSvg from "../Homepage/components/Story/Photo";
 import Play from "../Homepage/components/Story/Play";
 import VideoModal from "@components/VideoModal";
 
@@ -202,7 +202,10 @@ const OurStory = () => {
             <ContentRight>
               <DescImage>
                 <div style={{ position: "relative" }}>
-                  <PhotoSvg />
+                  <Image
+                    src="our-story-group.png"
+                    style={{ height: "100%", width: "100%" }}
+                  />
                   <div
                     role="presentation"
                     onClick={handleClickOpen}

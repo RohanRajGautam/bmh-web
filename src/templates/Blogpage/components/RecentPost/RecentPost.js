@@ -5,8 +5,6 @@ import { Heading } from "../../../../components/Heading";
 import RecentCard from "./RecentCard";
 
 const RecentPost = props => {
-  console.log(props.data.posts.nodes);
-
   return (
     <RecentWrapper>
       <Heading clean>Recent Articles</Heading>

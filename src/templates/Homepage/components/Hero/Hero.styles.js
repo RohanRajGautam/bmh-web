@@ -40,6 +40,7 @@ export const MainContainer = styled(Container)`
 
   ${mediaQueries("md")`
     margin-top: 5.2rem;
+    height: 80vh;
   `}
 `;
 
@@ -232,7 +233,11 @@ export const Subtitle = styled(HeadingSecondary)`
 
 export const HeroHeading = styled(Heading)`
   /* margin-top: ${SPACING.md}; */
-  padding-top: ${SPACING.xl};
+  padding-top: ${SPACING.md};
+
+  ${mediaQueries("md")`
+     padding-top: 13.6rem;
+  `}
 `;
 
 export const BackgroundVector = styled.div`

@@ -50,7 +50,6 @@ const useStyles = makeStyles(theme => ({
 const EventDialog = ({ open, handleClose, props, onClose }) => {
   const classes = useStyles();
 
-  console.log(props);
   return (
     <div>
       <Dialog
