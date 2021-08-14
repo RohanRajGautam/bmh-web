@@ -74,9 +74,9 @@ const SEO = ({ description, lang, meta, title }) => {
     >
       <link
         rel="preload"
-        href="/src/assets/fonts/Smiley.ttf"
+        href="/src/assets/fonts/Smiley.woff2"
         as="font"
-        type="font/truetype"
+        type="font/woff2"
         crossorigin
       />
     </Helmet>
