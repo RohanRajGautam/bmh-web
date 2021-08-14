@@ -1,19 +1,22 @@
 import React from "react";
-import Page from "../templates/AllBlogs";
+import Page from "../templates/Blogpage";
 import { graphql } from "gatsby";
 
-const Blogs = ({ data }) => {
+const Blog = ({ data }) => {
   return <Page data={data} />;
 };
 
 export const query = graphql`
   query {
-    allWpPost(sort: { fields: date, order: DESC }) {
+    allPost: allWpPost {
       nodes {
+        id
+        uri
+        slug
         title
         date
-        uri
         excerpt
+        authorId
         featuredImage {
           node {
             sourceUrl
@@ -28,7 +31,66 @@ export const query = graphql`
         }
       }
     }
+    category: allWpCategory(filter: { name: { eq: "Mindfulness" } }) {
+      edges {
+        node {
+          name
+          posts {
+            nodes {
+              title
+              id
+              uri
+              date
+              author {
+                node {
+                  name
+                }
+              }
+              featuredImage {
+                node {
+                  sourceUrl
+                  localFile {
+                    childImageSharp {
+                      fluid(maxWidth: 600) {
+                        ...GatsbyImageSharpFluid_withWebp
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    categoryTwo: allWpCategory(filter: { name: { eq: "Addiction" } }) {
+      edges {
+        node {
+          name
+          posts {
+            nodes {
+              title
+              uri
+              id
+              date
+              featuredImage {
+                node {
+                  sourceUrl
+                  localFile {
+                    childImageSharp {
+                      fluid(maxWidth: 600) {
+                        ...GatsbyImageSharpFluid_withWebp
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 `;
 
-export default Blogs;
+export default Blog;

@@ -14,7 +14,7 @@ import {
 const CategoryCard = props => {
   return (
     <CategoryBlogCardWrapper>
-      <StyledLink to={props?.url}>
+      <StyledLink to={"/blogs" + props?.url}>
         <CategoryBlogCard>
           <CategoryTextWrapper>
             <CategoryTitle>{props.title}</CategoryTitle>

@@ -44,7 +44,11 @@ const Events = props => {
   }, [selectedDate, props]);
 
   useEffect(() => {
-    dragSlider("#event-slider");
+    let isMounted = true; // note mutable flag
+    if (isMounted) dragSlider("#event-slider"); // add conditional check
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return (

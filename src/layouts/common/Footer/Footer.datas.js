@@ -76,7 +76,7 @@ export const staticData = [
     items: [
       { title: "Our Story", to: "/#our-story" },
       { title: "Events", to: "/#events" },
-      { title: "Blog", to: "/blog-cat" },
+      { title: "Blog", to: "/blogs" },
     ],
   },
   {

@@ -155,7 +155,7 @@ const FullPageImage = () => {
         gsap.to(imageFull, {
           scrollTrigger: {
             trigger: imageFull,
-            start: "center 40%",
+            start: "center 60%",
             end: "+=1000",
             scrub: 1, // for animation
             pinSpacing: false,

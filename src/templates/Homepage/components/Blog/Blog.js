@@ -15,7 +15,11 @@ import { dragSlider } from "../../../../utility";
 
 const Blog = props => {
   useEffect(() => {
-    dragSlider("#blog-slider");
+    let isMounted = true; // note mutable flag
+    if (isMounted) dragSlider("#blog-slider"); // add conditional check
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return (
@@ -27,7 +31,7 @@ const Blog = props => {
             On Our <span> Minds</span>
           </HeadingPrimary>
         </Header>
-        <StyledLink to="/blog-cat">
+        <StyledLink to="/blogs">
           <CheckOurBlog />
         </StyledLink>
       </HeadingWrapper>

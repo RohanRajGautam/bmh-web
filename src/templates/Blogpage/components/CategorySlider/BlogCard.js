@@ -50,7 +50,7 @@ const BlogCard = props => {
   ];
 
   return (
-    <StyledLink to={props?.url}>
+    <StyledLink to={"/blogs" + props?.url}>
       <Card>
         <DateWrapper>
           <Date>

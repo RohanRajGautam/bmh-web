@@ -30,13 +30,12 @@ const LogoWrapper = styled.div`
 const BlogPage = props => {
   return (
     <Layout dark>
-      <Seo title="Blog" />
+      <Seo title="Blogs" />
       <BlogPageWrapper>
         <LogoWrapper>
           <FullLogoAlt to="/" />
         </LogoWrapper>
         <Categories data={props && props.data.category.edges[0].node} />
-        {/* <RecentPost data={props && props.data.categoryTwo.edges[0].node} /> */}
         <CategorySlider data={props.data.allPost.nodes} />
       </BlogPageWrapper>
     </Layout>
