@@ -48,7 +48,7 @@ const Image = ({ src, ...rest }) => {
     return <img src={publicURL} alt="img" {...rest} draggable="false" />;
   }
 
-  if (extension === "svg" || childImageSharp) {
+  if (extension === "svg") {
     return <img src={publicURL} alt="img" {...rest} draggable="false" />;
   }
 
