@@ -1,5 +1,4 @@
 import React from "react";
-import RellaxWrapper from "react-rellax-wrapper";
 
 // styled-components
 import {
@@ -13,22 +12,17 @@ import {
   HeroTextContainer,
   ImageBg,
   ImageVector,
-  Subtitle,
-  BackgroundVector,
-  HeroHeading,
   LogoContainer,
   ButtonContainer,
 } from "./Hero.styles";
 
 // component style import
-import { HeadingPrimary } from "@components/Heading";
 import Image from "@components/Image";
 
 // images
 import BannerVector from "@images/home/banner-vector.png";
 import HomepageLogo from "@components/SvgComponent/homepage-logo";
 import ButtonPrimary from "@components/SvgComponent/btn-primary";
-import Dots from "@components/SvgComponent/dots";
 
 export default function Hero() {
   return (
