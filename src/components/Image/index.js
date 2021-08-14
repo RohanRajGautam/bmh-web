@@ -48,6 +48,10 @@ const Image = ({ src, ...rest }) => {
     return <img src={publicURL} alt="img" {...rest} draggable="false" />;
   }
 
+  if (extension === "svg" || childImageSharp) {
+    return <img src={publicURL} alt="img" {...rest} draggable="false" />;
+  }
+
   return <Img fluid={childImageSharp.fluid} {...rest} />;
 };
 
