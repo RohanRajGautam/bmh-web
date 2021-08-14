@@ -18,10 +18,18 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
-        fonts: [`Merriweather\:300,400,700`, `Mulish`],
-        display: "swap",
+        fonts: [
+          {
+            family: "Merriweather",
+            weights: ["300", "400", "700"],
+          },
+          {
+            family: "Mulish",
+            weights: ["300", "400", "700"],
+          },
+        ],
       },
     },
     `gatsby-plugin-image`,
