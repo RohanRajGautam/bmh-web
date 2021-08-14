@@ -56,12 +56,8 @@ export const ContentWrapper = styled.div`
 export const PhotoWrapper = styled.div`
   max-width: 65rem;
   max-height: 50rem;
+  min-width: 30rem;
   flex: 0 0 60%;
-
-  ${mediaQueries("md")`
-    width: auto;
-    text-align: center;
-  `}
 `;
 
 export const TextWrapper = styled.div`
