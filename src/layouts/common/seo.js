@@ -71,7 +71,15 @@ const SEO = ({ description, lang, meta, title }) => {
           content: metaDescription,
         },
       ].concat(meta)}
-    ></Helmet>
+    >
+      <link
+        rel="preload"
+        href="/src/assets/fonts/Smiley.ttf"
+        as="font"
+        type="font/truetype"
+        crossorigin
+      />
+    </Helmet>
   );
 };
 
