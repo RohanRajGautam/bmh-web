@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Beautiful Minds Health`,
-    description: `Beautiful Minds Health`,
+    description: `Get Your Life Back. We treat and prevent mental illness through wholistic medical care & wellness education.`,
     author: `@webpoint`,
     siteUrl: `https://beautifulmindshealth.com`,
     social: {
@@ -101,6 +101,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: `https://beautifulmindshealth.com`,
+      },
+    },
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
