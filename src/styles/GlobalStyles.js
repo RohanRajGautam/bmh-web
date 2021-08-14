@@ -8,10 +8,9 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    &::selection {
-      background-color: ${primary};
-      color: #fff;
-    }
+
+    scrollbar-width: thin;
+    scrollbar-color: ${primary};
     /* overflow-x: clip; */
   }
 
@@ -24,23 +23,25 @@ export const GlobalStyles = createGlobalStyle`
   body {
     box-sizing: border-box;
     font-family: 'Merriweather', 'Mulish', 'Smiley', 'MerriweatherSans';  
-    overflow-x: hidden;
-
-/* 
-    &::-webkit-scrollbar {
-      width: 8px;
+    overflow-x: hidden;    
+  }
+  
+  ::selection {
+      background-color: ${primary};
+      color: #fff;
     }
 
-    &::-webkit-scrollbar-track {
-      background: #1E3F20;
-    }
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
 
-    &::-webkit-scrollbar-thumb {
-      background: ${primary};
-      border-radius: 12px; 
-    } */
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
 
-    
+  *::-webkit-scrollbar-thumb {
+    background: ${primary};
+    border-radius: 24px; 
   }
 
   p{
