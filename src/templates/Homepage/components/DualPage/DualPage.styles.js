@@ -6,7 +6,6 @@ import { mediaQueries } from "@components/MediaQueries";
 export const MainContainer = styled(Container)`
   /* padding-top: ${SPACING.lg}; */
   padding: 0 11.3rem;
-  margin-top: 30rem;
 
   @media (min-height: 1200px) {
     margin-top: 0;
@@ -15,13 +14,16 @@ export const MainContainer = styled(Container)`
   ${mediaQueries("lg")`
     padding: 0 5vw;
   `}
+`;
+
+export const Medical = styled.div`
+  margin-top: 22rem;
 
   @media (max-width: 600px) {
-    margin-top: 22rem;
+    margin-top: 0;
   }
 `;
 
-export const Medical = styled.div``;
 export const Wellness = styled.div``;
 
 /* ========================================

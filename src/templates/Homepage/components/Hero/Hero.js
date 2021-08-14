@@ -65,17 +65,6 @@ export default function Hero() {
           </HeroItems>
         </HeroContent>
       </HeroContainer>
-      <HeroHeading center data-aos="fade-up" id="medical-wellness">
-        <Subtitle>OUR WHOLISTIC APPROACH</Subtitle>
-        <HeadingPrimary>
-          Treating <span>and</span> Preventing
-        </HeadingPrimary>
-      </HeroHeading>
-      <BackgroundVector>
-        <RellaxWrapper speed={3} percentage={0.4}>
-          <Dots />
-        </RellaxWrapper>
-      </BackgroundVector>
     </MainContainer>
   );
 }
