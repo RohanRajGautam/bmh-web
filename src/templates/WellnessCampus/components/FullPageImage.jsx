@@ -168,7 +168,7 @@ const FullPageImage = () => {
         gsap.to(imageContent, {
           scrollTrigger: {
             trigger: imageFull,
-            start: "center+=620 center",
+            start: "center+=620 bottom",
             scrub: 1,
             // toggleActions: "restart complete reverse reset",
           },
@@ -179,7 +179,7 @@ const FullPageImage = () => {
         gsap.to(imageFull, {
           scrollTrigger: {
             trigger: imageFull,
-            start: "center+=620 center",
+            start: "center+=620 bottom",
             scrub: 1,
             toggleActions: "restart complete reverse reset",
           },
