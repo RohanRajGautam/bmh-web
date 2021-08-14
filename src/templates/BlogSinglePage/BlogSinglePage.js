@@ -19,7 +19,7 @@ import {
   BlogSidebarTitle,
   BlogPageImage,
 } from "./BlogSinglePage.styles";
-import { RecentBlog } from "../Homepage/components/Blog/components";
+import RecentBlog from "./RecentBlog";
 import NextArticle from "./NextArticle";
 import SocialShare from "@components/SocialShare";
 import HomepageLogo from "@components/SvgComponent/homepage-logo";
@@ -90,7 +90,7 @@ export const query = graphql`
               sourceUrl
               localFile {
                 childImageSharp {
-                  fluid(maxWidth: 1260) {
+                  fluid(maxWidth: 1260, quality: 64) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }

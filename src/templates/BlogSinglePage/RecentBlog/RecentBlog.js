@@ -1,7 +1,7 @@
 import React from "react";
 import { BlogWrapper } from "./RecentBlog.styles";
 import { graphql, StaticQuery } from "gatsby";
-import BlogCard from "../Card/Card";
+import BlogCard from "../../Homepage/components/Blog/components/Card/Card";
 
 const RecentBlog = ({ data }) => {
   return (
@@ -18,7 +18,7 @@ const RecentBlog = ({ data }) => {
                   sourceUrl
                   localFile {
                     childImageSharp {
-                      fluid(maxWidth: 600) {
+                      fluid(maxWidth: 600, quality: 64) {
                         ...GatsbyImageSharpFluid_withWebp
                       }
                     }

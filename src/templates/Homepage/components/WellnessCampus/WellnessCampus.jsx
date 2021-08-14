@@ -26,7 +26,7 @@ const Wrapper = styled(Container)`
 `;
 
 const ImageMain = styled(Img)`
-height: 100%;
+  height: 100%;
 `;
 
 const Content = styled.div`
@@ -91,7 +91,7 @@ const WellnessCampus = () => {
     query {
       file(relativePath: { eq: "wellness-campus.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
+          fluid(maxWidth: 1260, quality: 64) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

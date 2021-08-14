@@ -40,19 +40,6 @@ export const DonateStyle = styled.div`
 
 export const DonateColumn = styled.div``;
 
-// export const DonateButton = styled(Button)`
-//   display: block;
-//   padding: 2rem 0;
-//   width: 80%;
-//   margin-top: 2rem;
-//   @media (max-width: 767px) {
-//     margin: 0 auto;
-//   }
-//   @media (min-width: 1024px) {
-//     max-width: 80%;
-//   }
-// `;
-
 export const Heading = styled(HeadingPrimary)`
   color: #fff;
 
