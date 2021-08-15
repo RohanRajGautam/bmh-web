@@ -4,7 +4,7 @@ const primary = "#6CA448";
 
 export const GlobalStyles = createGlobalStyle`
   * {
-    font-family: 'Merriweather', 'Mulish', 'Smiley', 'MerriweatherSans';
+    font-family: 'Merriweather', 'Mulish', 'Smiley';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,7 +22,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     box-sizing: border-box;
-    font-family: 'Merriweather', 'Mulish', 'Smiley', 'MerriweatherSans';  
+    font-family: 'Merriweather', 'Mulish', 'Smiley';  
     overflow-x: hidden;    
   }
   
