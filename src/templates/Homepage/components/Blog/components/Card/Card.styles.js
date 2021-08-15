@@ -26,7 +26,7 @@ export const Card = styled.div`
   }
 `;
 
-export const Date = styled.h5`
+export const Date = styled.p`
   font-family: "Merriweather";
   font-weight: bold;
   font-style: normal;

@@ -49,7 +49,7 @@ const DateWrapper = styled.div`
   flex-direction: column;
 `;
 
-const Date = styled.h4`
+const Date = styled.p`
   font-family: Merriweather;
   font-style: normal;
   font-weight: bold;
