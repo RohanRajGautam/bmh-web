@@ -66,7 +66,7 @@ export const TextWrapper = styled.div`
   font-weight: normal;
   font-size: 2rem;
   line-height: 32px;
-  color: #596166;
+  color: #52595e;
   /* text-align: justify; */
   padding: ${SPACING.sm} 0;
 `;
