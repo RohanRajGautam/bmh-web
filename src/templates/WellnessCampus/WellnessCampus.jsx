@@ -5,13 +5,12 @@ import Layout from "@layouts";
 import Seo from "@layouts/common/seo";
 import { Container } from "@components/Container";
 
-import { Banner } from "./components";
+import { Banner, FullPageImage } from "./components";
 import {
   FutureSectionWholistic,
   FutureSectionHealthy,
 } from "./components/FutureSection";
 import { ImageSliderFirst, ImageSliderSecond } from "./components/ImageSlider";
-import FullPageImage from "../../../FullPageImage";
 
 const WellnessContainer = styled(Container)``;
 

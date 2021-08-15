@@ -20,13 +20,13 @@ const CategorySlider = props => {
         {props.data.length &&
           props.data.map((item, index) => (
             <BlogCard
-              url={item.uri}
-              title={item.title}
-              date={item.date}
+              url={item?.uri}
+              title={item?.title}
+              date={item?.date}
               thumbnail={
-                item.featuredImage.node.localFile.childImageSharp.fluid
+                item?.featuredImage?.node?.localFile.childImageSharp.fluid
               }
-              desc={item.excerpt.replace(/<[^>]+>/g, "")}
+              desc={item?.excerpt.replace(/<[^>]+>/g, "")}
               key={index}
               blogcat
             />

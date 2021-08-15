@@ -103,7 +103,7 @@ const NextArticle = ({ nextPage }) => {
   return (
     <Wrapper>
       <Title>Next Article</Title>
-      <Link to={nextPage?.uri}>
+      <Link to={"/blogs" + nextPage?.uri}>
         <ImageContainer>
           <Image
             fluid={

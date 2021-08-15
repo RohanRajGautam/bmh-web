@@ -16,8 +16,8 @@ const Donate = () => {
     query {
       file(relativePath: { eq: "homepage-donate.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 1200, quality: 64) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

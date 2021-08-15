@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Beautiful Minds Health`,
-    description: `Beautiful Minds Health`,
+    description: `Get Your Life Back. We treat and prevent mental illness through wholistic medical care & wellness education.`,
     author: `@webpoint`,
     siteUrl: `https://beautifulmindshealth.com`,
     social: {
@@ -18,10 +18,18 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
-        fonts: [`Merriweather\:300,400,700`, `Mulish`],
-        display: "swap",
+        fonts: [
+          {
+            family: "Merriweather",
+            weights: ["300", "400", "700"],
+          },
+          {
+            family: "Mulish",
+            weights: ["300", "400", "700"],
+          },
+        ],
       },
     },
     `gatsby-plugin-image`,
@@ -43,6 +51,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-remove-trailing-slashes`,
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-sass`,
     "gatsby-plugin-optimize-svgs",
     // {
@@ -61,7 +70,20 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#6CA448`,
         display: `minimal-ui`,
-        icon: `src/images/icons/logo.svg`, // This path is relative to the root of the site.
+        icon: `src/images/icons/bhm_alt.png`, // This path is relative to the root of the site.
+        icons: [
+          {
+            src: `src/images/icons/bhm_alt_192.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+            purpose: "maskable",
+          },
+          {
+            src: `src/images/icons/bhm_alt_512.png`,
+            sizes: `512x512`,
+            type: `image/png`,
+          },
+        ], // Add or remove icon sizes as desired
       },
     },
     {
@@ -93,11 +115,18 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: `https://beautifulmindshealth.com`,
+      },
+    },
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
     `gatsby-plugin-preload-fonts`,
+    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {

@@ -30,7 +30,7 @@ svg {
 
 const ButtonPrimary = ({ to }) => {
   return (
-    <Wrapper to={to}>
+    <Wrapper to={to} aria-label="let us help">
       <svg
         width="271"
         height="96"

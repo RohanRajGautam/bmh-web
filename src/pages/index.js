@@ -24,7 +24,7 @@ const Index = ({ data }) => {
 
 export const query = graphql`
   query {
-    allPost: allWpPost(limit: 10)  {
+    allPost: allWpPost(limit: 10) {
       nodes {
         id
         uri
@@ -38,7 +38,7 @@ export const query = graphql`
             sourceUrl
             localFile {
               childImageSharp {
-                fluid(maxWidth: 600) {
+                fluid(maxWidth: 600, quality: 64) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }

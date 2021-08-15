@@ -188,7 +188,7 @@ export const NewsletterInput = styled.div`
       position: absolute;
       bottom: 10px;
       left: 0;
-      color: ${COLORS.textDisable};
+      color: ${COLORS.textBodyGrey};
     }
   }
 

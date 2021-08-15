@@ -17,7 +17,7 @@ export const HeadingSecondary = styled.p`
   font-weight: bold;
   font-size: 1.8rem;
   line-height: 2.4rem;
-  color: #596166;
+  color: #4d5358;
 
   opacity: 0.5;
   text-transform: uppercase;

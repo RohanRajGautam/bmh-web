@@ -34,7 +34,7 @@ const pulse = keyframes`
   }
 `;
 
-const PlayButton = styled.a`
+const PlayButton = styled.div`
   cursor: pointer;
   position: absolute;
   left: 4%;
@@ -43,11 +43,6 @@ const PlayButton = styled.a`
   border-radius: 50%;
   display: inline-flex;
   transition: transform 0.3s ease-in-out;
-
-  /* -webkit-animation: ${bounce} 2s infinite;
-  animation: ${bounce} 2s infinite; */
-  /* -webkit-animation: ${pulse} 2s infinite;
-  animation: ${pulse} 2s infinite; */
 
   &:hover {
     transform: scale(0.9);
@@ -63,9 +58,9 @@ const PlayButton = styled.a`
   }
 `;
 
-const Play = ({ to }) => {
+const Play = () => {
   return (
-    <PlayButton href={to} target="_blank" rel="noopener noreferrer">
+    <PlayButton>
       <svg
         width="76"
         height="76"

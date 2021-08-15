@@ -118,7 +118,7 @@ const Footer = () => {
         </FooterMain>
         <FooterSecondary>
           <LeftAlign>
-            <LogoWrapper to="/">
+            <LogoWrapper to="/" aria-label="Home">
               <BrandLogo />
             </LogoWrapper>
 

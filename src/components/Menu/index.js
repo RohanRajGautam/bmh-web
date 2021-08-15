@@ -23,21 +23,12 @@ import DonateBtn from "../../templates/Homepage/components/Donate/DonateBtn";
 import HomepageLogo from "@components/SvgComponent/homepage-logo";
 
 const BigMenuComponent = ({ handleBigMenu, bigMenu }) => {
-  // React.useEffect(() => {
-  //   // disable body-scrolling when modal is open
-  //   if (bigMenu) {
-  //     document.body.style.position = "fixed";
-  //   } else {
-  //     document.body.style.position = "initial";
-  //   }
-  // }, [bigMenu]);
-
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "nav-donate.png" }) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fluid(quality: 64) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

@@ -35,6 +35,7 @@ export default function Hero() {
               src={BannerVector}
               type="image/png"
               draggable="false"
+              alt="background-vector"
             />
           </ImageBg>
         </HeroBg>

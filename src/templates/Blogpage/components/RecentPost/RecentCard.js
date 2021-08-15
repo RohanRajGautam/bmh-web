@@ -11,7 +11,7 @@ import {
 
 const MyRecentCard = props => {
   return (
-    <StyledLink to={props?.url}>
+    <StyledLink to={"/blogs" + props?.url}>
       <RecentCard>
         <RecentCardInner>
           <RecentCardImage fluid={props.image} />

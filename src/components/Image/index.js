@@ -15,8 +15,8 @@ export const useImage = src => {
             extension
             publicURL
             childImageSharp {
-              fluid(maxWidth: 1260) {
-                ...GatsbyImageSharpFluid
+              fluid(maxWidth: 1260, quality: 64) {
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }

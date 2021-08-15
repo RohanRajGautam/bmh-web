@@ -30,13 +30,17 @@ export const SliderWrapper = styled.div`
   overflow-x: scroll;
   overflow-y: hidden;
   user-select: none;
-  cursor: grab;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;
   scroll-behavior: smooth;
   ::-webkit-scrollbar {
     display: none;
   }
+
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
 
   ${mediaQueries("sm")`
     margin-top: 6rem;
