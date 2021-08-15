@@ -10,6 +10,8 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
+import SmileyFont from "../../assets/fonts/Smiley.woff2";
+
 const SEO = ({ description, lang, meta, title }) => {
   const { site } = useStaticQuery(
     graphql`
@@ -71,7 +73,15 @@ const SEO = ({ description, lang, meta, title }) => {
           content: metaDescription,
         },
       ].concat(meta)}
-    ></Helmet>
+    >
+      <link
+        rel="preload"
+        as="font"
+        href={SmileyFont}
+        type="font/woff2"
+        crossOrigin="anonymous"
+      />
+    </Helmet>
   );
 };
 
