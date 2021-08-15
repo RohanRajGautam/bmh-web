@@ -70,7 +70,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#6CA448`,
         display: `minimal-ui`,
-        icon: `src/images/icons/bmh_alt.png`, // This path is relative to the root of the site.
+        icon: `src/images/icons/bhm_alt.png`, // This path is relative to the root of the site.
         icons: [
           {
             src: `src/images/icons/bhm_alt_192.png`,
