@@ -41,6 +41,7 @@ const Sidebar = () => {
             href="https://www.beautifulmindsmedical.com/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Medical"
           >
             <Text>Medical</Text>
             <RightArrow />
@@ -51,23 +52,24 @@ const Sidebar = () => {
             href="https://beautifulmindswellness.org/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Wellness"
           >
             <Text>Wellness</Text>
             <RightArrow />
           </Item>
         </ItemWrapper>
         <ItemWrapper clicked={bigMenu}>
-          <Item onClick={handleBigMenu}>
+          <Item onClick={handleBigMenu} aria-label="Menu">
             <Menu bigMenu={bigMenu} />
           </Item>
         </ItemWrapper>
         <ItemWrapper clicked={bigMenu}>
-          <Item href="/blogs">
+          <Item href="/blogs" aria-label="Go to blogs">
             <Text>Blog</Text>
           </Item>
         </ItemWrapper>
         <ItemWrapper clicked={bigMenu}>
-          <Item href="/#events">
+          <Item href="/#events" aria-label="Go to events">
             <Text>Events</Text>
           </Item>
         </ItemWrapper>
@@ -76,12 +78,13 @@ const Sidebar = () => {
             href="https://beautifulmindswellness.org/donate/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Donate"
           >
             <Donate />
           </Item>
         </ItemWrapper>
         <ItemWrapper clicked={bigMenu}>
-          <Item className="bmh-logo-sidebar" href="/">
+          <Item className="bmh-logo-sidebar" href="/" aria-label="Home">
             <SmallLogo />
           </Item>
         </ItemWrapper>

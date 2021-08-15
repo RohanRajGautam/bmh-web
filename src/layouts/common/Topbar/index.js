@@ -13,6 +13,7 @@ const Topbar = () => {
           target="_blank"
           rel="noopener noreferrer"
           activeClassName="active"
+          aria-label="Medical"
         >
           Medical
         </NavLink>
@@ -22,6 +23,7 @@ const Topbar = () => {
           target="_blank"
           rel="noopener noreferrer"
           activeClassName="active"
+          aria-label="Wellness"
         >
           Wellness
         </NavLink>

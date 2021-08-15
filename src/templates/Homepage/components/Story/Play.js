@@ -65,7 +65,12 @@ const PlayButton = styled.a`
 
 const Play = ({ to }) => {
   return (
-    <PlayButton href={to} target="_blank" rel="noopener noreferrer">
+    <PlayButton
+      href={to}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Play"
+    >
       <svg
         width="76"
         height="76"
