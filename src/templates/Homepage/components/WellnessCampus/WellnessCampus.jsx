@@ -50,7 +50,7 @@ const ButtonWrapper = styled.div`
 
   ${mediaQueries("sm")`
       margin-top: 2.5rem;
-      transform: scale(0.9);
+      transform: scale(0.9) !important;
   `}
 `;
 

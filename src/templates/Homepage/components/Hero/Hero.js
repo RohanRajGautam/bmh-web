@@ -30,7 +30,10 @@ export default function Hero() {
       <HeroContainer>
         <HeroBg>
           <ImageBg>
-            <Image src="home/banner-bg.jpg" style={{ height: "100%" }} />
+            <Image
+              src="home/banner-bg.jpg"
+              style={{ height: "100%", filter: "brightness(0.8)" }}
+            />
             <ImageVector
               src={BannerVector}
               type="image/png"

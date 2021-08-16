@@ -53,4 +53,8 @@ export const Heading = styled(HeadingPrimary)`
 
 export const ButtonContainer = styled.div`
   margin-top: ${SPACING.md};
+
+  @media (max-width: 600px) {
+    transform: translateX(-2rem) scale(0.9) !important;
+  }
 `;
