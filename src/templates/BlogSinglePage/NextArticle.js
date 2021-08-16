@@ -109,6 +109,7 @@ const NextArticle = ({ nextPage }) => {
             fluid={
               nextPage?.featuredImage?.node?.localFile.childImageSharp.fluid
             }
+            alt="next blog article"
           />
           <TextContainer>
             <Heading>{nextPage?.title}</Heading>
