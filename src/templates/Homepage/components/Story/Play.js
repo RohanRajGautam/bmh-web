@@ -1,38 +1,5 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
-
-/* bounce animation */
-const bounce = keyframes`
-  0%,
-  25%,
-  50%,
-  75%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-6px);
-  }
-`;
-
-/* pulse animation */
-const pulse = keyframes`
-  0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(54, 82, 36, 0.5);
-    box-shadow: 0 0 0 0 rgba(54, 82, 36, 0.5);
-  }
-  70% {
-    -webkit-box-shadow: 0 0 0 50px rgba(54, 82, 36, 0);
-    box-shadow: 0 0 0 50px rgba(54, 82, 36, 0);
-  }
-  100% {
-    -webkit-box-shadow: 0 0 0 0 rgba(54, 82, 36, 0);
-    box-shadow: 0 0 0 0 rgba(54, 82, 36, 0);
-  }
-`;
+import styled from "styled-components";
 
 const PlayButton = styled.div`
   cursor: pointer;
