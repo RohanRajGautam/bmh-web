@@ -50,6 +50,7 @@ const ButtonWrapper = styled.div`
 
   ${mediaQueries("sm")`
       margin-top: 2.5rem;
+      transform: scale(0.9);
   `}
 `;
 
@@ -67,6 +68,10 @@ const Title = styled.h3`
 
   color: #fff;
 
+  @media (max-width: 600px) {
+    font-size: 5rem;
+  }
+
   span {
     font: inherit;
     position: relative;
@@ -83,6 +88,12 @@ const Title = styled.h3`
         content: none;    
       `}
     }
+  }
+`;
+
+const WellnessHeader = styled(Heading)`
+  @media (max-width: 600px) {
+    padding: 0 5vw;
   }
 `;
 
@@ -107,12 +118,12 @@ const WellnessCampus = () => {
         backgroundAttachment="fixed"
       />
       <Content data-aos="fade-up">
-        <Heading center>
+        <WellnessHeader center>
           <Subtitle>Wellness campus</Subtitle>
           <Title>
             The <span>future</span> of mental health care
           </Title>
-        </Heading>
+        </WellnessHeader>
         <ButtonWrapper data-aos="fade-up">
           <ExploreSvg to="/wellness-campus" />
         </ButtonWrapper>

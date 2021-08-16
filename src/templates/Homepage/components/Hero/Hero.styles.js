@@ -217,10 +217,18 @@ export const HeroP = styled.p`
   @media (min-width: 1600px) {
     max-width: 50rem;
   }
+
+  @media (max-width: 600px) {
+    max-width: 30rem;
+  }
 `;
 
 export const ButtonContainer = styled.div`
   animation: ${slideFromBottom("title", 80)} 700ms ease-in-out;
+
+  @media (max-width: 600px) {
+    transform: translate(-3rem, 2rem) scale(0.8);
+  }
 `;
 
 export const Subtitle = styled(HeadingSecondary)`
