@@ -36,11 +36,15 @@ export const FadingDiv = styled.div`
 `;
 
 export const MainContainer = styled(Container)`
-  height: 100vh;
+  height: 100%;
+
+  @media (min-width: 1280px) {
+    padding-bottom: 85px;
+  }
 
   ${mediaQueries("md")`
     margin-top: 5.2rem;
-    height: 80vh;
+    height: 80%;
   `}
 `;
 
