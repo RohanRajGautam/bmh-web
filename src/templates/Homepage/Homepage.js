@@ -11,10 +11,13 @@ import {
   WellnessCampus,
 } from "./components";
 
+import EventBanner from "@components/EventBanner";
+
 const Homepage = props => {
   return (
     <>
       <Hero />
+      <EventBanner />
       <DualPage />
       <Testimonials />
       <StoryPage />
