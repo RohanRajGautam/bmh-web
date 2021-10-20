@@ -31,6 +31,10 @@ const Play = styled.div`
     -webkit-animation: none;
     animation: none;
   }
+
+  @media (max-width: 600px) {
+    transform: scale(0.8);
+  }
 `;
 
 const PlayButton = () => (

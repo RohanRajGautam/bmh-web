@@ -63,7 +63,7 @@ export const staticData = [
         title: "Transcranial Magnetic Stimulation (TMS)",
         to: "https://www.beautifulmindsmedical.com/advanced-tms-therapy",
       },
-      { title: "Supplements", to: "https://www.beautifulmindsnutrition.com" },
+      { title: "Supplements", to: "https://www.beautifulmindslabs.com" },
       {
         title: "Life & Health Coaching",
         to:

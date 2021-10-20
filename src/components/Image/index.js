@@ -45,10 +45,10 @@ const Image = ({ src, ...rest }) => {
   const { childImageSharp, publicURL, extension } = useImage(src);
 
   if (extension === "svg" || !childImageSharp) {
-    return <img src={publicURL} alt="img" {...rest} draggable="false" />;
+    return <img src={publicURL} alt="bmh" {...rest} draggable="false" />;
   }
 
-  return <Img fluid={childImageSharp.fluid} {...rest} />;
+  return <Img fluid={childImageSharp.fluid} {...rest} alt="bmh" />;
 };
 
 Image.propTypes = {

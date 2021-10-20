@@ -24,7 +24,7 @@ const CategoryCard = props => {
               <CategoryDate>{props.date}</CategoryDate>
             </CategoryMetaWrapper>
           </CategoryTextWrapper>
-          <ImageContainer fluid={props?.image} />
+          <ImageContainer fluid={props?.image} alt="blog" />
         </CategoryBlogCard>
       </StyledLink>
     </CategoryBlogCardWrapper>

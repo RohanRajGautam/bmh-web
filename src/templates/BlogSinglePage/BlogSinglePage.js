@@ -33,6 +33,7 @@ const BlogSinglePage = ({ data, pageContext, ...props }) => {
       <BlogPageHero>
         <BlogPageImage
           fluid={post?.featuredImage.node.localFile.childImageSharp.fluid}
+          alt="blog page hero"
         />
         <BlogPageHeroInner>
           <LogoContainer>

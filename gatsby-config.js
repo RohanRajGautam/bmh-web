@@ -70,7 +70,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#6CA448`,
         display: `minimal-ui`,
-        icon: `src/images/icons/bhm_alt.png`, // This path is relative to the root of the site.
+        icon: `src/images/icons/logo.svg`, // This path is relative to the root of the site.
         icons: [
           {
             src: `src/images/icons/bhm_alt_192.png`,
@@ -125,7 +125,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
-    `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-advanced-sitemap`,
     {
       resolve: "gatsby-plugin-robots-txt",

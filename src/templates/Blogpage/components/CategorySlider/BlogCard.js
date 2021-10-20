@@ -60,7 +60,7 @@ const BlogCard = props => {
         </DateWrapper>
         <Content>
           <CardThumbnailWrapper>
-            <CardThumbnail fluid={props?.thumbnail} />
+            <CardThumbnail fluid={props?.thumbnail} alt="card-thumbnail" />
           </CardThumbnailWrapper>
           <CardDesc>
             <CardTitle>{props?.title}</CardTitle>
