@@ -18,8 +18,10 @@ import {
   SecondaryTitle,
   SecondaryValue,
   PlaceholderLogo,
+  ButtonContainer,
 } from "./EventDialog.styles";
 
+import RegisterButton from "@components/SvgComponent/register-btn"
 import placeholderImg from "@images/icons/placeholder-logo.png";
 
 const useStyles = makeStyles(theme => ({
@@ -67,6 +69,11 @@ const EventDialog = ({ open, handleClose, props, onClose }) => {
                 <Title>Featured Speaker:</Title>
                 <Value>{props.instructor}</Value>
               </TextContainer>
+            )}
+            {props.registerLink && (
+              <ButtonContainer>
+                <RegisterButton to={props.registerLink} />
+              </ButtonContainer>
             )}
             <IconButton
               aria-label="close"

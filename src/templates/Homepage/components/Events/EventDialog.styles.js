@@ -46,7 +46,7 @@ export const DialogHeader = styled.div`
 
 export const DialogContent = styled.div`
   height: 40%;
-  background: #6ca448;
+  background: #15141a;
   padding: 3.2rem;
 `;
 
@@ -67,7 +67,7 @@ export const EventTitle = styled.h4`
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding-bottom: 3rem;
+  padding-bottom: 2.2rem;
   padding-top: 1rem;
   z-index: 1;
   position: relative;
@@ -83,7 +83,7 @@ export const Title = styled.h6`
   letter-spacing: 0em;
   text-align: left;
 
-  color: #5f6468;
+  color: #15141a;
 `;
 export const Value = styled.p`
   //styleName: P2;
@@ -147,3 +147,5 @@ export const PlaceholderLogo = styled.div`
   right: 0;
   bottom: 0;
 `;
+
+export const ButtonContainer = styled.div``;

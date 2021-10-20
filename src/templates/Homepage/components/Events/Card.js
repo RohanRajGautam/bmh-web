@@ -135,7 +135,9 @@ const Card = props => {
             {props.instructor && (
               <Subtitle>Featured Speaker: {props.instructor}</Subtitle>
             )}
-            <Subtitle>{props.venue}</Subtitle>
+            {(props.venue && props.venue !== "0" ) ? (
+              <Subtitle>{props.venue}</Subtitle>
+            ) : ""}
           </TitleWrapper>
         </ContentWrapper>
       </EventCard>

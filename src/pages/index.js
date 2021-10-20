@@ -59,6 +59,7 @@ export const query = graphql`
         eventDay
         rpClassType
         id
+        registerLink
         eventCost
         eventInstructors {
           nodes {

@@ -83,6 +83,7 @@ const Events = props => {
               }
               instructor={item.eventInstructors?.nodes[0]?.name}
               cost={item.eventCost}
+              registerLink={item.registerLink}
             />
           ))
         ) : (
