@@ -8,6 +8,7 @@ import { mediaQueries } from "@components/MediaQueries";
 const EventCard = styled.div`
   margin-right: ${SPACING.lg};
   min-width: 36rem;
+  max-width: 36rem;
   align-self: flex-end;
   &:hover {
     h2 {
@@ -128,16 +129,18 @@ const Card = props => {
               <Date>{props.date}</Date>
               <Time>{props.time}</Time>
             </DateWrapper>
-            {props.cost && <Cost>Cost: ${props.cost}</Cost>}
+            {props.cost && <Cost>Cost: {props.cost}</Cost>}
           </TopWrapper>
           <TitleWrapper>
             <Title>{props.title}</Title>
             {props.instructor && (
               <Subtitle>Featured Speaker: {props.instructor}</Subtitle>
             )}
-            {(props.venue && props.venue !== "0" ) ? (
+            {props.venue && props.venue !== "0" ? (
               <Subtitle>{props.venue}</Subtitle>
-            ) : ""}
+            ) : (
+              ""
+            )}
           </TitleWrapper>
         </ContentWrapper>
       </EventCard>

@@ -47,7 +47,7 @@ export const query = graphql`
         }
       }
     }
-    events: allWpClass(sort: { fields: [eventYear, eventMonth, eventDay] }) {
+    events: allWpClass(sort: { fields: [eventYear, eventMonth, eventDay], order: DESC }) {
       nodes {
         title
         eventStartTime
@@ -71,6 +71,7 @@ export const query = graphql`
             name
           }
         }
+        content
       }
     }
   }

@@ -34,9 +34,9 @@ const useStyles = makeStyles(theme => ({
   dialogPaper: {
     borderRadius: 24,
     maxWidth: 450,
-    maxHeight: 610,
+    // maxHeight: 610,
     width: 450,
-    height: 610,
+    // height: 610,
 
     [theme.breakpoints.down("xs")]: {
       width: "100%",
@@ -48,6 +48,18 @@ const useStyles = makeStyles(theme => ({
     },
   },
 }));
+
+
+/**
+ * generate content description
+ * @param content - the content of the post
+ * @returns The content description.
+ */
+const showContentDescription = (content) => {
+  if (!content) return null;
+  const contentArray = content.split('\n');
+  return contentArray[1];
+}
 
 const EventDialog = ({ open, handleClose, props, onClose }) => {
   const classes = useStyles();
@@ -68,6 +80,16 @@ const EventDialog = ({ open, handleClose, props, onClose }) => {
               <TextContainer>
                 <Title>Featured Speaker:</Title>
                 <Value>{props.instructor}</Value>
+              </TextContainer>
+            )}
+            {props.description && (
+              <TextContainer>
+                <Value
+                  dangerouslySetInnerHTML={{
+                    __html: showContentDescription(props.description)
+                  }}
+                >
+                </Value>
               </TextContainer>
             )}
             {props.registerLink && (
@@ -93,7 +115,7 @@ const EventDialog = ({ open, handleClose, props, onClose }) => {
           <DialogContent>
             {props.cost && (
               <SecondaryTextMain>
-                <Cost>Cost: ${props.cost}</Cost>
+                <Cost>Cost: {props.cost}</Cost>
               </SecondaryTextMain>
             )}
             {props.time && (

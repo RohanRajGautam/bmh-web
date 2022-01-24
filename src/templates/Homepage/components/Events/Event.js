@@ -37,7 +37,7 @@ const Events = props => {
 
     // Return events of date equal to or greater than the selected date
     const data = props?.data.filter(function (item) {
-      return item.eventYear >= `${year}` && item.eventMonth >= `${month}`;
+      return item.eventYear === `${year}` && item.eventMonth === `${month}`;
     });
 
     setEvents(data);
@@ -75,6 +75,7 @@ const Events = props => {
               key={index}
               title={item.title}
               day={item.eventDay}
+              description={item.content}
               date={item.eventDay + " " + getMonthName(item.eventMonth)}
               time={item.eventStartTime}
               venue={
