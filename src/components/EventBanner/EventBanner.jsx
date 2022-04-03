@@ -16,7 +16,7 @@ const ImageWrapper = styled(Container)`
 const EventBanner = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "Events/Song&Story.png" }) {
+      file(relativePath: { eq: "Events/step-out-of-stigma.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 64) {
             ...GatsbyImageSharpFluid_withWebp
@@ -29,7 +29,7 @@ const EventBanner = () => {
   return (
     <ImageWrapper>
       <a
-        href="https://app.donorview.com/Event/EventInfo?prm=3JfheZFdLRPkURmsQSVPTYvjEjXwHnVbjARA72Pjm2cJO3jXXIerSHlJRpY1QydD_BQsv10dfHCM3cbv2uZn2Djcolvk7ZQyOHx7wyRqRZt1i9OYQWfrfJpyAH2iRX-1zPAZSlnazsFQ8jYFnIm7zcULv1aK6HB99sJa_g4sk_Z31X8_mgcd2OAjHEXjsLPYNQBdCkD_9twFvIrscob9y67HvPr--t1PBdOyoctRTKC7SWQxMh96sRt14xd9hwcB0"
+        href="https://app.donorview.com/156Zz"
         target="_blank"
         rel="noopener noreferrer"
       >
