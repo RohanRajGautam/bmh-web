@@ -8,6 +8,7 @@ import img7 from "@images/services/img-7.jpg";
 import img8 from "@images/services/img-8.jpg";
 import img9 from "@images/services/img-9.jpg";
 import img10 from "@images/services/img-10.jpg";
+import img11 from "@images/services/img-11.jpg";
 
 export const MedicalTitle = "Medical";
 
@@ -96,5 +97,11 @@ export const WellnessServices = [
     available to all residents of Placer County who are 55 years old or older. The program provides
     short-term in-home or virtual confidential peer support & counseling.`,
     img: `${img10}`,
+  },
+  {
+    title: "Resources",
+    to: "https://beautifulmindswellness.org/resources/",
+    desc: ``,
+    img: `${img11}`,
   },
 ];
