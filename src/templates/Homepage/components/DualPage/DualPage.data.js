@@ -8,7 +8,7 @@ import img7 from "@images/services/img-7.jpg";
 import img8 from "@images/services/img-8.jpg";
 import img9 from "@images/services/img-9.jpg";
 import img10 from "@images/services/img-10.jpg";
-import img11 from "@images/services/img-11.jpg";
+import img11 from "@images/services/img-11.png";
 
 export const MedicalTitle = "Medical";
 
