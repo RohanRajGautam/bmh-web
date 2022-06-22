@@ -85,7 +85,7 @@ export const WellnessServices = [
   },
   {
     title: "Education",
-    to: "https://beautifulmindswellness.org/free-downloads/",
+    to: "https://beautifulmindswellness.org/education/",
     desc: `Your opportunity for positive personal growth: mentally, emotionally, physically &
     spiritually. Check out our online courses, YouTube channel, and podcast!`,
     img: `${img9}`,
