@@ -21,9 +21,9 @@ const Homepage = props => {
       <DualPage />
       <Testimonials />
       <StoryPage />
+      <Event data={props.data.events.nodes} />
       <WellnessCampus />
       <Blog data={props.data} />
-      <Event data={props.data.events.nodes} />
       <Donate />
     </>
   );
