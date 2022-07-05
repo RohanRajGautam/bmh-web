@@ -12,7 +12,7 @@ import ExploreSvg from "./explore";
 import arrow from "./Arrow.svg";
 
 const Wrapper = styled(Container)`
-  margin-top: ${SPACING.xl};
+  // margin-top: ${SPACING.xl};
   position: relative;
   text-align: center;
   @media (max-width: 1260px) {
