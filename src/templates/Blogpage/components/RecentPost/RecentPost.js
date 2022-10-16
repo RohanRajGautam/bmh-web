@@ -14,7 +14,7 @@ const RecentPost = props => {
             <RecentCard
               url={item.uri}
               title={item.title}
-              image={item.featuredImage.node.localFile.childImageSharp.fluid}
+              image={item.featuredImage.node.localFile?.childImageSharp?.fluid}
               date={item.date.substring(0, 10)}
               key={index}
             />

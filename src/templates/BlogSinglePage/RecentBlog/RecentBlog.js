@@ -39,7 +39,7 @@ const RecentBlog = ({ data }) => {
                 date={item.date}
                 thumbnail={
                   item.featuredImage.node &&
-                  item.featuredImage.node.localFile.childImageSharp.fluid
+                  item.featuredImage.node?.localFile?.childImageSharp?.fluid
                 }
                 key={index}
               />

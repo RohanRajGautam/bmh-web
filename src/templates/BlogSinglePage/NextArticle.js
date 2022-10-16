@@ -38,7 +38,7 @@ const ImageContainer = styled.div`
   background-color: ${COLORS.primary};
   border-radius: 24px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 1024px) {
     height: 50rem;
   }
 `;
@@ -74,6 +74,11 @@ const Heading = styled.h1`
   text-align: left;
   color: #ffffff;
 
+  @media (max-width: 1024px) {
+    font-size: 4.2rem;
+    line-height: 1.5;
+  }
+
   @media (max-width: 600px) {
     font-size: 3.2rem;
     line-height: 1.5;
@@ -107,7 +112,7 @@ const NextArticle = ({ nextPage }) => {
         <ImageContainer>
           <Image
             fluid={
-              nextPage?.featuredImage?.node?.localFile.childImageSharp.fluid
+              nextPage?.featuredImage?.node?.localFile?.childImageSharp?.fluid
             }
             alt="next blog article"
           />

@@ -31,7 +31,7 @@ const Categories = props => {
               title={item.title}
               author={item.author.node.name}
               date={item.date.substring(0, 10)}
-              image={item.featuredImage.node.localFile.childImageSharp.fluid}
+              image={item.featuredImage.node.localFile?.childImageSharp?.fluid}
             />
           ))}
         </CategoryBlock>

@@ -144,6 +144,13 @@ export const BlogContent = styled.div`
   @media (min-width: 1280px) {
     padding-right: 8.2rem !important;
   }
+  .fusion-text {
+    .wp-image-7189 {
+      border-radius: 50%;
+      max-height: 100px;
+      max-width: 100px;
+    }
+  }
   .fusion-fullwidth {
     padding: 0 !important;
   }
